@@ -1,0 +1,1615 @@
+[
+  {
+    "name": "Abrojos",
+    "cost": "10 mo"
+  },
+  {
+    "name": "Aceite de fuego",
+    "cost": "10 mo"
+  },
+  {
+    "name": "Aceite milagroso",
+    "uses": 2,
+    "description": "Una mezcla maloliente y resbaladiza."
+  },
+  {
+    "name": "Alabarda",
+    "damage": "1d10",
+    "cost": "20 mo",
+    "quality": [
+      "Voluminosa"
+    ]
+  },
+  {
+    "name": "Alimento para animales",
+    "cost": "10 mo",
+    "uses": 3,
+    "quality": [
+      "Voluminoso"
+    ]
+  },
+  {
+    "name": "Alojamiento y comida",
+    "cost": "30 mo",
+    "description": "Por noche."
+  },
+  {
+    "name": "Alquitrán",
+    "uses": 3,
+    "description": "Versátil: tanto pegajoso como altamente inflamable."
+  },
+  {
+    "name": "Amadou",
+    "uses": 3,
+    "description": "Un hongo bermellón que arde con bastante facilidad."
+  },
+  {
+    "name": "Amuleto con forma de cuervo",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Puedes formular una pregunta a los muertos, pero ganarás una Fatiga por cada uso."
+  },
+  {
+    "name": "Amuleto, reliquia familiar",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Brilla en presencia de magia. Lo único que te queda de una familia que nunca conociste."
+  },
+  {
+    "name": "Anillo de dolor",
+    "quality": [
+      "Insignificante",
+      "Reliquia"
+    ],
+    "description": "Toca a una criatura herida para transferirte sus heridas (intercambia puntos de FUE perdida).",
+    "recharge": "úsalo estando completamente sano; pierdes 1 punto de FUE permanentemente"
+  },
+  {
+    "name": "Anillo felino",
+    "uses": 2,
+    "description": "Puedes trepar por las paredes y caer con seguridad.",
+    "recharge": "pon el anillo en la cola de un gato callejero",
+    "quality": [
+      "Reliquia"
+    ]
+  },
+  {
+    "name": "Antitoxina",
+    "cost": "20 mo"
+  },
+  {
+    "name": "Antorcha",
+    "cost": "5 mo",
+    "uses": 3
+  },
+  {
+    "name": "Aqua vitae",
+    "uses": 1,
+    "description": "Purifica cualquier líquido, convirtiéndolo en agua pura. Beberla cura 1d6 de FUE."
+  },
+  {
+    "name": "Arco",
+    "damage": "1d6",
+    "cost": "20 mo",
+    "quality": [
+      "Voluminoso"
+    ]
+  },
+  {
+    "name": "Arco de bambú estriado",
+    "damage": "1d6",
+    "description": "Plegable, solo ocupa un espacio en el Inventario (pero se usa con las dos manos)."
+  },
+  {
+    "name": "Arco de fresno blanco",
+    "damage": "1d6",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "Puede usarse como escudo en combate cuerpo a cuerpo (+1 de Armadura)."
+  },
+  {
+    "name": "Arco de olmo montano",
+    "damage": "1d6",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "Protege al portador de venenos y toxinas siempre que lo lleve en la mano."
+  },
+  {
+    "name": "Arco de pino piñonero",
+    "damage": "1d6",
+    "quality": [
+      "Voluminoso"
+    ],
+    "uses": 1,
+    "description": "Segrega una carga de savia pegajosa al día; la savia es altamente explosiva."
+  },
+  {
+    "name": "Arco de roble albar",
+    "damage": "1d8",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "Si al golpear con él causas Daño Crítico, arrancas algo del blanco."
+  },
+  {
+    "name": "Arco de tejo del oeste",
+    "damage": "1d6",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "Puede blandirse como arma contundente (1d6). Ruidoso."
+  },
+  {
+    "name": "Arco largo desgastado",
+    "damage": "1d8",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "Perteneció a un viejo cazador."
+  },
+  {
+    "name": "Armadura completa",
+    "armor": "3",
+    "cost": "60 mo",
+    "quality": [
+      "Voluminosa"
+    ]
+  },
+  {
+    "name": "Armadura de cuero acolchado",
+    "armor": "1",
+    "aliases": [
+      "Cuero hervido"
+    ],
+    "description": "Cuero grueso y acolchado que amortigua golpes sin restar agilidad."
+  },
+  {
+    "name": "Armadura de cuero hervido",
+    "armor": "1",
+    "description": "Cuero endurecido al fuego, ligero y silencioso."
+  },
+  {
+    "name": "Artículos de baño",
+    "cost": "5 mo",
+    "description": "Jabón, perfume, etc."
+  },
+  {
+    "name": "Asiento en carruaje",
+    "cost": "5 mo",
+    "description": "Coste por trayecto."
+  },
+  {
+    "name": "Balde con sangre",
+    "quality": [
+      "Voluminoso",
+      "Reliquia"
+    ],
+    "description": "Vacíalo para invocar a un seguidor hecho de lo que esté enterrado bajo el suelo (PG 6, Armadura 1, FUE 13, DES 11, VOL 4, puños d8+d8).",
+    "recharge": "llénalo de nuevo con la sangre de un guerrero moribundo"
+  },
+  {
+    "name": "Ballesta",
+    "damage": "1d8",
+    "cost": "30 mo",
+    "quality": [
+      "Voluminosa"
+    ]
+  },
+  {
+    "name": "Banda siempre floreciente",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Un collar de flores que nunca se marchitan. En caso de Daño Crítico, las flores se deshacen en polvo, pero actúas como si tu Salvación hubiera tenido éxito (sigues perdiendo los puntos de FUE)."
+  },
+  {
+    "name": "Baraja de cartas",
+    "cost": "5 mo"
+  },
+  {
+    "name": "Bolsa de hierbas",
+    "uses": 3,
+    "description": "Restaura 1 de FUE al consumirse."
+  },
+  {
+    "name": "Bolsa de sal",
+    "description": "La sal aleja a ciertas cosas del Bosque, o eso dicen."
+  },
+  {
+    "name": "Bomba de semillas",
+    "damage": "1d6 (Estallido)",
+    "uses": 3,
+    "description": "Un saco de lona lleno de semillas que explotan al golpearlo con algo."
+  },
+  {
+    "name": "Bombas de humo",
+    "uses": 3,
+    "description": "Crean una cortina de humo espesa al instante."
+  },
+  {
+    "name": "Bombeador de aliento",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "Pulmones de acero portátiles. Permiten realizar intervenciones quirúrgicas para salvar vidas o respirar bajo el agua."
+  },
+  {
+    "name": "Botas con pinchos",
+    "damage": "1d8",
+    "description": "Romper cabezas es tan fácil como quebrar hielo o estiércol. Viajar es un poco más lento, pero es más fácil."
+  },
+  {
+    "name": "Botas de agua",
+    "description": "Altas y encauchadas, mantienen los pies secos al vadear."
+  },
+  {
+    "name": "Botas de escalada",
+    "cost": "15 mo"
+  },
+  {
+    "name": "Bracamarte",
+    "damage": "1d8",
+    "description": "Arma recuperada de unos ladrones de cosechas derrotados."
+  },
+  {
+    "name": "Brazaletes de hierro",
+    "armor": "1",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "Protección improvisada de un espíritu del bosque derrotado."
+  },
+  {
+    "name": "Brigantina",
+    "armor": "1",
+    "cost": "20 mo",
+    "quality": [
+      "Voluminosa"
+    ]
+  },
+  {
+    "name": "Brotecopa",
+    "uses": 1,
+    "description": "Ingiérelo para reducirte al tamaño de un ratón durante una hora (de forma intermitente)."
+  },
+  {
+    "name": "Brújula",
+    "cost": "75 mo"
+  },
+  {
+    "name": "Brújula de juramento",
+    "description": "No apunta al norte, sino al integrante de la Guardia más cercano."
+  },
+  {
+    "name": "Buscador de Líneas Ley",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Apunta hacia las Líneas Ley cercanas y otras fuentes de poder arcano. Si lo pierdes, el castigo es la muerte."
+  },
+  {
+    "name": "Báculo",
+    "damage": "1d6",
+    "cost": "5 mo"
+  },
+  {
+    "name": "Báculo nudoso",
+    "damage": "1d8",
+    "description": "Regalo de despedida de un druida."
+  },
+  {
+    "name": "Bálsamo curativo",
+    "uses": 1,
+    "description": "Restaura 1d4 de FUE al aplicarse."
+  },
+  {
+    "name": "Bálsamo de esencia de corazón",
+    "uses": 1,
+    "description": "Restaura 1d4 de FUE al aplicarse sobre una herida."
+  },
+  {
+    "name": "Bálsamo somnoliento",
+    "description": "Una barra de cera; si se hierve en agua, el vapor actúa como agente somnífero."
+  },
+  {
+    "name": "Caballo",
+    "cost": "75 mo",
+    "quality": [
+      "+4 espacios"
+    ]
+  },
+  {
+    "name": "Cadena",
+    "cost": "10 mo",
+    "description": "3 metros."
+  },
+  {
+    "name": "Cadena de azogue",
+    "description": "Sin ella, quien se transforma en lobo no puede volver a su forma original."
+  },
+  {
+    "name": "Calamita",
+    "description": "Extrae del cuerpo elementos peligrosos y actúa como una poderosa fuerza magnética."
+  },
+  {
+    "name": "Caldero de hierro",
+    "description": "Para hervir, destilar o preparar remedios sobre el fuego."
+  },
+  {
+    "name": "Caracol brillante",
+    "description": "Emite una bioluminiscencia tenue. Se alimenta con una ración cada dos días."
+  },
+  {
+    "name": "Carreta",
+    "cost": "30 mo",
+    "quality": [
+      "+4 espacios",
+      "Voluminosa"
+    ],
+    "description": "Debe empujarse con ambas manos."
+  },
+  {
+    "name": "Carrete de hilo de pesca",
+    "uses": 5,
+    "description": "Cada zambullida en el río garantiza una captura, aunque puede que lo que captures no sea agradable."
+  },
+  {
+    "name": "Carromato",
+    "cost": "200 mo",
+    "quality": [
+      "+8 espacios",
+      "Lento"
+    ]
+  },
+  {
+    "name": "Catalejo",
+    "cost": "40 mo"
+  },
+  {
+    "name": "Caña de pescar",
+    "cost": "10 mo"
+  },
+  {
+    "name": "Cenizas revitalizantes",
+    "uses": 3,
+    "description": "Restos de un espíritu de los árboles. Reaviva la llama de un fuego extinguido o devuelve a la vida a una criatura muerta hace instantes."
+  },
+  {
+    "name": "Cera para heridas",
+    "uses": 2,
+    "description": "Únicamente cura heridas químicas o causadas por fuego. Al hacerlo restaura la FUE por completo."
+  },
+  {
+    "name": "Chal de seda de polilla",
+    "description": "Manta resistente a la intemperie; también puede apagar un fuego sin sufrir daños."
+  },
+  {
+    "name": "Cincel",
+    "cost": "5 mo"
+  },
+  {
+    "name": "Cob Pío (caballo)",
+    "quality": [
+      "+4 espacios"
+    ],
+    "description": "Inteligente; puede entender órdenes sencillas e incluso tiene instinto para el peligro."
+  },
+  {
+    "name": "Cofre",
+    "cost": "25 mo"
+  },
+  {
+    "name": "Colmillo firme (caballo)",
+    "quality": [
+      "+6 espacios"
+    ],
+    "description": "Impresionantemente fuerte, capaz de transportar cargas pesadas (solo +2 espacios si transporta a dos personas)."
+  },
+  {
+    "name": "Comodidades para exteriores",
+    "cost": "10 mo",
+    "description": "Manta, hamaca, etc."
+  },
+  {
+    "name": "Contenedores",
+    "cost": "10 mo",
+    "description": "Saco, odre de agua o vino, etc."
+  },
+  {
+    "name": "Corona de acónito",
+    "description": "Efectiva contra hombres lobo."
+  },
+  {
+    "name": "Cortacadenas",
+    "description": "Herramienta robada de una casa de verano noble."
+  },
+  {
+    "name": "Costurero",
+    "cost": "20 mo"
+  },
+  {
+    "name": "Cota de malla",
+    "armor": "2",
+    "cost": "40 mo",
+    "quality": [
+      "Voluminosa"
+    ]
+  },
+  {
+    "name": "Cota de malla de atrezo",
+    "armor": "1",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "Recuerdo de un accidente en el escenario que dejó una cicatriz memorable."
+  },
+  {
+    "name": "Crema embellecedora",
+    "uses": 2,
+    "description": "Úsala para ganar una belleza irresistible durante las próximas 12 horas."
+  },
+  {
+    "name": "Cráneo de conejo",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Protege contra encantamientos de control."
+  },
+  {
+    "name": "Cubo de metal",
+    "description": "Para transportar hongos, agua o cualquier otra cosa que no deba derramarse."
+  },
+  {
+    "name": "Cuchillo de aguja",
+    "damage": "1d6",
+    "description": "Hoja fina de precisión, más quirúrgica que marcial."
+  },
+  {
+    "name": "Cuchillo de hueso manchado de sangre",
+    "damage": "1d6",
+    "description": "Si haces Daño Crítico, tu próximo ataque se potencia por entrar en contacto con la sangre."
+  },
+  {
+    "name": "Cuchillo de pelar",
+    "damage": "1d6",
+    "description": "Herramienta habitual para el despiece de presas."
+  },
+  {
+    "name": "Cuchillo de plata",
+    "damage": "1d6",
+    "description": "La plata hace mella en criaturas que el acero común no puede tocar."
+  },
+  {
+    "name": "Cuchillo de poda",
+    "damage": "1d6",
+    "description": "Hoja curva pensada para plantas, no para pelear, pero corta igual."
+  },
+  {
+    "name": "Cuchillo dentado",
+    "damage": "1d6",
+    "description": "Hoja serrada pensada para despiece, no para el duelo."
+  },
+  {
+    "name": "Cuchillo ocultable",
+    "damage": "1d6",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Fácil de esconder entre la ropa."
+  },
+  {
+    "name": "Cuchillos arrojadizos",
+    "damage": "1d6",
+    "description": "Ideales para el combate a distancia corta."
+  },
+  {
+    "name": "Cuerda de seda resistente",
+    "description": "Recuperada tras huir del cuartel de un alguacil."
+  },
+  {
+    "name": "Cultivo enfermo",
+    "uses": 6,
+    "description": "Muestra de la Marchitez, un tipo de podredumbre del tallo. Pudre cualquier planta que toque."
+  },
+  {
+    "name": "Daga",
+    "damage": "1d6",
+    "cost": "5 mo"
+  },
+  {
+    "name": "Daga de hierro",
+    "damage": "1d6",
+    "description": "El hierro frío molesta a ciertas criaturas feéricas más que cualquier otro metal."
+  },
+  {
+    "name": "Dagas gemelas",
+    "damage": "1d6+1d6",
+    "quality": [
+      "Voluminosa"
+    ],
+    "description": "Un par de dagas a juego, pensadas para pelear con las dos manos."
+  },
+  {
+    "name": "Dandi patinegro (caballo)",
+    "quality": [
+      "+4 espacios"
+    ],
+    "description": "Resistente y adaptable; los terrenos Duros o Peligrosos se vuelven un paso más fáciles."
+  },
+  {
+    "name": "Dardos somníferos",
+    "uses": 6,
+    "description": "Salvación de FUE o el objetivo cae dormido."
+  },
+  {
+    "name": "Dedo dorado",
+    "uses": 1,
+    "description": "Un dedal que imita cualquier llave común.",
+    "recharge": "deposítalo con al menos 100 mo durante una noche",
+    "quality": [
+      "Reliquia"
+    ]
+  },
+  {
+    "name": "Delphinium",
+    "uses": 1,
+    "description": "Permite respirar debajo del agua hasta una hora (fraccionable)."
+  },
+  {
+    "name": "Desdicha cazadora",
+    "uses": 3,
+    "description": "Flechas de fuerte olor. El aroma es lo bastante potente como para rastrearlas fácilmente."
+  },
+  {
+    "name": "Destrero pesado (caballo)",
+    "quality": [
+      "+2 espacios"
+    ],
+    "armor": "1",
+    "description": "Una bestia hecha para la guerra. Pezuñas (1d10+1d10)."
+  },
+  {
+    "name": "Diente de rastrero",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Colgado de una cadena, vibra ligeramente cuando algo te acecha."
+  },
+  {
+    "name": "Disfraces",
+    "cost": "15 mo",
+    "description": "Pintura facial, disfraz, etc.",
+    "aliases": [
+      "Disfraz"
+    ]
+  },
+  {
+    "name": "Disolvente universal",
+    "uses": 2,
+    "description": "Disuelve todo lo que toca en sus partes constituyentes."
+  },
+  {
+    "name": "Endurecedor",
+    "cost": "20 mo",
+    "uses": 3,
+    "description": "Hace que cualquier material plano (tela, cuero, arena) sea tan duro como la piedra."
+  },
+  {
+    "name": "Enredadera de zarza",
+    "description": "Atrapa a cualquier criatura de hasta el tamaño de un caballo (Salvación de FUE para liberarse). Reutilizable."
+  },
+  {
+    "name": "Equipo de expedición",
+    "cost": "10 mo",
+    "description": "Picas de escalada, polea, etc."
+  },
+  {
+    "name": "Escalera plegable",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "3 metros de largo."
+  },
+  {
+    "name": "Escudo",
+    "armor": "+1",
+    "cost": "10 mo",
+    "description": "Protección adicional mientras se sostiene activamente en combate."
+  },
+  {
+    "name": "Esfera de cuerda",
+    "quality": [
+      "Insignificante",
+      "Reliquia"
+    ],
+    "recharge": "",
+    "description": "Efecto Proteger: en el suelo aparece un círculo plateado de 15 metros de diámetro. El círculo no podrá ser atravesado por una especie a tu elección."
+  },
+  {
+    "name": "Esfera explosiva",
+    "damage": "1d12 (Estallido)",
+    "quality": [
+      "Voluminoso"
+    ],
+    "uses": 1,
+    "description": "Una bola de hierro del tamaño de una cabeza, llena de polvo explosivo que estalla al impactar."
+  },
+  {
+    "name": "Espada",
+    "damage": "1d8",
+    "cost": "10 mo"
+  },
+  {
+    "name": "Espada de bastón",
+    "damage": "1d6",
+    "description": "Una hoja oculta dentro de un bastón de paseo aparentemente inofensivo."
+  },
+  {
+    "name": "Espada larga",
+    "damage": "1d10",
+    "cost": "20 mo",
+    "quality": [
+      "Voluminosa"
+    ]
+  },
+  {
+    "name": "Espejo",
+    "cost": "5 mo"
+  },
+  {
+    "name": "Espina de zarza",
+    "description": "Puede perforar cualquier material orgánico, pero al ser removida no deja rastro de la perforación."
+  },
+  {
+    "name": "Esponja que nunca se seca",
+    "description": "Supuestamente hecha de los restos de una rara criatura marina."
+  },
+  {
+    "name": "Establo y alimento",
+    "cost": "75 mo",
+    "description": "Por noche."
+  },
+  {
+    "name": "Estaca larga",
+    "damage": "1d6",
+    "description": "Tan útil contra los muertos que no descansan como para asegurar una lona."
+  },
+  {
+    "name": "Estoque corto",
+    "damage": "1d6",
+    "description": "Arma elegante de esgrima."
+  },
+  {
+    "name": "Estruendizador",
+    "description": "Una herramienta de manivela que emite un fuerte ruido capaz de asustar a la mayoría de criaturas."
+  },
+  {
+    "name": "Extracto de semilla de vendaval",
+    "uses": 3,
+    "description": "Ingerirlo te permite correr cuatro veces más rápido. Después marca en tu Inventario dos casillas de Fatiga."
+  },
+  {
+    "name": "Extremidad alquímica",
+    "quality": [
+      "Insignificante"
+    ],
+    "damage": "1d8",
+    "description": "Reemplaza una extremidad perdida. Inmune al calor y al veneno. Necesita engrasarse a diario (usa una lata de aceite)."
+  },
+  {
+    "name": "Flauta de hueso",
+    "description": "Emite un sonido agudo que solo pueden oír los roedores. Mientras toques, te seguirán, incluso hasta la muerte."
+  },
+  {
+    "name": "Flauta de piedra",
+    "description": "Puede calmar las aguas de casi cualquier río."
+  },
+  {
+    "name": "Flautilla verde",
+    "description": "Una pequeña flauta que encanta a las plantas, facilitando el paso por zonas con mucha vegetación."
+  },
+  {
+    "name": "Flor de leche",
+    "uses": 3,
+    "description": "Un estimulante ligero. Masticarlo te hace inmune al Pánico durante la siguiente hora."
+  },
+  {
+    "name": "Fragmento de cristal del Vacío",
+    "description": "Mira a través de él con un ojo para ver marcas invisibles, criaturas y otros efectos mágicos. Pierdes la visión de ese ojo durante la siguiente hora (quedas Exhausto)."
+  },
+  {
+    "name": "Fuegos artificiales",
+    "uses": 2,
+    "description": "Un espectáculo deslumbrante aunque peligroso. Suficiente material explosivo como para volarse un dedo o tres."
+  },
+  {
+    "name": "Gambesón",
+    "armor": "+1",
+    "cost": "15 mo"
+  },
+  {
+    "name": "Gancho de agarre",
+    "cost": "25 mo"
+  },
+  {
+    "name": "Ganzúas",
+    "description": "Un juego de ganzúas para forzar cerraduras sencillas."
+  },
+  {
+    "name": "Garrote",
+    "damage": "1d6",
+    "cost": "5 mo"
+  },
+  {
+    "name": "Gato carroñero",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "Un familiar inteligente, lo suficientemente pequeño como para esconderlo en la mochila, pero lo suficientemente fuerte como para ahuyentar a depredadores más pequeños. Consume una ración de carne al día."
+  },
+  {
+    "name": "Gomina pirofórica",
+    "uses": 1,
+    "description": "Líquido verde pegajoso que se incendia al contacto con el aire y arde durante 8 horas. No puede extinguirse."
+  },
+  {
+    "name": "Grasa minera",
+    "uses": 3,
+    "description": "Ideal para desencajar una gema, una herramienta o una extremidad de una grieta estrecha. Altamente explosivo."
+  },
+  {
+    "name": "Grillete viejo",
+    "description": "Sigue siendo efectivo incluso con los muy fuertes. No tienes la llave."
+  },
+  {
+    "name": "Grilletes falsos",
+    "description": "Cómodos y de aspecto realista. Solo tú conoces el truco para liberarte de ellos."
+  },
+  {
+    "name": "Guante de protección",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Protege la mano de quemaduras y salpicaduras al trabajar con sustancias volátiles."
+  },
+  {
+    "name": "Guantes",
+    "cost": "20 mo",
+    "quality": [
+      "Insignificante"
+    ]
+  },
+  {
+    "name": "Gusano de hiedra",
+    "description": "Se confunde con una mala hierba. Tragado entero, absorbe cualquier toxina o putrefacción del organismo."
+  },
+  {
+    "name": "Habitación privada y comida",
+    "cost": "200 mo",
+    "description": "Para 4 personas, por noche."
+  },
+  {
+    "name": "Hacha",
+    "damage": "1d8",
+    "cost": "10 mo"
+  },
+  {
+    "name": "Hacha de mano",
+    "damage": "1d6",
+    "description": "Más ligera y manejable que un hacha de leñador."
+  },
+  {
+    "name": "Herramientas comunes",
+    "cost": "10 mo",
+    "description": "Martillo, pala, etc."
+  },
+  {
+    "name": "Herramientas de ladrón",
+    "cost": "25 mo",
+    "description": "Ganzúas, lima de metal, etc."
+  },
+  {
+    "name": "Herramientas especializadas",
+    "cost": "20 mo",
+    "description": "Tinta, etc."
+  },
+  {
+    "name": "Hierbas para pipa",
+    "uses": 6,
+    "description": "Tu carisma es tu amuleto: las conversaciones fluyen mejor tras fumar."
+  },
+  {
+    "name": "Honda",
+    "damage": "1d4",
+    "cost": "5 mo"
+  },
+  {
+    "name": "Hoz",
+    "damage": "1d6",
+    "cost": "5 mo"
+  },
+  {
+    "name": "Huevos de fuego",
+    "damage": "1d8 (Estallido)",
+    "description": "Seis pequeñas bolitas hechas de sal marina, madera y polvo de loza. Explotan a baja temperatura, pero las llamas se disipan rápidamente."
+  },
+  {
+    "name": "Incienso ritual",
+    "description": "Perfecto para rituales o para mantener a raya a las moscas. Tranquilizante."
+  },
+  {
+    "name": "Insignia",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Acredita tu oficio o afiliación ante quien sepa reconocerla."
+  },
+  {
+    "name": "Insignia imponente",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Insignia de metal de honor de la Guardia. Puede abrirte puertas, pero siempre deja un rastro."
+  },
+  {
+    "name": "Instrumentos complejos",
+    "cost": "50 mo",
+    "description": "Gaita, violín, etc."
+  },
+  {
+    "name": "Instrumentos quirúrgicos ensangrentados",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Un estuche de bisturís, pinzas y agujas que ya han visto uso."
+  },
+  {
+    "name": "Instrumentos sencillos",
+    "cost": "10 mo",
+    "description": "Flauta, laúd, etc.",
+    "aliases": [
+      "Instrumento sencillo"
+    ]
+  },
+  {
+    "name": "Jabón de cirujano",
+    "uses": 4,
+    "description": "Un bloque de lejía y ceniza que hace que la piel se vuelva temporalmente transparente, revelando la anatomía interna de quien lo usa."
+  },
+  {
+    "name": "Jardín de Cristal (libro)",
+    "description": "Obra herética que describe materiales, procedimientos y ubicaciones óptimas para abrir un Portal."
+  },
+  {
+    "name": "Jarra apestosa",
+    "uses": 1,
+    "description": "Al romperla, libera un olor tan repugnante que todos cerca deben superar una Salvación de FUE o vomitar."
+  },
+  {
+    "name": "Jubón de cuero",
+    "armor": "1",
+    "description": "Protección ligera pensada para no estorbar a caballo."
+  },
+  {
+    "name": "Jubón de la suerte",
+    "armor": "+1",
+    "description": "Un poco raído, pero nunca te ha fallado en el escenario ni fuera de él."
+  },
+  {
+    "name": "Juegos",
+    "cost": "10 mo",
+    "description": "Cartas de tarot, dados, etc."
+  },
+  {
+    "name": "La catedral y el Pabellón (libro)",
+    "description": "Cuentos infantiles cuyos márgenes contienen información sobre viajar, comer y dormir en la floresta nubosa."
+  },
+  {
+    "name": "Lanza",
+    "damage": "1d8",
+    "cost": "10 mo"
+  },
+  {
+    "name": "Larva injertadora",
+    "uses": 1,
+    "description": "Pequeño gusano que puede fusionar objetos inanimados con partes del cuerpo."
+  },
+  {
+    "name": "Lata de aceite",
+    "cost": "10 mo",
+    "uses": 6
+  },
+  {
+    "name": "Lata de rapé",
+    "uses": 6,
+    "description": "Recupera tu carencia olfativa. Úsala a diario o quedarás Exhausto."
+  },
+  {
+    "name": "Lazo de raíces",
+    "description": "Cuando se arroja, ata al suelo a una criatura tan grande como un lobo durante un breve periodo de tiempo."
+  },
+  {
+    "name": "Laúd azul cielo",
+    "description": "Revela las constelaciones, sin importar el clima que haga."
+  },
+  {
+    "name": "Lenguas Salvajes (libro)",
+    "cost": "",
+    "description": "Pergaminos encuadernados en cuero. Cataloga los lenguajes ocultos de las bestias y cómo entenderlos."
+  },
+  {
+    "name": "Lente sanguínea",
+    "description": "Extrae sangre de un objetivo sin que este lo sepa. Una gota robada, colocada en el ojo, revela recuerdos del objetivo del día anterior."
+  },
+  {
+    "name": "Librillo de cuentos trágicos",
+    "cost": "100 mo",
+    "description": "Prohibido en círculos respetables; se vuelve menos obsceno y más estremecedor hacia el final."
+  },
+  {
+    "name": "Libro",
+    "cost": "50 mo"
+  },
+  {
+    "name": "Libro de astronomía",
+    "description": "Recuerdo de una composición inaugural que redujo a la audiencia a un amasijo balbuceante hablando de brillantes criaturas del cielo nocturno."
+  },
+  {
+    "name": "Libro de cuentos",
+    "description": "Todo lo que queda de una compañía de artistas ambulantes."
+  },
+  {
+    "name": "Libro en blanco",
+    "description": "Páginas vírgenes, listas para copiar, ilustrar o llevar un diario."
+  },
+  {
+    "name": "Licor añejado",
+    "uses": 3,
+    "description": "Te mantiene caliente en los mejores momentos y puede usarse como explosivo en los peores."
+  },
+  {
+    "name": "Lingote de metal pesado",
+    "description": "Recuerdo de una época creando oro falso."
+  },
+  {
+    "name": "Linterna",
+    "cost": "10 mo"
+  },
+  {
+    "name": "Lona",
+    "description": "Alberga a una persona; suficiente para pasar la noche resguardado."
+  },
+  {
+    "name": "Luxbrújula",
+    "description": "Vibra suavemente a medida que se acerca al sol; el ruido se vuelve ensordecedor."
+  },
+  {
+    "name": "Látigo de cuero",
+    "damage": "1d6",
+    "description": "Restalla más de lo que hiere; útil para intimidar o dirigir a una bestia."
+  },
+  {
+    "name": "Látigo de vid sangrienta",
+    "damage": "1d8",
+    "description": "Al hacer Daño Crítico, desangra al objetivo, dándole la cualidad Estallido en su siguiente ataque."
+  },
+  {
+    "name": "Mangual",
+    "damage": "1d8",
+    "cost": "10 mo"
+  },
+  {
+    "name": "Marcador de rastro",
+    "description": "Un instrumento ruidoso que revela rastros cercanos, incluso cuando están ocultos."
+  },
+  {
+    "name": "Marioneta inquietante",
+    "description": "Tan bueno era el titiritero que lo marcaron como brujo y lo desterraron."
+  },
+  {
+    "name": "Martillo",
+    "damage": "1d6",
+    "description": "Herramienta de calderero, también sirve en un apuro."
+  },
+  {
+    "name": "Martillo de guerra",
+    "damage": "1d10",
+    "cost": "20 mo",
+    "quality": [
+      "Voluminosa"
+    ]
+  },
+  {
+    "name": "Maza",
+    "damage": "1d8",
+    "cost": "10 mo"
+  },
+  {
+    "name": "Maza de hierro estelar",
+    "damage": "1d8",
+    "description": "Brilla tenuemente en la oscuridad y se calienta mucho en presencia de brujería."
+  },
+  {
+    "name": "Mecha de luz tenue",
+    "description": "Colocada en el centro de una jaula de hierro forjado, proporciona luz tenue mientras pueda alimentarse del dolor y miedo próximos."
+  },
+  {
+    "name": "Mercurio (estimulante)",
+    "uses": 4,
+    "description": "En combate, atacas primero. Superas automáticamente cualquier Salvación de VOL durante una hora. Es adictivo: Salvación de FUE o quedas Exhausto después de 24 horas sin poder consumir."
+  },
+  {
+    "name": "Mula",
+    "cost": "30 mo",
+    "quality": [
+      "+6 espacios",
+      "Lento"
+    ]
+  },
+  {
+    "name": "Máscara de mitos",
+    "description": "Permite tomar la apariencia de un monstruo. Cuando te la quitas, ganas una Fatiga."
+  },
+  {
+    "name": "Máscara de médico de la peste",
+    "description": "Perteneció a un dueño que sucumbió a una enfermedad que acabó con todos sus conocidos."
+  },
+  {
+    "name": "Niebla errante (caballo)",
+    "quality": [
+      "+2 espacios"
+    ],
+    "description": "Salvaje pero muy rápido, incluso en terrenos duros. Montura ligera."
+  },
+  {
+    "name": "Nudo de brisa",
+    "uses": 3,
+    "description": "Crea una fuerte brisa a voluntad.",
+    "recharge": "átalo a un mástil durante una tormenta",
+    "quality": [
+      "Reliquia"
+    ]
+  },
+  {
+    "name": "Odre para bucear",
+    "cost": "5 mo"
+  },
+  {
+    "name": "Oro en polvo",
+    "uses": 3,
+    "description": "Usado para acabados y falsificaciones convincentes."
+  },
+  {
+    "name": "Pala de mano",
+    "damage": "1d6",
+    "description": "Pequeña, para desenterrar setas y raíces sin dañar el micelio."
+  },
+  {
+    "name": "Palanca",
+    "damage": "1d6",
+    "description": "A veces simplemente necesitas abrir esa maldita cosa."
+  },
+  {
+    "name": "Palo de cuentas viejo",
+    "damage": "1d8",
+    "description": "Una vez que un juramento se marca en su superficie, el palo se endurece hasta que se complete. Se rompe en dos si el juramento es roto."
+  },
+  {
+    "name": "Pasaje de embarcación",
+    "cost": "10 mo",
+    "description": "Coste por trayecto."
+  },
+  {
+    "name": "Pasta moldeable",
+    "uses": 3,
+    "description": "Sella cualquier agujero del tamaño de un puño."
+  },
+  {
+    "name": "Pata de conejo",
+    "description": "Protege de la magia (otorga Salvación)."
+  },
+  {
+    "name": "Peonza invertida",
+    "uses": 1,
+    "description": "Al girar, el tiempo retrocede 30 segundos. Todo el mundo recuerda lo acontecido."
+  },
+  {
+    "name": "Pergamino",
+    "cost": "10 mo",
+    "uses": 3
+  },
+  {
+    "name": "Picas y cuerda",
+    "description": "Para atravesar terrenos duros o crear trampas y estructuras improvisadas."
+  },
+  {
+    "name": "Piedra apagafuegos",
+    "uses": 2,
+    "description": "Una vez expuesta al aire, extingue cualquier llama cercana."
+  },
+  {
+    "name": "Piedra arcana",
+    "uses": 1,
+    "description": "Recolectada de un río que fluye desde el Otro Mundo. Puede absorber los efectos de un poder mágico activo; al destruirla, el poder se libera."
+  },
+  {
+    "name": "Piedra calefactora",
+    "description": "Genera un calor irresistible."
+  },
+  {
+    "name": "Piedra de afilar de hueso de dragón",
+    "description": "Tras un ritual de afilado de media hora, los ataques con el arma tienen Ventaja hasta que provoquen daño a FUE."
+  },
+  {
+    "name": "Piedra de bezoar",
+    "uses": 1,
+    "description": "Al tragarla por completo, cura de cualquier veneno (a menos que la recuperes)."
+  },
+  {
+    "name": "Piedra del sueño",
+    "description": "Ayuda a recordar los sueños con mayor claridad. Si se usa en exceso, puede causar adicción a los sueños."
+  },
+  {
+    "name": "Piedra imitadora",
+    "description": "Captura una frase corta que puede repetir posteriormente."
+  },
+  {
+    "name": "Piedras de atracción",
+    "description": "Dos piedras negras como el azabache. Cuando se separan, siempre ruedan una hacia la otra."
+  },
+  {
+    "name": "Piedras encriptadoras",
+    "description": "Un par de piedras negras afiladas. Cada una descifra cualquier mensaje escrito por la otra."
+  },
+  {
+    "name": "Pipa para fumar",
+    "cost": "15 mo",
+    "quality": [
+      "Insignificante"
+    ]
+  },
+  {
+    "name": "Pluma de ave para escribir",
+    "uses": 1,
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Un mapa dibujado con esta pluma revela el curso más rápido entre dos puntos."
+  },
+  {
+    "name": "Pluma de glamur",
+    "uses": 1,
+    "description": "Plumas de un ave de fuego. Hace que cualquier criatura se parezca a otra (o a una cosa) de forma convincente."
+  },
+  {
+    "name": "Pluma para escribir y tinta",
+    "description": "Herramientas básicas del oficio, siempre a mano."
+  },
+  {
+    "name": "Pluma siemprepinta",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Puede escribir sobre cualquier superficie, pero sigue necesitando tinta."
+  },
+  {
+    "name": "Poción curativa (efectos secundarios desconocidos)",
+    "uses": 1,
+    "description": "Restaura completamente la FUE. Solo quien la preparó conoce sus efectos secundarios."
+  },
+  {
+    "name": "Poción somnífera",
+    "uses": 3,
+    "description": "Induce un sueño profundo."
+  },
+  {
+    "name": "Polea",
+    "description": "Ideal para mover lápidas, rocas o incluso cadáveres."
+  },
+  {
+    "name": "Polvo cegador",
+    "uses": 1,
+    "description": "Ciega temporalmente a quien lo respire."
+  },
+  {
+    "name": "Polvo chispeante",
+    "uses": 3,
+    "description": "Se enciende fácil y rápidamente. Útil para encender fuego o como artefacto incendiario."
+  },
+  {
+    "name": "Polvo de cabra",
+    "description": "Hecho con placenta de cabrito. Cura temporalmente cualquier enfermedad; los síntomas regresan a las pocas horas."
+  },
+  {
+    "name": "Polvo nocturno",
+    "uses": 2,
+    "description": "Hecho a partir de la quema ritual de seis búhos. Al lanzarlo al aire, el día se convierte en noche por un breve periodo."
+  },
+  {
+    "name": "Punzón",
+    "damage": "1d6",
+    "description": "Para perforar cuero y pergamino; en un apuro, también puede herir."
+  },
+  {
+    "name": "Páginas reveladoras",
+    "description": "Un pergamino blanco. Quien lo despliega ve cómo sus acciones del día se revelan lentamente en una caligrafía apretada."
+  },
+  {
+    "name": "Pálido de Linden (caballo)",
+    "quality": [
+      "+3 espacios"
+    ],
+    "description": "Altamente entrenado y ágil; no requiere Salvación de DES para huir."
+  },
+  {
+    "name": "Píleo infernal",
+    "uses": 1,
+    "description": "Su aroma provoca náuseas intensas. Si se usa en un lugar cerrado, los presentes huyen del sitio."
+  },
+  {
+    "name": "Raciones",
+    "cost": "5 mo",
+    "uses": 3
+  },
+  {
+    "name": "Raízflor",
+    "uses": 1,
+    "description": "Un hongo blanco hallado en cadáveres profundamente enterrados. Ingiérelo para restaurar 1d6 de VOL; soñarás con los muertos."
+  },
+  {
+    "name": "Red",
+    "cost": "10 mo"
+  },
+  {
+    "name": "Red grande",
+    "description": "Para atrapar criaturas de tamaño considerable."
+  },
+  {
+    "name": "Repelente",
+    "cost": "10 mo",
+    "description": "Acónito, artemisa, etc."
+  },
+  {
+    "name": "Rodela hecha a la medida",
+    "armor": "+1",
+    "description": "Mientras la sostengas, no puedes ser movido por nadie siempre que ambos pies estén en suelo firme."
+  },
+  {
+    "name": "Rollo de hojalata",
+    "description": "Material en bruto para reparaciones y remiendos improvisados."
+  },
+  {
+    "name": "Ropa de camuflaje",
+    "description": "Tonos apagados y capucha, pensada para pasar inadvertida entre la maleza."
+  },
+  {
+    "name": "Ropa negra",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Discreta, silenciosa, ideal para pasar desapercibido de noche."
+  },
+  {
+    "name": "Ropa para entornos salvajes",
+    "cost": "15 mo",
+    "description": "Poncho, abrigo, etc.",
+    "quality": [
+      "Insignificante"
+    ]
+  },
+  {
+    "name": "Saco de hipérico",
+    "description": "Su olor puede calmar y dominar incluso a los gatos más grandes."
+  },
+  {
+    "name": "Sanguijuela",
+    "uses": 3,
+    "description": "Aplicada a una herida, restaura 1 de FUE."
+  },
+  {
+    "name": "Savia del árbol de piedra",
+    "armor": "+1",
+    "uses": 3,
+    "description": "Obtenida a cambio de sangre. Se endurece cuando se frota sobre cualquier superficie."
+  },
+  {
+    "name": "Sedante",
+    "cost": "30 mo"
+  },
+  {
+    "name": "Semilla corazón",
+    "description": "Recuperada de las raíces de un árbol moribundo. Plántala para crear un nuevo bosque."
+  },
+  {
+    "name": "Semilla de espino blanco",
+    "uses": 1,
+    "description": "Al plantarla, brota un refugio lujoso que se derrumba al día siguiente al salir la luna."
+  },
+  {
+    "name": "Semilla de hielo",
+    "uses": 1,
+    "description": "Congela cualquier cuerpo de agua, sin importar el tamaño. No te arriesgues a comerla."
+  },
+  {
+    "name": "Semillas explosivas",
+    "damage": "1d8 (Estallido)",
+    "uses": 4,
+    "description": "Una bolsa de semillas de un espíritu de la cosecha enfurecido."
+  },
+  {
+    "name": "Servicios de curación médica",
+    "cost": "30 mo"
+  },
+  {
+    "name": "Seta antorcha",
+    "uses": 2,
+    "description": "Cuando se aplasta, crea una luz azul fría durante un breve periodo de tiempo."
+  },
+  {
+    "name": "Señuelo",
+    "description": "Atrae a una criatura de la especialidad del domador."
+  },
+  {
+    "name": "Sierra amputadora",
+    "description": "Herramienta quirúrgica de campo, tan útil para sanar como para amputar."
+  },
+  {
+    "name": "Silbato",
+    "cost": "15 mo",
+    "quality": [
+      "Insignificante"
+    ]
+  },
+  {
+    "name": "Silbato de caña",
+    "description": "Cualquiera al alcance de su silbido debe superar una tirada de VOL para realizar una acción violenta."
+  },
+  {
+    "name": "Silbato de la muerte",
+    "uses": 1,
+    "description": "Su sonido asusta a todos los que lo oyen (Salvación de VOL o huyen).",
+    "recharge": "captura el último aliento de un guerrero moribundo",
+    "quality": [
+      "Reliquia"
+    ]
+  },
+  {
+    "name": "Silbato de trino",
+    "uses": 3,
+    "description": "Puede imitar el canto de cualquier pájaro e incluso enviar mensajes sencillos.",
+    "recharge": "alimenta a una cría de pájaro como lo haría su madre y sopla de nuevo",
+    "quality": [
+      "Reliquia"
+    ]
+  },
+  {
+    "name": "Silbato encantador",
+    "uses": 1,
+    "description": "Los oyentes escuchan una voz encantadora y familiar en la distancia que no pueden resistirse a seguir.",
+    "recharge": "pierdes un recuerdo apreciado",
+    "quality": [
+      "Reliquia"
+    ]
+  },
+  {
+    "name": "Sinfonía Silenciosa (libro)",
+    "description": "Muy rara, cataloga los signos sutiles utilizados por quienes emplean la magia de invisibilidad."
+  },
+  {
+    "name": "Soga",
+    "cost": "5 mo",
+    "description": "7.5 metros."
+  },
+  {
+    "name": "Sombrero fino",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Da un aire de respetabilidad que no siempre está justificado."
+  },
+  {
+    "name": "Sonajero de hierro",
+    "description": "Un generador de ruido para distraer o asustar a tu presa. Suena como una serpiente."
+  },
+  {
+    "name": "Sustancias comunes",
+    "cost": "10 mo",
+    "description": "Pegamento, grasa, etc."
+  },
+  {
+    "name": "Tallo pegajoso",
+    "uses": 2,
+    "description": "Tallo leñoso que, tras masticarse, se endurece como un pegamento imposible de disolver."
+  },
+  {
+    "name": "Teatrillo de bolsillo",
+    "description": "Incluye un juego de marionetas pequeñas y un escenario plegable. Bueno para distracciones rápidas."
+  },
+  {
+    "name": "Tejido de pereza",
+    "description": "Duro y resistente a la intemperie, útil para colgarse de los árboles. Suma +1 de Armadura mientras se está dentro."
+  },
+  {
+    "name": "Tenazas",
+    "description": "Para sujetar metal al rojo vivo o remachar piezas de hojalata."
+  },
+  {
+    "name": "Tesauro maldito",
+    "cost": "20 mo",
+    "description": "Si lo pierdes, quedas Exhausto: solo puedes hablar en rima perfecta hasta recuperarlo."
+  },
+  {
+    "name": "Tienda de acampada",
+    "cost": "20 mo",
+    "description": "Para 2 personas.",
+    "quality": [
+      "Voluminosa"
+    ]
+  },
+  {
+    "name": "Tinta contra mentirijillas",
+    "description": "Brilla cuando se usa para escribir afirmaciones verdaderas, pero se desvanece si se usa para escribir falsedades."
+  },
+  {
+    "name": "Tinturas benditas",
+    "description": "Ungüentos y aceites consagrados contra la brujería."
+  },
+  {
+    "name": "Tiza",
+    "cost": "1 mo",
+    "quality": [
+      "Insignificante"
+    ]
+  },
+  {
+    "name": "Trabuco prototipo",
+    "damage": "1d12 (Estallido)",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "Tarda un turno en recargarse."
+  },
+  {
+    "name": "Trampa",
+    "cost": "35 mo",
+    "damage": "1d6 (a FUE)"
+  },
+  {
+    "name": "Trampa de lazo",
+    "description": "Para atrapar animales o intrusos."
+  },
+  {
+    "name": "Trampa de resorte",
+    "damage": "4 (a FUE)",
+    "description": "Trampa de mordaza metálica, tan útil para cazar como para defender un campamento."
+  },
+  {
+    "name": "Tratado sobre el Abismo (libro)",
+    "description": "Un libro negro sin descripción. Describe las Raíces y la ubicación exacta de un Portal cercano."
+  },
+  {
+    "name": "Trompeta chillona",
+    "uses": 2,
+    "description": "Cuando se expone a la luz, grita tan fuerte que todos los ataques cercanos (incluidos los tuyos) quedan en Desventaja."
+  },
+  {
+    "name": "Trufa asesina",
+    "cost": "50 mo",
+    "uses": 1,
+    "description": "Amarga, altamente tóxica y muy rara entre asesinos. Ilegal en casi todos lados."
+  },
+  {
+    "name": "Ungüento regenerador",
+    "uses": 1,
+    "description": "Regenera una parte del cuerpo en el transcurso de un día."
+  },
+  {
+    "name": "Uniforme de tu Orden",
+    "quality": [
+      "Insignificante"
+    ],
+    "description": "Marca visible de pertenencia a tu Orden, para bien o para mal."
+  },
+  {
+    "name": "Utensilios para cocinar",
+    "cost": "10 mo",
+    "description": "Ollas, cucharones, etc."
+  },
+  {
+    "name": "Vals de las Estrellas (libro)",
+    "cost": "100 mo",
+    "description": "Detallados mapas astronómicos, movimientos celestes y festividades estelares. Muy valorado por su utilidad para los viajeros."
+  },
+  {
+    "name": "Vara",
+    "cost": "5 mo",
+    "description": "3 metros."
+  },
+  {
+    "name": "Vara de llama rápida",
+    "description": "Puede destruir un gran nido de arañas en segundos. Se usa junto a una lata de aceite."
+  },
+  {
+    "name": "Vara mágica (crece con agua)",
+    "description": "Un palo del tamaño de un dedo que duplica su tamaño cada vez que se sumerge completamente en agua. No vuelve a encogerse."
+  },
+  {
+    "name": "Vara solar",
+    "uses": 1,
+    "description": "Proporciona calor y luz durante una hora.",
+    "recharge": "dejar a pleno sol durante un día entero",
+    "quality": [
+      "Reliquia"
+    ]
+  },
+  {
+    "name": "Varita de zahorí",
+    "cost": "15 mo"
+  },
+  {
+    "name": "Velo del errante",
+    "uses": 1,
+    "description": "Úsalo para mezclarte entre la multitud y parecer un simple indigente.",
+    "recharge": "dona todas las ganancias del día a los pobres",
+    "quality": [
+      "Reliquia"
+    ]
+  },
+  {
+    "name": "Vendajes",
+    "cost": "30 mo",
+    "uses": 3
+  },
+  {
+    "name": "Vial de fuego",
+    "uses": 1,
+    "description": "Altamente alcohólico, pero extrañamente delicioso. Al lanzarlo, crea un muro de llamas de 3 metros de altura."
+  },
+  {
+    "name": "Vial susurrador",
+    "description": "Susurra un mensaje dentro del vial, y este lo reproducirá a quien lo abra a continuación."
+  },
+  {
+    "name": "Vidrio esclarecedor",
+    "uses": 3,
+    "description": "Un monóculo que te permite ver a través de paredes u otros obstáculos. Se rompe tras su tercer uso."
+  },
+  {
+    "name": "Vidrio recuperable",
+    "description": "Una copa de vino que se puede romper varias veces y se reconstruye tras 24 horas. Hace un ruido muy fuerte."
+  },
+  {
+    "name": "Violín de rosa negra",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "Su música causa una intensa tristeza e inmovilidad en los mortales cercanos. No sabes cómo tocarlo."
+  },
+  {
+    "name": "Violín espectral",
+    "quality": [
+      "Voluminoso"
+    ],
+    "description": "Su inquietante melodía es replicada por un gemelo distante."
+  },
+  {
+    "name": "Yelmo",
+    "armor": "+1",
+    "cost": "10 mo"
+  },
+  {
+    "name": "Yelmo con vela",
+    "armor": "+1",
+    "uses": 6,
+    "description": "Proporciona luz tenue mientras la vela dura."
+  },
+  {
+    "name": "Zafiro maldito",
+    "cost": "200 mo",
+    "description": "Regresa a tu bolsillo poco después de gastar lo que te hayan pagado por él. No te puedes deshacer de él."
+  }
+]

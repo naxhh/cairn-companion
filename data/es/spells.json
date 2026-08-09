@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Puerta espejo",
+    "cost": "1 Fatiga",
+    "description": "Conviertes un espejo en una puerta que conduce a otro espejo donde te hayas mirado hoy."
+  },
+  {
+    "name": "Desmontar",
+    "cost": "1 Fatiga",
+    "description": "Puedes separar y volver a unir cualquier parte de tu cuerpo a voluntad, sin sufrir daño ni dolor. Mantienes el control sobre las partes separadas."
+  },
+  {
+    "name": "Ilusión auditiva",
+    "cost": "1 Fatiga",
+    "description": "Creas sonidos ilusorios que parecen provenir de una dirección a tu elección. Produce sonidos aleatorios y ocasionalmente inoportunos a lo largo del día."
+  },
+  {
+    "name": "Ojo arcano",
+    "cost": "1 Fatiga",
+    "description": "Puedes ver a través de un globo ocular mágico flotante que vuela a tus órdenes."
+  },
+  {
+    "name": "Controlar plantas",
+    "cost": "1 Fatiga",
+    "description": "Las plantas y árboles cercanos te obedecen y adquieren la habilidad de moverse a paso lento. Crece hojas a lo largo de tu lomo y huele ligeramente a podredumbre mientras el efecto dura."
+  },
+  {
+    "name": "Detectar magia",
+    "cost": "1 Fatiga",
+    "description": "Puedes ver u oír auras mágicas cercanas. El libro se calienta al tocarlo cuando se usa magia cerca."
+  },
+  {
+    "name": "Leer mentes",
+    "cost": "1 Fatiga",
+    "description": "Puedes oír los pensamientos superficiales de las criaturas cercanas. Utilizarlo prolongadamente puede hacer que el lector confunda los pensamientos de los demás con los suyos propios."
+  },
+  {
+    "name": "Espesura",
+    "cost": "1 Fatiga",
+    "description": "Surge repentinamente una espesura de árboles y densos matorrales, de hasta 15 metros de ancho."
+  }
+]

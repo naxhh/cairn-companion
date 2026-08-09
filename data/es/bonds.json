@@ -1,0 +1,82 @@
+[
+  {
+    "name": "La gema heredada",
+    "description": "Heredaste una gema única (500 mo, fría y quebradiza) de un pariente fallecido hace tiempo. Te la entregaron con una advertencia: si derrochas tus nuevas riquezas, te cobrarán una deuda olvidada hace mucho tiempo."
+  },
+  {
+    "name": "La brújula del primo lejano",
+    "description": "Un primo lejano te dejó una pequeña herencia. Tienes 20 mo y una extraña brújula (Insignificante) que apunta siempre hacia algo en lo profundo del Bosque."
+  },
+  {
+    "name": "El retrato del amor perdido",
+    "description": "Llevas siempre contigo un retrato dibujado a mano (Insignificante) de un amor pasado, que desapareció en el Bosque. Sabes que sigue con vida."
+  },
+  {
+    "name": "El prisma enterrado",
+    "description": "Encontraste un prisma de cristal (Insignificante) enterrado en la tierra. Al mirarlo a trasluz, muestra imágenes de un lugar desconocido en lo profundo del Bosque. A veces sientes una presencia devolviéndote la mirada."
+  },
+  {
+    "name": "La deuda de la néyade",
+    "description": "Ayudaste a una néyade en dificultades a salir de un río angosto. A cambio, te entregó un poco de musgo plateado (Insignificante). Trágalo por completo cerca del agua y la criatura vendrá a pagar su deuda."
+  },
+  {
+    "name": "El diario de corteza",
+    "description": "Has heredado un diario antiguo, encuadernado en corteza de árbol. Cada noche, sus páginas se llenan de los acontecimientos del día, escritos con crudeza desde la perspectiva del diario. La escritura es tosca, pero precisa."
+  },
+  {
+    "name": "La media llave",
+    "description": "Guardas un secreto familiar oculto desde hace mucho. Tienes la mitad de una llave antigua (Insignificante). Dicen que si se une con su otra mitad, abre un Portal en cualquier puerta."
+  },
+  {
+    "name": "La carta de ascendencia feérica",
+    "description": "Recibiste una carta (Insignificante) que presenta pruebas irrefutables de tu verdadera ascendencia, noble entre las hadas. El texto también especifica una fecha y un lugar donde te encontrarás con quien la escribió, en lo profundo del Bosque."
+  },
+  {
+    "name": "El anillo del noble",
+    "description": "Tienes una gran deuda con un miembro de la nobleza y llevas un anillo con su emblema (Insignificante), que sirve como prueba de su protección, así como de tu obligación."
+  },
+  {
+    "name": "El espíritu travieso",
+    "description": "Has consumido un espíritu travieso que causa estragos en tus entrañas y te exige que lo devuelvas a su hogar, en las profundidades del Bosque. Ocupa un espacio en tu Inventario, pero absorbe una Fatiga por día. El espíritu te mantiene con vida, por ahora."
+  },
+  {
+    "name": "El mapa del cuentacuentos",
+    "description": "Un cuentacuentos itinerante te contó una vez historias de un gran tesoro escondido en las profundidades del Bosque. Creíste que eran solo cuentos para niños, hasta que te dieron un mapa enrollado (Insignificante) marcado con una X."
+  },
+  {
+    "name": "La carta para el Señor del Invierno",
+    "description": "En uno de tus viajes conociste a un cazador moribundo que te pidió entregar un mensaje a sus seres queridos. Tienes una carta (Insignificante), sellada con savia de árbol, dirigida al Señor del Invierno."
+  },
+  {
+    "name": "La bestia que no ayudaste",
+    "description": "Encontraste una bestia herida en el Bosque, pero decidiste no ayudarla. Ahora se te aparece en todas partes, especialmente cuando estás solo. Se muestra triste, pero no enojada. No caes en Pánico al actuar en solitario."
+  },
+  {
+    "name": "La pulsera prometida",
+    "description": "Le prometiste a una amistad de tu infancia que le traerías un regalo especial, algo único en el mundo. Tienes una pulsera (Insignificante) tejida con hilo y flores silvestres."
+  },
+  {
+    "name": "El corazón de piedra",
+    "description": "Te enfrentaste con una criatura del Bosque y te echó la maldición del corazón de piedra. Cada mes que pasa, la piedra se vuelve más pesada, ocupando un espacio más en tu Inventario. Hasta que tu deuda sea saldada, no podrás morir definitivamente."
+  },
+  {
+    "name": "El silbato del Señor del Roble",
+    "description": "Tallaste un silbato (Insignificante) de una rama perteneciente al Señor del Roble. Lo que hiciste no pasó desapercibido. Tampoco puedes deshacerte del silbato."
+  },
+  {
+    "name": "La flor de la Brigada del Amanecer",
+    "description": "La Brigada del Amanecer hizo un servicio a tu familia, entregando una flor seca de color rojo sangre (Insignificante) como prueba. Cuando la flor se torne blanca, deberás devolver el favor."
+  },
+  {
+    "name": "El laúd en miniatura",
+    "description": "Un día, un juglar visitó tu casa y la llenó de historias y canciones. Se fue sin dar explicación, dejando atrás solo un laúd en miniatura. Algo resuena en su interior."
+  },
+  {
+    "name": "El cuervo blanco de los sueños",
+    "description": "Se te apareció en sueños un cuervo blanco con una ramita en la boca. Te despertaste con la ramita (Insignificante) en la mano. Crees que te trae suerte. Huele ligeramente a azufre."
+  },
+  {
+    "name": "La maldición de la bruja del musgo",
+    "description": "Uno de tus antepasados hizo daño a una bruja del musgo, que maldijo su linaje. Tu rostro hace que los espejos se rompan en pedazos. Has notado que los fragmentos a veces revelan ilusiones."
+  }
+]

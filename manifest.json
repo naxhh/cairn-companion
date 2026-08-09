@@ -1,0 +1,10 @@
+{
+	"id": "cairn-companion",
+	"name": "Cairn Companion",
+	"version": "1.0.0",
+	"minAppVersion": "1.4.0",
+	"description": "Fichas vinculadas para partidas de Cairn 2e: objetos, rasgos, hechizos, PNJ, monstruos y trasfondos, con catálogo incorporado, ficha de personaje interactiva y tiradas de dados.",
+	"author": "TU_NOMBRE_AQUI",
+	"authorUrl": "https://github.com/TU_USUARIO_AQUI",
+	"isDesktopOnly": false
+}

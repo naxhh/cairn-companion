@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Alquimista",
+    "cost": "30 mo",
+    "role": "Elaboración de pociones y sustancias"
+  },
+  {
+    "name": "Cerrajero",
+    "cost": "5 mo",
+    "role": "Abrir cerraduras y cámaras acorazadas"
+  },
+  {
+    "name": "Domador de bestias",
+    "cost": "5 mo",
+    "role": "Manejo y doma de animales"
+  },
+  {
+    "name": "Erudito",
+    "cost": "20 mo",
+    "role": "Conocimientos, traducción, investigación"
+  },
+  {
+    "name": "Escolta",
+    "cost": "10 mo",
+    "role": "Protección en el camino"
+  },
+  {
+    "name": "Escolta veterano",
+    "cost": "20 mo",
+    "role": "Protección experimentada en combate"
+  },
+  {
+    "name": "Guía local",
+    "cost": "5 mo",
+    "role": "Orientación en el terreno conocido"
+  },
+  {
+    "name": "Herrero",
+    "cost": "15 mo",
+    "role": "Reparación y forja de equipo"
+  },
+  {
+    "name": "Marinero",
+    "cost": "5 mo",
+    "role": "Manejo de embarcaciones"
+  },
+  {
+    "name": "Navegante",
+    "cost": "10 mo",
+    "role": "Rutas marítimas y fluviales"
+  },
+  {
+    "name": "Rastreador",
+    "cost": "5 mo",
+    "role": "Seguir rastros y huellas"
+  },
+  {
+    "name": "Trampero",
+    "cost": "5 mo",
+    "role": "Tender y detectar trampas"
+  }
+]

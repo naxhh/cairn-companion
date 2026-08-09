@@ -1,0 +1,257 @@
+[
+  {
+    "name": "Barbero Cirujano",
+    "description": "Caminas en la delgada línea entre quien sana y provoca sufrimiento. Conoces la fragilidad de la carne, pero también los secretos que se esconden en su interior.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Sierra amputadora",
+      "Vendajes (3 usos)",
+      "Sanguijuela (restaura 1 de FUE, 3 usos)",
+      "Instrumentos quirúrgicos ensangrentados (Insignificante)"
+    ]
+  },
+  {
+    "name": "Calderero",
+    "description": "Se te conoce por el olor a metal fundido y el tintineo de la hojalata. No eres un simple comerciante, sino un artesano del fuego y el metal.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Tenazas",
+      "Rollo de hojalata",
+      "Guantes (Insignificante)",
+      "Martillo (1d6)"
+    ]
+  },
+  {
+    "name": "Campero",
+    "description": "Protector de la cosecha, defensor contra plagas, ladrones y bestias. Un puesto de gran honor, siempre y cuando no te maten antes.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Ración (3 usos)",
+      "Antorcha (3 usos)",
+      "Brigantina (Armadura 1, Voluminosa)",
+      "Honda (1d6)",
+      "Hacha de mano (1d6)",
+      "Repelente (3 usos)"
+    ]
+  },
+  {
+    "name": "Charlatán",
+    "description": "Tu ingenio es tu arma más afilada, una fachada tu escudo más fuerte. Pero cuando fallas, lo pierdes todo.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Carreta (+4 espacios, Voluminosa cuando se empuja)",
+      "Sombrero fino (Insignificante)",
+      "Espada de bastón (1d6)"
+    ]
+  },
+  {
+    "name": "Cortabolsas",
+    "description": "Habitas el espacio gris entre los que tienen poder y los que no. Encuentras oportunidades donde otros solo ven caos.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Dagas gemelas (1d6+1d6, Voluminosa)",
+      "Armadura de cuero acolchado (Armadura 1)",
+      "Ganzúas",
+      "Ropa negra (Insignificante)"
+    ]
+  },
+  {
+    "name": "Domador de Bestias",
+    "description": "Solo tú puedes caminar entre las criaturas salvajes, sin miedo y al mando para ordenarles qué hacer.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Látigo de cuero (1d6)",
+      "Dardos somníferos (Salvación de FUE o cae dormido, 6 usos)",
+      "Señuelo",
+      "Soga (7.5 metros)"
+    ]
+  },
+  {
+    "name": "Erradicador de Brujería",
+    "description": "Eres un mero dígito en la infalible mano de la justicia. Vas donde otros temen pisar, íntegro y tenaz.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Uniforme de tu Orden (Insignificante)",
+      "Tinturas benditas",
+      "Cuchillo de plata (1d6)",
+      "Ballesta (1d8, Voluminosa)"
+    ]
+  },
+  {
+    "name": "Escriba",
+    "description": "Copias textos antiguos e iluminas manuscritos, grabando las voces de los ingeniosos, los grandes y los poderosos.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Pluma para escribir y tinta",
+      "Libro en blanco",
+      "Punzón (1d6)",
+      "Insignia (Insignificante)"
+    ]
+  },
+  {
+    "name": "Flechaveloz",
+    "description": "Atacas desde lejos, pero eso no te convierte en cobarde. Haces música con la cuerda de tu arco: una advertencia, la silenciosa promesa de una muerte rápida.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Arco",
+      "Cuchillo dentado (1d6)",
+      "Armadura de cuero hervido (Armadura 1)",
+      "Bálsamo de esencia de corazón (restaura 1d4 FUE, 1 uso)"
+    ]
+  },
+  {
+    "name": "Guardahuesos",
+    "description": "Eres el protector de los que ya no están. Escuchas los últimos susurros de los muertos cuando descienden bajo la fría e inquebrantable tierra.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Linterna",
+      "Lata de aceite (6 usos)",
+      "Estaca larga (1d6)",
+      "Cadenas (3 metros)"
+    ]
+  },
+  {
+    "name": "Guardia Fronterizo",
+    "description": "Hiciste un juramento de sangre para patrullar la frontera y proteger el reino. Una vez hecho, el juramento no puede romperse.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Linterna",
+      "Lata de aceite (6 usos)",
+      "Espada larga (1d10, Voluminosa)",
+      "Armadura de cuero hervido (Armadura 1)"
+    ]
+  },
+  {
+    "name": "Huérfano",
+    "description": "Una marca de nacimiento extraña, un olor peculiar: de alguna manera, el toque de otro lugar aún persiste. Dondequiera que estés, tienes dificultades para encajar.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Bolsa de sal",
+      "Amuleto, reliquia familiar (Insignificante, brilla en presencia de magia)",
+      "Honda (1d6)",
+      "Daga (1d6)"
+    ]
+  },
+  {
+    "name": "Jinete Escolta",
+    "description": "Tus ingresos provienen de proteger caravanas, rastrear fugitivos o prestar tu espada a una causa. Tu camino no es solitario: siempre tendrás a tu caballo a tu lado.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Espada larga (1d10, Voluminosa)",
+      "Jubón de cuero (1 de Armadura)",
+      "Ballesta (1d8, Voluminosa)",
+      "Catalejo"
+    ]
+  },
+  {
+    "name": "Juglar",
+    "description": "¿Qué inspira más al alma que una canción, una estrofa y una buena actuación? ¿Por qué practicar durante años lo arcano cuando ya tienes la verdadera magia dentro de ti?",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Disfraz",
+      "Instrumento sencillo (flauta, laúd, etc.)",
+      "Jubón de la suerte (+1 de Armadura)",
+      "Honda (1d6)"
+    ]
+  },
+  {
+    "name": "Merodeador",
+    "description": "Eres un espectro en la noche, una sombra fugaz que se desliza junto a su presa, invisible. Sabes que un día no te saldrás con la tuya. Lo esperas con ansias.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Lona (alberga a 1 persona)",
+      "Cuero hervido (1 de Armadura)",
+      "Espada corta (1d6)",
+      "Trampa de resorte (4 de daño a FUE)"
+    ]
+  },
+  {
+    "name": "Naturalista",
+    "description": "Te adentras en las profundidades del Bosque, desentrañando sus secretos entre ramas ásperas y hojas susurrantes. No solo eres un erudito, también eres su confidente.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Caldero de hierro",
+      "Cuchillo de poda (1d6)",
+      "Bálsamo curativo (restaura 1d4 de FUE, 1 uso)",
+      "Esfera de cuerda (Insignificante, efecto Proteger)"
+    ]
+  },
+  {
+    "name": "Orífice",
+    "description": "Eres un artesano de lo arcano, un forjador de las fuerzas sutiles. En el crisol de tu taller, las leyes que rigen este mundo se deforman para adaptarse a tus necesidades.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Linterna",
+      "Lata de aceite (6 usos)",
+      "Cuchillo de aguja (1d6)",
+      "Guante de protección (Insignificante)"
+    ]
+  },
+  {
+    "name": "Recolector Fúngico",
+    "description": "Sigues los susurros de la tierra profunda, el pulso rítmico del bosque de micelio que crece bajo la superficie. La oscuridad no te causa terror. Además, te encantan las setas.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Pala de mano (1d6)",
+      "Yelmo con vela (+1 de Armadura, luz tenue, 6 usos)",
+      "Soga (7.5 metros)",
+      "Cubo de metal"
+    ]
+  },
+  {
+    "name": "Semibruja",
+    "description": "Nacida tanto en el mundo de los mortales como del que no se ve a simple vista, eres enigmática para unos y aterradora para otros.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Libro de Hechizos (Espesura)",
+      "Daga de hierro (1d6)",
+      "Bolsa de hierbas (restaura 1 de FUE, 3 usos)",
+      "Ropa de camuflaje"
+    ]
+  },
+  {
+    "name": "Surcador de Arroyos",
+    "description": "Cantas las historias que se cuentan sobre los ríos y lagos, tus talentos calman a amigos y elementos por igual. Has visto más que la mayoría, pero nunca parece ser suficiente para ti.",
+    "gear": [
+      "3d6 monedas de oro",
+      "Raciones (3 usos)",
+      "Antorcha (3 usos)",
+      "Botas de agua",
+      "Brigantina (Armadura 1, Voluminosa)",
+      "Brújula",
+      "Daga (1d6)"
+    ]
+  }
+]

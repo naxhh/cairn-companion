@@ -1,0 +1,1289 @@
+[
+  {
+    "name": "Abejas Asesinas",
+    "fue": 6,
+    "des": 14,
+    "vol": 8,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "picadura (d6)"
+    ],
+    "moral": "Destacamento",
+    "abilities": [],
+    "description": "- Abejas gigantes que construyen colmenas subterráneas. Son extremadamente agresivas y atacan a todo lo que se les acerque.\n- Producen una miel especial que cura 1d6 puntos de daño por quemadura. 3 usos.\n- Cuando las abejas infligen daño por quemadura, sus aguijones quedan clavados en el objetivo, infligiendo d4 puntos de daño cada ronda hasta que se extraigan."
+  },
+  {
+    "name": "Acechador Invisible",
+    "fue": 12,
+    "des": 12,
+    "vol": 15,
+    "pg": 8,
+    "armor": "",
+    "attacks": [
+      "puños (d4+d4)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Seres inteligentes creados por un poderoso mago. Son totalmente invisibles y silenciosos.\n- Sus ataques infligen daño directo de FUE (restando la Armadura)."
+  },
+  {
+    "name": "Acólito",
+    "fue": 8,
+    "des": 11,
+    "vol": 14,
+    "pg": 4,
+    "armor": 1,
+    "attacks": [
+      "daga ceremonial (d6)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Siervos sagrados vinculados a una deidad concreta. Suelen viajar en grupos de cuatro o más.\n- Llevan consigo un símbolo sagrado (Proteger una vez al día)."
+  },
+  {
+    "name": "Alce Sangriento",
+    "fue": 12,
+    "des": 13,
+    "vol": 5,
+    "pg": 4,
+    "armor": "",
+    "attacks": [
+      "cornada (d8)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: embiste a sus víctimas y les arranca las entrañas."
+    ],
+    "description": "- Nacidos de la violencia provocada por un acto codicioso o egoísta.\n- Matan a sus víctimas para alimentarse, pero no obtienen ningún alivio. Siempre tienen hambre.\n- Daño Crítico: embiste a sus víctimas y les arranca las entrañas."
+  },
+  {
+    "name": "Aranea",
+    "fue": 13,
+    "des": 12,
+    "vol": 15,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "mordisco (d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Arañas gigantes con un caparazón de color negro verdoso y cerebros de gran tamaño. Pueden adoptar forma humana a voluntad.\n- Llevan a cabo sus investigaciones mágicas en cavernas oscuras y llenas de telarañas. Llevan consigo en todo momento los libros de hechizos Encanto y Mando.\n- El daño por fuego contra las Araneas tiene ventaja."
+  },
+  {
+    "name": "Arpía",
+    "fue": 7,
+    "des": 12,
+    "vol": 14,
+    "pg": 8,
+    "armor": "",
+    "attacks": [
+      "garras (d6+d6)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Canto: Cualquiera que se encuentre cerca debe superar una tirada de VOL o quedará cautivado por su voz, siguiendo a la arpía y defendiéndola de cualquier amenaza."
+    ],
+    "description": "- Monstruos repugnantes con cuerpo de águila gigante y cabeza humanoide.\n- Sus movimientos y su vuelo son torpes debido a su desproporción. Dependen de que sus víctimas, cautivadas por su encanto, realicen cualquier acción destacable.\n- Canto: Cualquiera que se encuentre cerca debe superar una tirada de VOL o quedará cautivado por su voz, siguiendo a la arpía y defendiéndola de cualquier amenaza."
+  },
+  {
+    "name": "Azotador Mental",
+    "fue": 8,
+    "des": 12,
+    "vol": 18,
+    "pg": 12,
+    "armor": "",
+    "attacks": [
+      "tentáculos (d6, estallido)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Explosión Mental: Los objetivos cercanos deben superar una tirada de VOL o perder 1d4 puntos de VOL y quedar paralizados.",
+      "Daño Crítico: Un tentáculo arranca el cerebro de la víctima de su cráneo."
+    ],
+    "description": "- Criaturas humanoides de piel morada y cabeza parecida a la de un calamar. Viven en las profundidades subterráneas o en naves espaciales. Se alimentan de los cerebros de otros humanoides, absorbiendo sus recuerdos y su esencia vital. Son sumamente inteligentes, pero de una maldad inconcebible.\n- Explosión Mental: Los objetivos cercanos deben superar una tirada de VOL o perder 1d4 puntos de VOL y quedar paralizados.\n- Daño Crítico: Un tentáculo arranca el cerebro de la víctima de su cráneo."
+  },
+  {
+    "name": "Bandido",
+    "fue": 12,
+    "des": 12,
+    "vol": 9,
+    "pg": 4,
+    "armor": 1,
+    "attacks": [
+      "espada corta (d6) o arco corto (d6)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Leales: al realizar una tirada de Moral, se utiliza la VOL del líder (13). Si el líder muere, los demás huirán."
+    ],
+    "description": "- Forajidos que saquean asentamientos, atacan barcos o tienden emboscadas a los viajeros. Los grupos de cuatro o más personas constituyen un destacamento.\n- Un destacamento siempre viaja con un líder que lleva cota de malla o similar (2 de Armadura) y una espada larga (d10) o una ballesta (d8).\n- Leales: al realizar una tirada de Moral, se utiliza la VOL del líder (13). Si el líder muere, los demás huirán."
+  },
+  {
+    "name": "Banshee",
+    "fue": 6,
+    "des": 12,
+    "vol": 15,
+    "pg": 8,
+    "armor": "",
+    "attacks": [
+      "toque fantasmal (d8)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Lamento: Cualquiera que se encuentre al alcance del oído debe realizar una tirada de salvación de VOL o quedará inconsciente."
+    ],
+    "description": "- Espíritus incorpóreos que permanecen mucho tiempo después de la muerte para atormentar a los vivos.\n- No les afecta el frío, el calor ni los elementos. El daño infligido por armas de hierro tienen ventaja.\n- Lamento: Cualquiera que se encuentre al alcance del oído debe realizar una tirada de salvación de VOL o quedará inconsciente."
+  },
+  {
+    "name": "Basilisco",
+    "fue": 12,
+    "des": 13,
+    "vol": 13,
+    "pg": 10,
+    "armor": 1,
+    "attacks": [
+      "mordisco (d10)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Mirada: un objetivo que se encuentre frente al basilisco se petrifica lentamente de abajo hacia arriba y queda completamente inmovilizado al cabo de tres asaltos. Se puede elaborar un antídoto a partir de las mollejas del basilisco. El reflejo de la criatura es inofensivo."
+    ],
+    "description": "- Lagartos largos y serpenteantes que anidan en las profundidades de la tierra o entre las zarzas que hay justo a los pies.\n- Es difícil luchar contra un basilisco sin mirarlo a los ojos. (Los ataques que se le lanzan de frente tiene desventaja.)\n- Mirada: un objetivo que se encuentre frente al basilisco se petrifica lentamente de abajo hacia arriba y queda completamente inmovilizado al cabo de tres asaltos. Se puede elaborar un antídoto a partir de las mollejas del basilisco. El reflejo de la criatura es inofensivo."
+  },
+  {
+    "name": "Boggart",
+    "fue": 4,
+    "des": 17,
+    "vol": 13,
+    "pg": 3,
+    "armor": "",
+    "attacks": [],
+    "moral": "",
+    "abilities": [
+      "Magia: el boggart puede dar vida a los objetos, sembrar la confusión, crear disfraces mágicos, usar la telequinesis y teletransportarse."
+    ],
+    "description": "- Son seres traviesos, peludos y salvajes que valoran más las baratijas brillantes que el dinero.\n- Los boggarts tienen nombres propios que describen su verdadera naturaleza. Conocer estos nombres permite controlarlos.\n- Magia: el boggart puede dar vida a los objetos, sembrar la confusión, crear disfraces mágicos, usar la telequinesis y teletransportarse."
+  },
+  {
+    "name": "Bruja Marina",
+    "fue": 11,
+    "des": 15,
+    "vol": 14,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "garras largas (d6+d6)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Mirada Espantosa: el objetivo queda paralizado por el miedo (su PG cae a 0). Debe superar una tirada de salvación de VOL cada ronda para romper el hechizo."
+    ],
+    "description": "- Brujas fantasmales de piel verde que habitan en bosques de algas y aguas cálidas y poco profundas.\n- Inmunes a la magia de los libros de hechizos.\n- Mirada Espantosa: el objetivo queda paralizado por el miedo (su PG cae a 0). Debe superar una tirada de salvación de VOL cada ronda para romper el hechizo."
+  },
+  {
+    "name": "Bruja Raíz",
+    "fue": 9,
+    "des": 16,
+    "vol": 14,
+    "pg": 8,
+    "armor": "",
+    "attacks": [
+      "dedos-tubérculos (d6)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Son excelentes excavadores que se esconden bajo tierra cerca del agua. Mueven pequeñas frondas en el aire a modo de señuelo.\n- En la superficie, tienen un aspecto vagamente humanoide, con el rostro de un tocón de árbol podrido.\n- Intercambian minerales raros por un «cadáver fresco» de cualquier tipo."
+  },
+  {
+    "name": "Bruja de la Noche",
+    "fue": 9,
+    "des": 11,
+    "vol": 16,
+    "pg": 8,
+    "armor": "",
+    "attacks": [
+      "talones (d8+d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Horribles ancianas que habitan en bosques muertos, pantanos y ciénagas.\n- Llevan tres de los siguientes libros de hechizos: Ojo Arcano, Disfraz, Nube de Niebla, Identificar Propietario, Forma de Humo."
+  },
+  {
+    "name": "Bugbear",
+    "fue": 14,
+    "des": 12,
+    "vol": 11,
+    "pg": 8,
+    "armor": 1,
+    "attacks": [
+      "garrote (d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Criaturas grandes, parecidas a los goblins y cubiertas de pelaje.\n- Prefieren el sigilo y el engaño para obtener ventaja.\n- A menudo dirigen grupos de criaturas similares (normalmente goblins)."
+  },
+  {
+    "name": "Caracol Guerrero",
+    "fue": 14,
+    "des": 6,
+    "vol": 3,
+    "pg": 4,
+    "armor": 2,
+    "attacks": [
+      "tentáculos (d8+d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Caracoles gigantes acorazados con tentáculos pesados y en forma de maza.\n- Algunas especies tienen conchas de colores que pueden reflejar los ataques mágicos."
+  },
+  {
+    "name": "Caracol Trueno",
+    "fue": 14,
+    "des": 6,
+    "vol": 4,
+    "pg": 6,
+    "armor": 2,
+    "attacks": [
+      "aplastar y rodar (d10, estallido)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: el objetivo queda arrastrado por el impulso del rodamiento, perdiendo 1 PVE adicional por ronda hasta que se libere (tirada de salvación de PVE para escapar). Conversión de Monstruos"
+    ],
+    "description": "- Bestias de caparazón grueso que atacan arrollando a sus oponentes en línea recta. El ruido de sus caparazones al rodar es ensordecedor.\n- Daño Crítico: el objetivo queda arrastrado por el impulso del rodamiento, perdiendo 1 PVE adicional por ronda hasta que se libere (tirada de salvación de PVE para escapar). Conversión de Monstruos"
+  },
+  {
+    "name": "Centauro",
+    "fue": 14,
+    "des": 12,
+    "vol": 14,
+    "pg": 6,
+    "armor": 1,
+    "attacks": [
+      "lanza (d8) o arco corto (d6)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Criaturas con la parte inferior del cuerpo y las patas de un caballo, pero con la parte superior del cuerpo humanoide.\n- Rara vez se les ve solos, ya que prefieren la compañía de los de su propia especie."
+  },
+  {
+    "name": "Cerbero",
+    "fue": 12,
+    "des": 15,
+    "vol": 9,
+    "pg": 8,
+    "armor": "",
+    "attacks": [
+      "mordisco (d8)",
+      "soplo de fuego (d6, estallido)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Perros monstruosos e inteligentes que habitan cerca de los volcanes.\n- Inmunizados al daño por fuego y calor. Son tan calientes que pueden derretir el hierro con solo morderlo."
+  },
+  {
+    "name": "Constructo Óseo",
+    "fue": 15,
+    "des": 5,
+    "vol": 3,
+    "pg": 8,
+    "armor": 3,
+    "attacks": [
+      "brazos afilados (d8+d8)"
+    ],
+    "moral": "Destacamento",
+    "abilities": [],
+    "description": "- Gigantescas criaturas de cuatro brazos, hechas de hueso y magia.\n- Guardianes sin conciencia que están siempre listos para atacar a cualquier criatura que no sea su creador."
+  },
+  {
+    "name": "Dragón Verde",
+    "fue": 14,
+    "des": 15,
+    "vol": 18,
+    "pg": 12,
+    "armor": 2,
+    "attacks": [
+      "mordisco (d12)"
+    ],
+    "moral": "Destacamento",
+    "abilities": [
+      "Gas Cloro: Cualquier persona que se encuentre cerca debe realizar una tirada de salvación de DES para escapar de su alcance; de lo contrario, pierde 1d4 puntos de FUE y queda exhausto."
+    ],
+    "description": "- Serpientes que habitan en los bosques, cubiertas de altas escamas verdes. Acumulan enormes tesoros.\n- Utilizan su inteligencia y astucia para manipular a los débiles y ponerlos a su servicio.\n- Gas Cloro: Cualquier persona que se encuentre cerca debe realizar una tirada de salvación de DES para escapar de su alcance; de lo contrario, pierde 1d4 puntos de FUE y queda exhausto."
+  },
+  {
+    "name": "Dríada",
+    "fue": 8,
+    "des": 12,
+    "vol": 14,
+    "pg": 4,
+    "armor": "",
+    "attacks": [
+      "brazos entrelazados (d6)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Desorientar: el objetivo se desorienta y se aleja cada vez más del árbol anfitrión. Tirada de salvación de VOL una vez por ronda para liberarse."
+    ],
+    "description": "- Espíritus de los árboles tímidos y protectores que se manifiestan como hermosos humanoides de piel verde.\n- Incapaces de alejarse mucho del árbol al que están vinculados. Mueren si el árbol es destruido.\n- Desorientar: el objetivo se desorienta y se aleja cada vez más del árbol anfitrión. Tirada de salvación de VOL una vez por ronda para liberarse."
+  },
+  {
+    "name": "Elemental de Agua",
+    "fue": 15,
+    "des": 16,
+    "vol": 4,
+    "pg": 14,
+    "armor": "",
+    "attacks": [
+      "rociar (d8)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: el objetivo queda envuelto por el agua y se ahoga en tres turnos."
+    ],
+    "description": "- Espíritus raros de lagos, ríos y mares.\n- Los ataques comunes contra el elemental de agua estarán en desventaja.\n- Daño Crítico: el objetivo queda envuelto por el agua y se ahoga en tres turnos."
+  },
+  {
+    "name": "Elfo del Hielo",
+    "fue": 8,
+    "des": 13,
+    "vol": 14,
+    "pg": 14,
+    "armor": 1,
+    "attacks": [
+      "daga carámbano (d6)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Hermosos, amorales y longevos.\n- Resistentes a la mayoría de las formas de magia.\n- Pueden lanzar los siguientes hechizos a voluntad: Sueño, Teletransporte, Detectar magia."
+  },
+  {
+    "name": "Enredaderas Trepadoras",
+    "fue": 10,
+    "des": 12,
+    "vol": 2,
+    "pg": 8,
+    "armor": "",
+    "attacks": [
+      "enredaderas (d4, estallido)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño crítico: el objetivo queda suspendido en el aire, donde muere asfixiado en pocos minutos."
+    ],
+    "description": "- Tienen el aspecto de enredaderas inertes y comunes. Atacan a las criaturas que pasan por allí para utilizar sus cadáveres como abono.\n- Daño crítico: el objetivo queda suspendido en el aire, donde muere asfixiado en pocos minutos."
+  },
+  {
+    "name": "Escorpión Gigante",
+    "fue": 11,
+    "des": 12,
+    "vol": 4,
+    "pg": 8,
+    "armor": 1,
+    "attacks": [
+      "garras (d10+d10)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: el veneno del aguijón licúa las entrañas del objetivo, lo que provoca un daño adicional de d8 a la FUE. La pérdida de FUE es permanente."
+    ],
+    "description": "- Arácnidos del tamaño de un caballo que suelen encontrarse en terrenos áridos o cavernas.\n- Daño Crítico: el veneno del aguijón licúa las entrañas del objetivo, lo que provoca un daño adicional de d8 a la FUE. La pérdida de FUE es permanente."
+  },
+  {
+    "name": "Esfinge",
+    "fue": 12,
+    "des": 13,
+    "vol": 18,
+    "pg": 18,
+    "armor": "",
+    "attacks": [
+      "garras (d8+d8, estallido)",
+      "pico (d10)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Rugido: cualquiera que lo oiga debe superar una tirada de VOL o huir aterrorizado."
+    ],
+    "description": "- Bestias míticas con la parte superior del cuerpo y la cabeza de un humano, las alas de un águila y el cuerpo de un león. Son inmunes a cualquier tipo de magia.\n- Plantean acertijos a cualquiera con quien se cruzan. Quien no responda correctamente suele acabar muerto. Saben casi todo lo que vale la pena saber.\n- Rugido: cualquiera que lo oiga debe superar una tirada de VOL o huir aterrorizado."
+  },
+  {
+    "name": "Esqueleto",
+    "fue": 8,
+    "des": 13,
+    "vol": 0,
+    "pg": 5,
+    "armor": 1,
+    "attacks": [
+      "Espada oxidada (d6) o arco (d6)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Suelen estar al servicio de un amo o un nigromante, a menudo en grupos de tres o más.\n- Se les encuentra vestidos con lo que llevaban puesto en el momento de su muerte.\n- Si se mata a un esqueleto y sus huesos no se dispersan, vuelve a formarse."
+  },
+  {
+    "name": "Ettin",
+    "fue": 16,
+    "des": 8,
+    "vol": 6,
+    "pg": 10,
+    "armor": "",
+    "attacks": [
+      "garrote (d10)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Los gigantes de dos cabezas. Prefieren las cuevas y las chozas subterráneas.\n- No se les puede pillar por sorpresa."
+  },
+  {
+    "name": "Fantasma",
+    "fue": 14,
+    "des": 12,
+    "vol": 15,
+    "pg": 8,
+    "armor": "",
+    "attacks": [
+      "drenaje de vida (d6)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: el objetivo debe superar una tirada de Voluntad o quedará poseído, actuando únicamente según los caprichos del fantasma."
+    ],
+    "description": "- Espíritus incorpóreos de los muertos inquietos, vulnerables únicamente a la magia y a rituales específicos consagrados.\n- Daño Crítico: el objetivo debe superar una tirada de Voluntad o quedará poseído, actuando únicamente según los caprichos del fantasma."
+  },
+  {
+    "name": "Fuego Fatuo",
+    "fue": 6,
+    "des": 17,
+    "vol": 12,
+    "pg": 3,
+    "armor": "",
+    "attacks": [],
+    "moral": "",
+    "abilities": [],
+    "description": "- Espíritus nocturnos de llama fría, que suelen encontrarse en bosques frondosos, marismas y pantanos.\n- Se sabe que desvían a los viajeros, los llevan hasta un cadáver o los devuelven a casa."
+  },
+  {
+    "name": "Fénix",
+    "fue": 15,
+    "des": 13,
+    "vol": 12,
+    "pg": 4,
+    "armor": "",
+    "attacks": [
+      "talones (d10+d10)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Espíritus inteligentes, parecidos a halcones y de llama pura, que habitan en desiertos aislados y altas montañas.\n- Si se les mata, explotan en una llamarada. Renacen de sus cenizas 1d3 días después.\n- Sus plumas son muy codiciadas por sus propiedades curativas."
+  },
+  {
+    "name": "Gato Nocturno",
+    "fue": 9,
+    "des": 14,
+    "vol": 5,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "garras (d6+d6)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: El gato nocturno comienza a devorar al objetivo (d4 de daño FUE) mientras aún está vivo."
+    ],
+    "description": "- Marsupiales inteligentes y nocturnos que habitan en bosques y pantanos. Cazan en manadas.\n- Daño Crítico: El gato nocturno comienza a devorar al objetivo (d4 de daño FUE) mientras aún está vivo."
+  },
+  {
+    "name": "Gigante Celestial",
+    "fue": 16,
+    "des": 12,
+    "vol": 14,
+    "pg": 12,
+    "armor": 1,
+    "attacks": [
+      "maza (d10)"
+    ],
+    "moral": "Destacamento",
+    "abilities": [],
+    "description": "- Gigantes imponentes de piel blanca que viven en castillos en lo alto de las montañas.\n- Los ataques con proyectiles contra ellos estarán en desventaja debido a los fuertes vientos que los rodean."
+  },
+  {
+    "name": "Gigante Tormentoso",
+    "fue": 18,
+    "des": 16,
+    "vol": 18,
+    "pg": 18,
+    "armor": 2,
+    "attacks": [
+      "espadón (d12)"
+    ],
+    "moral": "Destacamento",
+    "abilities": [
+      "Trueno: Inflige 4 puntos de daño FUE a un solo objetivo. Los objetivos que lleven armadura metálica reciben el doble de daño."
+    ],
+    "description": "- Humanoides del tamaño de un edificio, con piel de tono bronceado y cabello claro. Viven en las cimas más altas de las montañas y en las costas más escarpadas.\n- Los rayos no les causan daño; pueden invocar nubes de tormenta a su antojo. Pueden volar utilizando el viento como si fuera su carro.\n- Trueno: Inflige 4 puntos de daño FUE a un solo objetivo. Los objetivos que lleven armadura metálica reciben el doble de daño."
+  },
+  {
+    "name": "Gnoll",
+    "fue": 12,
+    "des": 14,
+    "vol": 8,
+    "pg": 6,
+    "armor": 1,
+    "attacks": [
+      "lanza (d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Hienas humanoides feroces, fruto de experimentos arcanos realizados hace mucho tiempo.\n- Son guerreros letales que atacan en manada (como destacamento) o por su cuenta."
+  },
+  {
+    "name": "Goblin",
+    "fue": 8,
+    "des": 12,
+    "vol": 8,
+    "pg": 4,
+    "armor": "",
+    "attacks": [
+      "daga (d6) o honda (d6)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Pequeños humanoides grotescos con una piel de tonos terrosos: verde, marrón y gris.\n- Evitan el combate y solo atacan cuando les resulta ventajoso, utilizando tácticas de golpear y huir.\n- A veces se les ve montados en lobos gigantes."
+  },
+  {
+    "name": "Goblin Raíz",
+    "fue": 8,
+    "des": 14,
+    "vol": 8,
+    "pg": 4,
+    "armor": "",
+    "attacks": [
+      "lanza (d6)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Evitan el combate a menos que tengan ventaja (por ejemplo, si son más).\n- Defienden sus botines a muerte.\n- Los goblins raíz valoran mucho los libros de hechizos y siempre están dispuestos a intercambiarlos."
+  },
+  {
+    "name": "Gorro Rojo",
+    "fue": 6,
+    "des": 12,
+    "vol": 8,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "dos hoces (d6+d6)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: el objetivo es destripado, y el chorro de su sangre restaura la pérdida de FUE sufrida por el Gorro Rojo."
+    ],
+    "description": "- Nacidos de la sangre que se pudrió en la Tierra de las Hadas. Sus sombreros son de un rojo intenso debido a la sangre en la que se bañan.\n- Ignora a aquellos que tienen poco por lo que vivir, ya que no hay placer alguno en asesinarlos.\n- Daño Crítico: el objetivo es destripado, y el chorro de su sangre restaura la pérdida de FUE sufrida por el Gorro Rojo."
+  },
+  {
+    "name": "Grifo",
+    "fue": 14,
+    "des": 15,
+    "vol": 12,
+    "pg": 7,
+    "armor": "",
+    "attacks": [
+      "garras (d6+d6)"
+    ],
+    "moral": "Destacamento",
+    "abilities": [
+      "Daño Crítico: Desgarra la carne y los huesos de su víctima con su pico afilado como una navaja."
+    ],
+    "description": "- Híbridos voraces, con cabeza y alas de águila y la parte inferior del cuerpo de león.\n- Pueden utilizarse como monturas si se capturan jóvenes y se entrenan adecuadamente.\n- Vuelan y atacan a velocidades asombrosas, lanzándose en picado para atrapar a su presa.\n- Daño Crítico: Desgarra la carne y los huesos de su víctima con su pico afilado como una navaja."
+  },
+  {
+    "name": "Guardián de Criptas",
+    "fue": 12,
+    "des": 11,
+    "vol": 14,
+    "pg": 12,
+    "armor": "",
+    "attacks": [
+      "garras etéreas (d8+d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Esqueletos animados vestidos con túnicas ondeantes. Sus cuencas oculares son de un rojo hipnótico. Defienden criptas y tumbas, pero no atacan si no se les molesta.\n- Los ataques no mágicos contra ellos serán en desventaja.\n- Pueden teletransportar a cualquier objetivo que tengan a la vista a una sala aleatoria cercana."
+  },
+  {
+    "name": "Guiverno",
+    "fue": 15,
+    "des": 14,
+    "vol": 13,
+    "pg": 11,
+    "armor": "",
+    "attacks": [
+      "aguijón (d10)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: la víctima queda empalada e inmovilizada. A continuación, el guiverno le arranca la cabeza de un mordisco."
+    ],
+    "description": "- Reptiles alados, grandes e inteligentes. Habitan en cualquier tipo de terreno, aunque prefieren los acantilados secos.\n- Se mantienen alejados de otras criaturas y prefieren acechar en silencio a sus presas desde la distancia.\n- Daño Crítico: la víctima queda empalada e inmovilizada. A continuación, el guiverno le arranca la cabeza de un mordisco."
+  },
+  {
+    "name": "Gusano Púrpura",
+    "fue": 18,
+    "des": 8,
+    "vol": 6,
+    "pg": 18,
+    "armor": 1,
+    "attacks": [
+      "mordisco (d12)"
+    ],
+    "moral": "Destacamento",
+    "abilities": [
+      "Daño Crítico: El objetivo es devorado y sufre d8 puntos de daño FUE por el ácido del estómago del gusano."
+    ],
+    "description": "- Gusanos gigantescos que habitan en enormes madrigueras a gran profundidad bajo tierra y solo salen a la superficie para alimentarse. Se encuentran en los desiertos de altura y en la tundra cálida.\n- Daño Crítico: El objetivo es devorado y sufre d8 puntos de daño FUE por el ácido del estómago del gusano."
+  },
+  {
+    "name": "Gárgola",
+    "fue": 14,
+    "des": 4,
+    "vol": 12,
+    "pg": 8,
+    "armor": 3,
+    "attacks": [
+      "garras (d8+d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Estatuas mágicas de movimiento lento que representan a monstruosas criaturas aladas, y que suelen emplearse como guardias o perros de guardia.\n- Merodean por las noches, pero temen al día, cuando la luz del sol las paraliza.\n- Son inmunes a los encantamientos y al sueño mágico."
+  },
+  {
+    "name": "Hidra",
+    "fue": 13,
+    "des": 7,
+    "vol": 12,
+    "pg": 12,
+    "armor": 2,
+    "attacks": [
+      "mordisco (d12, estallido)"
+    ],
+    "moral": "Destacamento",
+    "abilities": [],
+    "description": "- Grandes reptiles con nueve cabezas serpentinas. Es muy difícil zafarse de ellos una vez que detectan a su presa.\n- Al recibir daño crítico, la hidra pierde una cabeza. A continuación, sigue luchando hasta que no le queda ninguna cabeza."
+  },
+  {
+    "name": "Hobgoblin",
+    "fue": 14,
+    "des": 8,
+    "vol": 11,
+    "pg": 6,
+    "armor": 2,
+    "attacks": [
+      "maza (d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Parientes grandes y fornidos de los duendes. Viven en fortalezas subterráneas hasta que se les convoca a la guerra.\n- Superan automáticamente las tiradas de moral si hay un comandante presente.\n- Están entrenados para luchar en equipo. El daño infligido tiene ventaja si un aliado también está enfrentándose al mismo enemigo."
+  },
+  {
+    "name": "Hombre Lobo",
+    "fue": 15,
+    "des": 14,
+    "vol": 6,
+    "pg": 8,
+    "armor": "",
+    "attacks": [
+      "garras (d6+d6)",
+      "mordisco (d8)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: el objetivo contrae la licantropía y se transforma en hombre lobo en la próxima luna llena."
+    ],
+    "description": "- Licantrópos feroces que pueden transformarse en lobos a voluntad.\n- Los ataques normales están en desventaja contra los hombres lobo, pero los ataques con armas de plata tienen ventaja.\n- Daño Crítico: el objetivo contrae la licantropía y se transforma en hombre lobo en la próxima luna llena."
+  },
+  {
+    "name": "Hombres Encapuchados",
+    "fue": 9,
+    "des": 12,
+    "vol": 14,
+    "pg": 12,
+    "armor": "",
+    "attacks": [
+      "bastón de ley (d8)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Los Vigilantes del Bosque: una secta que obtiene su poder de las líneas ley, las piedras rúnicas y elementos similares.",
+      "Daño Crítico: absorbe una parte del alma de la víctima (1d4 de daño a la VOL)"
+    ],
+    "description": "- Los Vigilantes del Bosque: una secta que obtiene su poder de las líneas ley, las piedras rúnicas y elementos similares.\n- Daño Crítico: absorbe una parte del alma de la víctima (1d4 de daño a la VOL)\n- Lleva consigo dos de los siguientes libros de hechizos: Encantar, Hipnotizar, Empujar/ Tirar, Escudo."
+  },
+  {
+    "name": "Horror Subterráneo",
+    "fue": 16,
+    "des": 11,
+    "vol": 4,
+    "pg": 6,
+    "armor": 1,
+    "attacks": [
+      "mordisco (d10)",
+      "chorro de ácido (d8, estallido)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: el objetivo pierde una extremidad. Tira 1d6. 1: cabeza; 2-4: pierna; 5-6: brazo."
+    ],
+    "description": "- Enormes insectos con múltiples patas y ojos negros y brillantes. Se alimentan de tierra, raíces y carne.\n- Excava justo debajo de la superficie para tender emboscadas a criaturas desprevenidas.\n- Daño Crítico: el objetivo pierde una extremidad. Tira 1d6. 1: cabeza; 2-4: pierna; 5-6: brazo."
+  },
+  {
+    "name": "Kobold",
+    "fue": 8,
+    "des": 13,
+    "vol": 4,
+    "pg": 3,
+    "armor": "",
+    "attacks": [
+      "mordisco (d6)",
+      "lanza (d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Humanoides sin pelo, con rasgos caninos y piel escamosa. Ven perfectamente en la oscuridad, pero la luz solar directa les causa daño.\n- Utilizan trampas y emboscadas para derrotar a sus oponentes. A menudo actúan al servicio de criaturas más poderosas."
+  },
+  {
+    "name": "Lamia",
+    "fue": 11,
+    "des": 12,
+    "vol": 16,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "mordisco con fuerza (d8)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: El objetivo sufre d6 puntos de daño a la VOL a medida que su espíritu se va agotando lentamente. A continuación, queda cautivado por la lamia, obedeciendo todas sus órdenes mientras se encuentre en su presencia."
+    ],
+    "description": "- Criaturas parecidas a centauros que se alimentan de la fuerza vital de los demás, seduciendo a sus víctimas gracias a su gran encanto e inteligencia. Su parte superior suele ser humanoide, mientras que la inferior puede adoptar la forma de diversos híbridos animales.\n- Poseen poderes mágicos innatos. Pueden crear ilusiones, hechizar a otras criaturas y disfrazarse a voluntad.\n- Daño Crítico: El objetivo sufre d6 puntos de daño a la VOL a medida que su espíritu se va agotando lentamente. A continuación, queda cautivado por la lamia, obedeciendo todas sus órdenes mientras se encuentre en su presencia."
+  },
+  {
+    "name": "Langosta Cavernícola",
+    "fue": 6,
+    "des": 12,
+    "vol": 3,
+    "pg": 2,
+    "armor": "",
+    "attacks": [
+      "mordisco (d6)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Grillos herbívoros gigantes que habitan en cuevas. Son inmunes a la mayoría de los venenos.\n- Su coloración natural les permite camuflarse entre las rocas. Emiten chillidos estridentes cuando se sienten amenazados."
+  },
+  {
+    "name": "Lich",
+    "fue": 8,
+    "des": 8,
+    "vol": 18,
+    "pg": 14,
+    "armor": 1,
+    "attacks": [
+      "daga del alma (d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Poderosos hechiceros que pagaron el precio más alto por la inmortalidad: su propia vida. Ahora, su sed de poder no conoce límites.\n- Mantienen su no-vida vinculándose a un artefacto terrenal, que suele estar protegido por al menos d6 otros sirvientes no-muertos.\n- Llevan hasta seis de los siguientes libros de hechizos: Animar objeto, Ojo arcano, Ensordecer, Desmontar, Muro elemental, Frenesí, Puerta, Levitar, Odio, Identificar propietario, Llamar a la puerta, Pacificar, Resucitar muertos, Resucitar espíritus, Escudo, Dormir, Forma de humo, Telequinesis, Telepatía, Teletransporte, Visión, Marca de mago."
+  },
+  {
+    "name": "Lobo",
+    "fue": 12,
+    "des": 14,
+    "vol": 8,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "mordisco (d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Grandes caninos que habitan principalmente en bosques o en la tundra.\n- Se pueden adiestrar con esfuerzo si se capturan cuando son jóvenes."
+  },
+  {
+    "name": "Lodo Gelatinoso",
+    "fue": 15,
+    "des": 6,
+    "vol": 3,
+    "pg": 8,
+    "armor": 1,
+    "attacks": [
+      "toque devorador (d8)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: el objetivo queda envuelto y sufre d6 puntos de daño FUE por ronda hasta que es devorado."
+    ],
+    "description": "- Grandes masas amorfas de gelatina transparente. Cazan sin sentido en busca de alimento en mazmorras y cavernas subterráneas.\n- Daño Crítico: el objetivo queda envuelto y sufre d6 puntos de daño FUE por ronda hasta que es devorado."
+  },
+  {
+    "name": "Mantícora",
+    "fue": 15,
+    "des": 14,
+    "vol": 12,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "garras (d6+d6)",
+      "púa en la cola (d8)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: El objetivo queda exhausto hasta que duerma bien por la noche. Hasta entonces, actúa de forma grosera, egoísta y cruel (o aún más, si esa ya es su naturaleza)."
+    ],
+    "description": "- Monstruos rencorosos con rostro humanoide, cuerpo de león, alas de murciélago y cola de escorpión. Habitan en regiones montañosas, castillos abandonados y mazmorras olvidadas.\n- Las púas de la cola actúan como dardos y vuelven a crecer al cabo de unos días. Una sola púa vale 150 po para un coleccionista.\n- Daño Crítico: El objetivo queda exhausto hasta que duerma bien por la noche. Hasta entonces, actúa de forma grosera, egoísta y cruel (o aún más, si esa ya es su naturaleza)."
+  },
+  {
+    "name": "Minotauro",
+    "fue": 16,
+    "des": 12,
+    "vol": 8,
+    "pg": 12,
+    "armor": 1,
+    "attacks": [
+      "hacha a dos manos (d10)",
+      "carga (d12)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Humanoides de gran tamaño (normalmente machos) con cabeza de toro. Habitan en laberintos o mazmorras.\n- Rastreadores extraordinarios con un excelente olfato y gran habilidad para orientarse."
+  },
+  {
+    "name": "Momia",
+    "fue": 12,
+    "des": 8,
+    "vol": 6,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "toque necrótico (d10)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: El objetivo queda infectado con la podredumbre de la momia y no puede recuperar FUE hasta que sea curado por un sanador especializado. El objetivo también queda exhausto."
+    ],
+    "description": "- Humanoides no muertos envueltos en sudarios. Se encuentran en pirámides, ruinas, templos y tumbas.\n- Daño Crítico: El objetivo queda infectado con la podredumbre de la momia y no puede recuperar FUE hasta que sea curado por un sanador especializado. El objetivo también queda exhausto."
+  },
+  {
+    "name": "Monstruo Herrumbre",
+    "fue": 16,
+    "des": 13,
+    "vol": 5,
+    "pg": 5,
+    "armor": "",
+    "attacks": [
+      "mordisco (d6)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño crítico: las armaduras metálicas se oxidan y se convierten en un peso inútil."
+    ],
+    "description": "- Criaturas parecidas a armadillos, con colas en forma de garrote y largas antenas. Se alimentan de hierro y metal oxidado.\n- Cualquier metal común que toquen con sus antenas se oxida al instante. Son capaces de oler el metal a gran distancia.\n- Daño crítico: las armaduras metálicas se oxidan y se convierten en un peso inútil."
+  },
+  {
+    "name": "Mímico",
+    "fue": 13,
+    "des": 6,
+    "vol": 12,
+    "pg": 9,
+    "armor": 2,
+    "attacks": [
+      "mordisco (d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Miméticos maliciosos que adoptan la forma de objetos inanimados que suelen encontrarse en las mazmorras.\n- Permanecen inmóviles mientras están camuflados, lo que sorprende a cualquiera que se acerque.\n- La saliva del mimético es extremadamente pegajosa y difícil de eliminar. Los alquimistas pagan hasta 150 po por el frasco más pequeño."
+  },
+  {
+    "name": "Naga",
+    "fue": 14,
+    "des": 12,
+    "vol": 14,
+    "pg": 6,
+    "armor": 1,
+    "attacks": [
+      "espada (d6)",
+      "mordisco (d10)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Mirada: cualquier objetivo que se encuentre frente a un naga queda hipnotizado y se somete a su voluntad. No se puede obligar a sus víctimas a cometer actos violentos."
+    ],
+    "description": "- Humanoides con la parte inferior del cuerpo, la cola y el cuello de serpiente. Habitan en selvas cálidas y templos perdidos en el tiempo.\n- Utilizan la astucia y la hipnosis para capturar a otras criaturas y esclavizarlas.\n- Mirada: cualquier objetivo que se encuentre frente a un naga queda hipnotizado y se somete a su voluntad. No se puede obligar a sus víctimas a cometer actos violentos."
+  },
+  {
+    "name": "Necrófago",
+    "fue": 14,
+    "des": 8,
+    "vol": 3,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "garras alargadas (d6+d6)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño crítico: el objetivo queda exhausto debido a su herida necrótica y muere en d4 días a menos que sea atendido por un sacerdote o un sanador experto. Si no se quema el cadáver, este resucitará más tarde como un necrófago."
+    ],
+    "description": "- Criaturas con aspecto humano y piel grisácea, vestidas con harapos, que solo ansían devorar la carne de los vivos.\n- Daño crítico: el objetivo queda exhausto debido a su herida necrótica y muere en d4 días a menos que sea atendido por un sacerdote o un sanador experto. Si no se quema el cadáver, este resucitará más tarde como un necrófago."
+  },
+  {
+    "name": "Ogro",
+    "fue": 16,
+    "des": 8,
+    "vol": 6,
+    "pg": 6,
+    "armor": 1,
+    "attacks": [
+      "garrote (d10)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Bestias enormes y glotonas, de mal carácter y escasa inteligencia.\n- Se dejan impresionar fácilmente por los objetos brillantes, y guardan sacos de oro y tesoros en sus guaridas."
+  },
+  {
+    "name": "Ojo del Terror",
+    "fue": 9,
+    "des": 8,
+    "vol": 16,
+    "pg": 15,
+    "armor": "",
+    "attacks": [
+      "mordisco (d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Esferas flotantes con bocas enormes, ojos gigantes y varios ojos pequeños situados en largos tallos.\n- Son muy inteligentes, tremendamente codiciosos y están completamente locos.\n- Pueden lanzar los siguientes hechizos a voluntad: Encanto, Fobia, Telequinesis, Sueño, Barajar, Visión. La magia que se utilice contra ellos requiere una tirada de salvación de Voluntad; de lo contrario, se esfuma."
+  },
+  {
+    "name": "Oso Grizzly",
+    "fue": 15,
+    "des": 13,
+    "vol": 5,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "garras (d8+d8)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: muerde al objetivo y le inflige un daño adicional de d6 FUE. El objetivo se desangra muy rápidamente."
+    ],
+    "description": "- Osos de color marrón rojizo que suelen encontrarse en montañas, bosques y praderas.\n- Prefieren alimentarse de pescado y carne, y atacarán a cualquier desafortunado que se cruce en su camino.\n- Daño Crítico: muerde al objetivo y le inflige un daño adicional de d6 FUE. El objetivo se desangra muy rápidamente."
+  },
+  {
+    "name": "Osobúho",
+    "fue": 16,
+    "des": 12,
+    "vol": 5,
+    "pg": 9,
+    "armor": "",
+    "attacks": [
+      "pico (d10)",
+      "garras (d8+d8)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: una pieza de la armadura se desgarra y queda destruida."
+    ],
+    "description": "- Carnívoros parecidos a osos con cara de búho. Se encuentran en bosques densos. Se rumorea que son fruto de un percance mágico.\n- Daño Crítico: una pieza de la armadura se desgarra y queda destruida."
+  },
+  {
+    "name": "Pantera Deforme",
+    "fue": 13,
+    "des": 16,
+    "vol": 12,
+    "pg": 8,
+    "armor": "",
+    "attacks": [
+      "tentáculos (d8+d8, estallido)",
+      "mordisco (d10)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Depredadores grotescos parecidos a panteras, con largos tentáculos afilados como cuchillas que les crecen en la espalda.\n- Resistentes a los ataques mágicos. El lanzador debe superar una tirada de salvación de VOL para que el efecto tenga éxito.\n- Pueden teletransportarse a corta distancia a voluntad. Odian a los Perros Parpadeantes."
+  },
+  {
+    "name": "Perro Parpadeante",
+    "fue": 11,
+    "des": 14,
+    "vol": 5,
+    "pg": 5,
+    "armor": "",
+    "attacks": [
+      "mordisco (d6)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Perros teletransportadores al servicio de un poderoso amo.\n- Pueden desvanecerse de la realidad a voluntad. Los ataques cuerpo a cuerpo contra estarán es desventaja."
+  },
+  {
+    "name": "Pesadilla",
+    "fue": 15,
+    "des": 12,
+    "vol": 8,
+    "pg": 8,
+    "armor": "",
+    "attacks": [
+      "pezuñas llameantes (d8+d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Caballos inteligentes y demoníacos con ojos como carbones ardientes, fosas nasales humeantes y pezuñas llameantes.\n- Los ataques cuerpo a cuerpo contra la Pesadilla serán con desventaja por las densas nubes de humo que genera."
+  },
+  {
+    "name": "Pixie",
+    "fue": 3,
+    "des": 15,
+    "vol": 13,
+    "pg": 3,
+    "armor": "",
+    "attacks": [],
+    "moral": "",
+    "abilities": [],
+    "description": "- Pequeños humanoides con alas de insecto. Son invisibles por naturaleza.\n- Pueden lanzar los hechizos Sueño y Mascarada a voluntad."
+  },
+  {
+    "name": "Puercome",
+    "fue": 16,
+    "des": 8,
+    "vol": 13,
+    "pg": 9,
+    "armor": "",
+    "attacks": [
+      "inmundicia (d6+d6)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Encantamiento: el objetivo obedece todas las órdenes del cerdo hasta que muere. Tirada de salvación de VOL una vez por ronda para liberarse."
+    ],
+    "description": "- Humanoides obesos que se transforman en enormes monstruos porcinos para alimentarse de carne humana.\n- Prefieren cazar en asentamientos aislados cercanos a bosques y humedales. Solo pueden cambiar de forma por la noche.\n- Encantamiento: el objetivo obedece todas las órdenes del cerdo hasta que muere. Tirada de salvación de VOL una vez por ronda para liberarse."
+  },
+  {
+    "name": "Reptiliano",
+    "fue": 14,
+    "des": 12,
+    "vol": 5,
+    "pg": 5,
+    "armor": 1,
+    "attacks": [
+      "lanza de hueso (d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Humanoides anfibios que viven en grandes tribus cerca de pantanos y selvas.\n- Fabrican sus armaduras y armas con los huesos de sus presas. Comen de todo, incluidos los humanoides."
+  },
+  {
+    "name": "Sabuesos Roca",
+    "fue": 14,
+    "des": 1,
+    "vol": 8,
+    "pg": 12,
+    "armor": 2,
+    "attacks": [
+      "mordisco (d10)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Construcciones inmóviles que suelen utilizarse como guardianes de grandes tumbas o artefactos.\n- No se dejan influir por las técnicas de persuasión habituales, pero les encanta un buen hueso."
+  },
+  {
+    "name": "Sombra",
+    "fue": 1,
+    "des": 18,
+    "vol": 14,
+    "pg": 14,
+    "armor": "",
+    "attacks": [
+      "toque drenante (d6, ignora la armadura)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: el objetivo pierde d4 puntos de FUE. Si su FUE se reduce a 0, también se convierte en una sombra."
+    ],
+    "description": "- Monstruos incorpóreos que parecen sombras animadas. No se ven afectados por ataques comunes, el sueño ni el control mental.\n- Daño Crítico: el objetivo pierde d4 puntos de FUE. Si su FUE se reduce a 0, también se convierte en una sombra."
+  },
+  {
+    "name": "Titán",
+    "fue": 16,
+    "des": 15,
+    "vol": 18,
+    "pg": 18,
+    "armor": 3,
+    "attacks": [
+      "espada ligera (d12)"
+    ],
+    "moral": "Destacamento",
+    "abilities": [],
+    "description": "- Gigantes míticos y humanoides de una belleza radiante y cuerpos poderosamente atléticos. De carácter benévolo, pero propensos a la megalomanía.\n- Son originarios de otros planos de existencia, pero a veces tienen bastiones en el mundo mortal.\n- Pueden levitar, cambiar de forma y moldear los elementos a voluntad."
+  },
+  {
+    "name": "Tritón",
+    "fue": 12,
+    "des": 15,
+    "vol": 12,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "tridente (d8)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Humanoides acuáticos de piel plateada, cabello azul verdoso y piernas escamosas que terminan en aletas. Habitan en aguas cálidas cercanas a la costa.\n- Viven en hermosos castillos esculpidos en roca marina y coral. Dirigen enormes bancos de peces tanto para protegerse como para alimentarse."
+  },
+  {
+    "name": "Trol",
+    "fue": 14,
+    "des": 12,
+    "vol": 4,
+    "pg": 14,
+    "armor": 1,
+    "attacks": [
+      "garra (d8)",
+      "garrote (d10)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Humanoides gigantes y verrugosos, hechos de carne y corteza. Habitan bajo tierra o en bosques profundos, así como en las ruinas de las viviendas de sus antiguas víctimas. Son carnívoros.\n- Cuando recibe un daño crítico, un troll seguirá luchando, a pesar de la pérdida de carne y extremidades. Solo cuando su FUE es 0 se considera que ha muerto de verdad. A menos que su cabeza sea rociada con ácido, fuego o magia poderosa, se regenerará por completo en un plazo de 1d4 días."
+  },
+  {
+    "name": "Trol de Madera",
+    "fue": 15,
+    "des": 12,
+    "vol": 7,
+    "pg": 10,
+    "armor": "",
+    "attacks": [
+      "mordisco (d8)",
+      "garrote (d10)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: De las heridas del objetivo comienzan a brotar musgo y ramitas."
+    ],
+    "description": "- Grandes humanoides con brazos alargados hechos de corteza o raíces. Viven en los bosques y mantienen una profunda conexión con la vegetación que los rodea.\n- Si mueren, se regenerarán lentamente a menos que su cadáver sea sacado del bosque o quemado.\n- Daño Crítico: De las heridas del objetivo comienzan a brotar musgo y ramitas."
+  },
+  {
+    "name": "Tumulario",
+    "fue": 16,
+    "des": 8,
+    "vol": 12,
+    "pg": 12,
+    "armor": 3,
+    "attacks": [
+      "espada larga (d10)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: en caso de fallo, cualquier pérdida de FUE es permanente."
+    ],
+    "description": "- Guerreros grotescos y caídos, resucitados de entre los muertos con fines maléficos. A menudo cabalgan monturas igualmente terroríficas y lideran a criaturas no muertas de menor rango en la batalla.\n- Daño Crítico: en caso de fallo, cualquier pérdida de FUE es permanente."
+  },
+  {
+    "name": "Túmulo Andante",
+    "fue": 15,
+    "des": 6,
+    "vol": 8,
+    "pg": 9,
+    "armor": "",
+    "attacks": [
+      "enredaderas (d8+d8)"
+    ],
+    "moral": "Destacamento",
+    "abilities": [
+      "Daño Crítico: el objetivo es devorado entero y arrastrado."
+    ],
+    "description": "- Humanoides altos formados por vegetación viscosa. Habitan en pantanos oscuros y subterráneos húmedos.\n- Daño Crítico: el objetivo es devorado entero y arrastrado."
+  },
+  {
+    "name": "Unicornio",
+    "fue": 14,
+    "des": 12,
+    "vol": 14,
+    "pg": 6,
+    "armor": "",
+    "attacks": [
+      "cuerno (d10, ignora la armadura)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Caballos mágicos con un único cuerno largo en la frente. Tímidos, pero orgullosos y testarudos, se les considera seres divinos.\n- Su crin vale una pequeña fortuna debido a sus poderosas propiedades curativas."
+  },
+  {
+    "name": "Vampiro",
+    "fue": 14,
+    "des": 12,
+    "vol": 16,
+    "pg": 12,
+    "armor": 1,
+    "attacks": [
+      "mordisco (d10)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Regeneración: un vampiro herido recupera 6 PG cuando muerde a un objetivo que tenga sangre. Si muere, se convierte en una nube de gas y se retira a su ataúd, reformándose al caer la noche siguiente. Solo puede morir si se expone a la luz del sol o si se destruye el ataúd.",
+      "Daño Crítico: El vampiro drena la esencia del objetivo, infligiendo d12 de daño a VOL. Si el objetivo llega a 0 VOL de esta forma, muere y resucita como un esclavo del vampiro."
+    ],
+    "description": "- Encantadoras criaturas no muertas que beben la sangre de los mortales. Actúan por la noche y duermen en un ataúd durante el día. Pueden transformarse en murciélagos a voluntad.\n- Regeneración: un vampiro herido recupera 6 PG cuando muerde a un objetivo que tenga sangre. Si muere, se convierte en una nube de gas y se retira a su ataúd, reformándose al caer la noche siguiente. Solo puede morir si se expone a la luz del sol o si se destruye el ataúd.\n- Daño Crítico: El vampiro drena la esencia del objetivo, infligiendo d12 de daño a VOL. Si el objetivo llega a 0 VOL de esta forma, muere y resucita como un esclavo del vampiro."
+  },
+  {
+    "name": "Víbora",
+    "fue": 5,
+    "des": 12,
+    "vol": 3,
+    "pg": 3,
+    "armor": "",
+    "attacks": [
+      "mordisco (d6)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: el objetivo queda envenenado y muere en 1d12 horas si no recibe un antídoto."
+    ],
+    "description": "- Serpientes venenosas que suelen encontrarse en cuevas, simas y otros lugares oscuros. A partir de sus glándulas venenosas se puede elaborar una antitoxina.\n- Utilizan el calor y el olfato para rastrear a sus víctimas.\n- Daño Crítico: el objetivo queda envenenado y muere en 1d12 horas si no recibe un antídoto."
+  },
+  {
+    "name": "Zombi",
+    "fue": 12,
+    "des": 6,
+    "vol": 3,
+    "pg": 2,
+    "armor": "",
+    "attacks": [
+      "uñas afiladas (d6)"
+    ],
+    "moral": "",
+    "abilities": [
+      "Daño Crítico: el objetivo resulta infectado y queda exhausto. Sin la ayuda de un especialista o un sanador, se convertirá en zombi en d4 días. Creando Monstruos Resumen Para crear un monstruo único, sigue estos pasos:",
+      "Apariencia: Encogido + Caparazón",
+      "Rasgos: Se mueve en línea recta + Punto débil",
+      "Ataque: Golpes + Agarrones",
+      "Habilidades: Inhabilita + Oído Una criatura parecida a un caracol con un caparazón duro. Solo se mueve en línea recta y tiene el vientre blando. Se lanza contra sus oponentes, arrastrándolos hacia su órbita desenfrenada. El rugido de su movimiento ahoga cualquier otro sonido. Esta criatura es físicamente resistente, con una FUE superior a la media y una armadura sólida. Probablemente sea rápida, pero poco maniobrable, y es probable que no dependa de la habilidad o la destreza para evitar el peligro. Es bruta, pero sigue siendo una bestia salvaje y tan obstinada como cualquier criatura que solo busca su próxima comida. Ataca rodando en línea recta y debería impactar contra múltiples objetivos."
+    ],
+    "description": "- Cadáver reanimado mediante un ritual de nigromancia o una influencia maligna. Inmune a todos los efectos que afecten a la mente.\n- Si no se destruye por completo (mediante fuego, desmembramiento total, etc.), el zombi volverá a levantarse en unos minutos.\n- Daño Crítico: el objetivo resulta infectado y queda exhausto. Sin la ayuda de un especialista o un sanador, se convertirá en zombi en d4 días. Creando Monstruos Resumen Para crear un monstruo único, sigue estos pasos:\n- Tira en la tabla de Apariencia Del Monstruo.\n- Tira en la tabla de Rasgos Del Monstruo.\n- Tira en la tabla de Ataques Del Monstruo.\n- Tira en la tabla de Habilidades Del Monstruo.\n- Describe el aspecto, las habilidades y los ataques de la criatura en un lenguaje sencillo.\n- Crea las estadísticas de la criatura siguiendo los principios, las definiciones y el formato del bloque de estadísticas que se indican a continuación. Principios\n- Usa el Daño Crítico para resaltar la amenaza o lo extraño de cualquier PNJ agresivo.\n- Recurre a la originalidad y el estilo para que las criaturas destaquen. Los jugadores recordarán más fácilmente a un humanoide con cara de cerdo que busca a sus ovejas perdidas que a un arquero goblin cualquiera.\n- Ajusta siempre las estadísticas de las criaturas en función de lo que resulte divertido e interesante. PROTECCIÓN CONTRA GOLPES La capacidad de una criatura para esquivar el peligro, ya sea gracias a su resistencia, velocidad o destreza. Asigna 3 PG a las criaturas normales, 6 PG a las más resistentes y 10 PG o más a las amenazas graves. ARMADURA Para algunas criaturas, esto representa su resistencia natural; para otras, puede deberse a algo que llevan puesto o transportan. Si una criatura es capaz de resistir un ataque sin moverse, aumenta este valor. ATRIBUTOS 3 es insuficiente, 6 es bajo, 10 es normal, 14 es notable y 18 es legendario. FUERZA Mide la salud general, la fuerza física y la resistencia a los venenos. ¡Se trata de la capacidad de una criatura para sobrevivir a un impacto directo, no de su capacidad para evitar el peligro! DESTREZA Empieza con un 10 como valor de referencia y, si la criatura es especialmente rápida, ágil o diestra, aumenta la cifra según sea necesario. Si es lenta de reaccionar, corpulenta o torpe, reduce la cifra. VOLUNTAD Determina la capacidad de una criatura para resistir la influencia de otra, así como su poder sobre los demás. También sirve como indicador de su capacidad de defensa en cuestiones mágicas o espirituales. ATAQUES Normalmente, un objeto (por ejemplo, una espada o un arco) o un arma natural (por ejemplo, garras o dientes). HABILIDADES Una acción o poder único que la criatura puede utilizar tanto en combate como fuera de él.\n- Si una habilidad puede evitarse o defenderse de forma efectiva mediante medios tradicionales, se trata de un ataque e interactúa con PG.\n- Si una habilidad no puede evitarse o defenderse de manera significativa mediante medios tradicionales, se trata de una Habilidad.\n- Si una habilidad solo afecta a un único PJ, por lo general debería tener un efecto inmediato sin posibilidad de realizar una tirada de salvación en esa ronda (véase Basilisco, pág. 83).\n- Si una habilidad es capaz de afectar a un grupo de PJ, por lo general debería requerir una tirada de salvación inmediata (véase Dragón Verde, pág. 88). Estadísticas de monstruos X PG, X Armadura, X FUE, X DES, X VOL, Ataque (dX, objetos especiales, cualidades)\n- Una descripción atractiva de su aspecto, comportamiento o hábitos de vida.\n- Una manía, táctica o peculiaridad que distingue a esta criatura.\n- Efecto especial o consecuencia del daño crítico. APARIENCIA DE MONSTRUOS Tira 1d20 por cada columna y combínalos. d20      Físico                                    Característica 1      Albino                                    Antenas 2      Negro                                     Pico 3      Cristalino                                Caparazón 4      Demacrado                                 Garras 5      Sin Ojos                                  Colmillos 6      Emplumado                                 Plumas 7      Gelatinoso                                Pelo 8      Brillante                                 Branquias 9      Endurecido                                Cuernos 10      Descabezado                               Marcas 11      Cornudo                                   Escamas 12      Encorvado                                 Concha 13      Iridiscente                               Hocico 14      Poliocular                                Cola 15      Escamoso                                  Zarpa 16      Segmentado                                Tentáculos 17      Esquelético                               Trompa 18      Viscoso                                   Pezuñas 19      Translúcido                               Voz 20      Retorcido                                 Alas RASGOS DEL MONSTRUO Tira 1d20 por cada columna y combínalos. d20   Rarezas                                          Debilidad 1    Cambia tamaño a voluntad                         Alcohol 2    Cambia de color a voluntad                       Frío 3    Recoge flores raras                              Conversación 4    Colecciona trofeos                               Adulación 5    No muere de viejo                                Juegos 6    Dibuja símbolos                                  Regalos 7    Fascinado por el fuego                           Hierro 8    Acapara libros                                   Ruidos fuertes 9    Adora un color concreto                          Espejos 10    Renace cada día                                  Colores brillantes 11    Adora objetos brillantes                         Luz de luna 12    Imita voces                                      Música 13    Se mueve linealmente                             Comidas preparadas 14    Narra todo                                       Puzles 15    Limpieza obsesiva                                Iconos religiosos 16    Crecen plantas a su paso                         Sal 17    Duerme al revés                                  Plata 18    Habla en rima                                    Luz solar 19    Suda Minerales Raros                             Verdadero nombre 20    Reproducción asexual                             Punto débil ATAQUES DEL MONSTRUO Tira 1d20 por cada columna y combínalos. d20     Tipo                          Daño Crítico 1     Muerde                        Asfixia 2     Corta                         Sangra 3     Quema                         Ceguera 4     Congela                       Rotura 5     Gasea                         Aplastamiento 6     Patada                        Caída 7     Puñetazos                     Diluye 8     Dispara                       Presa 9     Golpea                        Explota 10     Tajos                         Agarre 11     Rebana                        Incapacita 12     Aplasta                       Lacera 13     Pulveriza                     Licua 14     Aprieta                       Paraliza 15     Pincha                        Petrifica 16     Pica                          Envenena 17     Lanza                         Pincha 18     Toca                          Agrava 19     Fusta                         Pisotea 20     Destruye                      Debilita HABILIDADES DEL MONSTRUO Tira 1d20 por cada columna y combínalos. d20      Habilidad                            Objetivo 1      Absorbe                             Cuerpo 2      Amplifica                           Sueños 3      Atrae                               Elemento 4      Ata                                 Emociones 5      Camuflajes                          Energía 6      Conjura                             Salud 7      Controla                            Audición 8      Desactiva                           Ilusiones 9      Duplica                             Luz 10      Crece                               Memoria 11      Manipula                            Metal 12      Refleja                             Plantas 13      Regenera                            Espíritu 14      Resiste                             Piedra 15      Invierte                            Entorno 16      Transformación                      Tiempo 17      Encoge                              Visión 18      Transforma                          Agua 19      Atrapa                              Meteorología 20      Perfora                             Debilita Ejemplo de Monstruo\n- Apariencia: Encogido + Caparazón\n- Rasgos: Se mueve en línea recta + Punto débil\n- Ataque: Golpes + Agarrones\n- Habilidades: Inhabilita + Oído Una criatura parecida a un caracol con un caparazón duro. Solo se mueve en línea recta y tiene el vientre blando. Se lanza contra sus oponentes, arrastrándolos hacia su órbita desenfrenada. El rugido de su movimiento ahoga cualquier otro sonido. Esta criatura es físicamente resistente, con una FUE superior a la media y una armadura sólida. Probablemente sea rápida, pero poco maniobrable, y es probable que no dependa de la habilidad o la destreza para evitar el peligro. Es bruta, pero sigue siendo una bestia salvaje y tan obstinada como cualquier criatura que solo busca su próxima comida. Ataca rodando en línea recta y debería impactar contra múltiples objetivos."
+  },
+  {
+    "name": "Árbol Viviente",
+    "fue": 15,
+    "des": 3,
+    "vol": 12,
+    "pg": 10,
+    "armor": 3,
+    "attacks": [
+      "raíces (d8+d8, estallido)"
+    ],
+    "moral": "",
+    "abilities": [],
+    "description": "- Árboles sensibles y bípedos con un rostro vagamente humanoide en el tronco.\n- Hablan despacio y con solemnidad, con una voz grave. Son intemporales y viven miles de años."
+  }
+]
