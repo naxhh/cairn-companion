@@ -1,7 +1,7 @@
 {
 	"name": "cairn-companion",
 	"version": "1.0.0",
-	"description": "A campaign management helper for Cairn 2e TTRPG. Quickly link to cairn items, spells, monsters, etc.. Get random suggestions and keep your PJ cheat sheets up to date",
+	"description": "A campaign management tool for Cairn 2e TTRPG. Quickly link to cairn items, spells, monsters, etc.. Get random suggestions and keep your PJ cheat sheets up to date",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",

@@ -5,26 +5,11 @@ import { existsSync, mkdirSync, copyFileSync } from "fs";
 
 const banner = `/*
 Cairn Companion - Obsidian plugin
-Compilado automáticamente, no editar directamente. Edita src/main.ts
+Compiled automatically, do not edit directly. Edit src/main.ts
 */`;
 
 const prod = process.argv[2] === "production";
 
-// --- Modo desarrollo: compilar directamente dentro de tu vault de pruebas ---
-//
-// Define la variable de entorno CAIRN_DEV_VAULT_PLUGIN_DIR con la ruta a la
-// carpeta del plugin dentro de tu vault, y `npm run dev` escribirá ahí
-// main.js, manifest.json y styles.css en cada guardado — sin symlinks, sin
-// copiar nada a mano. Combínalo con el plugin comunitario "Hot Reload" en
-// ese vault para que Obsidian recargue el plugin solo.
-//
-// Ejemplo típico en WSL2, con el vault en el lado Windows:
-//   export CAIRN_DEV_VAULT_PLUGIN_DIR="/mnt/c/Users/tu_usuario/ObsidianVaults/CairnDev/.obsidian/plugins/cairn-companion"
-//   npm run dev
-//
-// Si la variable no está definida, `npm run dev` compila en la raíz del
-// proyecto (comportamiento anterior). `npm run build` (producción) siempre
-// compila en la raíz, ignora esta variable.
 const devOutDir = process.env.CAIRN_DEV_VAULT_PLUGIN_DIR;
 const outDir = prod ? "." : devOutDir || ".";
 
@@ -85,7 +70,7 @@ if (prod) {
 	await context.watch();
 	console.log(
 		outDir === "."
-			? "Vigilando cambios — compilando en la raíz del proyecto."
-			: `Vigilando cambios — compilando directamente en: ${outDir}`
+			? "Watching changes — compiling in the project root."
+			: `Watching changes — compiling directly in: ${outDir}`
 	);
 }

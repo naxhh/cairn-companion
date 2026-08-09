@@ -1,9 +1,5 @@
 name: Release Obsidian plugin
 
-# Se dispara al empujar un tag de versión (p. ej. `git tag 1.0.1 && git push --tags`).
-# El tag DEBE coincidir exactamente con la "version" de manifest.json — Obsidian
-# lo exige así para poder instalar/actualizar el plugin desde community plugins
-# o desde BRAT.
 on:
   push:
     tags:
@@ -22,28 +18,28 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Instalar dependencias y compilar
+      - name: Install deps and compile
         run: |
           npm install
           npm run build
 
-      - name: Comprobar que la versión del tag coincide con manifest.json
+      - name: Check that the tag version matches manifest.json
         run: |
           tag="${GITHUB_REF#refs/tags/}"
           manifest_version=$(node -p "require('./manifest.json').version")
           if [ "$tag" != "$manifest_version" ]; then
-            echo "El tag ($tag) no coincide con la version de manifest.json ($manifest_version)."
+            echo "The tag ($tag) does not match the version in manifest.json ($manifest_version)."
             exit 1
           fi
 
-      - name: Empaquetar
+      - name: Package
         run: |
           mkdir -p release/cairn-companion
           cp main.js manifest.json styles.css release/cairn-companion/
           cp -r data release/cairn-companion/data
           cd release && zip -r ../cairn-companion.zip cairn-companion
 
-      - name: Crear release en GitHub
+      - name: Create GitHub release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

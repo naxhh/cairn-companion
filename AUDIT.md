@@ -8,10 +8,12 @@ Consider this an immediate TODO list for the plugin
 - Review License shenanigants
 - Tweak DEVELOPMENT.md
 - Tweak README.md
+- Review build tooling
 
 
 ## TODO
 
+- Review deps versions
 - Review code
 - Review ES data
 - Add EN data
