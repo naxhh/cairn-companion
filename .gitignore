@@ -14,4 +14,5 @@ Thumbs.db
 npm-debug.log*
 *.log
 
-test-vault/
+# Obsidian plugin
+.hotreload
