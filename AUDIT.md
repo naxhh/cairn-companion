@@ -12,6 +12,11 @@ Consider this an immediate TODO list for the plugin
 
 
 ## TODO
+- Separate code in modules
+- Improve dice roller implementation so we don't need to pass the plugin/app everywhere
+- run dev is not really working.
+- i18n for EN plugin
+- i18n algunas entradas deberían ir a /data (scars, dungeonEventsTable, wildernessEventsTable)
 
 - Review deps versions
 - Review code

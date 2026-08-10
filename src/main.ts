@@ -16,65 +16,22 @@ import {
 	Setting,
 	TFile,
 	normalizePath,
-	parseYaml,
 	stringifyYaml,
+	getLanguage,
 } from "obsidian";
 
-/* -------------------------------------------------------------------------- */
-/*  Tipos de entrada                                                          */
-/* -------------------------------------------------------------------------- */
+import type { CairnType } from "./types";
+import { DATA_TYPES, TYPES, TYPE_LABELS, TYPE_ICONS } from "./types";
 
-type CairnType =
-	| "object"
-	| "skill"
-	| "spell"
-	| "npc"
-	| "monster"
-	| "background"
-	| "hireling"
-	| "bond"
-	| "omen"
-	| "character";
+import type { CairnSettings } from "./settings";
+import { DEFAULT_SETTINGS, EXAMPLES_FOLDER } from "./settings";
 
-// Tipos con datos incorporados (todo menos "character", que siempre es tuyo).
-const DATA_TYPES: Exclude<CairnType, "character">[] = [
-	"object",
-	"skill",
-	"spell",
-	"npc",
-	"monster",
-	"background",
-	"hireling",
-	"bond",
-	"omen",
-];
-const TYPES: CairnType[] = [...DATA_TYPES, "character"];
+import { CairnIndex, CairnEntry, BuiltinRaw } from "./indexer";
+import { doRoll, rollSave, extractDiceFormula, hasRollerPlugin } from "./dice";
+import { cairnMarkdownBlockProcessor, ParsedCairnBlock } from "./block";
+import { GuardianToolsModal } from "./guardian";
+import { normalize } from "./utils";
 
-const TYPE_LABELS: Record<CairnType, string> = {
-	object: "Objeto",
-	skill: "Rasgo / Habilidad",
-	spell: "Hechizo",
-	npc: "PNJ",
-	monster: "Monstruo",
-	background: "Trasfondo",
-	hireling: "Seguidor",
-	bond: "Vínculo",
-	omen: "Presagio",
-	character: "Personaje",
-};
-
-const TYPE_ICONS: Record<CairnType, string> = {
-	object: "🎒",
-	skill: "✨",
-	spell: "📖",
-	npc: "🧑",
-	monster: "🐺",
-	background: "📜",
-	hireling: "🧭",
-	bond: "🔗",
-	omen: "🌩️",
-	character: "🛡️",
-};
 
 interface FieldDef {
 	key: string;
@@ -205,249 +162,6 @@ const CREATE_LABELS: Record<CairnType, string> = {
 	character: "Nueva ficha de personaje",
 };
 
-/* -------------------------------------------------------------------------- */
-/*  Ajustes                                                                    */
-/* -------------------------------------------------------------------------- */
-
-type Language = "es" | "en";
-
-interface CairnSettings {
-	language: Language;
-	defaultFolder: string;
-	autoReindex: boolean;
-	autoLink: boolean;
-	autoLinkMinLength: number;
-}
-
-const EXAMPLES_FOLDER = "cairn-ejemplos";
-
-const DEFAULT_SETTINGS: CairnSettings = {
-	language: "es",
-	defaultFolder: "Cairn",
-	autoReindex: true,
-	autoLink: true,
-	autoLinkMinLength: 6,
-};
-
-/* -------------------------------------------------------------------------- */
-/*  Índice: combina datos incorporados (JSON) + notas del vault               */
-/* -------------------------------------------------------------------------- */
-
-interface CairnEntry {
-	type: CairnType;
-	name: string;
-	file: TFile | null; // null = entrada incorporada, sin nota propia
-	frontmatter: Record<string, unknown>;
-	description: string; // solo se usa para entradas incorporadas (sin archivo)
-	aliases: string[];
-	source: "builtin" | "vault";
-}
-
-interface BuiltinRaw {
-	name: string;
-	description?: string;
-	aliases?: string[];
-	[key: string]: unknown;
-}
-
-function normalize(s: string): string {
-	return s.trim().toLowerCase();
-}
-
-class CairnIndex {
-	entries: Record<CairnType, Map<string, CairnEntry>> = {
-		object: new Map(),
-		skill: new Map(),
-		spell: new Map(),
-		npc: new Map(),
-		monster: new Map(),
-		background: new Map(),
-		hireling: new Map(),
-		bond: new Map(),
-		omen: new Map(),
-		character: new Map(),
-	};
-
-	builtin: Record<Exclude<CairnType, "character">, BuiltinRaw[]> = {
-		object: [],
-		skill: [],
-		spell: [],
-		npc: [],
-		monster: [],
-		background: [],
-		hireling: [],
-		bond: [],
-		omen: [],
-	};
-
-	constructor(private app: App, private settings: CairnSettings) {}
-
-	clear() {
-		for (const t of TYPES) this.entries[t].clear();
-	}
-
-	rebuild() {
-		this.clear();
-
-		// 1) Datos incorporados primero (JSON del plugin)
-		for (const t of DATA_TYPES) {
-			for (const raw of this.builtin[t]) {
-				if (!raw || typeof raw.name !== "string" || !raw.name.trim()) continue;
-				const { name, description, aliases, ...rest } = raw;
-				const entry: CairnEntry = {
-					type: t,
-					name,
-					file: null,
-					frontmatter: rest,
-					description: typeof description === "string" ? description : "",
-					aliases: Array.isArray(aliases) ? aliases.map(String) : [],
-					source: "builtin",
-				};
-				this.entries[t].set(normalize(name), entry);
-				for (const a of entry.aliases) this.entries[t].set(normalize(a), entry);
-			}
-		}
-
-		// 2) Notas del vault: añaden o sobrescriben por nombre.
-		// La detección es siempre por la propiedad "cairn_type" del frontmatter,
-		// sin importar en qué carpeta viva la nota (puedes tener un catálogo
-		// reusable en "_db/" y entradas propias de una campaña en
-		// "Campaña/Faccion1/PNJ/Tesorero.md", por ejemplo).
-		const files = this.app.vault.getMarkdownFiles();
-		for (const file of files) {
-			const cache = this.app.metadataCache.getFileCache(file);
-			const fm = (cache?.frontmatter ?? {}) as Record<string, unknown>;
-
-			const fmType = fm["cairn_type"];
-			if (typeof fmType !== "string" || !(TYPES as string[]).includes(fmType)) continue;
-			const type = fmType as CairnType;
-
-			const name = (typeof fm["name"] === "string" && (fm["name"] as string).trim()) || file.basename;
-			const rawAliases = fm["aliases"];
-			const aliases: string[] = Array.isArray(rawAliases)
-				? rawAliases.map(String)
-				: typeof rawAliases === "string"
-				? [rawAliases]
-				: [];
-
-			const entry: CairnEntry = { type, name, file, frontmatter: fm, description: "", aliases, source: "vault" };
-			this.entries[type].set(normalize(name), entry);
-			for (const a of aliases) this.entries[type].set(normalize(a), entry);
-		}
-	}
-
-	find(type: CairnType, name: string): CairnEntry | undefined {
-		return this.entries[type].get(normalize(name));
-	}
-
-	list(type: CairnType): CairnEntry[] {
-		const seen = new Set<CairnEntry>();
-		const out: CairnEntry[] = [];
-		for (const e of this.entries[type].values()) {
-			if (!seen.has(e)) {
-				seen.add(e);
-				out.push(e);
-			}
-		}
-		return out.sort((a, b) => a.name.localeCompare(b.name));
-	}
-}
-
-/* -------------------------------------------------------------------------- */
-/*  Dados: usa el plugin "Dice Roller" si está disponible, si no cae a un     */
-/*  generador interno.                                                        */
-/* -------------------------------------------------------------------------- */
-
-interface DiceRollerLike {
-	getRoller: (
-		formula: string,
-		sourcePath?: string
-	) => Promise<{ roll: () => Promise<number | string>; containerEl?: HTMLElement }>;
-}
-
-function getDiceRollerApi(app: App): DiceRollerLike | null {
-	const anyApp = app as unknown as { plugins?: { plugins?: Record<string, unknown> } };
-	const plug = anyApp.plugins?.plugins?.["obsidian-dice-roller"] as DiceRollerLike | undefined;
-	if (plug && typeof plug.getRoller === "function") return plug;
-	return null;
-}
-
-function fallbackRoll(formula: string): number {
-	const clean = formula.replace(/\s+/g, "");
-	const tokens = clean.match(/[+-]?[^+-]+/g) || [clean];
-	let total = 0;
-	for (const tok of tokens) {
-		const sign = tok.startsWith("-") ? -1 : 1;
-		const body = tok.replace(/^[+-]/, "");
-		const diceMatch = body.match(/^(\d*)d(\d+)$/i);
-		if (diceMatch) {
-			const num = parseInt(diceMatch[1] || "1", 10);
-			const sides = parseInt(diceMatch[2], 10);
-			for (let i = 0; i < num; i++) total += sign * (1 + Math.floor(Math.random() * sides));
-		} else if (/^\d+$/.test(body)) {
-			total += sign * parseInt(body, 10);
-		}
-	}
-	return total;
-}
-
-function extractDiceFormula(text: string): string | null {
-	const m = text.match(/\d+d\d+(?:\s*\+\s*\d+d\d+)*(?:\s*[+-]\s*\d+)?/i);
-	return m ? m[0].replace(/\s+/g, "") : null;
-}
-
-async function doRoll(plugin: CairnPlugin, outputEl: HTMLElement, formula: string, label?: string) {
-	outputEl.empty();
-	outputEl.addClass("cairn-roll-output-active");
-	const activePath = plugin.app.workspace.getActiveFile()?.path ?? "";
-	const diceApi = getDiceRollerApi(plugin.app);
-	if (diceApi) {
-		try {
-			const roller = await diceApi.getRoller(formula, activePath);
-			const total = await roller.roll();
-			if (label) outputEl.createSpan({ text: `${label}: `, cls: "cairn-roll-label" });
-			if (roller.containerEl) {
-				outputEl.appendChild(roller.containerEl);
-			} else {
-				outputEl.createSpan({ text: `${formula} → ${total}` });
-			}
-			return;
-		} catch (e) {
-			/* si el plugin de dados falla, usamos el generador interno */
-		}
-	}
-	const total = fallbackRoll(formula);
-	if (label) outputEl.createSpan({ text: `${label}: `, cls: "cairn-roll-label" });
-	outputEl.createSpan({ text: `🎲 ${formula} → ${total}` });
-}
-
-async function rollSave(plugin: CairnPlugin, outputEl: HTMLElement, statValue: number, label: string) {
-	outputEl.empty();
-	outputEl.addClass("cairn-roll-output-active");
-	const activePath = plugin.app.workspace.getActiveFile()?.path ?? "";
-	const diceApi = getDiceRollerApi(plugin.app);
-	let total: number;
-	let diceEl: HTMLElement | null = null;
-	if (diceApi) {
-		try {
-			const roller = await diceApi.getRoller("1d20", activePath);
-			total = Number(await roller.roll());
-			diceEl = roller.containerEl ?? null;
-		} catch (e) {
-			total = fallbackRoll("1d20");
-		}
-	} else {
-		total = fallbackRoll("1d20");
-	}
-	const success = total === 1 || (total !== 20 && total <= statValue);
-	outputEl.createSpan({ text: `${label}: `, cls: "cairn-roll-label" });
-	if (diceEl) outputEl.appendChild(diceEl);
-	else outputEl.createSpan({ text: String(total) });
-	outputEl.createSpan({
-		text: ` vs ${statValue} → ${success ? "✅ Éxito" : "❌ Fallo"}`,
-		cls: success ? "cairn-success" : "cairn-fail",
-	});
-}
 
 /* -------------------------------------------------------------------------- */
 /*  Tabla de Cicatrices (Reglas Básicas)                                      */
@@ -527,65 +241,6 @@ function renderCicatriz(outputEl: HTMLElement, pgLost: number) {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Parseo del bloque único ```cairn (type + name obligatorios)               */
-/* -------------------------------------------------------------------------- */
-
-interface ParsedCairnBlock {
-	type: CairnType | "tools" | null;
-	name: string;
-	overrides: Record<string, unknown>;
-	error?: string;
-}
-
-function parseCairnBlock(source: string): ParsedCairnBlock {
-	let parsed: Record<string, unknown> = {};
-	try {
-		const y = parseYaml(source);
-		if (y && typeof y === "object") parsed = y as Record<string, unknown>;
-	} catch (e) {
-		return { type: null, name: "", overrides: {}, error: "El contenido del bloque no es YAML válido." };
-	}
-
-	const rawType = parsed["type"];
-	if (typeof rawType !== "string" || !rawType.trim()) {
-		return { type: null, name: "", overrides: {}, error: 'Falta el campo obligatorio "type".' };
-	}
-	const type = rawType.trim().toLowerCase();
-
-	// "tools" es un panel de utilidades, no una entrada del catálogo: no lleva "name".
-	if (type === "tools") {
-		const { type: _t, ...overrides } = parsed;
-		return { type: "tools", name: "", overrides };
-	}
-
-	const rawName = parsed["name"];
-	if (typeof rawName !== "string" || !rawName.trim()) {
-		return { type: null, name: "", overrides: {}, error: 'Falta el campo obligatorio "name".' };
-	}
-	if (!(TYPES as string[]).includes(type)) {
-		return {
-			type: null,
-			name: "",
-			overrides: {},
-			error: `Tipo "${rawType}" desconocido. Usa uno de: ${TYPES.join(", ")}, tools.`,
-		};
-	}
-
-	const { type: _t, name: _n, ...overrides } = parsed;
-	return { type: type as CairnType, name: rawName.trim(), overrides };
-}
-
-function renderBlockError(el: HTMLElement, message: string) {
-	el.empty();
-	el.addClass("cairn-card", "cairn-error-card");
-	el.createDiv({ cls: "cairn-error", text: `⚠️ ${message}` });
-	el.createDiv({
-		cls: "cairn-error-hint",
-		text: 'Formato esperado:\ntype: <tipo>\nname: "<nombre>"',
-	});
-}
-
-/* -------------------------------------------------------------------------- */
 /*  Utilidades varias                                                         */
 /* -------------------------------------------------------------------------- */
 
@@ -642,7 +297,7 @@ function appendAdvantageButtons(el: HTMLElement, plugin: CairnPlugin, rollOutput
 	});
 	advBtn.onclick = (ev: MouseEvent) => {
 		ev.preventDefault();
-		doRoll(plugin, rollOutput, "1d12", `${label} (Ventaja)`);
+		doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, "1d12", `${label} (Ventaja)`);
 	};
 	const disBtn = el.createEl("button", {
 		text: "▼",
@@ -651,7 +306,7 @@ function appendAdvantageButtons(el: HTMLElement, plugin: CairnPlugin, rollOutput
 	});
 	disBtn.onclick = (ev: MouseEvent) => {
 		ev.preventDefault();
-		doRoll(plugin, rollOutput, "1d4", `${label} (Desventaja)`);
+		doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, "1d4", `${label} (Desventaja)`);
 	};
 }
 
@@ -673,7 +328,7 @@ function appendTextWithDiceButton(
 		});
 		btn.onclick = (ev: MouseEvent) => {
 			ev.preventDefault();
-			doRoll(plugin, rollOutput, formula, label);
+			doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, formula, label);
 		};
 		// Ventaja/Desventaja sustituyen el dado del arma por 1d12/1d4 (Reglas
 		// Básicas: Combate → Modificadores de ataque). Solo se ofrece en
@@ -926,7 +581,7 @@ function buildInventorySection(
 						cls: "cairn-dice-btn",
 						attr: { "aria-label": "Tirar daño" },
 					});
-					rollBtn.onclick = () => doRoll(plugin, rollOutput, String(dmg), item.name);
+					rollBtn.onclick = () => doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, String(dmg), item.name);
 					appendAdvantageButtons(li, plugin, rollOutput, item.name);
 				}
 			}
@@ -1065,7 +720,7 @@ async function renderCharacterSheet(
 			plugin.setCharField(file, maxKey, v);
 		};
 		const rollBtn = box.createEl("button", { text: "🎲 Salvación", cls: "cairn-dice-btn" });
-		rollBtn.onclick = () => rollSave(plugin, rollOutput, Number(fm[key] ?? 0) || 0, `Salvación de ${label}`);
+		rollBtn.onclick = () => rollSave(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, Number(fm[key] ?? 0) || 0, `Salvación de ${label}`);
 	}
 
 	const miscRow = sheet.createDiv({ cls: "cairn-misc-row" });
@@ -1283,132 +938,6 @@ class RandomEntryModal extends FuzzySuggestModal<CairnType> {
 	}
 }
 
-/* -------------------------------------------------------------------------- */
-/*  Herramientas rápidas del Guardián (Dado del Destino, Reacciones, Clima,   */
-/*  Eventos en la Mazmorra / en Entornos Salvajes)                            */
-/* -------------------------------------------------------------------------- */
-
-interface QuickRollResult {
-	text: string;
-}
-
-function rollDadoDelDestino(): QuickRollResult {
-	const total = fallbackRoll("1d6");
-	const favorable = total >= 4;
-	return { text: `🎲 Dado del Destino: ${total} → ${favorable ? "Favorece a los PJ" : "Mala suerte para los PJ"}` };
-}
-
-function rollReaccion(): QuickRollResult {
-	const total = fallbackRoll("2d6");
-	let label: string;
-	if (total === 2) label = "Hostil";
-	else if (total <= 5) label = "Cauteloso";
-	else if (total <= 8) label = "Curioso";
-	else if (total <= 11) label = "Amable";
-	else label = "Servicial";
-	return { text: `🎲 Reacción: ${total} → ${label}` };
-}
-
-const CLIMA_TABLE: Record<string, string[]> = {
-	Primavera: ["Agradable", "Normal", "Normal", "Desagradable", "Inclemente", "Extremo"],
-	Verano: ["Agradable", "Agradable", "Normal", "Desagradable", "Inclemente", "Extremo"],
-	Otoño: ["Normal", "Normal", "Desagradable", "Inclemente", "Inclemente", "Extremo"],
-	Invierno: ["Normal", "Desagradable", "Inclemente", "Inclemente", "Extremo", "Extremo"],
-};
-
-function rollClima(season: string): QuickRollResult {
-	const total = fallbackRoll("1d6");
-	const table = CLIMA_TABLE[season] ?? CLIMA_TABLE["Verano"];
-	const result = table[total - 1];
-	const note = result === "Extremo" ? " (si sale Extremo dos veces seguidas, se vuelve Catastrófico)" : "";
-	return { text: `🎲 Clima de ${season}: ${total} → ${result}${note}` };
-}
-
-const EVENTOS_MAZMORRA: [string, string][] = [
-	["Encuentro", "Tira en una Tabla de Encuentros. Amenaza posiblemente hostil."],
-	["Señal", "Se descubre una pista, rastro, huella, guarida abandonada, olor, víctima, etc."],
-	[
-		"Ambiental",
-		"El entorno cambia o algo que ya ocurre se intensifica (el agua sube, el techo se derrumba, un ritual se acerca a su fin...).",
-	],
-	["Pérdida", "Las antorchas se apagan, un hechizo activo se desvanece, etc. Hay que lidiar con ello antes de continuar."],
-	[
-		"Agotamiento",
-		"El grupo se ve obligado a tomar un descanso corto (vuelve a tirar en esta tabla). Consume una ración o marca Fatiga.",
-	],
-	["Calma", "El grupo está solo (y a salvo) por ahora en la estancia o lugar donde se encuentran."],
-];
-
-const EVENTOS_SALVAJES: [string, string][] = [
-	["Encuentro", "Tira en una Tabla de Encuentros según el terreno y lugar (y la reacción del PNJ, si aplica)."],
-	[
-		"Señal",
-		"El grupo descubre una pista, rastro o indicación de un encuentro cercano, localidad, característica oculta o información sobre un área cercana.",
-	],
-	["Ambiental", "Hay un cambio en el clima o el terreno."],
-	[
-		"Pérdida",
-		"El grupo tiene que tomar una decisión que le costará un recurso (raciones, herramientas, etc.), tiempo o esfuerzo.",
-	],
-	[
-		"Agotamiento",
-		"El grupo encuentra un gran obstáculo: más esfuerzo, atender heridas o sufrir un retraso. Pasa más tiempo (y otra Acción de Supervivencia) o añade Fatiga.",
-	],
-	["Descubrimiento", "El grupo encuentra comida, tesoro u otro recurso útil, o se revela la característica principal del área."],
-];
-
-function rollFromTable(table: [string, string][]): QuickRollResult {
-	const total = fallbackRoll("1d6");
-	const [title, desc] = table[total - 1];
-	return { text: `🎲 ${total} → ${title}: ${desc}` };
-}
-
-function addToolButton(container: HTMLElement, resultEl: HTMLElement, label: string, rollFn: () => QuickRollResult) {
-	const btn = container.createEl("button", { text: label });
-	btn.onclick = () => {
-		resultEl.setText(rollFn().text);
-	};
-}
-
-function buildGuardianToolsUI(container: HTMLElement, asCard: boolean) {
-	container.empty();
-	if (asCard) {
-		container.addClass("cairn-card", "cairn-tools-card");
-		const header = container.createDiv({ cls: "cairn-card-header" });
-		header.createSpan({ text: "🧰", cls: "cairn-icon" });
-		header.createSpan({ text: "Herramientas del Guardián", cls: "cairn-title" });
-		header.createSpan({ text: "Utilidad", cls: "cairn-type-badge" });
-	} else {
-		container.addClass("cairn-utility-modal");
-		container.createEl("h3", { text: "Herramientas del Guardián" });
-	}
-
-	const resultEl = container.createDiv({ cls: "cairn-utility-result" });
-
-	const row1 = container.createDiv({ cls: "cairn-utility-row" });
-	addToolButton(row1, resultEl, "🎲 Dado del Destino", rollDadoDelDestino);
-	addToolButton(row1, resultEl, "🎲 Reacción de PNJ", rollReaccion);
-
-	container.createEl("div", { cls: "cairn-utility-label", text: "Clima" });
-	const row2 = container.createDiv({ cls: "cairn-utility-row" });
-	for (const season of Object.keys(CLIMA_TABLE)) {
-		addToolButton(row2, resultEl, season, () => rollClima(season));
-	}
-
-	container.createEl("div", { cls: "cairn-utility-label", text: "Eventos" });
-	const row3 = container.createDiv({ cls: "cairn-utility-row" });
-	addToolButton(row3, resultEl, "🎲 En la Mazmorra", () => rollFromTable(EVENTOS_MAZMORRA));
-	addToolButton(row3, resultEl, "🎲 En Entornos Salvajes", () => rollFromTable(EVENTOS_SALVAJES));
-}
-
-class GuardianToolsModal extends Modal {
-	onOpen() {
-		buildGuardianToolsUI(this.contentEl, false);
-	}
-	onClose() {
-		this.contentEl.empty();
-	}
-}
 
 /* -------------------------------------------------------------------------- */
 /*  Autocompletado de "type:" y "name:" dentro de un bloque ```cairn          */
@@ -1647,16 +1176,10 @@ export default class CairnPlugin extends Plugin {
 			this.reindex();
 		});
 
-		this.registerMarkdownCodeBlockProcessor("cairn", (source, el, ctx: MarkdownPostProcessorContext) => {
-			const parsed = parseCairnBlock(source);
-			if (parsed.error || !parsed.type) {
-				renderBlockError(el, parsed.error ?? "Error desconocido en el bloque.");
-				return;
-			}
-			if (parsed.type === "tools") {
-				buildGuardianToolsUI(el, true);
-				return;
-			}
+		this.registerMarkdownCodeBlockProcessor("cairn", (source: string, el: HTMLElement, ctx: MarkdownPostProcessorContext) => {
+			const parsed: ParsedCairnBlock | undefined = cairnMarkdownBlockProcessor(source, el);
+			if (!parsed || !(parsed.type && parsed.type !== "tools" && TYPES.includes(parsed.type))) return;
+
 			renderEntryCard(this, el, parsed.type, parsed.name, parsed.overrides);
 		});
 
@@ -1843,7 +1366,7 @@ export default class CairnPlugin extends Plugin {
 		}
 	}
 
-	async readDataFile(lang: Language, type: Exclude<CairnType, "character">): Promise<BuiltinRaw[] | null> {
+	async readDataFile(lang: string, type: Exclude<CairnType, "character">): Promise<BuiltinRaw[] | null> {
 		const path = normalizePath(`${pluginDir(this)}/data/${lang}/${type}s.json`);
 		try {
 			const exists = await this.app.vault.adapter.exists(path);
@@ -2159,6 +1682,14 @@ export default class CairnPlugin extends Plugin {
 
 	async loadSettings() {
 		const loaded = ((await this.loadData()) ?? {}) as Partial<CairnSettings>;
+		const language: string = getLanguage();
+		// Only en & es support for now
+		if (language == "es") {
+			loaded.language = "es";
+		} else {
+			loaded.language = "en";
+		}
+
 		this.settings = Object.assign({}, DEFAULT_SETTINGS, loaded);
 	}
 
@@ -2182,24 +1713,14 @@ class CairnSettingTab extends PluginSettingTab {
 		containerEl.empty();
 		containerEl.createEl("h2", { text: "Cairn Companion" });
 
+		const appLanguage = getLanguage();
+		const pluginLanguage = this.plugin.settings.language
 		new Setting(containerEl)
 			.setName("Idioma de los datos incorporados")
 			.setDesc(
-				"Objetos, hechizos, monstruos y trasfondos oficiales vienen empaquetados con el plugin. " +
-					"Elige el idioma; si un idioma todavía no tiene datos, se usa Español como reserva."
-			)
-			.addDropdown((d) =>
-				d
-					.addOption("es", "Español")
-					.addOption("en", "English")
-					.setValue(this.plugin.settings.language)
-					.onChange(async (value) => {
-						this.plugin.settings.language = value as Language;
-						await this.plugin.saveSettings();
-						await this.plugin.loadBuiltinData();
-						this.plugin.reindex();
-						this.display();
-					})
+				appLanguage === pluginLanguage
+					? "✅ Idioma soportado por el plugin."
+					: `❌ "${appLanguage}" no soportado por el plugin, se usará ${pluginLanguage}`
 			);
 
 		containerEl.createEl("p", {
@@ -2299,7 +1820,7 @@ class CairnSettingTab extends PluginSettingTab {
 				})
 			);
 
-		const dice = getDiceRollerApi(this.app);
+		const dice = hasRollerPlugin(this.app);
 		new Setting(containerEl)
 			.setName("Plugin de dados")
 			.setDesc(

@@ -26,7 +26,7 @@ const copyStaticAssets = {
 				try {
 					copyFileSync(f, `${outDir}/${f}`);
 				} catch (e) {
-					console.warn(`No se pudo copiar ${f} a ${outDir}:`, e.message);
+					console.warn(`Couldn't copy ${f} to ${outDir}:`, e.message);
 				}
 			}
 		});
