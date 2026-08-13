@@ -25,9 +25,10 @@ import { GuardianToolsModal, GuardianEventTables } from "./guardian";
 import { normalize } from "./utils";
 import type { CairnStrings } from "./i18n";
 import { getStrings } from "./i18n";
-import { renderEntryCard, templatesFor, CairnFieldSuggest, createAutoLinkSpan } from "./render";
+import { renderEntryCard, templatesFor, CairnFieldSuggest } from "./render";
 import { TypePickerModal, TextInputModal, RandomEntryModal } from "./modals";
 import { createSamples as createExampleNotes } from "./examples";
+import { CairnAutoLinker } from "./autolink";
 
 /* -------------------------------------------------------------------------- */
 /*  Plugin                                                                     */
@@ -41,8 +42,7 @@ export default class CairnPlugin extends Plugin {
 	settings: CairnSettings;
 	index: CairnIndex;
 	private reindexTimer: number | null = null;
-	autoLinkRegex: RegExp | null = null;
-	autoLinkMap: Map<string, { type: CairnType; canonicalName: string }> = new Map();
+	private autoLinker: CairnAutoLinker = new CairnAutoLinker(this);
 	scars: RollTableEntry[] = [];
 	dungeonEvents: RollTableEntry[] = [];
 	wildernessEvents: RollTableEntry[] = [];
@@ -75,7 +75,7 @@ export default class CairnPlugin extends Plugin {
 		// turns them into links with a hover preview.
 		this.registerMarkdownPostProcessor((el) => {
 			if (!this.settings.autoLink) return;
-			this.autoLinkElement(el);
+			this.autoLinker.linkElement(el);
 		});
 
 		this.registerEditorSuggest(new CairnFieldSuggest(this.app, this));
@@ -171,89 +171,7 @@ export default class CairnPlugin extends Plugin {
 
 	reindex() {
 		this.index.rebuild();
-		this.rebuildAutoLinkIndex();
-	}
-
-	rebuildAutoLinkIndex() {
-		const minLen = Math.max(1, this.settings.autoLinkMinLength || 1);
-		const map = new Map<string, { type: CairnType; canonicalName: string }>();
-		const names: string[] = [];
-		for (const t of TYPES) {
-			for (const entry of this.index.list(t)) {
-				const candidates = [entry.name, ...entry.aliases];
-				for (const c of candidates) {
-					const trimmed = c.trim();
-					if (!trimmed) continue;
-					const isMultiWord = /\s/.test(trimmed);
-					if (!isMultiWord && trimmed.length < minLen) continue;
-					const key = normalize(trimmed);
-					if (!map.has(key)) {
-						map.set(key, { type: t, canonicalName: entry.name });
-						names.push(trimmed);
-					}
-				}
-			}
-		}
-		names.sort((a, b) => b.length - a.length);
-		this.autoLinkMap = map;
-		if (names.length === 0) {
-			this.autoLinkRegex = null;
-			return;
-		}
-		const escaped = names.map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
-		this.autoLinkRegex = new RegExp(`\\b(${escaped.join("|")})\\b`, "gi");
-	}
-
-	autoLinkElement(root: HTMLElement) {
-		if (!this.autoLinkRegex || this.autoLinkMap.size === 0) return;
-		if (root.classList.contains("cairn-card") || root.querySelector(".cairn-card")) return;
-		if (root.closest(".cairn-card")) return;
-
-		const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-			acceptNode: (node) => {
-				const parent = (node as Text).parentElement;
-				if (!parent) return NodeFilter.FILTER_REJECT;
-				const tag = parent.tagName;
-				if (tag === "CODE" || tag === "PRE" || tag === "A" || tag === "SCRIPT" || tag === "STYLE") {
-					return NodeFilter.FILTER_REJECT;
-				}
-				if (parent.classList.contains("cairn-autolink")) return NodeFilter.FILTER_REJECT;
-				if (parent.closest(".cairn-card")) return NodeFilter.FILTER_REJECT;
-				if (!node.textContent || !node.textContent.trim()) return NodeFilter.FILTER_REJECT;
-				return NodeFilter.FILTER_ACCEPT;
-			},
-		});
-
-		const targets: Text[] = [];
-		let n: Node | null;
-		while ((n = walker.nextNode())) targets.push(n as Text);
-
-		for (const textNode of targets) {
-			const text = textNode.textContent ?? "";
-			const regex = this.autoLinkRegex;
-			regex.lastIndex = 0;
-			if (!regex.test(text)) continue;
-			regex.lastIndex = 0;
-
-			const frag = document.createDocumentFragment();
-			let lastIndex = 0;
-			let match: RegExpExecArray | null;
-			while ((match = regex.exec(text))) {
-				const matched = match[0];
-				const start = match.index;
-				if (start > lastIndex) frag.appendChild(document.createTextNode(text.slice(lastIndex, start)));
-				const info = this.autoLinkMap.get(normalize(matched));
-				if (info) {
-					frag.appendChild(createAutoLinkSpan(this, matched, info.type, info.canonicalName));
-				} else {
-					frag.appendChild(document.createTextNode(matched));
-				}
-				lastIndex = start + matched.length;
-				if (regex.lastIndex === match.index) regex.lastIndex++;
-			}
-			if (lastIndex < text.length) frag.appendChild(document.createTextNode(text.slice(lastIndex)));
-			textNode.parentNode?.replaceChild(frag, textNode);
-		}
+		this.autoLinker.rebuild();
 	}
 
 	async readDataFile(lang: string, type: Exclude<CairnType, "character">): Promise<BuiltinRaw[] | null> {
