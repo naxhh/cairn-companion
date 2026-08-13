@@ -1,4 +1,5 @@
 import type { App } from "obsidian";
+import type { CairnStrings } from "./i18n";
 
 interface DiceRollerLike {
     getRoller: (
@@ -75,7 +76,14 @@ export async function doRoll(activePath: string, app: App, outputEl: HTMLElement
     }
 }
 
-export async function rollSave(activePath: string, app: App, outputEl: HTMLElement, statValue: number, label: string) {
+export async function rollSave(
+    activePath: string,
+    app: App,
+    outputEl: HTMLElement,
+    statValue: number,
+    label: string,
+    strings: CairnStrings
+) {
     outputEl.empty();
     outputEl.addClass("cairn-roll-output-active");
     const diceApi = getDiceRollerApi(app);
@@ -89,7 +97,7 @@ export async function rollSave(activePath: string, app: App, outputEl: HTMLEleme
     if (diceEl) outputEl.appendChild(diceEl);
     else outputEl.createSpan({ text: String(total) });
     outputEl.createSpan({
-        text: ` vs ${statValue} → ${success ? "✅ Éxito" : "❌ Fallo"}`,
+        text: ` vs ${statValue} → ${success ? strings.dice.success : strings.dice.fail}`,
         cls: success ? "cairn-success" : "cairn-fail",
     });
 }

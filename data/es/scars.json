@@ -1,0 +1,50 @@
+[
+	{
+		"title": "Cicatriz permanente",
+		"effect": "Tira 1d6 | 1: Cuello, 2: Manos, 3: Ojo, 4: Pecho, 5: Piernas, 6: Oídos. Tira 1d6; si el resultado es mayor que tu PG máxima, quédate con esta nueva cifra."
+	},
+	{
+		"title": "Oír pajaritos",
+		"effect": "Estás desorientado y conmocionado. Describe cómo recuperas la concentración. Tira 1d6; si el resultado es mayor que tu PG máxima, quédate con esta nueva cifra."
+	},
+	{
+		"title": "Golpetazo",
+		"effect": "Te lanzaron por los aires y caíste de bruces, sin aliento. Estarás Exhausto hasta que descanses unas horas. Luego, tira 1d6 y suma el resultado a tu PG máxima."
+	},
+	{
+		"title": "Fractura",
+		"effect": "Tira 1d6 | 1-2: Pierna, 3-4: Brazo, 5: Costilla, 6: Cráneo. Una vez recuperado, tira 2d6; si el resultado es mayor que tu PG máxima, quédate con esta nueva cifra."
+	},
+	{
+		"title": "Enfermedad",
+		"effect": "Estás afectado por una infección asquerosa e incómoda. Cuando la superes, tira 2d6; si el resultado es mayor que tu PG máxima, quédate con esta nueva cifra."
+	},
+	{
+		"title": "Herida en la cabeza que cambiará tu vida",
+		"effect": "Tira 1d6 | 1-2: FUE, 3-4: DES, 5-6: VOL. Tira 3d6; si el resultado es mayor que la puntuación de esa Característica, usa este valor (el máximo no se modifica)."
+	},
+	{
+		"title": "Parálisis",
+		"effect": "Apenas puedes moverte hasta que descanses y recibas cuidados profesionales. Tras recuperarte, tira 3d6; si el resultado es mayor que tu DES máxima, quédate con esa nueva cifra."
+	},
+	{
+		"title": "Sordera",
+		"effect": "No podrás oír nada hasta que encuentres un remedio extraordinario. Realiza una Salvación de VOL; si tienes éxito, aumenta tu VOL máxima en 1d4."
+	},
+	{
+		"title": "Cerebro reestructurado",
+		"effect": "El daño ha arrancado una parte oculta de tu psique. Tira 3d6; si el resultado es mayor que tu VOL máxima, quédate con esa nueva cifra."
+	},
+	{
+		"title": "Desgarro",
+		"effect": "El daño arranca o deja inútil una extremidad (la Guardiana decide cuál). Haz una Salvación de VOL; si la superas, aumenta tu VOL máxima en 1d6."
+	},
+	{
+		"title": "Herida mortal",
+		"effect": "Estás Exhausto y fuera de combate. Morirás en una hora a menos que te curen. Tras recuperarte, tira 2d6; si el resultado es mayor que tu PG máxima, quédate con esta nueva cifra."
+	},
+	{
+		"title": "Condenado",
+		"effect": "La muerte parecía estar muy cerca, pero de alguna manera has sobrevivido. Si fallas la próxima tirada de Salvación contra Daño Crítico, morirás horriblemente. Si tienes éxito, tira 3d6; si el resultado es mayor que tu PG máxima, quédate con esta nueva cifra."
+	}
+]

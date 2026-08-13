@@ -1,0 +1,23 @@
+[
+	{
+		"title": "Encuentro",
+		"effect": "Tira en una Tabla de Encuentros según el terreno y lugar (y la reacción del PNJ, si aplica)."
+	},
+	{
+		"title": "Señal",
+		"effect": "El grupo descubre una pista, rastro o indicación de un encuentro cercano, localidad, característica oculta o información sobre un área cercana."
+	},
+	{ "title": "Ambiental", "effect": "Hay un cambio en el clima o el terreno." },
+	{
+		"title": "Pérdida",
+		"effect": "El grupo tiene que tomar una decisión que le costará un recurso (raciones, herramientas, etc.), tiempo o esfuerzo."
+	},
+	{
+		"title": "Agotamiento",
+		"effect": "El grupo encuentra un gran obstáculo: más esfuerzo, atender heridas o sufrir un retraso. Pasa más tiempo (y otra Acción de Supervivencia) o añade Fatiga."
+	},
+	{
+		"title": "Descubrimiento",
+		"effect": "El grupo encuentra comida, tesoro u otro recurso útil, o se revela la característica principal del área."
+	}
+]

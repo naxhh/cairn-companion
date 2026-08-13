@@ -25,18 +25,8 @@ export const DATA_TYPES: Exclude<CairnType, "character">[] = [
 ];
 export const TYPES: CairnType[] = [...DATA_TYPES, "character"];
 
-export const TYPE_LABELS: Record<CairnType, string> = {
-	object: "Objeto",
-	skill: "Rasgo / Habilidad",
-	spell: "Hechizo",
-	npc: "PNJ",
-	monster: "Monstruo",
-	background: "Trasfondo",
-	hireling: "Seguidor",
-	bond: "Vínculo",
-	omen: "Presagio",
-	character: "Personaje",
-};
+// Display labels for each type live in src/i18n.ts (CairnStrings.types),
+// selected at runtime based on the user's language setting.
 
 export const TYPE_ICONS: Record<CairnType, string> = {
 	object: "🎒",
@@ -50,3 +40,11 @@ export const TYPE_ICONS: Record<CairnType, string> = {
 	omen: "🌩️",
 	character: "🛡️",
 };
+
+// A generic { title, effect } roll-table row, used for the scars table and
+// the guardian tools' event tables. Content lives in data/<lang>/*.json,
+// not in code — these are game content, not plugin UI strings.
+export interface RollTableEntry {
+	title: string;
+	effect: string;
+}

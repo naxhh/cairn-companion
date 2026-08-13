@@ -1,0 +1,23 @@
+[
+	{
+		"title": "Encounter",
+		"effect": "Roll on an Encounter Table based on the terrain and location (and the NPC's reaction, if applicable)."
+	},
+	{
+		"title": "Sign",
+		"effect": "The party discovers a clue, trail, or indication of a nearby encounter, settlement, hidden feature, or information about a nearby area."
+	},
+	{ "title": "Environmental", "effect": "There's a change in the weather or terrain." },
+	{
+		"title": "Loss",
+		"effect": "The party has to make a decision that will cost a resource (rations, tools, etc.), time, or effort."
+	},
+	{
+		"title": "Exhaustion",
+		"effect": "The party runs into a major obstacle: more effort, tending to wounds, or a delay. Spend more time (and another Survival Action) or add Fatigue."
+	},
+	{
+		"title": "Discovery",
+		"effect": "The party finds food, treasure, or another useful resource, or the area's main feature is revealed."
+	}
+]

@@ -1,16 +1,22 @@
 
 import { MarkdownPostProcessorContext, parseYaml } from "obsidian";
 import { CairnType, TYPES } from "./types";
-import { buildGuardianToolsUI } from "./guardian";
+import { buildGuardianToolsUI, GuardianEventTables } from "./guardian";
+import type { CairnStrings } from "./i18n";
 
-export function cairnMarkdownBlockProcessor(source: string, el: HTMLElement): ParsedCairnBlock | undefined {
-			const parsed = parseCairnBlock(source);
+export function cairnMarkdownBlockProcessor(
+	source: string,
+	el: HTMLElement,
+	strings: CairnStrings,
+	tables: GuardianEventTables
+): ParsedCairnBlock | undefined {
+			const parsed = parseCairnBlock(source, strings);
 			if (parsed.error || !parsed.type) {
-				renderBlockError(el, parsed.error ?? "Error desconocido en el bloque.");
+				renderBlockError(el, parsed.error ?? strings.errors.unknownBlockError, strings);
 				return;
 			}
 			if (parsed.type === "tools") {
-				buildGuardianToolsUI(el, true);
+				buildGuardianToolsUI(el, true, strings, tables);
 				return;
 			}
 
@@ -24,22 +30,22 @@ export interface ParsedCairnBlock {
 	error?: string;
 }
 
-function parseCairnBlock(source: string): ParsedCairnBlock {
+function parseCairnBlock(source: string, strings: CairnStrings): ParsedCairnBlock {
 	let parsed: Record<string, unknown> = {};
 	try {
 		const y = parseYaml(source);
 		if (y && typeof y === "object") parsed = y as Record<string, unknown>;
 	} catch (e) {
-		return { type: null, name: "", overrides: {}, error: "El contenido del bloque no es YAML válido." };
+		return { type: null, name: "", overrides: {}, error: strings.errors.invalidYaml };
 	}
 
 	const rawType = parsed["type"];
 	if (typeof rawType !== "string" || !rawType.trim()) {
-		return { type: null, name: "", overrides: {}, error: 'Falta el campo obligatorio "type".' };
+		return { type: null, name: "", overrides: {}, error: strings.errors.missingType };
 	}
 	const type = rawType.trim().toLowerCase();
 
-	// "tools" es un panel de utilidades, no una entrada del catálogo: no lleva "name".
+	// "tools" is a utility panel, not a catalog entry: it has no "name".
 	if (type === "tools") {
 		const { type: _t, ...overrides } = parsed;
 		return { type: "tools", name: "", overrides };
@@ -47,14 +53,14 @@ function parseCairnBlock(source: string): ParsedCairnBlock {
 
 	const rawName = parsed["name"];
 	if (typeof rawName !== "string" || !rawName.trim()) {
-		return { type: null, name: "", overrides: {}, error: 'Falta el campo obligatorio "name".' };
+		return { type: null, name: "", overrides: {}, error: strings.errors.missingName };
 	}
 	if (!(TYPES as string[]).includes(type)) {
 		return {
 			type: null,
 			name: "",
 			overrides: {},
-			error: `Tipo "${rawType}" desconocido. Usa uno de: ${TYPES.join(", ")}, tools.`,
+			error: strings.errors.unknownType(rawType, TYPES.join(", ")),
 		};
 	}
 
@@ -62,12 +68,12 @@ function parseCairnBlock(source: string): ParsedCairnBlock {
 	return { type: type as CairnType, name: rawName.trim(), overrides };
 }
 
-function renderBlockError(el: HTMLElement, message: string) {
+function renderBlockError(el: HTMLElement, message: string, strings: CairnStrings) {
 	el.empty();
 	el.addClass("cairn-card", "cairn-error-card");
 	el.createDiv({ cls: "cairn-error", text: `⚠️ ${message}` });
 	el.createDiv({
 		cls: "cairn-error-hint",
-		text: 'Formato esperado:\ntype: <tipo>\nname: "<nombre>"',
+		text: strings.errors.expectedFormatHint,
 	});
 }

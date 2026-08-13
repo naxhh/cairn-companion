@@ -1,80 +1,58 @@
-import { Modal } from "obsidian";
+import { App, Modal } from "obsidian";
 import { fallbackRoller } from "./dice";
+import type { CairnStrings } from "./i18n";
+import type { RollTableEntry } from "./types";
+
+export interface GuardianEventTables {
+    dungeonEvents: RollTableEntry[];
+    wildernessEvents: RollTableEntry[];
+}
 
 interface QuickRollResult {
     text: string;
 }
 
-function rollDadoDelDestino(): QuickRollResult {
+function rollFateDie(strings: CairnStrings): QuickRollResult {
     const total = fallbackRoller.fallbackRoll("1d6");
     const favorable = total >= 4;
-    return { text: `🎲 Dado del Destino: ${total} → ${favorable ? "Favorece a los PJ" : "Mala suerte para los PJ"}` };
+    return {
+        text: `${strings.guardianTools.fateDie}: ${total} → ${
+            favorable ? strings.guardianTools.fateFavorable : strings.guardianTools.fateUnfavorable
+        }`,
+    };
 }
 
-function rollReaccion(): QuickRollResult {
+function rollReaction(strings: CairnStrings): QuickRollResult {
     const total = fallbackRoller.fallbackRoll("2d6");
+    const labels = strings.guardianTools.reactionLabels;
     let label: string;
-    if (total === 2) label = "Hostil";
-    else if (total <= 5) label = "Cauteloso";
-    else if (total <= 8) label = "Curioso";
-    else if (total <= 11) label = "Amable";
-    else label = "Servicial";
-    return { text: `🎲 Reacción: ${total} → ${label}` };
+    if (total === 2) label = labels.hostile;
+    else if (total <= 5) label = labels.cautious;
+    else if (total <= 8) label = labels.curious;
+    else if (total <= 11) label = labels.friendly;
+    else label = labels.helpful;
+    return { text: `${strings.guardianTools.reaction}: ${total} → ${label}` };
 }
 
-const EVENTOS_MAZMORRA: [string, string][] = [
-    ["Encuentro", "Tira en una Tabla de Encuentros. Amenaza posiblemente hostil."],
-    ["Señal", "Se descubre una pista, rastro, huella, guarida abandonada, olor, víctima, etc."],
-    [
-        "Ambiental",
-        "El entorno cambia o algo que ya ocurre se intensifica (el agua sube, el techo se derrumba, un ritual se acerca a su fin...).",
-    ],
-    ["Pérdida", "Las antorchas se apagan, un hechizo activo se desvanece, etc. Hay que lidiar con ello antes de continuar."],
-    [
-        "Agotamiento",
-        "El grupo se ve obligado a tomar un descanso corto (vuelve a tirar en esta tabla). Consume una ración o marca Fatiga.",
-    ],
-    ["Calma", "El grupo está solo (y a salvo) por ahora en la estancia o lugar donde se encuentran."],
-];
-
-const EVENTOS_SALVAJES: [string, string][] = [
-    ["Encuentro", "Tira en una Tabla de Encuentros según el terreno y lugar (y la reacción del PNJ, si aplica)."],
-    [
-        "Señal",
-        "El grupo descubre una pista, rastro o indicación de un encuentro cercano, localidad, característica oculta o información sobre un área cercana.",
-    ],
-    ["Ambiental", "Hay un cambio en el clima o el terreno."],
-    [
-        "Pérdida",
-        "El grupo tiene que tomar una decisión que le costará un recurso (raciones, herramientas, etc.), tiempo o esfuerzo.",
-    ],
-    [
-        "Agotamiento",
-        "El grupo encuentra un gran obstáculo: más esfuerzo, atender heridas o sufrir un retraso. Pasa más tiempo (y otra Acción de Supervivencia) o añade Fatiga.",
-    ],
-    ["Descubrimiento", "El grupo encuentra comida, tesoro u otro recurso útil, o se revela la característica principal del área."],
-];
-
-function rollFromTable(table: [string, string][]): QuickRollResult {
+function rollFromTable(table: RollTableEntry[]): QuickRollResult {
     const total = fallbackRoller.fallbackRoll("1d6");
-    const [title, desc] = table[total - 1];
-    return { text: `🎲 ${total} → ${title}: ${desc}` };
+    const { title, effect } = table[total - 1];
+    return { text: `🎲 ${total} → ${title}: ${effect}` };
 }
 
-
-const CLIMA_TABLE: Record<string, string[]> = {
-	Primavera: ["Agradable", "Normal", "Normal", "Desagradable", "Inclemente", "Extremo"],
-	Verano: ["Agradable", "Agradable", "Normal", "Desagradable", "Inclemente", "Extremo"],
-	Otoño: ["Normal", "Normal", "Desagradable", "Inclemente", "Inclemente", "Extremo"],
-	Invierno: ["Normal", "Desagradable", "Inclemente", "Inclemente", "Extremo", "Extremo"],
-};
-
-function rollClima(season: string): QuickRollResult {
-	const total = fallbackRoller.fallbackRoll("1d6");
-	const table = CLIMA_TABLE[season] ?? CLIMA_TABLE["Verano"];
-	const result = table[total - 1];
-	const note = result === "Extremo" ? " (si sale Extremo dos veces seguidas, se vuelve Catastrófico)" : "";
-	return { text: `🎲 Clima de ${season}: ${total} → ${result}${note}` };
+function rollWeather(season: string, strings: CairnStrings): QuickRollResult {
+    const seasons = strings.guardianTools.seasons;
+    const states = strings.guardianTools.weatherStates;
+    const table: Record<string, string[]> = {
+        [seasons.spring]: [states.pleasant, states.normal, states.normal, states.unpleasant, states.harsh, states.extreme],
+        [seasons.summer]: [states.pleasant, states.pleasant, states.normal, states.unpleasant, states.harsh, states.extreme],
+        [seasons.fall]: [states.normal, states.normal, states.unpleasant, states.harsh, states.harsh, states.extreme],
+        [seasons.winter]: [states.normal, states.unpleasant, states.harsh, states.harsh, states.extreme, states.extreme],
+    };
+    const total = fallbackRoller.fallbackRoll("1d6");
+    const result = (table[season] ?? table[seasons.summer])[total - 1];
+    const note = result === states.extreme ? strings.guardianTools.extremeNote : "";
+    return { text: `${strings.guardianTools.weatherLabel} (${season}): ${total} → ${result}${note}` };
 }
 
 function addToolButton(container: HTMLElement, resultEl: HTMLElement, label: string, rollFn: () => QuickRollResult) {
@@ -86,41 +64,50 @@ function addToolButton(container: HTMLElement, resultEl: HTMLElement, label: str
 
 
 export class GuardianToolsModal extends Modal {
+	constructor(app: App, private strings: CairnStrings, private tables: GuardianEventTables) {
+		super(app);
+	}
 	onOpen() {
-		buildGuardianToolsUI(this.contentEl, false);
+		buildGuardianToolsUI(this.contentEl, false, this.strings, this.tables);
 	}
 	onClose() {
 		this.contentEl.empty();
 	}
 }
 
-export function buildGuardianToolsUI(container: HTMLElement, asCard: boolean) {
+export function buildGuardianToolsUI(
+    container: HTMLElement,
+    asCard: boolean,
+    strings: CairnStrings,
+    tables: GuardianEventTables
+) {
     container.empty();
+    const gt = strings.guardianTools;
     if (asCard) {
         container.addClass("cairn-card", "cairn-tools-card");
         const header = container.createDiv({ cls: "cairn-card-header" });
         header.createSpan({ text: "🧰", cls: "cairn-icon" });
-        header.createSpan({ text: "Herramientas del Guardián", cls: "cairn-title" });
-        header.createSpan({ text: "Utilidad", cls: "cairn-type-badge" });
+        header.createSpan({ text: gt.panelTitle, cls: "cairn-title" });
+        header.createSpan({ text: gt.utilityBadge, cls: "cairn-type-badge" });
     } else {
         container.addClass("cairn-utility-modal");
-        container.createEl("h3", { text: "Herramientas del Guardián" });
+        container.createEl("h3", { text: gt.panelTitle });
     }
 
     const resultEl = container.createDiv({ cls: "cairn-utility-result" });
 
     const row1 = container.createDiv({ cls: "cairn-utility-row" });
-    addToolButton(row1, resultEl, "🎲 Dado del Destino", rollDadoDelDestino);
-    addToolButton(row1, resultEl, "🎲 Reacción de PNJ", rollReaccion);
+    addToolButton(row1, resultEl, gt.fateDie, () => rollFateDie(strings));
+    addToolButton(row1, resultEl, gt.reaction, () => rollReaction(strings));
 
-    container.createEl("div", { cls: "cairn-utility-label", text: "Clima" });
+    container.createEl("div", { cls: "cairn-utility-label", text: gt.weatherLabel });
     const row2 = container.createDiv({ cls: "cairn-utility-row" });
-    for (const season of Object.keys(CLIMA_TABLE)) {
-        addToolButton(row2, resultEl, season, () => rollClima(season));
+    for (const season of Object.values(gt.seasons)) {
+        addToolButton(row2, resultEl, season, () => rollWeather(season, strings));
     }
 
-    container.createEl("div", { cls: "cairn-utility-label", text: "Eventos" });
+    container.createEl("div", { cls: "cairn-utility-label", text: gt.eventsLabel });
     const row3 = container.createDiv({ cls: "cairn-utility-row" });
-    addToolButton(row3, resultEl, "🎲 En la Mazmorra", () => rollFromTable(EVENTOS_MAZMORRA));
-    addToolButton(row3, resultEl, "🎲 En Entornos Salvajes", () => rollFromTable(EVENTOS_SALVAJES));
+    addToolButton(row3, resultEl, gt.dungeonEventsButton, () => rollFromTable(tables.dungeonEvents));
+    addToolButton(row3, resultEl, gt.wildernessEventsButton, () => rollFromTable(tables.wildernessEvents));
 }

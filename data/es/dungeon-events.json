@@ -1,0 +1,17 @@
+[
+	{ "title": "Encuentro", "effect": "Tira en una Tabla de Encuentros. Amenaza posiblemente hostil." },
+	{ "title": "Señal", "effect": "Se descubre una pista, rastro, huella, guarida abandonada, olor, víctima, etc." },
+	{
+		"title": "Ambiental",
+		"effect": "El entorno cambia o algo que ya ocurre se intensifica (el agua sube, el techo se derrumba, un ritual se acerca a su fin...)."
+	},
+	{
+		"title": "Pérdida",
+		"effect": "Las antorchas se apagan, un hechizo activo se desvanece, etc. Hay que lidiar con ello antes de continuar."
+	},
+	{
+		"title": "Agotamiento",
+		"effect": "El grupo se ve obligado a tomar un descanso corto (vuelve a tirar en esta tabla). Consume una ración o marca Fatiga."
+	},
+	{ "title": "Calma", "effect": "El grupo está solo (y a salvo) por ahora en la estancia o lugar donde se encuentran." }
+]

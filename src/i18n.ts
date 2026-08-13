@@ -1,4 +1,5 @@
-import type { CairnType } from "./types"; // ajusta el import si CairnType no se exporta todavía
+import type { CairnType } from "./types";
+import type { Language } from "./settings";
 
 export interface CairnStrings {
 	types: Record<CairnType, string>;
@@ -105,10 +106,6 @@ export interface CairnStrings {
 		fail: string;
 	};
 
-	scars: {
-		entries: { title: string; effect: string }[];
-	};
-
 	guardianTools: {
 		panelTitle: string;
 		fateDie: string;
@@ -135,8 +132,6 @@ export interface CairnStrings {
 		eventsLabel: string;
 		dungeonEventsButton: string;
 		wildernessEventsButton: string;
-		dungeonEventsTable: { title: string; effect: string }[];
-		wildernessEventsTable: { title: string; effect: string }[];
 		utilityBadge: string;
 	};
 
@@ -334,71 +329,6 @@ export const es: CairnStrings = {
 		fail: "❌ Fallo",
 	},
 
-	scars: {
-		entries: [
-			{
-				title: "Cicatriz permanente",
-				effect:
-					"Tira 1d6 | 1: Cuello, 2: Manos, 3: Ojo, 4: Pecho, 5: Piernas, 6: Oídos. Tira 1d6; si el resultado es mayor que tu PG máxima, quédate con esta nueva cifra.",
-			},
-			{
-				title: "Oír pajaritos",
-				effect:
-					"Estás desorientado y conmocionado. Describe cómo recuperas la concentración. Tira 1d6; si el resultado es mayor que tu PG máxima, quédate con esta nueva cifra.",
-			},
-			{
-				title: "Golpetazo",
-				effect:
-					"Te lanzaron por los aires y caíste de bruces, sin aliento. Estarás Exhausto hasta que descanses unas horas. Luego, tira 1d6 y suma el resultado a tu PG máxima.",
-			},
-			{
-				title: "Fractura",
-				effect:
-					"Tira 1d6 | 1-2: Pierna, 3-4: Brazo, 5: Costilla, 6: Cráneo. Una vez recuperado, tira 2d6; si el resultado es mayor que tu PG máxima, quédate con esta nueva cifra.",
-			},
-			{
-				title: "Enfermedad",
-				effect:
-					"Estás afectado por una infección asquerosa e incómoda. Cuando la superes, tira 2d6; si el resultado es mayor que tu PG máxima, quédate con esta nueva cifra.",
-			},
-			{
-				title: "Herida en la cabeza que cambiará tu vida",
-				effect:
-					"Tira 1d6 | 1-2: FUE, 3-4: DES, 5-6: VOL. Tira 3d6; si el resultado es mayor que la puntuación de esa Característica, usa este valor (el máximo no se modifica).",
-			},
-			{
-				title: "Parálisis",
-				effect:
-					"Apenas puedes moverte hasta que descanses y recibas cuidados profesionales. Tras recuperarte, tira 3d6; si el resultado es mayor que tu DES máxima, quédate con esa nueva cifra.",
-			},
-			{
-				title: "Sordera",
-				effect:
-					"No podrás oír nada hasta que encuentres un remedio extraordinario. Realiza una Salvación de VOL; si tienes éxito, aumenta tu VOL máxima en 1d4.",
-			},
-			{
-				title: "Cerebro reestructurado",
-				effect:
-					"El daño ha arrancado una parte oculta de tu psique. Tira 3d6; si el resultado es mayor que tu VOL máxima, quédate con esa nueva cifra.",
-			},
-			{
-				title: "Desgarro",
-				effect:
-					"El daño arranca o deja inútil una extremidad (la Guardiana decide cuál). Haz una Salvación de VOL; si la superas, aumenta tu VOL máxima en 1d6.",
-			},
-			{
-				title: "Herida mortal",
-				effect:
-					"Estás Exhausto y fuera de combate. Morirás en una hora a menos que te curen. Tras recuperarte, tira 2d6; si el resultado es mayor que tu PG máxima, quédate con esta nueva cifra.",
-			},
-			{
-				title: "Condenado",
-				effect:
-					"La muerte parecía estar muy cerca, pero de alguna manera has sobrevivido. Si fallas la próxima tirada de Salvación contra Daño Crítico, morirás horriblemente. Si tienes éxito, tira 3d6; si el resultado es mayor que tu PG máxima, quédate con esta nueva cifra.",
-			},
-		],
-	},
-
 	guardianTools: {
 		panelTitle: "Herramientas del Guardián",
 		fateDie: "🎲 Dado del Destino",
@@ -425,50 +355,6 @@ export const es: CairnStrings = {
 		eventsLabel: "Eventos",
 		dungeonEventsButton: "🎲 En la Mazmorra",
 		wildernessEventsButton: "🎲 En Entornos Salvajes",
-		dungeonEventsTable: [
-			{ title: "Encuentro", effect: "Tira en una Tabla de Encuentros. Amenaza posiblemente hostil." },
-			{ title: "Señal", effect: "Se descubre una pista, rastro, huella, guarida abandonada, olor, víctima, etc." },
-			{
-				title: "Ambiental",
-				effect:
-					"El entorno cambia o algo que ya ocurre se intensifica (el agua sube, el techo se derrumba, un ritual se acerca a su fin...).",
-			},
-			{
-				title: "Pérdida",
-				effect: "Las antorchas se apagan, un hechizo activo se desvanece, etc. Hay que lidiar con ello antes de continuar.",
-			},
-			{
-				title: "Agotamiento",
-				effect:
-					"El grupo se ve obligado a tomar un descanso corto (vuelve a tirar en esta tabla). Consume una ración o marca Fatiga.",
-			},
-			{ title: "Calma", effect: "El grupo está solo (y a salvo) por ahora en la estancia o lugar donde se encuentran." },
-		],
-		wildernessEventsTable: [
-			{
-				title: "Encuentro",
-				effect: "Tira en una Tabla de Encuentros según el terreno y lugar (y la reacción del PNJ, si aplica).",
-			},
-			{
-				title: "Señal",
-				effect:
-					"El grupo descubre una pista, rastro o indicación de un encuentro cercano, localidad, característica oculta o información sobre un área cercana.",
-			},
-			{ title: "Ambiental", effect: "Hay un cambio en el clima o el terreno." },
-			{
-				title: "Pérdida",
-				effect: "El grupo tiene que tomar una decisión que le costará un recurso (raciones, herramientas, etc.), tiempo o esfuerzo.",
-			},
-			{
-				title: "Agotamiento",
-				effect:
-					"El grupo encuentra un gran obstáculo: más esfuerzo, atender heridas o sufrir un retraso. Pasa más tiempo (y otra Acción de Supervivencia) o añade Fatiga.",
-			},
-			{
-				title: "Descubrimiento",
-				effect: "El grupo encuentra comida, tesoro u otro recurso útil, o se revela la característica principal del área.",
-			},
-		],
 		utilityBadge: "Utilidad",
 	},
 
@@ -694,70 +580,6 @@ export const en: CairnStrings = {
 		fail: "❌ Failure",
 	},
 
-	scars: {
-		entries: [
-			{
-				title: "Permanent scar",
-				effect:
-					"Roll 1d6 | 1: Neck, 2: Hands, 3: Eye, 4: Chest, 5: Legs, 6: Ears. Roll 1d6; if the result is higher than your max HP, keep this new number.",
-			},
-			{
-				title: "Seeing stars",
-				effect:
-					"You're dazed and disoriented. Describe how you regain focus. Roll 1d6; if the result is higher than your max HP, keep this new number.",
-			},
-			{
-				title: "Winded",
-				effect:
-					"You're thrown through the air and land hard, gasping for breath. You're Exhausted until you rest for a few hours. Then roll 1d6 and add the result to your max HP.",
-			},
-			{
-				title: "Fracture",
-				effect:
-					"Roll 1d6 | 1-2: Leg, 3-4: Arm, 5: Rib, 6: Skull. Once recovered, roll 2d6; if the result is higher than your max HP, keep this new number.",
-			},
-			{
-				title: "Sickness",
-				effect:
-					"You're afflicted with a nasty, uncomfortable infection. Once you recover, roll 2d6; if the result is higher than your max HP, keep this new number.",
-			},
-			{
-				title: "Life-changing head wound",
-				effect:
-					"Roll 1d6 | 1-2: STR, 3-4: DEX, 5-6: WIL. Roll 3d6; if the result is higher than that Characteristic's score, use this value instead (the maximum doesn't change).",
-			},
-			{
-				title: "Paralysis",
-				effect:
-					"You can barely move until you rest and get professional care. Once recovered, roll 3d6; if the result is higher than your max DEX, keep this new number.",
-			},
-			{
-				title: "Deafness",
-				effect:
-					"You can't hear anything until you find an extraordinary remedy. Make a WIL Save; if you succeed, increase your max WIL by 1d4.",
-			},
-			{
-				title: "Restructured brain",
-				effect: "The damage has torn loose a hidden part of your psyche. Roll 3d6; if the result is higher than your max WIL, keep this new number.",
-			},
-			{
-				title: "Maiming",
-				effect:
-					"The damage tears off or disables a limb (the Warden decides which). Make a WIL Save; if you succeed, increase your max WIL by 1d6.",
-			},
-			{
-				title: "Mortal wound",
-				effect:
-					"You're Exhausted and out of the fight. You'll die within an hour unless you're healed. Once recovered, roll 2d6; if the result is higher than your max HP, keep this new number.",
-			},
-			{
-				title: "Doomed",
-				effect:
-					"Death seemed certain, but somehow you survived. If you fail your next Save against Critical Damage, you die horribly. If you succeed, roll 3d6; if the result is higher than your max HP, keep this new number.",
-			},
-		],
-	},
-
 	guardianTools: {
 		panelTitle: "Warden Tools",
 		fateDie: "🎲 Fate Die",
@@ -784,46 +606,6 @@ export const en: CairnStrings = {
 		eventsLabel: "Events",
 		dungeonEventsButton: "🎲 In the Dungeon",
 		wildernessEventsButton: "🎲 In the Wilderness",
-		dungeonEventsTable: [
-			{ title: "Encounter", effect: "Roll on an Encounter Table. Possibly hostile threat." },
-			{ title: "Sign", effect: "A clue, trail, footprint, abandoned lair, smell, victim, etc. is discovered." },
-			{
-				title: "Environmental",
-				effect: "The environment changes, or something already happening intensifies (water rises, the ceiling collapses, a ritual nears completion...).",
-			},
-			{
-				title: "Loss",
-				effect: "Torches go out, an active spell fades, etc. It has to be dealt with before continuing.",
-			},
-			{
-				title: "Exhaustion",
-				effect: "The party is forced to take a short rest (roll on this table again). Consume a ration or mark Fatigue.",
-			},
-			{ title: "Calm", effect: "The party is alone (and safe) for now in the room or place they're in." },
-		],
-		wildernessEventsTable: [
-			{
-				title: "Encounter",
-				effect: "Roll on an Encounter Table based on the terrain and location (and the NPC's reaction, if applicable).",
-			},
-			{
-				title: "Sign",
-				effect: "The party discovers a clue, trail, or indication of a nearby encounter, settlement, hidden feature, or information about a nearby area.",
-			},
-			{ title: "Environmental", effect: "There's a change in the weather or terrain." },
-			{
-				title: "Loss",
-				effect: "The party has to make a decision that will cost a resource (rations, tools, etc.), time, or effort.",
-			},
-			{
-				title: "Exhaustion",
-				effect: "The party runs into a major obstacle: more effort, tending to wounds, or a delay. Spend more time (and another Survival Action) or add Fatigue.",
-			},
-			{
-				title: "Discovery",
-				effect: "The party finds food, treasure, or another useful resource, or the area's main feature is revealed.",
-			},
-		],
 		utilityBadge: "Utility",
 	},
 
@@ -920,3 +702,7 @@ export const en: CairnStrings = {
 		copyCreateFailed: (err) => `Couldn't create the copy: ${err}`,
 	},
 };
+
+export function getStrings(lang: Language): CairnStrings {
+	return lang === "en" ? en : es;
+}
