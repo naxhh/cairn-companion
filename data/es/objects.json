@@ -44,6 +44,13 @@
     "description": "Un hongo bermellón que arde con bastante facilidad."
   },
   {
+    "name": "Amigo de la Pisada",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Zapatos de piel suave que se adaptan a cualquier tamaño de pie. Dejan tras de sí huellas que se dispersan y giran de forma confusa, haciendo casi imposible su rastreo."
+  },
+  {
     "name": "Amuleto con forma de cuervo",
     "quality": [
       "Insignificante"
@@ -65,6 +72,16 @@
     ],
     "description": "Toca a una criatura herida para transferirte sus heridas (intercambia puntos de FUE perdida).",
     "recharge": "úsalo estando completamente sano; pierdes 1 punto de FUE permanentemente"
+  },
+  {
+    "name": "Anillo de la Serpiente",
+    "uses": "1 carga",
+    "quality": [
+      "Insignificante",
+      "Reliquia"
+    ],
+    "recharge": "Entierra el anillo con un cadáver. Un mes después, exhuma el cadáver y recupéralo.",
+    "description": "Un anillo de serpiente de hierro forjado. Póntelo en el dedo y sumérgete en un sueño tan profundo que la mayoría pensará que estás muerto. Si te quitas el anillo, despertarás renovado. Si no, el efecto desaparecerá al cabo de un mes."
   },
   {
     "name": "Anillo felino",
@@ -211,6 +228,15 @@
     "cost": "5 mo"
   },
   {
+    "name": "Barra Maravilla",
+    "uses": "1 carga",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Sujeta la barra con ambas manos sin soltarla durante una hora continua (salvación VOL para tener éxito). Solo puedes hacer un intento al día.",
+    "description": "Al pulsar el interruptor situado en el lateral de esta barra de hierro, queda congelada, incluso en el aire. Una vez congelada, no se puede mover por ninguna fuerza hasta que se pulse el interruptor."
+  },
+  {
     "name": "Bolsa de hierbas",
     "uses": 3,
     "description": "Restaura 1 de FUE al consumirse."
@@ -332,12 +358,30 @@
     "description": "Sin ella, quien se transforma en lobo no puede volver a su forma original."
   },
   {
+    "name": "Caja de Chismes",
+    "uses": "1 carga",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Difunde con éxito una falsedad en presencia de la caja.",
+    "description": "Gira la manivela para reproducir cualquier sonido emitido en el día anterior en tu ubicación actual. Cada manivela retrocede una hora."
+  },
+  {
     "name": "Calamita",
     "description": "Extrae del cuerpo elementos peligrosos y actúa como una poderosa fuerza magnética."
   },
   {
     "name": "Caldero de hierro",
     "description": "Para hervir, destilar o preparar remedios sobre el fuego."
+  },
+  {
+    "name": "Campana del Heraldo",
+    "uses": "1 carga",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Fundir y reforjar. Cada vez, tira un d6. Con un 1-2, se rompe para siempre.",
+    "description": "Cuélgala a la altura del pecho para que suene cuando el peligro sea inminente."
   },
   {
     "name": "Caracol brillante",
@@ -374,6 +418,14 @@
     "cost": "10 mo"
   },
   {
+    "name": "Ceniza de Fénix",
+    "uses": "1 uso",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Se rocía sobre un cadáver para resucitarlo. Vuelven con plena salud, pero sin recordar su vida pasada."
+  },
+  {
     "name": "Cenizas revitalizantes",
     "uses": 3,
     "description": "Restos de un espíritu de los árboles. Reaviva la llama de un fuego extinguido o devuelve a la vida a una criatura muerta hace instantes."
@@ -386,6 +438,23 @@
   {
     "name": "Chal de seda de polilla",
     "description": "Manta resistente a la intemperie; también puede apagar un fuego sin sufrir daños."
+  },
+  {
+    "name": "Charreteras de púas",
+    "armor": 1,
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Hombreras con pinchos que envenenan a cualquiera que las toque (salvación de FUE o pierde el conocimiento)."
+  },
+  {
+    "name": "Chicle de Cera de Piedra",
+    "uses": "3 usos",
+    "quality": [
+      "Insignificante",
+      "Reliquia"
+    ],
+    "description": "Mastica y luego escupe. El chicle se endurecerá y se estirará, formando un sello perfecto e irrompible."
   },
   {
     "name": "Cincel",
@@ -410,6 +479,14 @@
     "description": "Impresionantemente fuerte, capaz de transportar cargas pesadas (solo +2 espacios si transporta a dos personas)."
   },
   {
+    "name": "Comepiedras",
+    "uses": "1 uso",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Ciempiés del tamaño de un roedor que consume y digiere piedra, capaz de excavar un pequeño túnel en menos de una hora. Puede usarse más de una vez, pero solo si puedes atraparlo (DES 18)."
+  },
+  {
     "name": "Comodidades para exteriores",
     "cost": "10 mo",
     "description": "Manta, hamaca, etc."
@@ -420,8 +497,24 @@
     "description": "Saco, odre de agua o vino, etc."
   },
   {
+    "name": "Copas de Asesino",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Un par de frágiles copas de vino. Cualquier líquido vertido en una se intercambia con la otra."
+  },
+  {
     "name": "Corona de acónito",
     "description": "Efectiva contra hombres lobo."
+  },
+  {
+    "name": "Corona de Carnero",
+    "armor": 1,
+    "quality": [
+      "Voluminoso",
+      "Reliquia"
+    ],
+    "description": "Un hermoso yelmo con cabeza de carnero tallado en resistente roble alpino. Los cuernos pueden usarse como armas (d6+d6)."
   },
   {
     "name": "Cortacadenas",
@@ -511,6 +604,15 @@
     "description": "Recuperada tras huir del cuartel de un alguacil."
   },
   {
+    "name": "Cuerda Pegajosa",
+    "uses": "1 carga",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Corta 3 metros de cuerda, que luego se marchita.",
+    "description": "Una cuerda de 30 metros que se adhiere a cualquier superficie."
+  },
+  {
     "name": "Cultivo enfermo",
     "uses": 6,
     "description": "Muestra de la Marchitez, un tipo de podredumbre del tallo. Pudre cualquier planta que toque."
@@ -593,6 +695,14 @@
     "description": "Disuelve todo lo que toca en sus partes constituyentes."
   },
   {
+    "name": "Ejército Esponja",
+    "uses": "1 uso",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Una docena de soldados en miniatura hechos de esponjas marinas talladas. Al salpicarlos con agua, crecen hasta alcanzar su tamaño completo [8 PG, 6 FUE, 13 DES, 5 VOL, esponja endurecida (d6), desprendimiento] y siguen las órdenes de la persona que ven hasta que son destruidos o se secan por completo (unos 10 minutos)."
+  },
+  {
     "name": "Endurecedor",
     "cost": "20 mo",
     "uses": 3,
@@ -661,6 +771,14 @@
     "cost": "5 mo"
   },
   {
+    "name": "Espejo Polilla",
+    "quality": [
+      "Voluminoso",
+      "Reliquia"
+    ],
+    "description": "Un espejo de cristal de cuerpo entero y doble cara. Entra en el espejo para ser transportado a otro espejo que conozcas. Sales del otro lado convertido en un enorme enjambre de polillas zumbadoras, que paralizan a los que te rodean (salvación de VOL para evitarlo) mientras te contemplan horrorizados. Puedes volver a tu forma normal cuando quieras. El espejo sólo funciona en una dirección."
+  },
+  {
     "name": "Espina de zarza",
     "description": "Puede perforar cualquier material orgánico, pero al ser removida no deja rastro de la perforación."
   },
@@ -720,6 +838,14 @@
   {
     "name": "Fragmento de cristal del Vacío",
     "description": "Mira a través de él con un ojo para ver marcas invisibles, criaturas y otros efectos mágicos. Pierdes la visión de ese ojo durante la siguiente hora (quedas Exhausto)."
+  },
+  {
+    "name": "Frasco Balbuceante",
+    "uses": "2 usos",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Un idioma extranjero se entiende automáticamente y se puede responder con fluidez, siempre que no se hable ni se oiga la lengua materna del bebedor."
   },
   {
     "name": "Fuegos artificiales",
@@ -786,6 +912,14 @@
   {
     "name": "Gusano de hiedra",
     "description": "Se confunde con una mala hierba. Tragado entero, absorbe cualquier toxina o putrefacción del organismo."
+  },
+  {
+    "name": "Gusano de Oreja Honesto",
+    "uses": "1 uso",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Gusano maloliente del tamaño de un meñique que se alimenta de cerumen introduciéndose en el conducto auditivo de una persona dormida. La víctima pierde la capacidad de mentir durante 1d4 horas."
   },
   {
     "name": "Habitación privada y comida",
@@ -980,12 +1114,29 @@
     "cost": "10 mo"
   },
   {
+    "name": "Linterna Espectral",
+    "uses": "1 carga",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Mata a la última persona encontrada con la ayuda de la linterna, atrapando su espíritu en el interior. La linterna debe estar cerca cuando los mates.",
+    "description": "Escribe el nombre de alguien en su cristal y el nombre desaparecerá. La linterna revela un camino hacia su ubicación actual, visible sólo para el portador (de día o de noche)."
+  },
+  {
     "name": "Lona",
     "description": "Alberga a una persona; suficiente para pasar la noche resguardado."
   },
   {
     "name": "Luxbrújula",
     "description": "Vibra suavemente a medida que se acerca al sol; el ruido se vuelve ensordecedor."
+  },
+  {
+    "name": "Lágrima de Dríada",
+    "uses": "1 uso",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Rompe este cristal para fundirte con un árbol que puedas tocar. Puedes percibir lo que ocurre en el bosque al que pertenece ese árbol."
   },
   {
     "name": "Látigo de cuero",
@@ -998,9 +1149,25 @@
     "description": "Al hacer Daño Crítico, desangra al objetivo, dándole la cualidad Estallido en su siguiente ataque."
   },
   {
+    "name": "Macizo de Almas",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Una bola dura, del tamaño de un puño, cubierta de pequeñas protuberancias. Al rodar sobre una superficie plana, recoge cualquier objeto más pequeño que su masa actual, que aumenta a medida que se adhieren más objetos a su superficie. Sólo los seres vivos son inmunes."
+  },
+  {
     "name": "Mangual",
     "damage": "1d8",
     "cost": "10 mo"
+  },
+  {
+    "name": "Mapa Sanguíneo",
+    "uses": "1 carga",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Vierte medio litro de tu propia esencia vital en el mapa, sangre por sangre. Quedas exhausto hasta que puedas descansar y comer una Ración.",
+    "description": "Un pergamino de cuero en blanco que absorbe la sangre derramada sobre su superficie antes de enrollarse en un apretado pergamino. Desenróllalo para ver un mapa aproximado que revela la ubicación actual de cualquier resto de sangre. La imagen desaparece al cabo de unos minutos."
   },
   {
     "name": "Marcador de rastro",
@@ -1034,13 +1201,42 @@
     "description": "Brilla tenuemente en la oscuridad y se calienta mucho en presencia de brujería."
   },
   {
+    "name": "Maza del Matarreyes",
+    "damage": "d8",
+    "uses": "2 cargas",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Asesta un golpe mortal al líder de un grupo o facción.",
+    "description": "Mantén el arma en alto y grita una orden o declaración. Cualquiera que falle una salvación de VOL debe obedecer, en contra de su buen juicio."
+  },
+  {
     "name": "Mecha de luz tenue",
     "description": "Colocada en el centro de una jaula de hierro forjado, proporciona luz tenue mientras pueda alimentarse del dolor y miedo próximos."
+  },
+  {
+    "name": "Mejor Varita",
+    "uses": "2 cargas",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Acepta de buen grado un mal trato o intercambio mientras estés en posesión de la varita.",
+    "description": "Vibra con mayor intensidad cuando se apunta al mejor de una serie de objetos."
   },
   {
     "name": "Mercurio (estimulante)",
     "uses": 4,
     "description": "En combate, atacas primero. Superas automáticamente cualquier Salvación de VOL durante una hora. Es adictivo: Salvación de FUE o quedas Exhausto después de 24 horas sin poder consumir."
+  },
+  {
+    "name": "Moneda del Padre",
+    "uses": "1 carga",
+    "quality": [
+      "Insignificante",
+      "Reliquia"
+    ],
+    "recharge": "Lleva la moneda durante tres días sin gastar ni ganar dinero.",
+    "description": "Lanza este trozo de metal plano al aire y se transformará en d100 monedas de oro. Las monedas ilusorias desaparecen al cabo de una hora."
   },
   {
     "name": "Mula",
@@ -1084,6 +1280,14 @@
     "description": "Usado para acabados y falsificaciones convincentes."
   },
   {
+    "name": "Pacto de Amantes",
+    "uses": "1 uso",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Un frasco de tinta roja, con un corazón roto en el anverso. Redacta un contrato de cualquier extensión. Cualquiera que firme está obligado a obedecer bajo pena de muerte."
+  },
+  {
     "name": "Pala de mano",
     "damage": "1d6",
     "description": "Pequeña, para desenterrar setas y raíces sin dañar el micelio."
@@ -1104,6 +1308,14 @@
     "description": "Coste por trayecto."
   },
   {
+    "name": "Pasta de Trigo Dorado",
+    "uses": "2 usos",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Mezclada con agua, esta sustancia une químicamente dos objetos cualesquiera."
+  },
+  {
     "name": "Pasta moldeable",
     "uses": 3,
     "description": "Sella cualquier agujero del tamaño de un puño."
@@ -1121,6 +1333,15 @@
     "name": "Pergamino",
     "cost": "10 mo",
     "uses": 3
+  },
+  {
+    "name": "Pergamino de Aniquilación",
+    "uses": "1 uso",
+    "quality": [
+      "Insignificante",
+      "Reliquia"
+    ],
+    "description": "Un documento de una sola página lleno de galimatías. Firma en cualquier parte de la página para eliminar cualquier conocimiento de tu existencia de este plano de la realidad. Nadie te conocerá ni te recordará, y cualquier referencia a tu nombre o linaje desaparecerá. El pergamino desaparece en una nube de humo que huele ligeramente a azufre."
   },
   {
     "name": "Picas y cuerda",
@@ -1150,12 +1371,55 @@
     "description": "Al tragarla por completo, cura de cualquier veneno (a menos que la recuperes)."
   },
   {
+    "name": "Piedra de Halcón",
+    "uses": "3 cargas",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Mata y cómete una presa común, cocinando la carne junto a la piedra.",
+    "description": "Percibe el mundo a través de los ojos y oídos de un ave rapaz cercana. Sientes lo que ella siente, pero no tienes control sobre ella."
+  },
+  {
     "name": "Piedra del sueño",
     "description": "Ayuda a recordar los sueños con mayor claridad. Si se usa en exceso, puede causar adicción a los sueños."
   },
   {
+    "name": "Piedra Espía",
+    "uses": "1 carga",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Para grabar un nuevo sonido, salta la roca al menos tres veces sobre una masa de agua y recupérala.",
+    "description": "Una piedra lisa y plana, ligeramente caliente al tacto. Apriétala para grabar audio en un radio de 12 metros. Apriétala de nuevo para reproducirlo, tantas veces como quieras."
+  },
+  {
     "name": "Piedra imitadora",
     "description": "Captura una frase corta que puede repetir posteriormente."
+  },
+  {
+    "name": "Piedra Nocturna",
+    "uses": "1 uso",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Raras piedras con forma de luna extraídas de cuevas submarinas y dolinas de la selva. Se tragan enteras para aliviar el cansancio y las privaciones, como si se hubiera dormido bien y tomado una buena comida. La piedra acabará pasando por tu organismo. No es divertido."
+  },
+  {
+    "name": "Piedra Ocular",
+    "uses": "3 cargas",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Colócala en un cubo con agua de lluvia durante la noche.",
+    "description": "Elige un objeto creado por seres vivos. Puedes percibir el ejemplo más cercano."
+  },
+  {
+    "name": "Piedra Pupilo",
+    "uses": "1 uso",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Una piedra de río plana y discreta con muescas de símbolos descoloridos. Se rompe para liberar un polvo plateado en un radio de 6 metros que apacigua a cualquiera que lo respire."
   },
   {
     "name": "Piedras de atracción",
@@ -1184,6 +1448,14 @@
     "name": "Pluma de glamur",
     "uses": 1,
     "description": "Plumas de un ave de fuego. Hace que cualquier criatura se parezca a otra (o a una cosa) de forma convincente."
+  },
+  {
+    "name": "Pluma de Roc",
+    "uses": "1 uso",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Sujétalo mientras caes para flotar con seguridad hasta el suelo desde cualquier altura."
   },
   {
     "name": "Pluma para escribir y tinta",
@@ -1225,14 +1497,49 @@
     "description": "Hecho con placenta de cabrito. Cura temporalmente cualquier enfermedad; los síntomas regresan a las pocas horas."
   },
   {
+    "name": "Polvo de Mufla",
+    "uses": "2 usos",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Una bolsa de polvo fino que amortigua todo sonido en un radio de 12 metros cuando se esparce."
+  },
+  {
     "name": "Polvo nocturno",
     "uses": 2,
     "description": "Hecho a partir de la quema ritual de seis búhos. Al lanzarlo al aire, el día se convierte en noche por un breve periodo."
   },
   {
+    "name": "Promesa del Parlamento",
+    "armor": 1,
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Un casco con forma de cabeza de búho. Su portador puede girar la cabeza como un búho y ver en la oscuridad con perfecta claridad. Mientras lleva el casco, el usuario pierde la capacidad de hablar y sólo emite los más simples arrullos."
+  },
+  {
+    "name": "Puerta Tiza",
+    "uses": "1 uso",
+    "quality": [
+      "Insignificante",
+      "Reliquia"
+    ],
+    "description": "Dibuja una puerta en cualquier superficie plana para abrir un pasadizo de un solo sentido hacia las Raíces. Buena suerte."
+  },
+  {
     "name": "Punzón",
     "damage": "1d6",
     "description": "Para perforar cuero y pergamino; en un apuro, también puede herir."
+  },
+  {
+    "name": "Puño Veilsilk",
+    "uses": "1 carga",
+    "quality": [
+      "Insignificante",
+      "Reliquia"
+    ],
+    "recharge": "Corta uno de los dedos.",
+    "description": "Una mano que lleve este guante puede atravesar objetos sólidos."
   },
   {
     "name": "Páginas reveladoras",
@@ -1365,6 +1672,15 @@
     ]
   },
   {
+    "name": "Silbato Calavera",
+    "uses": "3 cargas",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Alimenta el instrumento con un mechón de pelo humano arrancado de un cráneo vivo.",
+    "description": "Produce un grito escalofriante que obliga a cualquiera que lo oiga (incluido el soplador) a realizar una salvación de VOL o quedar temporalmente incapacitado."
+  },
+  {
     "name": "Silbato de caña",
     "description": "Cualquiera al alcance de su silbido debe superar una tirada de VOL para realizar una acción violenta."
   },
@@ -1396,6 +1712,13 @@
     ]
   },
   {
+    "name": "Silbato-Soga",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "5 metros de cuero muy flexible. Se arremolina en el aire para generar un potente efecto subsónico que ahuyenta a la fauna salvaje. También funciona bajo el agua."
+  },
+  {
     "name": "Sinfonía Silenciosa (libro)",
     "description": "Muy rara, cataloga los signos sutiles utilizados por quienes emplean la magia de invisibilidad."
   },
@@ -1424,6 +1747,13 @@
     "name": "Tallo pegajoso",
     "uses": 2,
     "description": "Tallo leñoso que, tras masticarse, se endurece como un pegamento imposible de disolver."
+  },
+  {
+    "name": "Tarro de Hormigas",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Rómpelo para liberar una colonia de hormigas de fuego [6 PG, 2 FUE, 10 DES, 1 VOL, mordisco (d10), desprendimiento]. Consume una ración cada dos días."
   },
   {
     "name": "Teatrillo de bolsillo",
@@ -1503,6 +1833,14 @@
     "description": "Amarga, altamente tóxica y muy rara entre asesinos. Ilegal en casi todos lados."
   },
   {
+    "name": "Una Hoja Llamada Esperanza",
+    "damage": "d6",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Una espada fina y curva que brilla con una luz tenue, visible sólo en la oscuridad total. Cuando está bañada por la luz del sol, su primer ataque tiene Ventaja."
+  },
+  {
     "name": "Ungüento regenerador",
     "uses": 1,
     "description": "Regenera una parte del cuerpo en el transcurso de un día."
@@ -1520,6 +1858,14 @@
     "description": "Ollas, cucharones, etc."
   },
   {
+    "name": "Uña de Homúnculo",
+    "quality": [
+      "Insignificante",
+      "Reliquia"
+    ],
+    "description": "Pincha un dedo con el extremo puntiagudo y martillea cualquier objeto pequeño para formar un sirviente leal [3 PG, 4 FUE, 13 DES, 5 VOL] completamente entregado a ti. Si no se destruye, te sobrevivirá."
+  },
+  {
     "name": "Vals de las Estrellas (libro)",
     "cost": "100 mo",
     "description": "Detallados mapas astronómicos, movimientos celestes y festividades estelares. Muy valorado por su utilidad para los viajeros."
@@ -1532,6 +1878,15 @@
   {
     "name": "Vara de llama rápida",
     "description": "Puede destruir un gran nido de arañas en segundos. Se usa junto a una lata de aceite."
+  },
+  {
+    "name": "Vara Empática",
+    "uses": "3 cargas",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Regala la vara a un antiguo enemigo. Se trata de una transacción unidireccional.",
+    "description": "Cuando dos criaturas tocan este poste de madera al mismo tiempo, sus estados físico y emocional se entrelazan por completo hasta que se sueltan."
   },
   {
     "name": "Vara mágica (crece con agua)",
@@ -1551,6 +1906,14 @@
     "cost": "15 mo"
   },
   {
+    "name": "Vela Chupa Luz",
+    "uses": "3 usos",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Una vez encendida, esta cera de sebo negra arroja oscuridad en lugar de luz, incluso en los días más luminosos."
+  },
+  {
     "name": "Velo del errante",
     "uses": 1,
     "description": "Úsalo para mezclarte entre la multitud y parecer un simple indigente.",
@@ -1563,6 +1926,14 @@
     "name": "Vendajes",
     "cost": "30 mo",
     "uses": 3
+  },
+  {
+    "name": "Vendaval de Susurros",
+    "uses": "1 uso",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Una planta con forma de globo que capta un mensaje hablado y lo entrega en un lugar a un día de camino."
   },
   {
     "name": "Vial de fuego",
@@ -1597,6 +1968,14 @@
     "description": "Su inquietante melodía es replicada por un gemelo distante."
   },
   {
+    "name": "Voz de la montaña",
+    "uses": "1 uso",
+    "quality": [
+      "Reliquia"
+    ],
+    "description": "Guijarro áspero imbuido de la esencia de un espíritu de montaña. Aplástalo para provocar un terremoto o una catástrofe natural similar. No esperes salvarte."
+  },
+  {
     "name": "Yelmo",
     "armor": "+1",
     "cost": "10 mo"
@@ -1611,5 +1990,15 @@
     "name": "Zafiro maldito",
     "cost": "200 mo",
     "description": "Regresa a tu bolsillo poco después de gastar lo que te hayan pagado por él. No te puedes deshacer de él."
+  },
+  {
+    "name": "Último Aliento",
+    "damage": "d6",
+    "uses": "1 carga",
+    "quality": [
+      "Reliquia"
+    ],
+    "recharge": "Asesta un golpe mortal con la espada, absorbiendo el alma de la víctima moribunda en la hoja. Hay una astuta inteligencia en su interior que habla al que la empuña, pidiéndole siempre más almas, ¡más!",
+    "description": "Espada corta astillada de dudosa calidad. Se clava en la tierra para formar una cúpula de cristal que rodea e inmoviliza a quien la empuña. La cúpula es impenetrable por medios mundanos y se hace añicos en cuanto se vuelve a levantar la espada."
   }
 ]

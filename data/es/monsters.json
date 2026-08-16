@@ -239,22 +239,6 @@
     "description": "- Caracoles gigantes acorazados con tentáculos pesados y en forma de maza.\n- Algunas especies tienen conchas de colores que pueden reflejar los ataques mágicos."
   },
   {
-    "name": "Caracol Trueno",
-    "fue": 14,
-    "des": 6,
-    "vol": 4,
-    "pg": 6,
-    "armor": 2,
-    "attacks": [
-      "aplastar y rodar (d10, estallido)"
-    ],
-    "moral": "",
-    "abilities": [
-      "Daño Crítico: el objetivo queda arrastrado por el impulso del rodamiento, perdiendo 1 PVE adicional por ronda hasta que se libere (tirada de salvación de PVE para escapar). Conversión de Monstruos"
-    ],
-    "description": "- Bestias de caparazón grueso que atacan arrollando a sus oponentes en línea recta. El ruido de sus caparazones al rodar es ensordecedor.\n- Daño Crítico: el objetivo queda arrastrado por el impulso del rodamiento, perdiendo 1 PVE adicional por ronda hasta que se libere (tirada de salvación de PVE para escapar). Conversión de Monstruos"
-  },
-  {
     "name": "Centauro",
     "fue": 14,
     "des": 12,

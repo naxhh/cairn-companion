@@ -1,42 +1,502 @@
 [
   {
-    "name": "Puerta espejo",
+    "name": "Adherir",
     "cost": "1 Fatiga",
-    "description": "Conviertes un espejo en una puerta que conduce a otro espejo donde te hayas mirado hoy."
+    "description": "Un objeto está cubierto de una baba extremadamente pegajosa. Los objetos adyacentes se adhieren al libro con gran fuerza."
   },
   {
-    "name": "Desmontar",
+    "name": "Anclar",
     "cost": "1 Fatiga",
-    "description": "Puedes separar y volver a unir cualquier parte de tu cuerpo a voluntad, sin sufrir daño ni dolor. Mantienes el control sobre las partes separadas."
+    "description": "De tus brazos brota un fuerte cable que se fija a dos puntos situados a menos de 15 metros a cada lado. Si se tira de una cuerda a través del lazo de hierro de su espina, se vuelve tan pesado como un elefante."
   },
   {
-    "name": "Ilusión auditiva",
+    "name": "Animar Objeto",
     "cost": "1 Fatiga",
-    "description": "Creas sonidos ilusorios que parecen provenir de una dirección a tu elección. Produce sonidos aleatorios y ocasionalmente inoportunos a lo largo del día."
+    "description": "Un objeto obedece tus órdenes lo mejor que puede. Moldeable como la arcilla. De sus hojas brotan risas infantiles."
   },
   {
-    "name": "Ojo arcano",
+    "name": "Antropomorfizar",
     "cost": "1 Fatiga",
-    "description": "Puedes ver a través de un globo ocular mágico flotante que vuela a tus órdenes."
+    "description": "El animal adquiere inteligencia humana o apariencia humana durante un día. Gime, ronronea y gruñe según el trato que reciba."
   },
   {
-    "name": "Controlar plantas",
+    "name": "Ojo Arcano",
     "cost": "1 Fatiga",
-    "description": "Las plantas y árboles cercanos te obedecen y adquieren la habilidad de moverse a paso lento. Crece hojas a lo largo de tu lomo y huele ligeramente a podredumbre mientras el efecto dura."
+    "description": "Puedes ver a través de un mágico globo ocular flotante que vuela a tu antojo. Necesita un chorrito de agua para abrirse."
   },
   {
-    "name": "Detectar magia",
+    "name": "Prisión Astral",
     "cost": "1 Fatiga",
-    "description": "Puedes ver u oír auras mágicas cercanas. El libro se calienta al tocarlo cuando se usa magia cerca."
+    "description": "Un objeto se congela en el tiempo y el espacio dentro de una coraza de cristal invulnerable. Silenciosos, abstractos, los rostros gritan de angustia en su interior."
   },
   {
-    "name": "Leer mentes",
+    "name": "Atraer",
     "cost": "1 Fatiga",
-    "description": "Puedes oír los pensamientos superficiales de las criaturas cercanas. Utilizarlo prolongadamente puede hacer que el lector confunda los pensamientos de los demás con los suyos propios."
+    "description": "Dos objetos se atraen magnéticamente con fuerza si se acercan a menos de 3 metros. Las brújulas cercanas giran inútilmente."
+  },
+  {
+    "name": "Ilusión Sonora",
+    "cost": "1 Fatiga",
+    "description": "Creas sonidos ilusorios que parecen proceder de una dirección de tu elección. Produce sonidos aleatorios y ocasionalmente inoportunos a lo largo del día."
+  },
+  {
+    "name": "Balbucear",
+    "cost": "1 Fatiga",
+    "description": "Una criatura debe repetir en voz alta y clara todo lo que piensas. De lo contrario, enmudece. Cuando el texto se lee en voz alta, las palabras de los demás se vuelven ininteligibles."
+  },
+  {
+    "name": "Flor Señuelo",
+    "cost": "1 Fatiga",
+    "description": "Del suelo brota una planta que emana olor a carne en descomposición. Atrae a las moscas."
+  },
+  {
+    "name": "Forma Bestial",
+    "cost": "1 Fatiga",
+    "description": "Tú y tus posesiones os transformáis en un animal mundano. Cubierto de espeso pelaje, sus bordes están forrados de pequeños dientes."
+  },
+  {
+    "name": "Confundir",
+    "cost": "1 Fatiga",
+    "description": "Una criatura de tu elección es incapaz de formar nuevos recuerdos a corto plazo mientras dure el hechizo. Su contenido cambia cada vez que se abre."
+  },
+  {
+    "name": "Trueque Corporal",
+    "cost": "1 Fatiga",
+    "description": "Cambias de cuerpo con una criatura que toques. Si un cuerpo muere, el otro también muere. La portada muestra una imagen de la última criatura que lo leyó."
+  },
+  {
+    "name": "Encanto",
+    "cost": "1 Fatiga",
+    "description": "Una criatura que puedes ver te trata como a un amigo. Cálido al tacto y huele a rosas."
+  },
+  {
+    "name": "Comando",
+    "cost": "1 Fatiga",
+    "description": "Un objetivo obedece una única orden de tres palabras que no le causa daño. Se diluye con el tiempo, hasta que finalmente desaparece para siempre."
+  },
+  {
+    "name": "Comprender",
+    "cost": "1 Fatiga",
+    "description": "Llegas a dominar todas las lenguas durante un breve periodo de tiempo. Gotea letras, manchando todo lo que toca."
+  },
+  {
+    "name": "Cono de Espuma",
+    "cost": "1 Fatiga",
+    "description": "Una espuma densa sale de la mano y cubre el objetivo. Esponjoso y húmedo con un residuo jabonoso."
+  },
+  {
+    "name": "Plantas de Control",
+    "cost": "1 Fatiga",
+    "description": "Las plantas y árboles cercanos te obedecen y adquieren la capacidad de moverse a paso lento. Las hojas crecen a lo largo del lomo y huele ligeramente a podredumbre."
+  },
+  {
+    "name": "Control del Tiempo",
+    "cost": "1 Fatiga",
+    "description": "Puede alterar el tipo de clima a voluntad, pero no lo controla de otro modo. Muy resistente al fuego y al agua."
+  },
+  {
+    "name": "Curar Heridas",
+    "cost": "1 Fatiga",
+    "description": "Restaura 1d4 FUE al día a una criatura que puedas tocar. Huele a vinagre y tomillo. Se vuelve rojo tras su uso."
+  },
+  {
+    "name": "Ensordecer",
+    "cost": "1 Fatiga",
+    "description": "Todas las criaturas cercanas están ensordecidas. Los instrumentos cercanos suenan de vez en cuando, como en señal de protesta."
+  },
+  {
+    "name": "Detectar Magia",
+    "cost": "1 Fatiga",
+    "description": "Puedes ver u oír auras mágicas cercanas. Se calienta al tacto si se usa magia cerca."
+  },
+  {
+    "name": "Desarmar",
+    "cost": "1 Fatiga",
+    "description": "Cualquiera de las partes de tu cuerpo puede separarse y volver a unirse a voluntad, sin causar dolor ni daños. Puedes seguir controlándolas. Regenera las páginas rotas o desfiguradas."
+  },
+  {
+    "name": "Disfraz",
+    "cost": "1 Fatiga",
+    "description": "Puedes alterar la apariencia de un personaje a voluntad siempre que siga siendo humanoide. Los intentos de duplicar a otros personajes parecerán extraños. La superficie es un espejo perfecto."
+  },
+  {
+    "name": "Desplazar",
+    "cost": "1 Fatiga",
+    "description": "Un objeto parece estar a 4 metros de su posición real. A veces se introducen en su interior trozos de cuerda, ropa y hojas."
+  },
+  {
+    "name": "Terremoto",
+    "cost": "1 Fatiga",
+    "description": "El suelo empieza a temblar violentamente. Las estructuras pueden sufrir daños o derrumbarse. La arena se desliza por las esquinas, aparentemente sin parar."
+  },
+  {
+    "name": "Elasticidad",
+    "cost": "1 Fatiga",
+    "description": "Tu cuerpo puede estirarse hasta 3 metros. Huele a caramelo y es muy flexible."
+  },
+  {
+    "name": "Muro Elemental",
+    "cost": "1 Fatiga",
+    "description": "Un muro de hielo o fuego de 15 m de largo y 10 de alto se eleva desde el suelo. La piel y las sustancias más calientes se adhieren a ella después de su uso."
+  },
+  {
+    "name": "Hurto",
+    "cost": "1 Fatiga",
+    "description": "Un objeto visible se teletransporta a tus manos. En ocasiones, la preciada posesión de un aliado puede encontrarse escondida entre sus tapas."
+  },
+  {
+    "name": "Pulmón de Pez",
+    "cost": "1 Fatiga",
+    "description": "Un objetivo puede respirar bajo el agua hasta que vuelva a salir a la superficie. Huele mucho a mar. Atrae a los animales salvajes."
+  },
+  {
+    "name": "Antorcha",
+    "cost": "1 Fatiga",
+    "description": "Una brillante bola de energía dispara una estela de luz hacia el cielo, revelando tu ubicación a amigos o enemigos. Brilla débilmente en completa oscuridad."
+  },
+  {
+    "name": "Banco de Niebla",
+    "cost": "1 Fatiga",
+    "description": "Una densa niebla se extiende a tu alrededor. Cuando se sumerge en agua, el libro acaba convirtiendo todo el líquido en vapor."
+  },
+  {
+    "name": "Frenesí",
+    "cost": "1 Fatiga",
+    "description": "Una criatura cercana estalla en un frenesí de violencia. Cubierta áspera, de papel de lija, que destroza cualquier libro que toca."
+  },
+  {
+    "name": "Puerta",
+    "cost": "1 Fatiga",
+    "description": "Se abre un portal a un plano cualquiera. En el centro se abre un gran agujero que termina en un vacío. Los objetos que caen dentro no se vuelven a ver."
+  },
+  {
+    "name": "Cambio Gravitatorio",
+    "cost": "1 Fatiga",
+    "description": "Puedes cambiar la dirección de la gravedad, pero sólo para ti. Se adhiere al objeto más grande cercano."
+  },
+  {
+    "name": "Codicia",
+    "cost": "1 Fatiga",
+    "description": "Una criatura desarrolla el impulso irrefrenable de poseer un objeto visible de tu elección. La cubierta cambia según el propietario, insinuando sutilmente sus deseos más profundos."
+  },
+  {
+    "name": "Aprisa",
+    "cost": "1 Fatiga",
+    "description": "Tu velocidad de movimiento se triplica. Las páginas se voltean bruscamente mientras están abiertas. Puede causar cortes de papel."
+  },
+  {
+    "name": "Odio",
+    "cost": "1 Fatiga",
+    "description": "Una criatura desarrolla un profundo odio hacia otra criatura o grupo y desea destruirlos. La exposición prolongada al libro puede provocar sospechas, paranoia y desconfianza hacia los demás."
+  },
+  {
+    "name": "Oír Susurros",
+    "cost": "1 Fatiga",
+    "description": "Se oyen claramente los sonidos débiles. Después, la voz del lector se amplifica durante un breve periodo de tiempo."
+  },
+  {
+    "name": "Flotar",
+    "cost": "1 Fatiga",
+    "description": "Un objeto flota, sin fricción, a 60 centímetros del suelo. Puede sostener hasta un humanoide. Flota si se suelta."
+  },
+  {
+    "name": "Hipnotizar",
+    "cost": "1 Fatiga",
+    "description": "Una criatura entra en trance y responderá con la verdad a una pregunta de sí o no que le hagas. Sus cubiertas están decoradas con llamativas espirales."
+  },
+  {
+    "name": "Toque Helado",
+    "cost": "1 Fatiga",
+    "description": "Una gruesa capa de hielo se extiende por una superficie tocada, de hasta 3 metros de radio. Se requieren guantes. No inflamable."
+  },
+  {
+    "name": "Identificar Propietario",
+    "cost": "1 Fatiga",
+    "description": "Aparecen letras sobre el objeto que tocas, que deletrean el nombre de los propietarios del objeto, si los hay. En el interior del libro figura el nombre de su anterior propietario."
+  },
+  {
+    "name": "Iluminar",
+    "cost": "1 Fatiga",
+    "description": "Una luz flotante se mueve según tus órdenes. Al sostenerlas bajo la luz, las páginas se convierten en un prisma de vibrantes arco iris."
+  },
+  {
+    "name": "Atadura Invisible",
+    "cost": "1 Fatiga",
+    "description": "Dos objetos a menos de 3 metros de distancia no pueden separarse más de 3 metros. Sus páginas no están unidas por pegamento o hilo, pero se mantienen unidas."
+  },
+  {
+    "name": "Golpear",
+    "cost": "1 Fatiga",
+    "description": "Una cerradura mundana o mágica cercana se abre con fuerza. Cerrado. Un nuevo propietario «produce» la llave después de su próxima comida."
+  },
+  {
+    "name": "Salto",
+    "cost": "1 Fatiga",
+    "description": "Saltas hasta 3 metros de altura, una vez. Cuando se lanza, sigue adelante."
+  },
+  {
+    "name": "Aire Líquido",
+    "cost": "1 Fatiga",
+    "description": "El aire a tu alrededor se vuelve nadable. Flota por voluntad propia, rebotando en lo que toca."
+  },
+  {
+    "name": "Atenuador mágico",
+    "cost": "1 Fatiga",
+    "description": "Todos los efectos mágicos cercanos ven reducida su eficacia a la mitad. Las reliquias situadas a menos de 30 m del libro de hechizos no pueden recargarse."
+  },
+  {
+    "name": "Mansión",
+    "cost": "1 Fatiga",
+    "description": "Una casa de campo robusta y amueblada aparece durante horas. Puedes permitir y prohibir la entrada a voluntad. Si se deja dentro, tanto el libro como la cabaña desaparecen para siempre."
+  },
+  {
+    "name": "Locura Marmórea",
+    "cost": "1 Fatiga",
+    "description": "Tus bolsillos están llenos de canicas y se rellenarán cada 30 segundos. Cuando se sacude, emite un juguetón sonido de traqueteo."
+  },
+  {
+    "name": "Mascarada",
+    "cost": "1 Fatiga",
+    "description": "El aspecto y la voz de un personaje se vuelven idénticos a los de un personaje que toques. El uso prolongado hace que el propietario desarrolle tics inconscientes pero perceptibles."
+  },
+  {
+    "name": "Miniaturizar",
+    "cost": "1 Fatiga",
+    "description": "Una criatura que tocas se reduce al tamaño de un ratón. El texto es ridícula y cómicamente grande."
+  },
+  {
+    "name": "Imagen Especular",
+    "cost": "1 Fatiga",
+    "description": "Aparece un duplicado ilusorio de ti mismo que está bajo tu control. Con el tiempo, el propietario empieza a preguntarse quién es el original y quién el duplicado."
+  },
+  {
+    "name": "Sendaespejo",
+    "cost": "1 Fatiga",
+    "description": "Un espejo se convierte en una puerta a otro espejo en el que te has mirado hoy. No se abre a menos que el propietario golpee amablemente la cubierta."
+  },
+  {
+    "name": "Multibrazo",
+    "cost": "1 Fatiga",
+    "description": "Ganas temporalmente un brazo extra. Tras su uso, el lanzador sufre el síndrome del miembro fantasma durante un día."
+  },
+  {
+    "name": "Esfera Nocturna",
+    "cost": "1 Fatiga",
+    "description": "Aparece ante ti una esfera de oscuridad de 15 metros de ancho que muestra el cielo nocturno. Muestra una constelación destacada en su portada."
+  },
+  {
+    "name": "Objetivar",
+    "cost": "1 Fatiga",
+    "description": "Te conviertes en cualquier objeto inanimado entre el tamaño de un piano de cola y una manzana. El dueño sufre una intensa pareidolia durante días tras su uso."
+  },
+  {
+    "name": "Forma Rezumante",
+    "cost": "1 Fatiga",
+    "description": "Te conviertes en una gelatina viviente. Gotea lentamente un ácido que acaba devorando todo lo que toca."
+  },
+  {
+    "name": "Pacificar",
+    "cost": "1 Fatiga",
+    "description": "Una criatura cercana a ti tiene aversión a la violencia. Huele a jazmín e incienso. Atrae a los niños."
+  },
+  {
+    "name": "Pasaje",
+    "cost": "1 Fatiga",
+    "description": "Crea un camino temporal a través de madera, piedra o ladrillo. Un objeto que se deje caer encima del libro cae inevitablemente por el otro lado."
+  },
+  {
+    "name": "Fobia",
+    "cost": "1 Fatiga",
+    "description": "Una criatura cercana se aterroriza con un objeto de tu elección. Con el tiempo, el arte abstracto e inquietante empieza a llenar sus páginas."
+  },
+  {
+    "name": "Foso",
+    "cost": "1 Fatiga",
+    "description": "En el suelo se abre un foso de 3 metros de ancho y 3 metros de profundidad. Un foso puede guardarse con seguridad en su lomo."
+  },
+  {
+    "name": "Oleada Primigenia",
+    "cost": "1 Fatiga",
+    "description": "Una criatura evoluciona rápidamente hacia una versión futura de su especie. El propietario es perseguido por extrañas visiones de sus propios antepasados."
+  },
+  {
+    "name": "Empujar/Tirar",
+    "cost": "1 Fatiga",
+    "description": "Un objeto de cualquier tamaño es atraído directamente hacia ti o empujado directamente lejos de ti con la fuerza de un hombre. Cualquier fuerza en contra del libro se amplifica cómicamente."
+  },
+  {
+    "name": "Levantar a un muerto",
+    "cost": "1 Fatiga",
+    "description": "Un esqueleto se levanta del suelo para servirte. Son increíblemente estúpidos y solo pueden obedecer órdenes sencillas. El propietario se siente cada vez más fascinado por los huesos después de cada uso."
+  },
+  {
+    "name": "Elevar el espíritu",
+    "cost": "1 Fatiga",
+    "description": "El espíritu de un cadáver cercano se manifiesta y responderá a 1 pregunta. Las respuestas (pero no sus preguntas) quedan inscritas para siempre en sus páginas."
+  },
+  {
+    "name": "Leer Mente",
+    "cost": "1 Fatiga",
+    "description": "Puedes oír los pensamientos superficiales de las criaturas cercanas. La posesión prolongada puede hacer que el lector confunda los pensamientos de los demás con los suyos propios."
+  },
+  {
+    "name": "Repeler",
+    "cost": "1 Fatiga",
+    "description": "Dos objetos se repelen magnéticamente en un radio de 3 metros. Cerrado por dos potentes correas que se abren en momentos inoportunos."
+  },
+  {
+    "name": "Escudriñar",
+    "cost": "1 Fatiga",
+    "description": "Puedes ver a través de los ojos de una criatura que has tocado hoy. Los ojos del propietario se vuelven de color blanco lechoso durante una hora después de su uso."
+  },
+  {
+    "name": "Esculpir Elementos",
+    "cost": "1 Fatiga",
+    "description": "La materia inanimada se comporta como la arcilla en tus manos. Se descompone lentamente al contacto con la madera o la tela. Entiérrelo en la tierra o sumérjalo en agua para renovarlo."
+  },
+  {
+    "name": "Sentido",
+    "cost": "1 Fatiga",
+    "description": "Elige un tipo de objeto (llave, oro, flecha, jarra, etc.). Puedes percibir el ejemplar más cercano. El propietario anterior del libro siempre conoce la ubicación actual del libro."
+  },
+  {
+    "name": "Escudo",
+    "cost": "1 Fatiga",
+    "description": "Una criatura a la que toques queda protegida de ataques mundanos durante un minuto. Lleva una cota de malla oxidada y pesa bastante. Si se sujeta, proporciona +1 de Armadura."
+  },
+  {
+    "name": "Mortaja",
+    "cost": "1 Fatiga",
+    "description": "Una criatura que tocas es invisible hasta que se mueve. Invisible para cualquiera que no sea el propietario actual del libro."
+  },
+  {
+    "name": "Barajar",
+    "cost": "1 Fatiga",
+    "description": "Dos criaturas que puedes ver instantáneamente cambian de lugar. Si ha sido robado pero aún no se ha leído, reaparece donde su propietario lo dejó por última vez."
+  },
+  {
+    "name": "Reparación Hábil",
+    "cost": "1 Fatiga",
+    "description": "Realizas pequeñas reparaciones en un objeto inerte. Cosidas a partir de la vitela de cien libros, no hay dos páginas iguales."
+  },
+  {
+    "name": "Dormir",
+    "cost": "1 Fatiga",
+    "description": "Una criatura que puedes ver cae en un sueño ligero. Suave como una almohada, pero sólo produce un sueño irregular."
+  },
+  {
+    "name": "Escurridizo",
+    "cost": "1 Fatiga",
+    "description": "Todas las superficies en un radio de 10 metros se vuelven extremadamente resbaladizas. Se necesitan guantes para manipularlo, no sea que el libro se caiga de la forma más cómica."
+  },
+  {
+    "name": "Forma de Humo",
+    "cost": "1 Fatiga",
+    "description": "Tu cuerpo se convierte en un humo vivo que puedes controlar. Huele a hoguera. Las páginas no se pueden quemar, pero son muy sensibles a la humedad."
+  },
+  {
+    "name": "Oler",
+    "cost": "1 Fatiga",
+    "description": "Se pueden oler hasta los rastros más tenues de aromas. Expresa un fuerte olor detectable sólo por su dueño."
+  },
+  {
+    "name": "Apagar",
+    "cost": "1 Fatiga",
+    "description": "La fuente de cualquier luz mundana que puedas ver se apaga al instante. Si se dejan en un lugar durante mucho tiempo, las fuentes de luz cercanas acaban por atenuarse y, finalmente, se apagan."
+  },
+  {
+    "name": "Ordenar",
+    "cost": "1 Fatiga",
+    "description": "Los objetos inanimados se ordenan según las categorías que establezcas. Se endereza cuando se cae o se lanza."
+  },
+  {
+    "name": "Hechizosierra",
+    "cost": "1 Fatiga",
+    "description": "Una hoja giratoria sale volando de tu pecho y arrasa con cualquier planta que encuentre a su paso. Por lo demás, es inofensiva. Envuelto en cuero teñido, debe engrasarse al menos una vez al mes."
+  },
+  {
+    "name": "Escalada de Araña",
+    "cost": "1 Fatiga",
+    "description": "Puedes trepar superficies como una araña. Las telarañas nuevas deben apartarse antes de cada uso. Son difíciles de quitar."
+  },
+  {
+    "name": "Enjambre",
+    "cost": "1 Fatiga",
+    "description": "Te conviertes en un enjambre de cuervos, ratas o pirañas. Solo se te puede dañar con ataques de ráfaga. Se divide fácilmente en una docena de partes distintas que se acercan lentamente con el tiempo."
+  },
+  {
+    "name": "Señuelo Objetivo",
+    "cost": "1 Fatiga",
+    "description": "Un objeto que tocas se convierte en objetivo de cualquier hechizo cercano. Atrae todo tipo de criaturas mágicas, fugas de hechizos y adivinación."
+  },
+  {
+    "name": "Telequinesis",
+    "cost": "1 Fatiga",
+    "description": "Puedes trasladar mentalmente 1 objeto de menos de 15 kg. El propietario puede invocar el libro sólo mediante una orden mental (salvación VOL o quedar privado después)."
+  },
+  {
+    "name": "Telepatía",
+    "cost": "1 Fatiga",
+    "description": "Dos criaturas pueden escuchar los pensamientos de la otra, por muy lejos que estén. El poseedor puede oír (pero no responder) a los pensamientos de quien lo poseyó por última vez, y viceversa."
+  },
+  {
+    "name": "Teletransporte",
+    "cost": "1 Fatiga",
+    "description": "Un objeto o persona que puedes ver se transporta de un lugar a otro en un radio de 15 metros. Puede destruirse para crear un portal a otra dimensión."
   },
   {
     "name": "Espesura",
     "cost": "1 Fatiga",
-    "description": "Surge repentinamente una espesura de árboles y densos matorrales, de hasta 15 metros de ancho."
+    "description": "De repente brota una espesura de árboles y maleza densa de hasta 15 metros de ancho. Envuelto en lianas que deben destruirse de nuevo con cada uso."
+  },
+  {
+    "name": "Control del Tiempo (Dilatación)",
+    "cost": "1 Fatiga",
+    "description": "El tiempo en una burbuja de 15 metros se ralentiza o aumenta un 10% durante 30 segundos. Alterna su apariencia como imposiblemente antigua o como recién escrita."
+  },
+  {
+    "name": "Visión Verdadera",
+    "cost": "1 Fatiga",
+    "description": "Ves a través de todas las ilusiones cercanas. No se puede ocultar con magia y sobresale como un pulgar dolorido."
+  },
+  {
+    "name": "Subida",
+    "cost": "1 Fatiga",
+    "description": "Aparece un manantial de agua de mar. Encuadernaciones de cuero endurecido cubiertas de sal y percebes vivos."
+  },
+  {
+    "name": "Visión",
+    "cost": "1 Fatiga",
+    "description": "Controlas completamente lo que ve una criatura. Un inquietante ojo sin párpado adorna la portada."
+  },
+  {
+    "name": "Ilusión Óptica",
+    "cost": "1 Fatiga",
+    "description": "Aparece una ilusión silenciosa, inmóvil y del tamaño de la habitación que elijas. Lleno de páginas ricas y coloridas muy parecidas a un cuento infantil."
+  },
+  {
+    "name": "Pabellón",
+    "cost": "1 Fatiga",
+    "description": "Aparece en el suelo un círculo plateado de 15 metros de diámetro. Elige una especie que no pueda cruzarlo. Las cubiertas están decoradas con extrañas criaturas de otro mundo con miles de ojos."
+  },
+  {
+    "name": "Telaraña",
+    "cost": "1 Fatiga",
+    "description": "Tus muñecas disparan gruesas telarañas. El texto es extraño, pero de algún modo inteligible, porque es el lenguaje de los sueños."
+  },
+  {
+    "name": "Artilugio",
+    "cost": "1 Fatiga",
+    "description": "Una versión primitiva de una herramienta o elemento dibujado aparece ante ti y desaparece al cabo de poco tiempo. Huele a hierro y óxido, a sudor y esfuerzo. De lo más profundo de sus páginas emanan débiles sonidos de duro trabajo."
+  },
+  {
+    "name": "Marca del Mago",
+    "cost": "1 Fatiga",
+    "description": "Tu dedo puede disparar un chorro de pintura de color octarino. Esta pintura solo es visible para ti y puede verse a cualquier distancia, incluso a través de objetos sólidos. En el interior de la portada hay un pequeño bolsillo que contiene un fino bloc de papel con el nombre y la fecha de fallecimiento de todos los propietarios anteriores."
+  },
+  {
+    "name": "Visión de Rayos X",
+    "cost": "1 Fatiga",
+    "description": "Puedes ver a través de las paredes, la suciedad, la ropa, etc. La exposición prolongada puede provocar caída del cabello, visión borrosa y fatiga."
   }
 ]
