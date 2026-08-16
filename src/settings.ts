@@ -6,6 +6,7 @@ export interface CairnSettings {
     autoReindex: boolean;
     autoLink: boolean;
     autoLinkMinLength: number;
+    graphicalDice: boolean;
 }
 
 export const EXAMPLES_FOLDER = "cairn-examples";
@@ -16,4 +17,5 @@ export const DEFAULT_SETTINGS: CairnSettings = {
     autoReindex: true,
     autoLink: true,
     autoLinkMinLength: 6,
+    graphicalDice: false,
 };

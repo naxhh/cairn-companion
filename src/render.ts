@@ -218,7 +218,7 @@ function appendAdvantageButtons(el: HTMLElement, plugin: CairnPlugin, rollOutput
 	});
 	advBtn.onclick = (ev: MouseEvent) => {
 		ev.preventDefault();
-		void doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, "1d12", `${label} ${s.dice.advantageSuffix}`);
+		void doRoll(rollOutput, "1d12", `${label} ${s.dice.advantageSuffix}`, plugin.settings.graphicalDice);
 	};
 	const disBtn = el.createEl("button", {
 		text: "▼",
@@ -227,7 +227,7 @@ function appendAdvantageButtons(el: HTMLElement, plugin: CairnPlugin, rollOutput
 	});
 	disBtn.onclick = (ev: MouseEvent) => {
 		ev.preventDefault();
-		void doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, "1d4", `${label} ${s.dice.disadvantageSuffix}`);
+		void doRoll(rollOutput, "1d4", `${label} ${s.dice.disadvantageSuffix}`, plugin.settings.graphicalDice);
 	};
 }
 
@@ -250,7 +250,7 @@ function appendTextWithDiceButton(
 		});
 		btn.onclick = (ev: MouseEvent) => {
 			ev.preventDefault();
-			void doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, formula, label);
+			void doRoll(rollOutput, formula, label, plugin.settings.graphicalDice);
 		};
 		// Advantage/Disadvantage replace the weapon's die with 1d12/1d4 (Basic
 		// Rules: Combat → Attack modifiers). Only offered on damage/attack
@@ -507,7 +507,7 @@ function buildInventorySection(
 						cls: "cairn-dice-btn",
 						attr: { "aria-label": s.sheet.rollDamageAria },
 					});
-					rollBtn.onclick = () => doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, asString(dmg), item.name);
+					rollBtn.onclick = () => doRoll(rollOutput, asString(dmg), item.name, plugin.settings.graphicalDice);
 					appendAdvantageButtons(li, plugin, rollOutput, item.name);
 				}
 			}
@@ -647,7 +647,7 @@ async function renderCharacterSheet(
 			void plugin.setCharField(file, maxKey, v);
 		};
 		const rollBtn = box.createEl("button", { text: s.sheet.save, cls: "cairn-dice-btn" });
-		rollBtn.onclick = () => rollSave(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, Number(fm[key] ?? 0) || 0, s.sheet.saveOf(label), s);
+		rollBtn.onclick = () => rollSave(rollOutput, Number(fm[key] ?? 0) || 0, s.sheet.saveOf(label), s, plugin.settings.graphicalDice);
 	}
 
 	const miscRow = sheet.createDiv({ cls: "cairn-misc-row" });

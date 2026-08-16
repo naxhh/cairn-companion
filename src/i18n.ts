@@ -176,6 +176,8 @@ export interface CairnStrings {
 		diceRollerName: string;
 		diceRollerFound: string;
 		diceRollerNotFound: string;
+		graphicalDiceName: string;
+		graphicalDiceDesc: string;
 		usageHeading: string;
 		usageIntro: string;
 		usageExtraFields: string;
@@ -406,6 +408,8 @@ export const es: CairnStrings = {
 		diceRollerName: "Plugin de dados",
 		diceRollerFound: "✅ «Dice Roller» detectado: los botones 🎲 lo usarán para tirar.",
 		diceRollerNotFound: "No se detectó el plugin «Dice Roller». Los botones 🎲 usarán un generador interno propio.",
+		graphicalDiceName: "Dados 3D animados",
+		graphicalDiceDesc: "Al tirar, muestra los dados animados de «Dice Roller» en vez de solo el resultado. Requiere que el plugin «Dice Roller» esté instalado.",
 		usageHeading: "Cómo usar el plugin",
 		usageIntro:
 			"Utiliza el bloque de código cairn para referenciar entradas.",
@@ -640,6 +644,8 @@ export const en: CairnStrings = {
 		diceRollerName: "Dice plugin",
 		diceRollerFound: "✅ \"Dice Roller\" detected: the 🎲 buttons will use it to roll.",
 		diceRollerNotFound: "The \"Dice Roller\" plugin wasn't detected. The 🎲 buttons will use a built-in generator instead.",
+		graphicalDiceName: "Animated 3D dice",
+		graphicalDiceDesc: "When rolling, show \"Dice Roller\"'s animated dice instead of just the result. Requires the \"Dice Roller\" plugin to be installed.",
 		usageHeading: "How to use the plugin",
 		usageIntro:
 			"Use the cairn code block to reference entries.",

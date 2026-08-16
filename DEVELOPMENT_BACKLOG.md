@@ -3,8 +3,7 @@ While the TODO iteams are the ones I'm trying to focus on.
 That said, PR's are welcome for any point in both lists.
 
 ## TODO
-- Publish into obsidian marketplace (pass checks)
-- Fix "not found dice roller" plugin
+- The "reading" view doesn't find the items in the index
 - Improve dice roller implementation so we don't need to pass the plugin/app everywhere
 - run dev is not really working.
 - Manual review ES data
@@ -33,3 +32,5 @@ That said, PR's are welcome for any point in both lists.
 - Add EN data
 - Review code
 - Review deps versions
+- Publish into obsidian marketplace (pass checks)
+- Fix "not found dice roller" plugin

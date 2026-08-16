@@ -348,7 +348,7 @@ class CairnSettingTab extends PluginSettingTab {
 	// search find these controls.
 	getSettingDefinitions(): SettingDefinitionItem[] {
 		const s = this.plugin.strings();
-		const dice = hasRollerPlugin(this.app);
+		const dice = hasRollerPlugin();
 
 		return [
 			{
@@ -430,6 +430,11 @@ class CairnSettingTab extends PluginSettingTab {
 			{
 				name: s.settings.diceRollerName,
 				desc: dice ? s.settings.diceRollerFound : s.settings.diceRollerNotFound,
+			},
+			{
+				name: s.settings.graphicalDiceName,
+				desc: s.settings.graphicalDiceDesc,
+				control: { type: "toggle", key: "graphicalDice", disabled: !dice },
 			},
 			{
 				name: s.settings.usageHeading,

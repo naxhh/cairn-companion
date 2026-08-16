@@ -13,7 +13,7 @@ interface QuickRollResult {
 }
 
 function rollFateDie(strings: CairnStrings): QuickRollResult {
-    const total = fallbackRoller.fallbackRoll("1d6");
+    const total = fallbackRoller.roll("1d6");
     const favorable = total >= 4;
     return {
         text: `${strings.guardianTools.fateDie}: ${total} → ${
@@ -23,7 +23,7 @@ function rollFateDie(strings: CairnStrings): QuickRollResult {
 }
 
 function rollReaction(strings: CairnStrings): QuickRollResult {
-    const total = fallbackRoller.fallbackRoll("2d6");
+    const total = fallbackRoller.roll("2d6");
     const labels = strings.guardianTools.reactionLabels;
     let label: string;
     if (total === 2) label = labels.hostile;
@@ -35,7 +35,7 @@ function rollReaction(strings: CairnStrings): QuickRollResult {
 }
 
 function rollFromTable(table: RollTableEntry[]): QuickRollResult {
-    const total = fallbackRoller.fallbackRoll("1d6");
+    const total = fallbackRoller.roll("1d6");
     const { title, effect } = table[total - 1];
     return { text: `🎲 ${total} → ${title}: ${effect}` };
 }
@@ -49,7 +49,7 @@ function rollWeather(season: string, strings: CairnStrings): QuickRollResult {
         [seasons.fall]: [states.normal, states.normal, states.unpleasant, states.harsh, states.harsh, states.extreme],
         [seasons.winter]: [states.normal, states.unpleasant, states.harsh, states.harsh, states.extreme, states.extreme],
     };
-    const total = fallbackRoller.fallbackRoll("1d6");
+    const total = fallbackRoller.roll("1d6");
     const result = (table[season] ?? table[seasons.summer])[total - 1];
     const note = result === states.extreme ? strings.guardianTools.extremeNote : "";
     return { text: `${strings.guardianTools.weatherLabel} (${season}): ${total} → ${result}${note}` };
