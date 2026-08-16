@@ -2,9 +2,9 @@
 	"id": "cairn-companion",
 	"name": "Cairn Companion",
 	"version": "1.0.0",
-	"minAppVersion": "1.4.0",
-	"description": "A campaign management tool for Cairn 2e TTRPG. Quickly link to cairn items, spells, monsters, etc.. Get random suggestions and keep your PJ cheat sheets up to date",
-	"author": "nax_hh",
-	"authorUrl": "https://github.com/nax_hh",
+	"minAppVersion": "1.10.0",
+	"description": "A campaign management tool for Cairn 2e TTRPG. Quickly link to cairn items, spells, monsters, etc.. Get random suggestions and keep your PJ cheat sheets up to date!",
+	"author": "naxhh",
+	"authorUrl": "https://github.com/naxhh",
 	"isDesktopOnly": false
 }

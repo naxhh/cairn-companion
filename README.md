@@ -220,5 +220,11 @@ independent of whatever you've written.
 
 ## License
 
-MIT for the plugin's code see [`LICENSE`](LICENSE).
-CC-BY-SA 4.0 for Cairn 2e data see [data/LICENSE](data/LICENSE) file.
+The plugin's code is MIT — see [`LICENSE`](LICENSE).
+
+That covers everything **except** `data/*/*.json`, the bundled Cairn 2e catalog
+data, which is a structured transcription of Yochai Gal's SRD (cairnrpg.com)
+and, for the Spanish files, "La esquina del rol"'s translation (es.cairnrpg.com).
+Both are CC-BY-SA 4.0, not MIT — see [`data/LICENSE`](data/LICENSE). If you
+modify or redistribute the data files, it's under CC-BY-SA 4.0, not the MIT
+terms above.

@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This licence covers the code of the plugin (everything except the data/[es,en,de,...]/*.json).
-The non-code data is a structured transcription of the SRD of 
-Cairn 2e, by Yochai Gal, under the license CC-BY-SA 4.0 (cairnrpg.com) not MIT.
-The spanish translation is done by "La esquina del rol" under the same CC-BY-SA 4.0 (es.cairnrpg.com) license.
-
-If you modify or re-distribute the data files do it under the CC-BY-SA 4.0 license not the MIT one.

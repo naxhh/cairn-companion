@@ -150,12 +150,10 @@ export interface CairnStrings {
 	};
 
 	settings: {
-		heading: string;
 		languageName: string;
 		languageDesc: string;
 		languageEs: string;
 		languageEn: string;
-		folderInfoParagraph: string;
 		defaultFolderName: string;
 		defaultFolderDesc: string;
 		autoLinkName: string;
@@ -181,8 +179,7 @@ export interface CairnStrings {
 		usageHeading: string;
 		usageIntro: string;
 		usageExtraFields: string;
-		usageCharacterCommand: string;
-		usagePerTypeCommands: string;
+		usageCommands: string;
 		fallbackLanguageNotice: (lang: string) => string;
 	};
 
@@ -373,21 +370,12 @@ export const es: CairnStrings = {
 	},
 
 	settings: {
-		heading: "Cairn Companion",
 		languageName: "Idioma de los datos incorporados",
 		languageDesc:
 			"Objetos, hechizos, monstruos y trasfondos oficiales vienen empaquetados con el plugin. " +
 			"Elige el idioma; si un idioma todavía no tiene datos, se usa Español como reserva.",
 		languageEs: "Español",
 		languageEn: "English",
-		folderInfoParagraph:
-			"La detección de tipo es siempre por la propiedad cairn_type del frontmatter — nunca por la " +
-			"carpeta. Puedes guardar tus notas donde quieras: un catálogo reusable en, por ejemplo, «_db/», " +
-			"y entradas propias de una campaña en «Campaña/Personajes/» o incluso " +
-			"«Campaña/Facción 1/PNJ/Tesorero.md». La carpeta de abajo solo se usa como destino por defecto " +
-			"cuando el propio plugin crea una nota nueva por ti (botón «Crear nota», los comandos «Nuevo " +
-			"objeto» / «Nuevo PNJ» / etc., «Crear copia editable»...) — no restringe dónde puede vivir una " +
-			"nota ya existente, ni hay una carpeta distinta por tipo.",
 		defaultFolderName: "Carpeta por defecto",
 		defaultFolderDesc: "Dónde se crean las notas nuevas cuando usas el plugin, sea cual sea su tipo.",
 		autoLinkName: "Detectar menciones automáticamente",
@@ -418,22 +406,14 @@ export const es: CairnStrings = {
 		diceRollerName: "Plugin de dados",
 		diceRollerFound: "✅ «Dice Roller» detectado: los botones 🎲 lo usarán para tirar.",
 		diceRollerNotFound: "No se detectó el plugin «Dice Roller». Los botones 🎲 usarán un generador interno propio.",
-		usageHeading: "Cómo usarlo",
+		usageHeading: "Cómo usar el plugin",
 		usageIntro:
-			"Un único tipo de bloque para todo, con dos campos obligatorios: type y name. Mientras escribes " +
-			"dentro del bloque, ambos campos se autocompletan (type sugiere los tipos válidos; name sugiere " +
-			"las entradas de ese tipo ya indexadas).",
+			"Utiliza el bloque de código cairn para referenciar entradas.",
 		usageExtraFields:
 			"Cualquier campo extra dentro del bloque, aparte de type y name, se muestra como «Notas de la " +
 			"partida» sin modificar la ficha original.",
-		usageCharacterCommand:
-			"Comando «Nueva ficha de personaje»: crea una nota con una ficha interactiva (características, PG, " +
-			"inventario, notas) que puedes editar directamente desde la vista de lectura — los cambios se ven " +
-			"al instante, sin recargar.",
-		usagePerTypeCommands:
-			"También hay un comando «Nuevo <tipo>» por cada tipo (Nuevo objeto, Nuevo PNJ, Nuevo monstruo...): " +
-			"pide un nombre y crea la nota con todas las propiedades vacías y, en el cuerpo, el bloque cairn " +
-			"ya escrito y listo para copiar y pegar donde quieras referenciarlo.",
+		usageCommands:
+			"Utiliza los comandos (ctrl+p) buscando «Cairn» para crear nuevas entradas, insertar referencias, abrir herramientas del Guardián o generar una entrada aleatoria.",
 		fallbackLanguageNotice: (lang) => `No hay datos en "${lang}" todavía; se usó Español como reserva.`,
 	},
 
@@ -624,21 +604,12 @@ export const en: CairnStrings = {
 	},
 
 	settings: {
-		heading: "Cairn Companion",
 		languageName: "Built-in data language",
 		languageDesc:
 			"Official objects, spells, monsters, and backgrounds ship bundled with the plugin. " +
 			"Pick a language; if a language doesn't have data yet, Spanish is used as a fallback.",
 		languageEs: "Español",
 		languageEn: "English",
-		folderInfoParagraph:
-			"Type detection is always based on the note's cairn_type frontmatter property — never on " +
-			"the folder. Save your notes wherever you like: a reusable catalog in, say, \"_db/\", and " +
-			"campaign-specific entries in \"Campaign/Characters/\" or even " +
-			"\"Campaign/Faction 1/NPCs/Treasurer.md\". The folder below is only used as the default " +
-			"destination when the plugin itself creates a new note for you (the \"Create note\" button, the " +
-			"\"New object\" / \"New NPC\" / etc. commands, \"Create editable copy\"...) — it doesn't restrict " +
-			"where an existing note can live, and there's no separate folder per type.",
 		defaultFolderName: "Default folder",
 		defaultFolderDesc: "Where new notes are created when you use the plugin, regardless of type.",
 		autoLinkName: "Detect mentions automatically",
@@ -669,22 +640,14 @@ export const en: CairnStrings = {
 		diceRollerName: "Dice plugin",
 		diceRollerFound: "✅ \"Dice Roller\" detected: the 🎲 buttons will use it to roll.",
 		diceRollerNotFound: "The \"Dice Roller\" plugin wasn't detected. The 🎲 buttons will use a built-in generator instead.",
-		usageHeading: "How to use it",
+		usageHeading: "How to use the plugin",
 		usageIntro:
-			"A single block type for everything, with two required fields: type and name. As you type " +
-			"inside the block, both fields autocomplete (type suggests valid types; name suggests already-" +
-			"indexed entries of that type).",
+			"Use the cairn code block to reference entries.",
 		usageExtraFields:
 			"Any extra field inside the block, besides type and name, is shown as \"Session notes\" without " +
 			"modifying the original entry.",
-		usageCharacterCommand:
-			"\"New character sheet\" command: creates a note with an interactive sheet (characteristics, HP, " +
-			"inventory, notes) you can edit directly from reading view — changes show up instantly, no " +
-			"reload needed.",
-		usagePerTypeCommands:
-			"There's also a \"New <type>\" command for each type (New object, New NPC, New monster...): it " +
-			"asks for a name and creates the note with every property empty and, in the body, the cairn " +
-			"block already written and ready to copy and paste wherever you want to reference it.",
+		usageCommands:
+			"Use the commands (ctrl+p) searching for \"Cairn\" to create new entries, insert references, open Warden tools, or generate a random entry.",
 		fallbackLanguageNotice: (lang) => `No data for "${lang}" yet; Spanish was used as a fallback.`,
 	},
 

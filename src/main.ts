@@ -348,8 +348,6 @@ class CairnSettingTab extends PluginSettingTab {
 	display(): void {
 		const { containerEl } = this;
 		const s = this.plugin.strings();
-		containerEl.empty();
-		containerEl.createEl("h2", { text: s.settings.heading });
 
 		new Setting(containerEl)
 			.setName(s.settings.languageName)
@@ -367,8 +365,6 @@ class CairnSettingTab extends PluginSettingTab {
 						this.display();
 					})
 			);
-
-		containerEl.createEl("p", { text: s.settings.folderInfoParagraph });
 
 		new Setting(containerEl)
 			.setName(s.settings.defaultFolderName)
@@ -450,12 +446,14 @@ class CairnSettingTab extends PluginSettingTab {
 			.setName(s.settings.diceRollerName)
 			.setDesc(dice ? s.settings.diceRollerFound : s.settings.diceRollerNotFound);
 
-		containerEl.createEl("h3", { text: s.settings.usageHeading });
-		containerEl.createEl("p", { text: s.settings.usageIntro });
-		const usage = containerEl.createEl("pre");
-		usage.createEl("code", { text: USAGE_EXAMPLE[this.plugin.settings.language] });
-		containerEl.createEl("p", { text: s.settings.usageExtraFields });
-		containerEl.createEl("p", { text: s.settings.usageCharacterCommand });
-		containerEl.createEl("p", { text: s.settings.usagePerTypeCommands });
+	
+		new Setting(containerEl)
+			.setName(s.settings.usageHeading)
+			.setDesc(
+				s.settings.usageIntro + "\n\n" +
+				USAGE_EXAMPLE[this.plugin.settings.language] + "\n\n" +
+				s.settings.usageExtraFields + "\n\n" +
+				s.settings.usageCommands
+			);
 	}
 }
