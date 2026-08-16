@@ -11,6 +11,7 @@ That said, PR's are welcome for any point in both lists.
 - Object has "uses" property but is not used in the card or character inventory.
 - I'm unsure on the diff of hireling and npc... not sure what to do with it
 - Move roll tables to the index not the plugin
+- Unbind and re-bind commands on language change
 
 ## Future ideas
 - Setting seeds helpers
