@@ -129,11 +129,6 @@ export default class CairnPlugin extends Plugin {
 			},
 		});
 
-		// A "New <type>" command for each type (besides the character one
-		// above, which keeps its own id in case a hotkey is already bound to
-		// it). Each one creates the file with the full frontmatter (empty
-		// properties) and, in the body, the ```cairn block already written
-		// and ready to copy and paste wherever it's needed.
 		for (const type of DATA_TYPES) {
 			this.addCommand({
 				id: `cairn-new-${type}`,
@@ -219,8 +214,9 @@ export default class CairnPlugin extends Plugin {
 		];
 		for (const [filename, key] of rollTables) {
 			let data = await this.readRollTable(lang, filename);
-			if (!data && lang !== "es") {
-				data = await this.readRollTable("es", filename);
+			if (!data && lang !== "en") {
+				// Default to EN data if the language is not supported.
+				data = await this.readRollTable("en", filename);
 				if (data) usedFallback = true;
 			}
 			this[key] = data ?? [];
@@ -321,9 +317,7 @@ export default class CairnPlugin extends Plugin {
 	async loadSettings() {
 		const loaded = ((await this.loadData()) ?? {}) as Partial<CairnSettings>;
 		// No language saved yet (first run): default to the Obsidian UI
-		// language when supported, otherwise English. Only en & es are
-		// supported for now. Once saved, the user's own choice (from the
-		// settings dropdown) always wins over the app language.
+		// language when supported, otherwise English.
 		if (loaded.language !== "es" && loaded.language !== "en") {
 			loaded.language = getLanguage() === "es" ? "es" : "en";
 		}
