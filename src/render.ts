@@ -198,7 +198,7 @@ function computeSlots(plugin: CairnPlugin, inventory: InventoryItem[]): number {
 		const quality = objEntry ? (objEntry.frontmatter as Record<string, unknown>)["quality"] : undefined;
 		const qArr: string[] = Array.isArray(quality) ? quality.map((s) => String(s).toLowerCase()) : [];
 		let perUnit = 1;
-		if (qArr.some((q) => q.includes("insignificante") || q.includes("insignificant"))) perUnit = 0;
+		if (qArr.some((q) => q.includes("insignificante") || q.includes("insignificant") || q.includes("petty"))) perUnit = 0;
 		else if (qArr.some((q) => q.includes("voluminos") || q.includes("bulky"))) perUnit = 2;
 		total += perUnit;
 	}

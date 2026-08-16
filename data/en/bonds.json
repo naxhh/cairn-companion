@@ -1,0 +1,82 @@
+[
+  {
+    "name": "The Inherited Gem",
+    "description": "You inherited a Single Gem (500gp, cold and brittle) from a long-dead relative. It arrived with a warning: squander your newfound riches, and a debt long thought forgotten would be called in."
+  },
+  {
+    "name": "The Distant Cousin's Compass",
+    "description": "A distant cousin left you a small inheritance. Take 20Gp and a Strange Compass (petty) that always points towards something deep in the Wood."
+  },
+  {
+    "name": "The Lost Love's Portrait",
+    "description": "You carry a Portrait in a locket (petty) of a past love who disappeared into the Wood long ago. Somehow you know that they are still alive."
+  },
+  {
+    "name": "The Buried Prism",
+    "description": "You found a Tiny Crystal Prism (petty) buried in the dirt. When held up to the light, it shows visions of an unknown location deep within the Wood. Sometimes you feel a presence looking back at you."
+  },
+  {
+    "name": "The Naiad's Debt",
+    "description": "You once freed a Naiad from a choked stream. In return, it gave you some Silver Moss (petty). Swallow it near water, and the creature will come, once, to repay its debt."
+  },
+  {
+    "name": "The Bark-Bound Journal",
+    "description": "You inherited an old Journal, bound in bark. Each evening, its pages are filled with the events of the day, crassly written from the journal's perspective. The writing is crude but accurate."
+  },
+  {
+    "name": "The Half Key",
+    "description": "You protect a long-dormant family secret. Take one half of an Ancient Key (petty). They say that if joined with its twin, it opens a Gate through any door."
+  },
+  {
+    "name": "The Letter of Fae Ascendancy",
+    "description": "You received a Letter (petty) detailing incontrovertible proof that your true parentage is that of Fae nobility. The note also indicates a date and location where you are to meet the letter's author, deep in the the Wood."
+  },
+  {
+    "name": "The Noble's Ring",
+    "description": "You owe a great debt to a member of the nobility and carry their Signet Ring (petty), which serves as proof of their protection as well as your obligation."
+  },
+  {
+    "name": "The Mischievous Spirit",
+    "description": "You consumed a Mischievous Spirit that wreaks havoc on your insides, demanding to be taken home, deep in the Wood. It occupies one slot but absorbs one Fatigue each day. It wants you alive (for now)."
+  },
+  {
+    "name": "The Storyteller's Map",
+    "description": "A roaming storyteller once spun you tales of great treasure hidden deep in the Wood. You thought it naught but fancy, till they gave you A Rolled-Up Map (petty) marked with an X."
+  },
+  {
+    "name": "The Letter for the Lord of Winter",
+    "description": "During your travels, you met a dying hunter who asked you to deliver a message to their loved ones. Take a Letter (petty), sealed with tree sap. It is addressed only to the Lord Of Winter."
+  },
+  {
+    "name": "The Beast You Didn't Help",
+    "description": "You found a wounded beast in the forest but chose to ignore it. You see it everywhere now, but only when you're alone. It looks sad but not angry. You cannot become panicked when acting alone."
+  },
+  {
+    "name": "The Promised Bracelet",
+    "description": "You promised a childhood friend that you'd bring them back a rare gift, something unique in all the world. Take a Bracelet (petty) woven from twine and wildflowers."
+  },
+  {
+    "name": "The Stone Heart",
+    "description": "You crossed a creature of the Wood, and it cursed you with a Stone Heart. With each passing month, the stone grows heavier by one slot. Until your debt is lifted, you cannot truly die."
+  },
+  {
+    "name": "The Oak Lord's Whistle",
+    "description": "You carved a Whistle (petty) from an Oak Lord's branch. Your act did not go unnoticed. You cannot seem to rid yourself of the whistle either."
+  },
+  {
+    "name": "The Dawn Brigade's Flower",
+    "description": "The Dawn Brigade did your family a service, giving you a dried Blood-Red Flower (petty) as proof. When the flower turns white, it means the favor is owed."
+  },
+  {
+    "name": "The Miniature Lute",
+    "description": "An entertainer once visited your home, filling it with story and song. He left one day without a word, leaving behind only A Miniature Lute. Something rattles inside."
+  },
+  {
+    "name": "The White Crow of Dreams",
+    "description": "A white crow appeared to you in a dream, holding a twig in its mouth. You awoke the next morning with the Twig (petty) in your hand. You believe it brings you luck. It smells faintly of sulfur."
+  },
+  {
+    "name": "The Moss Witch's Curse",
+    "description": "One of your ancestors wronged a Moss Witch, who cursed their bloodline. Your visage causes mirrors to shatter. You've noticed that the shards can sometimes reveal illusions."
+  }
+]

@@ -1,17 +1,26 @@
 [
-	{ "title": "Encounter", "effect": "Roll on an Encounter Table. Possibly hostile threat." },
-	{ "title": "Sign", "effect": "A clue, trail, footprint, abandoned lair, smell, victim, etc. is discovered." },
-	{
-		"title": "Environmental",
-		"effect": "The environment changes, or something already happening intensifies (water rises, the ceiling collapses, a ritual nears completion...)."
-	},
-	{
-		"title": "Loss",
-		"effect": "Torches go out, an active spell fades, etc. It has to be dealt with before continuing."
-	},
-	{
-		"title": "Exhaustion",
-		"effect": "The party is forced to take a short rest (roll on this table again). Consume a ration or mark Fatigue."
-	},
-	{ "title": "Calm", "effect": "The party is alone (and safe) for now in the room or place they're in." }
+  {
+    "title": "Encounter",
+    "effect": "Roll on an encounter table. Possibly hostile. (See Reactions.)"
+  },
+  {
+    "title": "Sign",
+    "effect": "A clue, spoor, track, abandoned lair, scent, victim, etc is discovered."
+  },
+  {
+    "title": "Environment",
+    "effect": "Surroundings shift or escalate. Water rises, ceilings collapse, a ritual nears completion, etc."
+  },
+  {
+    "title": "Loss",
+    "effect": "Torches are blown out, an ongoing spell fizzles, etc. The party must resolve the effect before moving on."
+  },
+  {
+    "title": "Exhaustion",
+    "effect": "The party must rest (triggering another roll on this table), add a Fatigue, or consume a ration."
+  },
+  {
+    "title": "Quiet",
+    "effect": "The party is left alone (and safe) for the time being."
+  }
 ]

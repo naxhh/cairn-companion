@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Alchemist",
+    "cost": "30 gp",
+    "role": "Brewing potions and substances"
+  },
+  {
+    "name": "Animal Handler",
+    "cost": "5 gp",
+    "role": "Handling and training animals"
+  },
+  {
+    "name": "Blacksmith",
+    "cost": "15 gp",
+    "role": "Repairing and forging equipment"
+  },
+  {
+    "name": "Bodyguard",
+    "cost": "10 gp",
+    "role": "Protection on the road"
+  },
+  {
+    "name": "Local Guide",
+    "cost": "5 gp",
+    "role": "Guidance through known terrain"
+  },
+  {
+    "name": "Lockpick",
+    "cost": "10 gp",
+    "role": "Opening locks and vaults"
+  },
+  {
+    "name": "Navigator",
+    "cost": "10 gp",
+    "role": "Sea and river routes"
+  },
+  {
+    "name": "Sailor",
+    "cost": "5 gp",
+    "role": "Handling boats and ships"
+  },
+  {
+    "name": "Scholar",
+    "cost": "20 gp",
+    "role": "Knowledge, translation, research"
+  },
+  {
+    "name": "Tracker",
+    "cost": "5 gp",
+    "role": "Following trails and tracks"
+  },
+  {
+    "name": "Trapper",
+    "cost": "5 gp",
+    "role": "Setting and spotting traps"
+  },
+  {
+    "name": "Veteran Bodyguard",
+    "cost": "20 gp",
+    "role": "Combat-hardened protection"
+  }
+]

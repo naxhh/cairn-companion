@@ -30,10 +30,6 @@ import { TypePickerModal, TextInputModal, RandomEntryModal } from "./modals";
 import { createSamples as createExampleNotes } from "./examples";
 import { CairnAutoLinker } from "./autolink";
 
-/* -------------------------------------------------------------------------- */
-/*  Plugin                                                                     */
-/* -------------------------------------------------------------------------- */
-
 function pluginDir(plugin: CairnPlugin): string {
 	return plugin.manifest.dir ?? `${plugin.app.vault.configDir}/plugins/${plugin.manifest.id}`;
 }

@@ -1,0 +1,258 @@
+[
+  {
+    "name": "Aurifex",
+    "description": "You are an artisan of the arcane, a smith of subtle forces. In the crucible of your workshop, the laws that govern this world are warped to suit your needs.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Lantern",
+      "Oil Can (6 uses)",
+      "Needle-knife (d6)",
+      "Protective Gloves (petty)"
+    ]
+  },
+  {
+    "name": "Barber-Surgeon",
+    "description": "You walk the line between healer and harrower, knowing the frailty of the flesh but also the secrets that lie within. With the right tools, life and death are merely words.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Bonesaw (d6)",
+      "Bandages (3 uses)",
+      "Leech (restores 1 STR, 3 uses)",
+      "Stained Medical Finery (petty)"
+    ]
+  },
+  {
+    "name": "Beast Handler",
+    "description": "You alone can walk among the creatures of the wild, fearless and in control. You share a connection with animals that others can only dream of... so long as you don't become their snack.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Leather Whip (d6)",
+      "Soporific Darts (STR save or fall asleep, 6 uses)",
+      "Lure",
+      "Rope (25ft)"
+    ]
+  },
+  {
+    "name": "Bonekeeper",
+    "description": "You are a shepherd to the departed. You listen to the final whispers of the dead as they descend into the cold, unyielding earth. You know that to fully celebrate the gift of life, we must honor its finale as well.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Lantern",
+      "Oil Can (6 uses)",
+      "Stake (d6)",
+      "Chains (10ft)"
+    ]
+  },
+  {
+    "name": "Cutpurse",
+    "description": "You live in the grey space between those who have power and those who don’t. You find opportunity where others see only chaos. With nimble fingers, you unburden both the richest merchant and the lowliest guard.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Twin Daggers (d6+d6, bulky)",
+      "Padded Leather (1 Armor)",
+      "Lockpicks",
+      "Black Outfit (petty)"
+    ]
+  },
+  {
+    "name": "Fieldwarden",
+    "description": "Protectors of the harvest, defense against pests, thieves, and beasts. A position of great honor, while it lasts: many guardians do not live out their natural lives. Roll a second time on the Bonds table.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Brigandine (1 Armor, bulky)",
+      "Sling (d6)",
+      "Hand Axe (d6)",
+      "Repellent (pick the type, 3 uses)"
+    ]
+  },
+  {
+    "name": "Fletchwind",
+    "description": "You strike from afar, but that does not make you a coward. You are a musician, the song of your bowstring naught but a warning, singing the silent promise of a quick death.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Bow (see table)",
+      "Serrated Knife (d6)",
+      "Boiled Leather (1 Armor)",
+      "Heartroot Salve (restores 1d4 STR, 1 use)"
+    ]
+  },
+  {
+    "name": "Foundling",
+    "description": "An odd birthmark, a strange smell: somehow, the touch of elsewhere still lingers. Wherever you are, you have trouble fitting in. Roll on the Omens table (even if you're not the youngest player), but keep the results private for now.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Salt Pouch",
+      "Heirloom Amulet (petty, glows in the presence of magic)",
+      "Sling (d6)",
+      "Dagger (d6)"
+    ]
+  },
+  {
+    "name": "Fungal Forager",
+    "description": "You follow the whisperings of the deep earth, the rhythmic pulse of the mycelium forest that grows beneath the surface. The dark holds no terror for you. Also, you really love mushrooms.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Sharpened Trowel (d6)",
+      "Candle Helmet (+1 Armor, dim, 6 uses)",
+      "Rope (25ft)",
+      "Metal Pail"
+    ]
+  },
+  {
+    "name": "Greenwise",
+    "description": "You delve deep into the Wood, prying its secrets from between rough boughs and whispering leaves. To this verdant kingdom, you are no mere scholar but its confidant as well.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Iron Pot",
+      "Root Knife (d6)",
+      "Healing Salve (restore 1d4 STR, 1 use)",
+      "Twine Bauble (petty, Ward once per day)"
+    ]
+  },
+  {
+    "name": "Half Witch",
+    "description": "Born of both the mortal world and the unseen, you are an enigma to some and feared by many. Yours is the tale of what happens when two worlds collide.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Spellbook (Thicket: A thicket of trees and dense",
+      "Iron Dagger (d6)",
+      "Herbs Pouch (restore 1 STR, 3 uses)",
+      "Ghillie Suit"
+    ]
+  },
+  {
+    "name": "Hexenbane",
+    "description": "You are a mere digit on the unerring hand of justice. You go where others fear to tread, unyielding and unbroken.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Vestments of the Order (petty)",
+      "Blessed Tinctures",
+      "Silver Knife (d6)",
+      "Crossbow (d8, bulky)"
+    ]
+  },
+  {
+    "name": "Jongleur",
+    "description": "What inspires the soul more than song, words, and spectacle? Why practice for years to master the arcane when you've already got real magic inside?",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Costume",
+      "Simple Instrument (Pipes, Lute, etc.)",
+      "Lucky Jerkin (+1 Armor)",
+      "Sling (d6)"
+    ]
+  },
+  {
+    "name": "Kettlewright",
+    "description": "You are known by the smell of molten metal and the jingle of tin. You are no mere merchant but an artisan of fire and metal.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Pincers",
+      "Roll of Tin",
+      "Gloves (petty)",
+      "Hammer (d6)"
+    ]
+  },
+  {
+    "name": "Marchguard",
+    "description": "Bound by blood Oath to patrol the border and protect the realm. Once sworn, the Oath cannot be broken. The Guard always finds their own.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Lantern",
+      "Oil Can (6 uses)",
+      "Long Sword (d10, bulky)",
+      "Boiled Leather (1 Armor)"
+    ]
+  },
+  {
+    "name": "Mountebank",
+    "description": "Wits are your sharpest weapon, a facade your strongest shield. But when you do lose, you lose badly.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Cart (+4 slots, bulky when pulled)",
+      "Trick Playing Cards",
+      "Fancy Hat (petty)",
+      "Cane Sword (d6)"
+    ]
+  },
+  {
+    "name": "Outrider",
+    "description": "Your coin comes from escorting caravans, tracking fugitives, or lending your blade to a cause. You've been a savior, an executioner, a hero, and even a villain. Yours is not a solitary path, however: you'll always have your horse.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Long Sword (d10, bulky)",
+      "Leather Jerkin (1 Armor)",
+      "Crossbow (d8, bulky)",
+      "Spyglass"
+    ]
+  },
+  {
+    "name": "Prowler",
+    "description": "You are a specter in the night, a fleeting shadow that slips by its prey, unseen. Each kill is a test of cunning and animal determination, a contest between life and death. You know that one day you will lose. You look forward to it.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Tarp",
+      "Boiled Leather (1 Armor)",
+      "Short Sword (d6)",
+      "Spring-Loaded trap (4 STR damage)"
+    ]
+  },
+  {
+    "name": "Rill Runner",
+    "description": "You sing the stories of rivers and lakes, your talents soothing friends and the elements alike. You've seen more than most, but somehow it never seems to be enough.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Water Shoes",
+      "Brigandine (1 Armor, bulky)",
+      "Compass",
+      "Dagger (d6)"
+    ]
+  },
+  {
+    "name": "Scrivener",
+    "description": "You copy ancient texts and illuminate manuscripts, recording the voices of the clever, the great, and the powerful. You will prove that the pen truly is mightier than the sword.",
+    "gear": [
+      "3d6 Gold Pieces",
+      "Rations (3 uses)",
+      "Torch (3 uses)",
+      "Quill & Ink",
+      "Blank Book",
+      "Awl (d6)",
+      "Badge (petty)"
+    ]
+  }
+]

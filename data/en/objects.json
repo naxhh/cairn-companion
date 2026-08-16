@@ -1,0 +1,1823 @@
+[
+  {
+    "name": "A Blade Called Hope",
+    "damage": "d6",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A thin, curved sword that glows with faint light, visible only in total darkness. When bathed in heavy sunlight, its first attack is Enhanced."
+  },
+  {
+    "name": "A Treatise on the Abyss",
+    "description": "A nondescript black book. An in-depth, largely theoretical text describing the Roots, as well as information about the location of a nearby Gate."
+  },
+  {
+    "name": "Air Bladder",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Alchemical Limb",
+    "quality": [
+      "Petty"
+    ],
+    "description": "Replaces a limb torn off by a mock firefly. Immune to heat and poison. Needs to be oiled daily."
+  },
+  {
+    "name": "Alchemical Tattoo",
+    "quality": [
+      "Petty"
+    ],
+    "description": "A dog, cat, or bird that can leave your body on demand. It follows your commands to the best of its abilities and can pass its injuries (as STR loss) back onto you."
+  },
+  {
+    "name": "Amadou",
+    "uses": "3 uses",
+    "description": "A vermilion fungus that catches fire quite easily."
+  },
+  {
+    "name": "Animal Feed",
+    "uses": "3 uses",
+    "quality": [
+      "Bulky"
+    ],
+    "cost": "5 gp"
+  },
+  {
+    "name": "Antitoxin",
+    "cost": "20 gp"
+  },
+  {
+    "name": "Aqua Vita",
+    "uses": "1 use",
+    "description": "Purifies any liquid, converting it to pure water. Drinking it cures 1d6 STR."
+  },
+  {
+    "name": "Assassin's Goblets",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A pair of fragile wine flutes. Any liquid poured into one is swapped with the other."
+  },
+  {
+    "name": "Axe",
+    "damage": "1d8",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Babbleflask",
+    "uses": "2 uses",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A foreign language is automatically understood and can be spoken back with fluency, so long as the drinker's native tongue is neither spoken nor heard."
+  },
+  {
+    "name": "Bandages",
+    "uses": "3 uses",
+    "cost": "30 gp"
+  },
+  {
+    "name": "Barbed Epaulets",
+    "armor": 1,
+    "quality": [
+      "Relic"
+    ],
+    "description": "Spiked shoulder pads that poison anyone that touches them (STR save or lose consciousness)."
+  },
+  {
+    "name": "Bathing Goods",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Beauty Cream",
+    "uses": "2 uses",
+    "description": "Apply to appear irresistibly beautiful for the next 12 hours."
+  },
+  {
+    "name": "Betterwand",
+    "uses": "2 charges",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Willingly accept a poor deal or trade while in possession of the wand.",
+    "description": "Vibrates with increased intensity when pointed at the best of a series of objects."
+  },
+  {
+    "name": "Bezoar Stone",
+    "uses": "1 use, unless retrieved",
+    "description": "Ingesting it cures any poison."
+  },
+  {
+    "name": "Black Rose Fiddle",
+    "quality": [
+      "Bulky"
+    ],
+    "description": "Its music causes intense sadness and immobility in nearby mortals. (Others are merely fascinated.) You don't know how to play it."
+  },
+  {
+    "name": "Black Tar",
+    "uses": "3 uses",
+    "description": "Versatile: both sticky and highly flammable."
+  },
+  {
+    "name": "Blacked-Out Ledger",
+    "description": "Taken when you swore to always repay your debts, whether in coin or in kind."
+  },
+  {
+    "name": "Blacklegged Dandy",
+    "quality": [
+      "+4 slots"
+    ],
+    "description": "Hardy and adaptable. Tough or Perilous terrain are one step easier. 6 HP."
+  },
+  {
+    "name": "Blast Sphere",
+    "damage": "1d12",
+    "quality": [
+      "Blast",
+      "Bulky"
+    ],
+    "uses": "1 use",
+    "description": "A head-sized iron ball filled with explosive powder that detonates on impact."
+  },
+  {
+    "name": "Blinding Powder",
+    "uses": "1 use",
+    "description": "Taken from a guild warehouse job."
+  },
+  {
+    "name": "Blood Pail",
+    "quality": [
+      "Bulky"
+    ],
+    "recharge": "Fill with the blood of a dying warrior.",
+    "description": "From a local death-cult. Empty it to raise a servant built from whatever is buried below, with 6 HP, 1 Armor, 13 STR, 11 DEX, 4 WIL, and shard fists (d8+d8). Only one servant can be raised at a time. If destroyed, you permanently lose 1d4 STR."
+  },
+  {
+    "name": "Bloodmap",
+    "uses": "1 charge",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Pour a pint of your own life essence onto the map, blood for blood. You are deprived until you can rest and eat a Ration.",
+    "description": "A blank leather parchment that absorbs any blood spilled on its surface before rolling into a tight scroll. Unroll to see a rough map revealing the current location of any remaining blood. The image disappears after a few minutes."
+  },
+  {
+    "name": "Bloodvine Whip",
+    "damage": "1d8",
+    "description": "On Critical Damage, it drains the target's blood, granting the weapon's next attack the blast quality."
+  },
+  {
+    "name": "Blunderbuss",
+    "damage": "1d12",
+    "quality": [
+      "Blast",
+      "Bulky"
+    ],
+    "description": "A prototype firearm that takes one round to reload."
+  },
+  {
+    "name": "Bone Knife",
+    "damage": "1d6",
+    "description": "Blood-stained, taken after nearly being killed by an antlered demon. On Critical Damage, its next attack becomes enhanced from contact with blood."
+  },
+  {
+    "name": "Book",
+    "cost": "50 gp"
+  },
+  {
+    "name": "Book on Astronomy",
+    "description": "Your debut composition's notes resembled stellar constellations, drawing you into questions of the sky."
+  },
+  {
+    "name": "Bow",
+    "damage": "1d6",
+    "quality": [
+      "Bulky"
+    ],
+    "cost": "20 gp"
+  },
+  {
+    "name": "Breeze Knot",
+    "uses": "3 charges",
+    "recharge": "Tie it to a mast during a storm.",
+    "description": "Creates a strong breeze."
+  },
+  {
+    "name": "Briar Thorn",
+    "description": "Can pierce any organic material (quite painfully) but leaves no trace when removed."
+  },
+  {
+    "name": "Briarvine",
+    "description": "Entangles any creature up to horse size (STR to break free). Reusable."
+  },
+  {
+    "name": "Brigandine",
+    "armor": 1,
+    "quality": [
+      "Bulky"
+    ],
+    "cost": "20 gp"
+  },
+  {
+    "name": "Burial Wagon",
+    "quality": [
+      "+6 slots",
+      "Slow"
+    ],
+    "description": "A wagon from your last job as a Bonekeeper. Came with a stubborn old donkey (+4 slots, only +2 slots if pulling the wagon)."
+  },
+  {
+    "name": "Caltrops",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Captain's Uniform",
+    "quality": [
+      "Petty"
+    ],
+    "description": "Taken after your latest stunt destroyed a priceless artifact and injured a dozen bystanders."
+  },
+  {
+    "name": "Card Deck",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Carriage Seat",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Carrion Cat",
+    "quality": [
+      "Bulky"
+    ],
+    "description": "A clever pet, small enough to hide in your pack, but strong enough to scare off smaller predators. Requires one ration a day, and it must be meat."
+  },
+  {
+    "name": "Cart",
+    "quality": [
+      "+4 slots",
+      "Bulky"
+    ],
+    "cost": "30 gp"
+  },
+  {
+    "name": "Catring",
+    "uses": "2 charges",
+    "recharge": "Place the ring on a stray cat's tail.",
+    "description": "Climb up walls and fall safely."
+  },
+  {
+    "name": "Celestial Lute",
+    "description": "Reveals the constellations above, no matter the weather."
+  },
+  {
+    "name": "Ceremonial Sword",
+    "cost": "60 gp",
+    "description": "Harmless, deals no damage."
+  },
+  {
+    "name": "Chain",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Chainmail",
+    "armor": 2,
+    "quality": [
+      "Bulky"
+    ],
+    "cost": "40 gp"
+  },
+  {
+    "name": "Chalk",
+    "quality": [
+      "Petty"
+    ],
+    "cost": "1 gp"
+  },
+  {
+    "name": "Chest",
+    "cost": "25 gp"
+  },
+  {
+    "name": "Chisel",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Cipher Stone",
+    "description": "A pair of sharp black stones. Each one decrypts any message written by the other."
+  },
+  {
+    "name": "Clatter Keeper",
+    "description": "A hand-cranked device that emits a loud noise, frightening away most creatures."
+  },
+  {
+    "name": "Coin of the Father",
+    "uses": "1 charge",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Carry the coin for three days without spending or earning any money.",
+    "description": "Flip this worthless-looking hunk of flat metal in the air, and it will transform into d100 gold coins. The illusory coins disappear after one hour."
+  },
+  {
+    "name": "Common Agents",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Common Tools",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Compass",
+    "cost": "75 gp"
+  },
+  {
+    "name": "Complex Instruments",
+    "cost": "50 gp"
+  },
+  {
+    "name": "Containers",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Cooking Gear",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Costume Gear",
+    "cost": "15 gp"
+  },
+  {
+    "name": "Crossbow",
+    "damage": "1d8",
+    "quality": [
+      "Bulky"
+    ],
+    "cost": "30 gp"
+  },
+  {
+    "name": "Crow-Shaped Amulet",
+    "description": "You can ask a question of the dead but must add a Fatigue each time. They do not always speak truthfully."
+  },
+  {
+    "name": "Crowbar",
+    "damage": "1d6",
+    "description": "Sometimes you just need to get the damn thing open!"
+  },
+  {
+    "name": "Cudgel",
+    "damage": "1d6",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Cursed Sapphire",
+    "cost": "200 gp",
+    "description": "It noticeably returns to your pocket shortly after you spend it. You can't seem to get rid of it."
+  },
+  {
+    "name": "Cusped Falchion",
+    "damage": "1d8",
+    "description": "Taken from crop thieves who outnumbered you."
+  },
+  {
+    "name": "Cutpurse's Ladder",
+    "quality": [
+      "Bulky"
+    ],
+    "description": "A 10ft folding ladder, taken from a guild warehouse job."
+  },
+  {
+    "name": "Dagger",
+    "damage": "1d6",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Death-Whistle",
+    "uses": "1 charge",
+    "recharge": "Capture the final breath of a dying warrior.",
+    "description": "Its scream frightens away all who hear it (WIL save or flee)."
+  },
+  {
+    "name": "Delphinium",
+    "uses": "1 use",
+    "description": "Breathe water for up to one hour. Can be divided into fractional doses."
+  },
+  {
+    "name": "Diseased Crop",
+    "uses": "6 uses",
+    "description": "A relic of the Withering, a type of stem rot from the Roots. Quickly decays any plant it touches."
+  },
+  {
+    "name": "Dowsing Rod",
+    "cost": "15 gp"
+  },
+  {
+    "name": "Dream Stone",
+    "description": "A smooth blue stone that helps recall dreams more clearly. Overuse can cause dream-addiction."
+  },
+  {
+    "name": "Drowning Rod",
+    "description": "A finger-sized wooden stick that doubles in size each time it is fully submerged in water. It does not shrink down again."
+  },
+  {
+    "name": "Drowse Balm",
+    "description": "A wax bar. If boiled in water, the steam acts as a soporific agent."
+  },
+  {
+    "name": "Dryad's Tear",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "Shatter this crystal to merge with a tree you can touch. You can perceive the goings-on within whatever forest that tree belongs to."
+  },
+  {
+    "name": "Echo Leaf",
+    "quality": [
+      "Petty"
+    ],
+    "description": "A blank parchment. Whomever unfurls it sees their actions of the day slowly revealed in a tight scrawl."
+  },
+  {
+    "name": "Empathy Rod",
+    "uses": "3 charges",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Give the rod to a former enemy as a gift. This is a one-way transaction.",
+    "description": "When two creatures touch this wooden pole at the same time, their physical and emotional states become fully intertwined until they let go."
+  },
+  {
+    "name": "Everbloom Band",
+    "description": "A circlet adorned with flowers that never wilt. On Critical Damage, the flowers dissolve into dust, but you act as if your save succeeded (STR loss still occurs)."
+  },
+  {
+    "name": "Everquill",
+    "quality": [
+      "Petty"
+    ],
+    "description": "A quill that writes on any surface. You still need ink."
+  },
+  {
+    "name": "Expeditionary Gear",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Eyestone",
+    "uses": "3 charges",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Place in a bucket of rainwater overnight.",
+    "description": "Choose an object created by living creatures. You can sense the nearest example."
+  },
+  {
+    "name": "Falconstone",
+    "uses": "3 charges",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Kill and eat a common quarry, cooking the meat alongside the stone.",
+    "description": "Perceive the world through the eyes and ears of a nearby bird of prey. You feel whatever it feels but have no control over it."
+  },
+  {
+    "name": "False Cuffs",
+    "description": "Comfortable, realistic-looking cuffs. Only you know the trick to get out of them."
+  },
+  {
+    "name": "Fence Cutters",
+    "description": "Taken from a noble's summer home, which was full of fancy wine but not much else."
+  },
+  {
+    "name": "Fermented Spirits",
+    "uses": "3 uses",
+    "description": "Keeps you warm at the best of times and as an explosive at the worst."
+  },
+  {
+    "name": "Fib Ink",
+    "description": "Glows when used to write true statements but fades if used to write false ones."
+  },
+  {
+    "name": "Fieldwarden's Fireseeds",
+    "damage": "1d8",
+    "quality": [
+      "Blast"
+    ],
+    "uses": "4 uses",
+    "description": "A pouch gathered after a crop spirit's fires consumed nearly everything."
+  },
+  {
+    "name": "Fire Eggs",
+    "damage": "1d8",
+    "quality": [
+      "Blast"
+    ],
+    "description": "Six small pellets made of sea salt, wood, and crockery-dust. They explode at low heat, but the flames dissipate quickly."
+  },
+  {
+    "name": "Fire Oil",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Fireflask",
+    "uses": "1 use",
+    "description": "Highly alcoholic, yet strangely delicious. When thrown, it creates a wall of flames 10ft high that burns out after a few minutes."
+  },
+  {
+    "name": "Fireworks",
+    "uses": "2 uses",
+    "description": "A dazzling, albeit dangerous, display. Enough explosive material to blow off a finger or three."
+  },
+  {
+    "name": "Fishing Rod",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Flail",
+    "damage": "1d8",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Footpad's Friend",
+    "quality": [
+      "Relic"
+    ],
+    "description": "Soft leather shoes that adapt to fit any foot size. Leave behind footprints that scatter and turn in a confusing manner, making tracking nigh-impossible."
+  },
+  {
+    "name": "Foundling's Storybook",
+    "description": "Left behind by a troupe of traveling entertainers who vanished overnight."
+  },
+  {
+    "name": "Gale Seed Extract",
+    "uses": "3 uses",
+    "description": "Ingesting it lets you sprint with a speed four times your regular rate. Afterward, add two Fatigue."
+  },
+  {
+    "name": "Gambeson",
+    "armor": 1,
+    "cost": "15 gp"
+  },
+  {
+    "name": "Games",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Garden of Glass",
+    "description": "Bound in the cover of another book. A heretical work describing the materials, procedures, and optimal locations required to open a Gate."
+  },
+  {
+    "name": "Gate Chalk",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "Draw a doorway on any flat surface to open a one-way passage to the Roots. Good luck."
+  },
+  {
+    "name": "Ghost Violin",
+    "description": "A dark-gray violin that plays a haunting tune, mirrored by an invisible, distant twin."
+  },
+  {
+    "name": "Gildfinger",
+    "uses": "1 charge",
+    "recharge": "Bundle it with at least 100gp for a night.",
+    "description": "A finger glove that mimics any mundane key."
+  },
+  {
+    "name": "Glamour Feather",
+    "uses": "1 use",
+    "description": "Plume of a firebird. Can make any creature appear convincingly as someone (or something) else."
+  },
+  {
+    "name": "Glimpse Glass",
+    "uses": "3 uses",
+    "description": "A monocle that lets you see through walls or other obstructions. It shatters after the last use."
+  },
+  {
+    "name": "Gloves",
+    "quality": [
+      "Petty"
+    ],
+    "cost": "20 gp"
+  },
+  {
+    "name": "Glowsnail",
+    "description": "Casts a soft, bioluminescent light. Feeds on one ration every two days."
+  },
+  {
+    "name": "Gnarled Staff",
+    "damage": "1d8",
+    "description": "All you took when you left the druid who taught you the language of trees."
+  },
+  {
+    "name": "Goat Powder",
+    "description": "Derived from the placenta of a baby goat. Temporarily cures any affliction, but symptoms return within hours."
+  },
+  {
+    "name": "Gold Powder",
+    "uses": "3 uses",
+    "description": "Fake gold dust, nearly indistinguishable from the real thing."
+  },
+  {
+    "name": "Golden Wheat Paste",
+    "uses": "2 uses",
+    "quality": [
+      "Relic"
+    ],
+    "description": "When mixed with water, this substance chemically bonds any two objects."
+  },
+  {
+    "name": "Goosefelt Tarp",
+    "description": "Fits two. Stolen before leaving home when you joined to escape family trouble."
+  },
+  {
+    "name": "Gossip Box",
+    "uses": "1 charge",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Successfully spread one falsehood in the presence of the box.",
+    "description": "Wind the crank to replay any sound made in the past day in your current location. Each crank goes back one hour."
+  },
+  {
+    "name": "Graftgrub",
+    "uses": "1 use",
+    "description": "A small worm that can fuse inanimate objects with parts of the body."
+  },
+  {
+    "name": "Grappling Hook",
+    "cost": "25 gp"
+  },
+  {
+    "name": "Greenwhistle",
+    "description": "A small flute that calms plants, making passage through areas heavy with plant life a bit easier."
+  },
+  {
+    "name": "Greenwise's Healing Potion",
+    "description": "Completely restores STR. Only you know of its unintended side effects."
+  },
+  {
+    "name": "Halberd",
+    "damage": "1d10",
+    "quality": [
+      "Bulky"
+    ],
+    "cost": "20 gp"
+  },
+  {
+    "name": "Harbinger's Bell",
+    "uses": "1 charge",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Melt and reforge. Each time, roll a d6. On a 1-2, it breaks forever.",
+    "description": "Hang at chest height to ring when danger is imminent."
+  },
+  {
+    "name": "Hardening Glue",
+    "uses": "3 uses",
+    "cost": "20 gp",
+    "description": "Makes any flat material (cloth, leather, sand) as hard as stone."
+  },
+  {
+    "name": "Hawthorn Seed",
+    "uses": "1 use",
+    "description": "An acorn from the other side, gathered on the spring equinox. When planted, it sprouts a luxurious shelter, collapsing at moonrise the next day."
+  },
+  {
+    "name": "Healing Unguent",
+    "uses": "1 use",
+    "description": "Taught by a wizened apothecary. Restores d4 STR."
+  },
+  {
+    "name": "Heartseed",
+    "description": "Saved from the roots of a dying tree, poisoned by a malicious forest spirit. Plant it to create a new forest."
+  },
+  {
+    "name": "Heavy Destrier",
+    "armor": 1,
+    "quality": [
+      "+2 slots"
+    ],
+    "description": "A beast built for war, an imposing creature. 8 HP, hooves (d10+d10)."
+  },
+  {
+    "name": "Hellcap",
+    "uses": "1 use",
+    "description": "Exposure to its aroma causes intense nausea and vomiting. Either way, it clears the room. Bottled."
+  },
+  {
+    "name": "Helmet",
+    "armor": 1,
+    "cost": "10 gp"
+  },
+  {
+    "name": "Hex Stone",
+    "uses": "1 use",
+    "description": "Gathered from a river that flows from the other side. Removed from its iron tin, it can absorb the effects of an active magical effect. If destroyed, the magic is released."
+  },
+  {
+    "name": "Homunculus",
+    "description": "A miniature clay replica of yourself that follows your every command. It hates being enthralled to you and complains bitterly whenever possible. Any damage done to the homunculus is also done to you. 3 HP, 4 STR, 13 DEX, 5 WIL."
+  },
+  {
+    "name": "Homunculus Nail",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "Prick a finger with the pointy end and hammer into any small object to form a loyal servant [3 HP, 4 STR, 13 DEX, 5 WIL] completely devoted to you. If not destroyed, it will outlive you."
+  },
+  {
+    "name": "Honest Earworm",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A foul-smelling, pinky-sized worm that feeds on earwax by crawling into the ear canal of a sleeping person. The victim then loses the ability to lie for 1d4 hours."
+  },
+  {
+    "name": "Horse",
+    "quality": [
+      "+4 slots"
+    ],
+    "cost": "75 gp"
+  },
+  {
+    "name": "Impressive Pin",
+    "quality": [
+      "Petty"
+    ],
+    "description": "A metal badge of honor from the Guard. It can open doors but leaves a trail."
+  },
+  {
+    "name": "Incense",
+    "description": "Perfect for rituals or to keep the flies at bay. Cools the blood."
+  },
+  {
+    "name": "Iron Bracers",
+    "armor": 1,
+    "quality": [
+      "Bulky"
+    ],
+    "description": "Taken after saving a heartseed from a malicious forest spirit's victim."
+  },
+  {
+    "name": "Iron Rattle",
+    "description": "A noisemaker for distracting or scaring your quarry. Sounds convincingly like a snake."
+  },
+  {
+    "name": "Ivy Worm",
+    "description": "A green worm often mistaken for a weed. Swallowed whole, it absorbs any toxins or rot in the body before exiting through the usual way."
+  },
+  {
+    "name": "Jar of Ants",
+    "quality": [
+      "Relic"
+    ],
+    "description": "Break to release a colony of fire ants [6 HP, 2 STR, 10 DEX, 1 WIL, bite (d10), detachment]. Consumes a ration every two days."
+  },
+  {
+    "name": "Jongleur's Rapier",
+    "damage": "1d6",
+    "description": "Light-weight. Taken after an actor died and you were blamed, despite your training in the deadly arts."
+  },
+  {
+    "name": "Kettlewright's Necklace",
+    "quality": [
+      "Petty"
+    ],
+    "cost": "20 gp",
+    "description": "Sold to monasteries and nobles alike."
+  },
+  {
+    "name": "Kettlewright's Saw",
+    "damage": "1d6",
+    "description": "Taken while scavenging raw tin and iron from battlefields."
+  },
+  {
+    "name": "Key to a Safehouse",
+    "quality": [
+      "Petty"
+    ],
+    "description": "Taken when the Oath was simply a means of avoiding punishment as a convict."
+  },
+  {
+    "name": "Lantern",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Last Breath",
+    "damage": "d6",
+    "uses": "1 charge",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Deliver a killing blow with the sword, absorbing the dying victim's soul into the blade. There is a cunning intelligence within that speaks to the wielder, forever asking for more souls, more!",
+    "description": "A chipped short sword of dubious quality. Drive into the earth to form a crystal dome that encircles and immobilizes the wielder. The dome is impenetrable by mundane means, and shatters once the sword is lifted again."
+  },
+  {
+    "name": "Lightsucker Candle",
+    "uses": "3 uses",
+    "quality": [
+      "Relic"
+    ],
+    "description": "Once lit, this black tallow wax sheds darkness rather than light, even in the brightest of days."
+  },
+  {
+    "name": "Linden White",
+    "quality": [
+      "+3 slots"
+    ],
+    "description": "Highly trained and agile; performs intricate maneuvers in a time of need (no DEX save to flee). 4 HP."
+  },
+  {
+    "name": "Lodestone",
+    "description": "Draws out dangerous elements from the body and acts as a powerful magnetic force."
+  },
+  {
+    "name": "Long Sword",
+    "damage": "1d10",
+    "quality": [
+      "Bulky"
+    ],
+    "cost": "20 gp"
+  },
+  {
+    "name": "Lover's Covenant",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A bottle of red-tinted ink, a broken heart emblazoned on the front. Write up a contract of any length. Any who sign are bound to obey by penalty of death."
+  },
+  {
+    "name": "Luxcompass",
+    "description": "Hums softly as it moves closer to the Sun. Eventually the noise becomes unbearably loud."
+  },
+  {
+    "name": "Mace",
+    "damage": "1d8",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Mace of the Kingslayer",
+    "damage": "d8",
+    "uses": "2 charges",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Deliver a fatal blow to the leader of a group or faction.",
+    "description": "Hold the weapon aloft and shout an order or declaration. Any who fail a WIL save must obey, against their better judgment."
+  },
+  {
+    "name": "Manacles",
+    "description": "Though old, they're still effective even against the very strong. You don't have the key."
+  },
+  {
+    "name": "Mapping Paper",
+    "description": "Taken during a dark period in your life, when you needed direction."
+  },
+  {
+    "name": "Marchguard's Throwing Knives",
+    "damage": "1d6",
+    "description": "A brace of knives, taken when your family lost everything."
+  },
+  {
+    "name": "Medical Healing",
+    "cost": "50 gp"
+  },
+  {
+    "name": "Metal Ingot",
+    "description": "A heavy ingot of fake gold, made in your workshop."
+  },
+  {
+    "name": "Milkflower",
+    "uses": "3 uses",
+    "description": "A gentle stimulant. Chewing it makes you immune to panic for the next hour."
+  },
+  {
+    "name": "Mimic Stone",
+    "description": "Records a short phrase that can later be played back."
+  },
+  {
+    "name": "Miner's Grease",
+    "uses": "3 uses",
+    "description": "Great for dislodging a gem, tool, or limb from a tight crack. Highly explosive."
+  },
+  {
+    "name": "Miracle Oil",
+    "uses": "2 uses",
+    "description": "A smelly, slippery concoction."
+  },
+  {
+    "name": "Mirror",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Monk's Habit",
+    "quality": [
+      "Petty"
+    ],
+    "description": "Warm. Taken when you snuck away from a secluded forest monastery."
+  },
+  {
+    "name": "Moth Mirror",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A full-length, double-sided glass mirror. Step into the mirror to be transported to another mirror you know. You come out of the other side as an enormous swarm of buzzing moths, striking those around you with paralysis (WIL save to avoid) as they gaze upon you in horror. You can revert to your normal form at will. The mirror only operates in one direction."
+  },
+  {
+    "name": "Muffle Dust",
+    "uses": "2 uses",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A pouch of fine dust that muffles all sound in a 40ft radius when scattered."
+  },
+  {
+    "name": "Mule",
+    "quality": [
+      "+6 slots",
+      "Slow"
+    ],
+    "cost": "30 gp"
+  },
+  {
+    "name": "Murderous Truffle",
+    "uses": "1 use",
+    "description": "Pungent, highly toxic, and very rare (worth 50gp to assassins). Illegal pretty much everywhere."
+  },
+  {
+    "name": "Mythos Mask",
+    "description": "A plaster mask that allows one to take on a monster's countenance. Once it comes off, add a Fatigue."
+  },
+  {
+    "name": "Net",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Nightdust Powder",
+    "uses": "2 uses",
+    "description": "Made from the ritual burning of six owls. When tossed in the air, day turns to night for a short while."
+  },
+  {
+    "name": "Nightstone",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "Rare moon-shaped stones dredged from underwater caves and jungle dolines. Swallow whole to relieve all fatigue and deprivation as if you had a good night's sleep and a good meal. The stone will eventually pass through your system. It isn't fun."
+  },
+  {
+    "name": "Oath Compass",
+    "description": "Points not towards North, but instead to the nearest member of the Guard. It also lets you know when they're getting close."
+  },
+  {
+    "name": "Obliteration Scroll",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A single-page document filled with gibberish. Sign anywhere on the page to remove any knowledge of your existence from this plane of reality. No one will know or remember you, and any references to your name or lineage will vanish. The scroll disappears in a puff of smoke that smells faintly of sulfur."
+  },
+  {
+    "name": "Oft-mended Chain Mail",
+    "armor": 2,
+    "quality": [
+      "Bulky"
+    ],
+    "description": "Well-worn armor from the forge where you grew up."
+  },
+  {
+    "name": "Oil Can",
+    "uses": "6 uses",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Oilskin Coat",
+    "description": "Taken during a dark period in your life, when you needed direction."
+  },
+  {
+    "name": "Outdoor Comfort",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Pain Band",
+    "quality": [
+      "Petty"
+    ],
+    "recharge": "Wear the ring while in perfect health. You will lose 1 STR, permanently.",
+    "description": "Touch an injured creature to transfer their wounds to you. (Exchange their lost STR with your own.)"
+  },
+  {
+    "name": "Pan Flute",
+    "description": "Emits a high-pitched sound that only rodents can hear. So long as you play, they will follow, even to their deaths."
+  },
+  {
+    "name": "Parchment",
+    "uses": "3 uses",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Paring Knife",
+    "damage": "1d6",
+    "description": "Taken after hunting an azure warbler, whose gametes attract a sizeable profit if properly extracted."
+  },
+  {
+    "name": "Parliament's Promise",
+    "armor": 1,
+    "quality": [
+      "Relic"
+    ],
+    "description": "A helmet in the form of an owl's head. Its wearer can twist their head around like an owl and can see in darkness with perfect clarity. While wearing the helm, the wearer loses the ability to speak, uttering only the simplest of cooing noises."
+  },
+  {
+    "name": "Phoenix Ash",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "Sprinkle over a corpse to resurrect the deceased. They return with full health but no memory of their past life."
+  },
+  {
+    "name": "Piebald Cob",
+    "quality": [
+      "+4 slots"
+    ],
+    "description": "Intelligent; understands simple commands and has an instinct for danger. 6 HP."
+  },
+  {
+    "name": "Pipeweed",
+    "uses": "6 uses",
+    "description": "Your good luck charm. Conversations tend to flow more easily after a smoke."
+  },
+  {
+    "name": "Plague Doctor's Mask",
+    "description": "Taken after its owner succumbed to the disease that wiped out everyone you once knew."
+  },
+  {
+    "name": "Plate",
+    "armor": 3,
+    "quality": [
+      "Bulky"
+    ],
+    "cost": "60 gp"
+  },
+  {
+    "name": "Pneuma Pump",
+    "quality": [
+      "Bulky"
+    ],
+    "description": "Portable iron lungs. Enables life-saving surgery or underwater breathing."
+  },
+  {
+    "name": "Poacher's Woe",
+    "uses": "3 uses",
+    "description": "Strongly-scented arrows. The scent is powerful enough to track with ease."
+  },
+  {
+    "name": "Pocket Leyfinder",
+    "description": "Points to nearby ley lines and other sources of arcane power. If you lose it, the punishment is death."
+  },
+  {
+    "name": "Pocket Theatre",
+    "description": "A set of small puppets and a folding stage. Good for quick distractions."
+  },
+  {
+    "name": "Pole",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Private Room & Board",
+    "description": "Fits 4.",
+    "cost": "35 gp"
+  },
+  {
+    "name": "Pulley",
+    "description": "Great for moving gravestones, rocks, or even bodies."
+  },
+  {
+    "name": "Pullstones",
+    "description": "Two jet-black stones. When separated, the stones will always roll toward one another."
+  },
+  {
+    "name": "Pyrophoric Gel",
+    "uses": "1 use",
+    "description": "A sticky green fluid that catches fire when exposed to air, then burns for 8 hours. Cannot be extinguished."
+  },
+  {
+    "name": "Quell Stone",
+    "uses": "2 uses",
+    "description": "Wrapped in burlap. Extinguishes any nearby flames once exposed to air."
+  },
+  {
+    "name": "Quick-Flame Rod",
+    "description": "Taken by an Arachnid specialist. Can destroy a large spider nest in seconds."
+  },
+  {
+    "name": "Quicksilver",
+    "uses": "4 uses",
+    "description": "A stimulant. Go first in combat, and automatically pass any WIL saves for one hour. Addictive: save STR or become deprived after 24 hours without it."
+  },
+  {
+    "name": "Quicksilver Chain",
+    "description": "Without it, you are unable to shift back from wolf form."
+  },
+  {
+    "name": "Rabbit Skull",
+    "quality": [
+      "Petty"
+    ],
+    "description": "Protects against charms."
+  },
+  {
+    "name": "Rabbit's Foot",
+    "quality": [
+      "Petty"
+    ],
+    "description": "You were wearing it when they found you. They say it is the foot of she who left you, and that it protects you from witch magic."
+  },
+  {
+    "name": "Rations",
+    "uses": "3 uses",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Raven Familiar",
+    "description": "8 HP, 3 STR, 11 DEX, 13 WIL, beak (d6). Speaks as an intelligent being and is entirely devoted to you."
+  },
+  {
+    "name": "Rebirth Ash",
+    "uses": "3 uses",
+    "description": "Remnants of a bark spirit. Sprinkle to reignite a fire that has died or return to life a creature that has died only moments before."
+  },
+  {
+    "name": "Rebreak Glass",
+    "description": "A wine flute that can be broken multiple times, reforming after 24 hours. Makes a really loud noise."
+  },
+  {
+    "name": "Reed Whistle",
+    "description": "Anyone in earshot must pass a WIL save to perform an act of violence."
+  },
+  {
+    "name": "Regrowth Salve",
+    "uses": "1 use",
+    "description": "Regrows a body part over the course of a day."
+  },
+  {
+    "name": "Reinforced Spiked Boots",
+    "damage": "1d8",
+    "description": "Cracks heads as easily as it does ice and muck. Travel is also a bit slower, but easier."
+  },
+  {
+    "name": "Repellent",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Retractable Wires",
+    "description": "Taken after a botched bank job. You bear a brand only visible by firelight; anyone who sees the mark can ask you for a beer."
+  },
+  {
+    "name": "Reverse Teetotum",
+    "uses": "1 use",
+    "description": "When spun, time skips backwards 30 seconds. Everyone remembers what happened."
+  },
+  {
+    "name": "Rill Runner's Feather Quill",
+    "quality": [
+      "Petty"
+    ],
+    "uses": "1 use",
+    "description": "A map drawn with this quill reveals the most expedient course between any two points."
+  },
+  {
+    "name": "Rime Seed",
+    "uses": "1 use",
+    "description": "Freezes any body of water, no matter the size. Don't eat it."
+  },
+  {
+    "name": "Ring of the Snake",
+    "uses": "1 charge",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Bury the ring with a corpse. A month later, exhume the corpse and retrieve it.",
+    "description": "A wrought-iron serpent ring. Place it on your finger and fall into a sleep so deep that most will think you are dead. If the ring is removed, you will awaken feeling refreshed. Otherwise, the effect will wear off after one month."
+  },
+  {
+    "name": "River Twine",
+    "uses": "5 uses",
+    "description": "A spool of twine. Each dip into the river guarantees a catch, though it might not be pleasant."
+  },
+  {
+    "name": "Rivertooth",
+    "quality": [
+      "+6 slots"
+    ],
+    "description": "Impressively strong, capable of carrying heavy loads. 4 HP. Only +2 slots if carrying two people."
+  },
+  {
+    "name": "Roc Feather",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "Hold while falling to float safely to the ground from any height."
+  },
+  {
+    "name": "Room & Board",
+    "description": "Per night.",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Root Tether",
+    "description": "When thrown, binds a creature as large as a wolf to the soil for a short time."
+  },
+  {
+    "name": "Rootflower",
+    "uses": "1 use",
+    "description": "A white fungus found only on corpses deep underground. Ingest to restore d6 WIL. You will dream of the dead and their stories."
+  },
+  {
+    "name": "Rope",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Royal Crest",
+    "quality": [
+      "Petty"
+    ],
+    "description": "Born into royalty, you chose a different life. The crest grants you access but also alerts your family of your whereabouts."
+  },
+  {
+    "name": "Sanguine Lens",
+    "description": "Extracts blood from a target without their knowledge. A stolen drop placed on the eye reveals memories from the past day."
+  },
+  {
+    "name": "Scroll of Mirrorwalk",
+    "quality": [
+      "Petty"
+    ],
+    "description": "A single-use scroll bearing an unusual, little-known spell."
+  },
+  {
+    "name": "Sedative",
+    "cost": "30 gp"
+  },
+  {
+    "name": "Seed Bomb",
+    "damage": "1d6",
+    "quality": [
+      "Blast"
+    ],
+    "uses": "3 uses",
+    "description": "A canvas sack filled with seeds that explode on impact."
+  },
+  {
+    "name": "Sessile Oak Bow",
+    "damage": "1d8",
+    "quality": [
+      "Bulky"
+    ],
+    "description": "Slams into targets. On Critical Damage, something is torn off."
+  },
+  {
+    "name": "Sewing Kit",
+    "cost": "20 gp"
+  },
+  {
+    "name": "Shield",
+    "armor": 1,
+    "cost": "10 gp"
+  },
+  {
+    "name": "Ship's Passage",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Shrieking Trumpet",
+    "uses": "2 uses",
+    "description": "When exposed to light, it screams so loudly that all nearby attacks (including your own) are impaired."
+  },
+  {
+    "name": "Sickle",
+    "damage": "1d6",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Silk Moth Shawl",
+    "description": "A weatherproof blanket; it can also douse a fire without being damaged."
+  },
+  {
+    "name": "Silver Marsh Crawler's Tooth",
+    "quality": [
+      "Petty"
+    ],
+    "description": "Worn on a chain around your neck. Hums softly when something is stalking you."
+  },
+  {
+    "name": "Simple Instruments",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Sketchbook",
+    "description": "Filled with detailed drawings."
+  },
+  {
+    "name": "Skull Whistle",
+    "uses": "3 charges",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Feed the instrument a clump of human hair pulled from a living skull.",
+    "description": "Produces a chilling scream that forces any who hear it (including the blower) to make a WIL save or become temporarily incapacitated."
+  },
+  {
+    "name": "Sling",
+    "damage": "1d6",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Sloth-Tarp",
+    "description": "A tough and weatherproof fabric, useful for hanging off trees. When inside, you have +1 Armor."
+  },
+  {
+    "name": "Smelting Hammer",
+    "damage": "1d10",
+    "quality": [
+      "Bulky"
+    ],
+    "description": "Taken from your days as a military smelter."
+  },
+  {
+    "name": "Smith's Apron",
+    "quality": [
+      "Petty"
+    ],
+    "description": "From a gruff blacksmith who raised you."
+  },
+  {
+    "name": "Smoke Pellets",
+    "uses": "3 uses",
+    "description": "Taken after a university job you were seen at, but not pursued."
+  },
+  {
+    "name": "Smoking Pipe",
+    "quality": [
+      "Petty"
+    ],
+    "cost": "15 gp"
+  },
+  {
+    "name": "Snare Trap",
+    "description": "Taken after your life was saved by a member of the Marchguard."
+  },
+  {
+    "name": "Soporific Concoction",
+    "uses": "3 uses",
+    "description": "Taken after a close friend disappeared into the Wood."
+  },
+  {
+    "name": "Soul Clump",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A hard, fist-sized ball covered in small bumps. When rolled on a flat surface, it collects any objects smaller than its current mass, which subsequently increases as more items are attached to its surface. Only living creatures are immune."
+  },
+  {
+    "name": "Spark Dust",
+    "uses": "3 uses",
+    "description": "Ignites easily and quickly. Useful for starting a fire or as an incendiary device."
+  },
+  {
+    "name": "Spear",
+    "damage": "1d8",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Specialized Tools",
+    "cost": "20 gp"
+  },
+  {
+    "name": "Spike and Cord",
+    "description": "For traversing difficult terrain or for creating makeshift traps and structures."
+  },
+  {
+    "name": "Spiked Boots",
+    "cost": "15 gp"
+  },
+  {
+    "name": "Sponge",
+    "description": "Supposedly made from the remains of a rare sea creature. It never seems to dry out."
+  },
+  {
+    "name": "Sponge Army",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A dozen miniature soldiers made of carved sea sponges. When splashed with water, they grow to full size [8 HP, 6 STR, 13 DEX, 5 WIL, hardened sponge (d6), detachment] and follow the orders of the person they see until they are destroyed or dry out completely (about 10 minutes)."
+  },
+  {
+    "name": "Sproutcup",
+    "uses": "1 use",
+    "description": "Ingest to shrink down to the size of a mouse. (Your belongings stay the same size.) You return to normal size within the hour, often in fits and starts."
+  },
+  {
+    "name": "Spyglass",
+    "cost": "40 gp"
+  },
+  {
+    "name": "Spystone",
+    "uses": "1 charge",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "To record a new sound, skip the rock at least three times on a body of water and recover it.",
+    "description": "A smooth, flat stone that is slightly warm to the touch. Squeeze to record audio in a 40ft radius. Squeeze again to play it back, as many times as you like."
+  },
+  {
+    "name": "Stable & Feed",
+    "description": "Per night.",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Staff",
+    "damage": "1d6",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Stage Mail",
+    "armor": 1,
+    "description": "Well-worn armor. Taken after you were scarred in an on-stage accident."
+  },
+  {
+    "name": "Star-Iron Mace",
+    "damage": "1d8",
+    "description": "Shines faintly in darkness and becomes very hot in the presence of witchcraft."
+  },
+  {
+    "name": "Steadymade Buckler",
+    "armor": 1,
+    "description": "While holding this shield, you cannot be moved so long as both feet are planted on firm ground."
+  },
+  {
+    "name": "Sticky Rope",
+    "uses": "1 charge",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Cut off 10ft of rope, which then withers away.",
+    "description": "A 100ft rope that can stick to any surface."
+  },
+  {
+    "name": "Stink Jar",
+    "uses": "1 use",
+    "description": "Shattering this jar releases an odor so foul all nearby must make a STR save or immediately vomit."
+  },
+  {
+    "name": "Stone Eater",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A rodent-sized centipede that consumes and digests stone, capable of cutting a small tunnel in under an hour. It can be used more than once, but only if you can catch it (DEX 18)."
+  },
+  {
+    "name": "Stone Flute",
+    "description": "Can calm almost any river."
+  },
+  {
+    "name": "Stone Pine Bow",
+    "damage": "1d6",
+    "quality": [
+      "Bulky"
+    ],
+    "description": "Produces one use of Sticky Sap per day. The sap is highly explosive."
+  },
+  {
+    "name": "Stonetree Sap",
+    "armor": 1,
+    "uses": "3 uses",
+    "description": "Sap obtained in exchange for blood. Hardens when rubbed on any surface."
+  },
+  {
+    "name": "Stonewax Gum",
+    "uses": "3 uses",
+    "quality": [
+      "Relic"
+    ],
+    "description": "Chew, then spit. The gum will harden and stretch, making a perfect, unbreakable seal."
+  },
+  {
+    "name": "Stray Fogger",
+    "quality": [
+      "+2 slots"
+    ],
+    "description": "Wild but very fast (even in Tough terrain). Rides light. 4 HP."
+  },
+  {
+    "name": "Striped Bamboo Bow",
+    "damage": "1d6",
+    "description": "Collapsible; it only requires one slot (but still requires both hands)."
+  },
+  {
+    "name": "Strong Silk Rope",
+    "description": "30ft. Taken from a heist on a Constable's quarters, escaping but leaving some friends behind."
+  },
+  {
+    "name": "Sun Stick",
+    "uses": "1 use",
+    "recharge": "Leave in heavy sunlight for a full day.",
+    "description": "Provides ample warmth and light for up to one hour."
+  },
+  {
+    "name": "Surgeon's Soap",
+    "uses": "4 uses",
+    "description": "A lye and ash block that makes skin temporarily transparent, revealing the anatomy within."
+  },
+  {
+    "name": "Sweetwhistle",
+    "uses": "1 charge",
+    "recharge": "Lose a dear memory. (Describe it.)",
+    "description": "Listeners hear a soft, familiar voice in the distance that they cannot resist following."
+  },
+  {
+    "name": "Sword",
+    "damage": "1d8",
+    "cost": "10 gp"
+  },
+  {
+    "name": "Tacky Stalk",
+    "uses": "2 uses",
+    "description": "A woody reed that hardens into a permanent adhesive when chewed."
+  },
+  {
+    "name": "Tally Stick",
+    "damage": "1d8",
+    "description": "Once a vow is marked onto its face, the stick hardens. It will snap in half if the vow is ever broken."
+  },
+  {
+    "name": "Tent",
+    "quality": [
+      "Bulky"
+    ],
+    "description": "Fits 2.",
+    "cost": "20 gp"
+  },
+  {
+    "name": "The Cathedral and the Canopy",
+    "description": "Large-leaf binding over vellum. Nominally a children's storybook, the margins detail information about traveling, eating, and sleeping in the cloud forests."
+  },
+  {
+    "name": "The Silent Symphony",
+    "description": "Bound in fluorescent wrap. Very rare; chronicles the subtle signs used by those employing invisibility magic."
+  },
+  {
+    "name": "The Star Waltz",
+    "cost": "100 gp",
+    "description": "A comet-shaped clasp bound in fine leather. Detailed astronomical charts, celestial movements, and stellar festivals."
+  },
+  {
+    "name": "The Wild Tongue",
+    "description": "A bundle of leather-bound scrolls. A seminal work cataloging the hidden languages of beasts and how to understand them."
+  },
+  {
+    "name": "Thesaurus",
+    "cost": "20 gp",
+    "description": "Without it, you are deprived. Taken after you were cursed to speak only in rhyme."
+  },
+  {
+    "name": "Thieving Tools",
+    "cost": "25 gp"
+  },
+  {
+    "name": "Tin Helm",
+    "armor": 1,
+    "description": "Taken from your days as a military smelter."
+  },
+  {
+    "name": "Tin of Snuff",
+    "uses": "6 uses",
+    "description": "Dampens your lost sense of smell, now able to sniff out gold as a pig does truffles. Use it every day or become deprived."
+  },
+  {
+    "name": "Tinker's Paste",
+    "uses": "3 uses",
+    "description": "Seals shut any fist-sized opening."
+  },
+  {
+    "name": "Torch",
+    "uses": "3 uses",
+    "cost": "5 gp"
+  },
+  {
+    "name": "Torch Fungus",
+    "uses": "2 uses",
+    "description": "When crushed, it creates a cold blue light for a short while."
+  },
+  {
+    "name": "Tragic Tales",
+    "cost": "100 gp",
+    "description": "Banned in proper company, this book becomes less bawdy and more harrowing towards the end."
+  },
+  {
+    "name": "Trail Shaker",
+    "description": "A noisy instrument that reveals nearby trails, even when deeply hidden."
+  },
+  {
+    "name": "Trap",
+    "damage": "1d6 (to STR)",
+    "cost": "35 gp"
+  },
+  {
+    "name": "Tupshead Crown",
+    "armor": 1,
+    "quality": [
+      "Relic"
+    ],
+    "description": "A beautifully rendered ram's head helm wrought from tough alpine oak. The horns can be used as weapons (d6+d6)."
+  },
+  {
+    "name": "Uncanny Hand-Puppet",
+    "description": "Taken after your puppeteering and mimicry skills got you branded a witch and banished."
+  },
+  {
+    "name": "Universal Solvent",
+    "uses": "2 uses",
+    "description": "Dissolves anything it touches into its constituent parts."
+  },
+  {
+    "name": "Unmarked Repellent",
+    "uses": "3 uses",
+    "description": "Powerful stuff. Its faded label makes it unclear what it is actually meant to repel, though. Perhaps everything."
+  },
+  {
+    "name": "Vagrant's Veil",
+    "uses": "1 charge",
+    "quality": [
+      "Petty"
+    ],
+    "recharge": "Donate the day's winnings to the poor.",
+    "description": "Wear it to blend seamlessly into crowds, appearing as a simple pauper."
+  },
+  {
+    "name": "Veilsilk Grip",
+    "uses": "1 charge",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Snip off one of the fingers.",
+    "description": "A hand wearing this glove can phase through solid objects."
+  },
+  {
+    "name": "Voice of the Mountain",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A rough pebble imbued with the essence of a mountain spirit. Crush to call forth an earthquake or similar natural disaster. Do not expect to be spared."
+  },
+  {
+    "name": "Voidglass Shard",
+    "description": "Peer through it to see invisible marks, creatures, and other magical effects. Lose the use of your eye for an hour afterwards (deprived)."
+  },
+  {
+    "name": "Wagon",
+    "quality": [
+      "+8 slots",
+      "Slow"
+    ],
+    "cost": "200 gp"
+  },
+  {
+    "name": "War Hammer",
+    "damage": "1d10",
+    "quality": [
+      "Bulky"
+    ],
+    "cost": "20 gp"
+  },
+  {
+    "name": "Warble-Whistle",
+    "uses": "3 charges",
+    "recharge": "Feed a baby bird as its mother would, then blow.",
+    "description": "Can imitate any bird call and can even be used to send simple messages."
+  },
+  {
+    "name": "Ward Stone",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A flat, unassuming river stone notched with faded symbols. Smash to release a silvery powder in a 20ft radius that pacifies anyone who breathes it."
+  },
+  {
+    "name": "Warming Stone",
+    "description": "Generates an irresistible heat. Carried by a Serpent specialist."
+  },
+  {
+    "name": "Weathered Longbow",
+    "damage": "1d8",
+    "quality": [
+      "Bulky"
+    ],
+    "description": "Taken from the old hunter who raised you."
+  },
+  {
+    "name": "Western Yew Bow",
+    "damage": "1d6",
+    "quality": [
+      "Bulky"
+    ],
+    "description": "Can be wielded as a blunt weapon (d6). Noisy."
+  },
+  {
+    "name": "Whisper Vial",
+    "description": "Whisper a message into the vial, and it will play it back to whoever opens it next."
+  },
+  {
+    "name": "Whispergale",
+    "uses": "1 use",
+    "quality": [
+      "Relic"
+    ],
+    "description": "A balloon-shaped plant that captures a spoken message and delivers it to a location within a day's walk."
+  },
+  {
+    "name": "Whistle",
+    "quality": [
+      "Petty"
+    ],
+    "cost": "15 gp"
+  },
+  {
+    "name": "Whistle-Rope",
+    "quality": [
+      "Relic"
+    ],
+    "description": "15ft of highly flexible leather. Swirl in the air to generate a powerful subsonic effect that drives away wildlife. Also works underwater."
+  },
+  {
+    "name": "White Ash Bow",
+    "damage": "1d6",
+    "quality": [
+      "Bulky"
+    ],
+    "description": "Can be used in place of a shield in melee combat (+1 Armor)."
+  },
+  {
+    "name": "Wilderness Clothes",
+    "quality": [
+      "Petty"
+    ],
+    "cost": "15 gp"
+  },
+  {
+    "name": "Wisp Lantern",
+    "description": "Caged in wrought iron, provides a dim light so long as the wisp is able to feed on nearby pain and fear."
+  },
+  {
+    "name": "Wolfsbane Wreath",
+    "description": "Taken by a Canine specialist. Effective against werewolves as well as canines."
+  },
+  {
+    "name": "Wonder Bar",
+    "uses": "1 charge",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Hold the bar with both hands without letting go for one continuous hour (WIL save to succeed). You can make only one attempt each day.",
+    "description": "Pressing the switch on the side of this iron bar freezes it in place, even in midair. Once frozen, it cannot be moved by any force until the switch is depressed."
+  },
+  {
+    "name": "Woundwax",
+    "uses": "2 uses",
+    "description": "Heals wounds from fire or chemicals (restoring full STR) but nothing else."
+  },
+  {
+    "name": "Wraith Lantern",
+    "uses": "1 charge",
+    "quality": [
+      "Relic"
+    ],
+    "recharge": "Kill the last person found with the help of the lantern, trapping their spirit inside. The lantern must be nearby when they are killed.",
+    "description": "Write someone's name onto its glass, and the name will disappear. The lantern reveals a path to their current location, visible only to the holder (day or night)."
+  },
+  {
+    "name": "Wych Elm Bow",
+    "damage": "1d6",
+    "quality": [
+      "Bulky"
+    ],
+    "description": "Protects the bearer from poisons and toxins, so long as they are holding it."
+  },
+  {
+    "name": "Wyrmbone Whetstone",
+    "description": "Following a half-hour ritual sharpening, attacks with the weapon are enhanced until STR damage is dealt."
+  }
+]

@@ -50,6 +50,8 @@ export class CairnIndex {
         omen: [],
     };
 
+    // TODO: move roll tables here
+
     constructor(private app: App, private settings: CairnSettings) {}
 
     clear() {
