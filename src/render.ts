@@ -14,7 +14,7 @@ import type { CairnType, RollTableEntry } from "./types";
 import { TYPE_ICONS, TYPES } from "./types";
 import type { CairnEntry } from "./indexer";
 import { doRoll, rollSave, extractDiceFormula } from "./dice";
-import { normalize } from "./utils";
+import { normalize, asString } from "./utils";
 import type { CairnStrings } from "./i18n";
 import { NamePickerModal, EntryPreviewModal } from "./modals";
 import type CairnPlugin from "./main";
@@ -182,7 +182,7 @@ export function inventoryOf(fm: Record<string, unknown>, field = "inventory"): I
 		if (typeof item === "string") return { name: item, qty: 1 };
 		if (item && typeof item === "object") {
 			const o = item as Record<string, unknown>;
-			return { name: String(o.name ?? ""), qty: Number(o.qty ?? 1) || 1 };
+			return { name: typeof o.name === "string" ? o.name : "", qty: Number(o.qty ?? 1) || 1 };
 		}
 		return { name: String(item), qty: 1 };
 	});
@@ -299,8 +299,8 @@ export async function renderEntryCard(
 			(entry.file ? plugin.app.metadataCache.getFileCache(entry.file)?.frontmatter : undefined) ??
 			entry.frontmatter;
 		const background = (freshBgFm as Record<string, unknown>)["background"];
-		if (background) {
-			header.createEl("em", { text: String(background), cls: "cairn-character-background" });
+		if (typeof background === "string" && background) {
+			header.createEl("em", { text: background, cls: "cairn-character-background" });
 		}
 	}
 	if (entry && entry.source === "builtin") {
@@ -353,7 +353,7 @@ export async function renderEntryCard(
 		const freshFm =
 			(entry.file ? plugin.app.metadataCache.getFileCache(entry.file)?.frontmatter : undefined) ??
 			entry.frontmatter;
-		const mode = String(overrides["mode"] ?? (freshFm as Record<string, unknown>)["mode"] ?? "all").toLowerCase();
+		const mode = asString(overrides["mode"] ?? (freshFm as Record<string, unknown>)["mode"], "all").toLowerCase();
 		if (mode === "small") {
 			renderCharacterSmallCard(container, entry, freshFm, s);
 		} else {
@@ -418,7 +418,7 @@ export async function renderEntryCard(
 		} else {
 			body.remove();
 		}
-	} catch (e) {
+	} catch {
 		/* if reading fails, the description is skipped */
 	}
 }
@@ -428,7 +428,7 @@ export async function renderEntryCard(
 /* -------------------------------------------------------------------------- */
 
 function statOrDash(v: unknown): string {
-	return v === undefined || v === null || v === "" ? "—" : String(v);
+	return v === undefined || v === null || v === "" ? "—" : asString(v, "—");
 }
 
 function renderCharacterSmallCard(container: HTMLElement, entry: CairnEntry, fm: Record<string, unknown>, s: CairnStrings) {
@@ -507,7 +507,7 @@ function buildInventorySection(
 						cls: "cairn-dice-btn",
 						attr: { "aria-label": s.sheet.rollDamageAria },
 					});
-					rollBtn.onclick = () => doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, String(dmg), item.name);
+					rollBtn.onclick = () => doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, asString(dmg), item.name);
 					appendAdvantageButtons(li, plugin, rollOutput, item.name);
 				}
 			}
@@ -580,7 +580,7 @@ async function renderCharacterSheet(
 	pgBox.createDiv({ cls: "cairn-stat-label", text: s.sheet.hp });
 	const pgRow = pgBox.createDiv({ cls: "cairn-stat-inputs" });
 	const pgCur = pgRow.createEl("input", { type: "number", cls: "cairn-input-sm" });
-	pgCur.value = fm.pg === undefined || fm.pg === "" ? "" : String(fm.pg);
+	pgCur.value = asString(fm.pg);
 	pgCur.onchange = () => {
 		const v = numOrEmpty(pgCur.value);
 		fm.pg = v;
@@ -588,7 +588,7 @@ async function renderCharacterSheet(
 	};
 	pgRow.createSpan({ text: "/" });
 	const pgMax = pgRow.createEl("input", { type: "number", cls: "cairn-input-sm" });
-	pgMax.value = fm.pg_max === undefined || fm.pg_max === "" ? "" : String(fm.pg_max);
+	pgMax.value = asString(fm.pg_max);
 	pgMax.onchange = () => {
 		const v = numOrEmpty(pgMax.value);
 		fm.pg_max = v;
@@ -617,7 +617,7 @@ async function renderCharacterSheet(
 	restBtn.onclick = async () => {
 		const maxVal = fm.pg_max !== undefined && fm.pg_max !== "" ? fm.pg_max : fm.pg ?? "";
 		fm.pg = maxVal;
-		pgCur.value = maxVal === "" ? "" : String(maxVal);
+		pgCur.value = asString(maxVal);
 		await plugin.setCharField(file, "pg", maxVal);
 	};
 
@@ -631,7 +631,7 @@ async function renderCharacterSheet(
 		box.createDiv({ cls: "cairn-stat-label", text: label });
 		const row = box.createDiv({ cls: "cairn-stat-inputs" });
 		const cur = row.createEl("input", { type: "number", cls: "cairn-input-sm" });
-		cur.value = fm[key] === undefined || fm[key] === "" ? "" : String(fm[key]);
+		cur.value = asString(fm[key]);
 		cur.onchange = () => {
 			const v = numOrEmpty(cur.value);
 			fm[key] = v;
@@ -640,7 +640,7 @@ async function renderCharacterSheet(
 		row.createSpan({ text: "/" });
 		const max = row.createEl("input", { type: "number", cls: "cairn-input-sm" });
 		const maxKey = `${key}_max`;
-		max.value = fm[maxKey] === undefined || fm[maxKey] === "" ? "" : String(fm[maxKey]);
+		max.value = asString(fm[maxKey]);
 		max.onchange = () => {
 			const v = numOrEmpty(max.value);
 			fm[maxKey] = v;
@@ -654,7 +654,7 @@ async function renderCharacterSheet(
 	const armorWrap = miscRow.createDiv({ cls: "cairn-misc-field" });
 	armorWrap.createEl("label", { text: s.sheet.armor });
 	const armorInput = armorWrap.createEl("input", { type: "number", cls: "cairn-input-sm" });
-	armorInput.value = fm.armor === undefined || fm.armor === "" ? "" : String(fm.armor);
+	armorInput.value = asString(fm.armor);
 	armorInput.onchange = () => {
 		const v = numOrEmpty(armorInput.value);
 		fm.armor = v;
@@ -664,7 +664,7 @@ async function renderCharacterSheet(
 	const goldWrap = miscRow.createDiv({ cls: "cairn-misc-field" });
 	goldWrap.createEl("label", { text: s.sheet.gold });
 	const goldInput = goldWrap.createEl("input", { type: "number", cls: "cairn-input-sm" });
-	goldInput.value = fm.gold === undefined || fm.gold === "" ? "" : String(fm.gold);
+	goldInput.value = asString(fm.gold);
 	goldInput.onchange = () => {
 		const v = numOrEmpty(goldInput.value);
 		fm.gold = v;
@@ -674,7 +674,7 @@ async function renderCharacterSheet(
 	const ageWrap = miscRow.createDiv({ cls: "cairn-misc-field" });
 	ageWrap.createEl("label", { text: s.sheet.age });
 	const ageInput = ageWrap.createEl("input", { type: "text", cls: "cairn-input-sm" });
-	ageInput.value = fm.age === undefined ? "" : String(fm.age);
+	ageInput.value = asString(fm.age);
 	ageInput.onchange = () => {
 		fm.age = ageInput.value;
 		void plugin.setCharField(file, "age", ageInput.value);
@@ -694,7 +694,7 @@ async function renderCharacterSheet(
 	const notesBox = sheet.createDiv({ cls: "cairn-notes-box" });
 	notesBox.createEl("label", { text: s.sheet.notesLabel });
 	const notesArea = notesBox.createEl("textarea");
-	notesArea.value = fm.notes === undefined ? "" : String(fm.notes);
+	notesArea.value = asString(fm.notes);
 	notesArea.onchange = () => {
 		fm.notes = notesArea.value;
 		void plugin.setCharField(file, "notes", notesArea.value);
@@ -835,7 +835,7 @@ async function renderTooltipContent(plugin: CairnPlugin, container: HTMLElement,
 		if (v === undefined || v === null || v === "" || (Array.isArray(v) && v.length === 0)) continue;
 		const row = table.createEl("tr");
 		row.createEl("th", { text: f.label });
-		row.createEl("td", { text: f.format ? f.format(v) : String(v) });
+		row.createEl("td", { text: f.format ? f.format(v) : asString(v) });
 		shown++;
 	}
 	if (table.childElementCount === 0) table.remove();
@@ -845,7 +845,7 @@ async function renderTooltipContent(plugin: CairnPlugin, container: HTMLElement,
 		try {
 			const raw = await plugin.app.vault.cachedRead(entry.file);
 			desc = raw.replace(/^---\n[\s\S]*?\n---\n?/, "").trim();
-		} catch (e) {
+		} catch {
 			/* ignore */
 		}
 	} else {
@@ -890,11 +890,13 @@ export function createAutoLinkSpan(plugin: CairnPlugin, text: string, type: Cair
 
 	span.addEventListener("mouseenter", () => {
 		clearTimers();
-		showTimer = window.setTimeout(async () => {
-			removeTooltip();
-			tooltipEl = document.body.createDiv({ cls: "cairn-tooltip" });
-			await renderTooltipContent(plugin, tooltipEl, type, canonicalName);
-			positionTooltip(tooltipEl, span);
+		showTimer = window.setTimeout(() => {
+			void (async () => {
+				removeTooltip();
+				tooltipEl = document.body.createDiv({ cls: "cairn-tooltip" });
+				await renderTooltipContent(plugin, tooltipEl, type, canonicalName);
+				positionTooltip(tooltipEl, span);
+			})();
 		}, 250);
 	});
 	span.addEventListener("mouseleave", () => {

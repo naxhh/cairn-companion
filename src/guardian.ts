@@ -100,13 +100,13 @@ export function buildGuardianToolsUI(
     addToolButton(row1, resultEl, gt.fateDie, () => rollFateDie(strings));
     addToolButton(row1, resultEl, gt.reaction, () => rollReaction(strings));
 
-    container.createEl("div", { cls: "cairn-utility-label", text: gt.weatherLabel });
+    container.createDiv({ cls: "cairn-utility-label", text: gt.weatherLabel });
     const row2 = container.createDiv({ cls: "cairn-utility-row" });
     for (const season of Object.values(gt.seasons)) {
         addToolButton(row2, resultEl, season, () => rollWeather(season, strings));
     }
 
-    container.createEl("div", { cls: "cairn-utility-label", text: gt.eventsLabel });
+    container.createDiv({ cls: "cairn-utility-label", text: gt.eventsLabel });
     const row3 = container.createDiv({ cls: "cairn-utility-row" });
     addToolButton(row3, resultEl, gt.dungeonEventsButton, () => rollFromTable(tables.dungeonEvents));
     addToolButton(row3, resultEl, gt.wildernessEventsButton, () => rollFromTable(tables.wildernessEvents));

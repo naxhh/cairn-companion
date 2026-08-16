@@ -5,7 +5,6 @@ import {
 	Notice,
 	Plugin,
 	PluginSettingTab,
-	Setting,
 	SettingDefinitionItem,
 	TFile,
 	normalizePath,
@@ -174,7 +173,7 @@ export default class CairnPlugin extends Plugin {
 			const raw = await this.app.vault.adapter.read(path);
 			const parsed: unknown = JSON.parse(raw);
 			return Array.isArray(parsed) ? (parsed as BuiltinRaw[]) : null;
-		} catch (e) {
+		} catch {
 			return null;
 		}
 	}
@@ -187,7 +186,7 @@ export default class CairnPlugin extends Plugin {
 			const raw = await this.app.vault.adapter.read(path);
 			const parsed: unknown = JSON.parse(raw);
 			return Array.isArray(parsed) ? (parsed as RollTableEntry[]) : null;
-		} catch (e) {
+		} catch {
 			return null;
 		}
 	}
@@ -232,7 +231,7 @@ export default class CairnPlugin extends Plugin {
 			if (!this.app.vault.getAbstractFileByPath(cur)) {
 				try {
 					await this.app.vault.createFolder(cur);
-				} catch (e) {
+				} catch {
 					/* already exists, continue */
 				}
 			}
@@ -346,9 +345,7 @@ class CairnSettingTab extends PluginSettingTab {
 	}
 
 	// Declarative settings API (Obsidian 1.13.0+): lets the in-app settings
-	// search find these controls. display() below stays as-is — it's the
-	// required fallback for the 1.10.0–1.12.x range this plugin still
-	// supports, since getSettingDefinitions() only exists from 1.13.0 on.
+	// search find these controls.
 	getSettingDefinitions(): SettingDefinitionItem[] {
 		const s = this.plugin.strings();
 		const dice = hasRollerPlugin(this.app);
@@ -455,117 +452,5 @@ class CairnSettingTab extends PluginSettingTab {
 				this.update();
 			}
 		})();
-	}
-
-	display(): void {
-		const { containerEl } = this;
-		const s = this.plugin.strings();
-
-		new Setting(containerEl)
-			.setName(s.settings.languageName)
-			.setDesc(s.settings.languageDesc)
-			.addDropdown((d) =>
-				d
-					.addOption("es", s.settings.languageEs)
-					.addOption("en", s.settings.languageEn)
-					.setValue(this.plugin.settings.language)
-					.onChange(async (value) => {
-						this.plugin.settings.language = value as Language;
-						await this.plugin.saveSettings();
-						await this.plugin.loadBuiltinData();
-						this.plugin.reindex();
-						this.display();
-					})
-			);
-
-		new Setting(containerEl)
-			.setName(s.settings.defaultFolderName)
-			.setDesc(s.settings.defaultFolderDesc)
-			.addText((text) =>
-				text
-					.setPlaceholder(DEFAULT_SETTINGS.defaultFolder)
-					.setValue(this.plugin.settings.defaultFolder)
-					.onChange(async (value) => {
-						this.plugin.settings.defaultFolder = value.trim() || DEFAULT_SETTINGS.defaultFolder;
-						await this.plugin.saveSettings();
-					})
-			);
-
-		new Setting(containerEl)
-			.setName(s.settings.autoLinkName)
-			.setDesc(s.settings.autoLinkDesc)
-			.addToggle((t) =>
-				t.setValue(this.plugin.settings.autoLink).onChange(async (v) => {
-					this.plugin.settings.autoLink = v;
-					await this.plugin.saveSettings();
-				})
-			);
-
-		new Setting(containerEl)
-			.setName(s.settings.minLengthName)
-			.setDesc(s.settings.minLengthDesc)
-			.addText((t) =>
-				t.setValue(String(this.plugin.settings.autoLinkMinLength)).onChange(async (v) => {
-					const n = parseInt(v, 10);
-					this.plugin.settings.autoLinkMinLength =
-						Number.isFinite(n) && n > 0 ? n : DEFAULT_SETTINGS.autoLinkMinLength;
-					await this.plugin.saveSettings();
-				})
-			);
-
-		new Setting(containerEl)
-			.setName(s.settings.autoReindexName)
-			.setDesc(s.settings.autoReindexDesc)
-			.addToggle((t) =>
-				t.setValue(this.plugin.settings.autoReindex).onChange(async (v) => {
-					this.plugin.settings.autoReindex = v;
-					await this.plugin.saveSettings();
-				})
-			);
-
-		new Setting(containerEl)
-			.setName(s.settings.reindexNowName)
-			.addButton((b) =>
-				b.setButtonText(s.settings.reindexButton).onClick(() => {
-					this.plugin.reindex();
-					new Notice(s.settings.reindexNotice(this.plugin.countEntries()));
-				})
-			);
-
-		new Setting(containerEl)
-			.setName(s.settings.reloadDataName)
-			.setDesc(s.settings.reloadDataDesc)
-			.addButton((b) =>
-				b.setButtonText(s.settings.reloadButton).onClick(async () => {
-					await this.plugin.loadBuiltinData();
-					this.plugin.reindex();
-					new Notice(s.settings.reloadNotice(this.plugin.countEntries()));
-				})
-			);
-
-		new Setting(containerEl)
-			.setName(s.settings.createSamplesName)
-			.setDesc(s.settings.createSamplesDesc)
-			.addButton((b) =>
-				b.setButtonText(s.settings.createSamplesButton).onClick(async () => {
-					await this.plugin.createSamples();
-					new Notice(s.settings.createSamplesNotice);
-				})
-			);
-
-		const dice = hasRollerPlugin(this.app);
-		new Setting(containerEl)
-			.setName(s.settings.diceRollerName)
-			.setDesc(dice ? s.settings.diceRollerFound : s.settings.diceRollerNotFound);
-
-	
-		new Setting(containerEl)
-			.setName(s.settings.usageHeading)
-			.setDesc(
-				s.settings.usageIntro + "\n\n" +
-				USAGE_EXAMPLE[this.plugin.settings.language] + "\n\n" +
-				s.settings.usageExtraFields + "\n\n" +
-				s.settings.usageCommands
-			);
 	}
 }

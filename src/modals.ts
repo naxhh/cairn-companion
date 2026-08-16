@@ -22,7 +22,7 @@ export class NamePickerModal extends FuzzySuggestModal<string> {
 		return item;
 	}
 	onChooseItem(item: string) {
-		this.onPick(item);
+		void this.onPick(item);
 	}
 }
 
@@ -70,14 +70,14 @@ export class TextInputModal extends Modal {
 		input.addEventListener("keydown", (e: KeyboardEvent) => {
 			if (e.key === "Enter") {
 				this.close();
-				this.onSubmit(input.value.trim());
+				void this.onSubmit(input.value.trim());
 			}
 		});
 		const btnRow = contentEl.createDiv({ cls: "cairn-modal-buttons" });
 		const okBtn = btnRow.createEl("button", { text: this.strings.modals.createButton, cls: "mod-cta" });
 		okBtn.onclick = () => {
 			this.close();
-			this.onSubmit(input.value.trim());
+			void this.onSubmit(input.value.trim());
 		};
 	}
 	onClose() {

@@ -1,5 +1,5 @@
 
-import { MarkdownPostProcessorContext, parseYaml } from "obsidian";
+import { parseYaml } from "obsidian";
 import { CairnType, TYPES } from "./types";
 import { buildGuardianToolsUI, GuardianEventTables } from "./guardian";
 import type { CairnStrings } from "./i18n";
@@ -35,7 +35,7 @@ function parseCairnBlock(source: string, strings: CairnStrings): ParsedCairnBloc
 	try {
 		const y: unknown = parseYaml(source);
 		if (y && typeof y === "object") parsed = y as Record<string, unknown>;
-	} catch (e) {
+	} catch {
 		return { type: null, name: "", overrides: {}, error: strings.errors.invalidYaml };
 	}
 
