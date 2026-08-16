@@ -170,12 +170,12 @@ function numOrEmpty(v: string): number | "" {
 	return Number.isNaN(n) ? "" : n;
 }
 
-interface InventoryItem {
+export interface InventoryItem {
 	name: string;
 	qty: number;
 }
 
-function inventoryOf(fm: Record<string, unknown>, field = "inventory"): InventoryItem[] {
+export function inventoryOf(fm: Record<string, unknown>, field = "inventory"): InventoryItem[] {
 	const raw = fm[field];
 	if (!Array.isArray(raw)) return [];
 	return raw.map((item) => {
@@ -195,7 +195,7 @@ function computeSlots(plugin: CairnPlugin, inventory: InventoryItem[]): number {
 	let total = 0;
 	for (const item of inventory) {
 		const objEntry = plugin.index.find("object", item.name);
-		const quality = objEntry ? (objEntry.frontmatter as Record<string, unknown>)["quality"] : undefined;
+		const quality = objEntry ? objEntry.frontmatter["quality"] : undefined;
 		const qArr: string[] = Array.isArray(quality) ? quality.map((s) => String(s).toLowerCase()) : [];
 		let perUnit = 1;
 		if (qArr.some((q) => q.includes("insignificante") || q.includes("insignificant") || q.includes("petty"))) perUnit = 0;
@@ -218,7 +218,7 @@ function appendAdvantageButtons(el: HTMLElement, plugin: CairnPlugin, rollOutput
 	});
 	advBtn.onclick = (ev: MouseEvent) => {
 		ev.preventDefault();
-		doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, "1d12", `${label} ${s.dice.advantageSuffix}`);
+		void doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, "1d12", `${label} ${s.dice.advantageSuffix}`);
 	};
 	const disBtn = el.createEl("button", {
 		text: "▼",
@@ -227,7 +227,7 @@ function appendAdvantageButtons(el: HTMLElement, plugin: CairnPlugin, rollOutput
 	});
 	disBtn.onclick = (ev: MouseEvent) => {
 		ev.preventDefault();
-		doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, "1d4", `${label} ${s.dice.disadvantageSuffix}`);
+		void doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, "1d4", `${label} ${s.dice.disadvantageSuffix}`);
 	};
 }
 
@@ -250,7 +250,7 @@ function appendTextWithDiceButton(
 		});
 		btn.onclick = (ev: MouseEvent) => {
 			ev.preventDefault();
-			doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, formula, label);
+			void doRoll(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, formula, label);
 		};
 		// Advantage/Disadvantage replace the weapon's die with 1d12/1d4 (Basic
 		// Rules: Combat → Attack modifiers). Only offered on damage/attack
@@ -327,7 +327,9 @@ export async function renderEntryCard(
 	if (entry.file) {
 		titleEl.onclick = (evt: MouseEvent) => {
 			evt.preventDefault();
-			plugin.app.workspace.getLeaf(evt.ctrlKey || evt.metaKey).openFile(entry.file as TFile);
+			if (entry.file instanceof TFile) {
+				void plugin.app.workspace.getLeaf(evt.ctrlKey || evt.metaKey).openFile(entry.file);
+			}
 		};
 	}
 
@@ -353,7 +355,7 @@ export async function renderEntryCard(
 			entry.frontmatter;
 		const mode = String(overrides["mode"] ?? (freshFm as Record<string, unknown>)["mode"] ?? "all").toLowerCase();
 		if (mode === "small") {
-			renderCharacterSmallCard(container, entry, freshFm as Record<string, unknown>, s);
+			renderCharacterSmallCard(container, entry, freshFm, s);
 		} else {
 			await renderCharacterSheet(plugin, container, entry, rollOutput);
 		}
@@ -498,7 +500,7 @@ function buildInventorySection(
 
 			const objEntry = plugin.index.find("object", item.name);
 			if (objEntry) {
-				const dmg = (objEntry.frontmatter as Record<string, unknown>)["damage"];
+				const dmg = objEntry.frontmatter["damage"];
 				if (dmg) {
 					const rollBtn = li.createEl("button", {
 						text: "🎲",
@@ -582,7 +584,7 @@ async function renderCharacterSheet(
 	pgCur.onchange = () => {
 		const v = numOrEmpty(pgCur.value);
 		fm.pg = v;
-		plugin.setCharField(file, "pg", v);
+		void plugin.setCharField(file, "pg", v);
 	};
 	pgRow.createSpan({ text: "/" });
 	const pgMax = pgRow.createEl("input", { type: "number", cls: "cairn-input-sm" });
@@ -590,7 +592,7 @@ async function renderCharacterSheet(
 	pgMax.onchange = () => {
 		const v = numOrEmpty(pgMax.value);
 		fm.pg_max = v;
-		plugin.setCharField(file, "pg_max", v);
+		void plugin.setCharField(file, "pg_max", v);
 	};
 
 	const dmgRow = pgBox.createDiv({ cls: "cairn-dmg-row" });
@@ -633,7 +635,7 @@ async function renderCharacterSheet(
 		cur.onchange = () => {
 			const v = numOrEmpty(cur.value);
 			fm[key] = v;
-			plugin.setCharField(file, key, v);
+			void plugin.setCharField(file, key, v);
 		};
 		row.createSpan({ text: "/" });
 		const max = row.createEl("input", { type: "number", cls: "cairn-input-sm" });
@@ -642,7 +644,7 @@ async function renderCharacterSheet(
 		max.onchange = () => {
 			const v = numOrEmpty(max.value);
 			fm[maxKey] = v;
-			plugin.setCharField(file, maxKey, v);
+			void plugin.setCharField(file, maxKey, v);
 		};
 		const rollBtn = box.createEl("button", { text: s.sheet.save, cls: "cairn-dice-btn" });
 		rollBtn.onclick = () => rollSave(plugin.app.workspace.getActiveFile()?.path ?? "", plugin.app, rollOutput, Number(fm[key] ?? 0) || 0, s.sheet.saveOf(label), s);
@@ -656,7 +658,7 @@ async function renderCharacterSheet(
 	armorInput.onchange = () => {
 		const v = numOrEmpty(armorInput.value);
 		fm.armor = v;
-		plugin.setCharField(file, "armor", v);
+		void plugin.setCharField(file, "armor", v);
 	};
 
 	const goldWrap = miscRow.createDiv({ cls: "cairn-misc-field" });
@@ -666,7 +668,7 @@ async function renderCharacterSheet(
 	goldInput.onchange = () => {
 		const v = numOrEmpty(goldInput.value);
 		fm.gold = v;
-		plugin.setCharField(file, "gold", v);
+		void plugin.setCharField(file, "gold", v);
 	};
 
 	const ageWrap = miscRow.createDiv({ cls: "cairn-misc-field" });
@@ -675,7 +677,7 @@ async function renderCharacterSheet(
 	ageInput.value = fm.age === undefined ? "" : String(fm.age);
 	ageInput.onchange = () => {
 		fm.age = ageInput.value;
-		plugin.setCharField(file, "age", ageInput.value);
+		void plugin.setCharField(file, "age", ageInput.value);
 	};
 
 	buildInventorySection(sheet, plugin, charFile, fm, rollOutput, {
@@ -695,7 +697,7 @@ async function renderCharacterSheet(
 	notesArea.value = fm.notes === undefined ? "" : String(fm.notes);
 	notesArea.onchange = () => {
 		fm.notes = notesArea.value;
-		plugin.setCharField(file, "notes", notesArea.value);
+		void plugin.setCharField(file, "notes", notesArea.value);
 	};
 }
 
@@ -829,7 +831,7 @@ async function renderTooltipContent(plugin: CairnPlugin, container: HTMLElement,
 	let shown = 0;
 	for (const f of fieldDefsFor(s)[type]) {
 		if (shown >= 6) break;
-		const v = (entry.frontmatter as Record<string, unknown>)[f.key];
+		const v = entry.frontmatter[f.key];
 		if (v === undefined || v === null || v === "" || (Array.isArray(v) && v.length === 0)) continue;
 		const row = table.createEl("tr");
 		row.createEl("th", { text: f.label });
@@ -861,11 +863,11 @@ async function renderTooltipContent(plugin: CairnPlugin, container: HTMLElement,
 }
 
 export function createAutoLinkSpan(plugin: CairnPlugin, text: string, type: CairnType, canonicalName: string): HTMLElement {
-	const span = document.createElement("span");
-	span.className = "cairn-autolink";
-	span.textContent = text;
-	span.dataset.cairnType = type;
-	span.dataset.cairnName = canonicalName;
+	const span = createSpan({
+		cls: "cairn-autolink",
+		text,
+		attr: { "data-cairn-type": type, "data-cairn-name": canonicalName },
+	});
 
 	let tooltipEl: HTMLElement | null = null;
 	let showTimer: number | null = null;
@@ -905,7 +907,7 @@ export function createAutoLinkSpan(plugin: CairnPlugin, text: string, type: Cair
 		removeTooltip();
 		const entry = plugin.index.find(type, canonicalName);
 		if (entry?.file) {
-			plugin.app.workspace.getLeaf(ev.ctrlKey || ev.metaKey).openFile(entry.file);
+			void plugin.app.workspace.getLeaf(ev.ctrlKey || ev.metaKey).openFile(entry.file);
 		} else {
 			new EntryPreviewModal(plugin.app, plugin, type, canonicalName).open();
 		}

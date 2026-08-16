@@ -11,7 +11,7 @@ import type CairnPlugin from "./main";
 /* -------------------------------------------------------------------------- */
 
 export class NamePickerModal extends FuzzySuggestModal<string> {
-	constructor(app: App, private names: string[], placeholder: string, private onPick: (name: string) => void) {
+	constructor(app: App, private names: string[], placeholder: string, private onPick: (name: string) => void | Promise<void>) {
 		super(app);
 		this.setPlaceholder(placeholder);
 	}
@@ -58,7 +58,7 @@ export class TextInputModal extends Modal {
 		app: App,
 		private title: string,
 		private strings: CairnStrings,
-		private onSubmit: (value: string) => void
+		private onSubmit: (value: string) => void | Promise<void>
 	) {
 		super(app);
 	}
@@ -125,7 +125,7 @@ export class RandomEntryResultModal extends Modal {
 		const insertBtn = btnRow.createEl("button", { text: this.s.modals.insertIntoDocButton, cls: "mod-cta" });
 		insertBtn.onclick = () => this.insertIntoActiveEditor();
 
-		this.renderRandom();
+		void this.renderRandom();
 	}
 
 	private async renderRandom() {

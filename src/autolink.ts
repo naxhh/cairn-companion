@@ -87,7 +87,7 @@ export class CairnAutoLinker {
 			if (!regex.test(text)) continue;
 			regex.lastIndex = 0;
 
-			const frag = document.createDocumentFragment();
+			const frag = createFragment();
 			let lastIndex = 0;
 			let match: RegExpExecArray | null;
 			while ((match = regex.exec(text))) {

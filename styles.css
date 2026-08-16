@@ -310,7 +310,8 @@
 
 .cairn-autolink {
 	color: var(--link-color);
-	text-decoration: underline dotted;
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
 	text-underline-offset: 2px;
 	cursor: pointer;
 }

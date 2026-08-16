@@ -6,6 +6,7 @@ import {
 	Plugin,
 	PluginSettingTab,
 	Setting,
+	SettingDefinitionItem,
 	TFile,
 	normalizePath,
 	stringifyYaml,
@@ -25,7 +26,7 @@ import { GuardianToolsModal, GuardianEventTables } from "./guardian";
 import { normalize } from "./utils";
 import type { CairnStrings } from "./i18n";
 import { getStrings } from "./i18n";
-import { renderEntryCard, templatesFor, CairnFieldSuggest } from "./render";
+import { renderEntryCard, templatesFor, CairnFieldSuggest, inventoryOf } from "./render";
 import { TypePickerModal, TextInputModal, RandomEntryModal } from "./modals";
 import { createSamples as createExampleNotes } from "./examples";
 import { CairnAutoLinker } from "./autolink";
@@ -64,7 +65,7 @@ export default class CairnPlugin extends Plugin {
 			const parsed: ParsedCairnBlock | undefined = cairnMarkdownBlockProcessor(source, el, this.strings(), this.eventTables());
 			if (!parsed || !(parsed.type && parsed.type !== "tools" && TYPES.includes(parsed.type))) return;
 
-			renderEntryCard(this, el, parsed.type, parsed.name, parsed.overrides);
+			void renderEntryCard(this, el, parsed.type, parsed.name, parsed.overrides);
 		});
 
 		// Detects mentions of known names in plain text (reading view) and
@@ -171,7 +172,7 @@ export default class CairnPlugin extends Plugin {
 			const exists = await this.app.vault.adapter.exists(path);
 			if (!exists) return null;
 			const raw = await this.app.vault.adapter.read(path);
-			const parsed = JSON.parse(raw);
+			const parsed: unknown = JSON.parse(raw);
 			return Array.isArray(parsed) ? (parsed as BuiltinRaw[]) : null;
 		} catch (e) {
 			return null;
@@ -184,7 +185,7 @@ export default class CairnPlugin extends Plugin {
 			const exists = await this.app.vault.adapter.exists(path);
 			if (!exists) return null;
 			const raw = await this.app.vault.adapter.read(path);
-			const parsed = JSON.parse(raw);
+			const parsed: unknown = JSON.parse(raw);
 			return Array.isArray(parsed) ? (parsed as RollTableEntry[]) : null;
 		} catch (e) {
 			return null;
@@ -278,29 +279,28 @@ export default class CairnPlugin extends Plugin {
 	}
 
 	async setCharField(file: TFile, key: string, value: unknown) {
-		await this.app.fileManager.processFrontMatter(file, (fm) => {
+		await this.app.fileManager.processFrontMatter(file, (fm: Record<string, unknown>) => {
 			fm[key] = value;
 		});
 	}
 
 	async addToList(file: TFile, field: "inventory" | "insignificant", itemName: string) {
-		await this.app.fileManager.processFrontMatter(file, (fm) => {
-			const list: Array<{ name: string; qty: number }> = Array.isArray(fm[field]) ? fm[field] : [];
-			const existing = list.find((i) => i && normalize(String(i.name)) === normalize(itemName));
-			if (existing) existing.qty = (Number(existing.qty) || 1) + 1;
+		await this.app.fileManager.processFrontMatter(file, (fm: Record<string, unknown>) => {
+			const list = inventoryOf(fm, field);
+			const existing = list.find((i) => normalize(i.name) === normalize(itemName));
+			if (existing) existing.qty += 1;
 			else list.push({ name: itemName, qty: 1 });
 			fm[field] = list;
 		});
 	}
 
 	async changeListQty(file: TFile, field: "inventory" | "insignificant", itemName: string, delta: number) {
-		await this.app.fileManager.processFrontMatter(file, (fm) => {
-			const list: Array<{ name: string; qty: number }> = Array.isArray(fm[field]) ? fm[field] : [];
-			const idx = list.findIndex((i) => i && normalize(String(i.name)) === normalize(itemName));
+		await this.app.fileManager.processFrontMatter(file, (fm: Record<string, unknown>) => {
+			let list = inventoryOf(fm, field);
+			const idx = list.findIndex((i) => normalize(i.name) === normalize(itemName));
 			if (idx >= 0) {
-				const nextQty = (Number(list[idx].qty) || 1) + delta;
-				if (nextQty <= 0) list.splice(idx, 1);
-				else list[idx].qty = nextQty;
+				list[idx].qty += delta;
+				if (list[idx].qty <= 0) list = list.filter((_, i) => i !== idx);
 			}
 			fm[field] = list;
 		});
@@ -343,6 +343,118 @@ const USAGE_EXAMPLE: Record<Language, string> = {
 class CairnSettingTab extends PluginSettingTab {
 	constructor(app: App, private plugin: CairnPlugin) {
 		super(app, plugin);
+	}
+
+	// Declarative settings API (Obsidian 1.13.0+): lets the in-app settings
+	// search find these controls. display() below stays as-is — it's the
+	// required fallback for the 1.10.0–1.12.x range this plugin still
+	// supports, since getSettingDefinitions() only exists from 1.13.0 on.
+	getSettingDefinitions(): SettingDefinitionItem[] {
+		const s = this.plugin.strings();
+		const dice = hasRollerPlugin(this.app);
+
+		return [
+			{
+				name: s.settings.languageName,
+				desc: s.settings.languageDesc,
+				control: {
+					type: "dropdown",
+					key: "language",
+					options: { es: s.settings.languageEs, en: s.settings.languageEn },
+				},
+			},
+			{
+				name: s.settings.defaultFolderName,
+				desc: s.settings.defaultFolderDesc,
+				control: {
+					type: "text",
+					key: "defaultFolder",
+					placeholder: DEFAULT_SETTINGS.defaultFolder,
+					validate: (value) => (value.trim() ? undefined : s.settings.defaultFolderName),
+				},
+			},
+			{
+				name: s.settings.autoLinkName,
+				desc: s.settings.autoLinkDesc,
+				control: { type: "toggle", key: "autoLink" },
+			},
+			{
+				name: s.settings.minLengthName,
+				desc: s.settings.minLengthDesc,
+				control: {
+					type: "number",
+					key: "autoLinkMinLength",
+					min: 1,
+					step: 1,
+					validate: (value) => (Number.isFinite(value) && value > 0 ? undefined : s.settings.minLengthName),
+				},
+			},
+			{
+				name: s.settings.autoReindexName,
+				desc: s.settings.autoReindexDesc,
+				control: { type: "toggle", key: "autoReindex" },
+			},
+			{
+				name: s.settings.reindexNowName,
+				render: (setting) => {
+					setting.addButton((b) =>
+						b.setButtonText(s.settings.reindexButton).onClick(() => {
+							this.plugin.reindex();
+							new Notice(s.settings.reindexNotice(this.plugin.countEntries()));
+						})
+					);
+				},
+			},
+			{
+				name: s.settings.reloadDataName,
+				desc: s.settings.reloadDataDesc,
+				render: (setting) => {
+					setting.addButton((b) =>
+						b.setButtonText(s.settings.reloadButton).onClick(async () => {
+							await this.plugin.loadBuiltinData();
+							this.plugin.reindex();
+							new Notice(s.settings.reloadNotice(this.plugin.countEntries()));
+						})
+					);
+				},
+			},
+			{
+				name: s.settings.createSamplesName,
+				desc: s.settings.createSamplesDesc,
+				render: (setting) => {
+					setting.addButton((b) =>
+						b.setButtonText(s.settings.createSamplesButton).onClick(async () => {
+							await this.plugin.createSamples();
+							new Notice(s.settings.createSamplesNotice);
+						})
+					);
+				},
+			},
+			{
+				name: s.settings.diceRollerName,
+				desc: dice ? s.settings.diceRollerFound : s.settings.diceRollerNotFound,
+			},
+			{
+				name: s.settings.usageHeading,
+				desc:
+					s.settings.usageIntro + "\n\n" +
+					USAGE_EXAMPLE[this.plugin.settings.language] + "\n\n" +
+					s.settings.usageExtraFields + "\n\n" +
+					s.settings.usageCommands,
+			},
+		];
+	}
+
+	setControlValue(key: string, value: unknown): void | Promise<void> {
+		return (async () => {
+			await super.setControlValue(key, value);
+			await this.plugin.saveSettings();
+			if (key === "language") {
+				await this.plugin.loadBuiltinData();
+				this.plugin.reindex();
+				this.update();
+			}
+		})();
 	}
 
 	display(): void {

@@ -33,7 +33,7 @@ export interface ParsedCairnBlock {
 function parseCairnBlock(source: string, strings: CairnStrings): ParsedCairnBlock {
 	let parsed: Record<string, unknown> = {};
 	try {
-		const y = parseYaml(source);
+		const y: unknown = parseYaml(source);
 		if (y && typeof y === "object") parsed = y as Record<string, unknown>;
 	} catch (e) {
 		return { type: null, name: "", overrides: {}, error: strings.errors.invalidYaml };

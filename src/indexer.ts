@@ -94,7 +94,7 @@ export class CairnIndex {
             if (typeof fmType !== "string" || !(TYPES as string[]).includes(fmType)) continue;
             const type = fmType as CairnType;
 
-            const name = (typeof fm["name"] === "string" && (fm["name"] as string).trim()) || file.basename;
+            const name = (typeof fm["name"] === "string" && fm["name"].trim()) || file.basename;
             const rawAliases = fm["aliases"];
             const aliases: string[] = Array.isArray(rawAliases)
                 ? rawAliases.map(String)
