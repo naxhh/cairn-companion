@@ -1,5 +1,5 @@
 import { App, Modal } from "obsidian";
-import { fallbackRoller } from "./dice";
+import { DiceRoller } from "./dice";
 import type { CairnStrings } from "./i18n";
 import type { RollTableEntry } from "./types";
 
@@ -12,8 +12,8 @@ interface QuickRollResult {
     text: string;
 }
 
-function rollFateDie(strings: CairnStrings): QuickRollResult {
-    const total = fallbackRoller.roll("1d6");
+function rollFateDie(strings: CairnStrings, diceRoller: DiceRoller): QuickRollResult {
+    const total = diceRoller.rollAndGet("1d6");
     const favorable = total >= 4;
     return {
         text: `${strings.guardianTools.fateDie}: ${total} → ${
@@ -22,8 +22,8 @@ function rollFateDie(strings: CairnStrings): QuickRollResult {
     };
 }
 
-function rollReaction(strings: CairnStrings): QuickRollResult {
-    const total = fallbackRoller.roll("2d6");
+function rollReaction(strings: CairnStrings, diceRoller: DiceRoller): QuickRollResult {
+    const total = diceRoller.rollAndGet("2d6");
     const labels = strings.guardianTools.reactionLabels;
     let label: string;
     if (total === 2) label = labels.hostile;
@@ -34,13 +34,13 @@ function rollReaction(strings: CairnStrings): QuickRollResult {
     return { text: `${strings.guardianTools.reaction}: ${total} → ${label}` };
 }
 
-function rollFromTable(table: RollTableEntry[]): QuickRollResult {
-    const total = fallbackRoller.roll("1d6");
+function rollFromTable(table: RollTableEntry[], diceRoller: DiceRoller): QuickRollResult {
+    const total = diceRoller.rollAndGet("1d6");
     const { title, effect } = table[total - 1];
     return { text: `🎲 ${total} → ${title}: ${effect}` };
 }
 
-function rollWeather(season: string, strings: CairnStrings): QuickRollResult {
+function rollWeather(season: string, strings: CairnStrings, diceRoller: DiceRoller): QuickRollResult {
     const seasons = strings.guardianTools.seasons;
     const states = strings.guardianTools.weatherStates;
     const table: Record<string, string[]> = {
@@ -49,7 +49,7 @@ function rollWeather(season: string, strings: CairnStrings): QuickRollResult {
         [seasons.fall]: [states.normal, states.normal, states.unpleasant, states.harsh, states.harsh, states.extreme],
         [seasons.winter]: [states.normal, states.unpleasant, states.harsh, states.harsh, states.extreme, states.extreme],
     };
-    const total = fallbackRoller.roll("1d6");
+    const total = diceRoller.rollAndGet("1d6");
     const result = (table[season] ?? table[seasons.summer])[total - 1];
     const note = result === states.extreme ? strings.guardianTools.extremeNote : "";
     return { text: `${strings.guardianTools.weatherLabel} (${season}): ${total} → ${result}${note}` };
@@ -64,11 +64,16 @@ function addToolButton(container: HTMLElement, resultEl: HTMLElement, label: str
 
 
 export class GuardianToolsModal extends Modal {
-	constructor(app: App, private strings: CairnStrings, private tables: GuardianEventTables) {
+	constructor(
+        app: App,
+        private strings: CairnStrings,
+        private tables: GuardianEventTables,
+        private diceRoller: DiceRoller
+    ) {
 		super(app);
 	}
 	onOpen() {
-		buildGuardianToolsUI(this.contentEl, false, this.strings, this.tables);
+		buildGuardianToolsUI(this.contentEl, false, this.strings, this.tables, this.diceRoller);
 	}
 	onClose() {
 		this.contentEl.empty();
@@ -79,7 +84,8 @@ export function buildGuardianToolsUI(
     container: HTMLElement,
     asCard: boolean,
     strings: CairnStrings,
-    tables: GuardianEventTables
+    tables: GuardianEventTables,
+    diceRoller: DiceRoller
 ) {
     container.empty();
     const gt = strings.guardianTools;
@@ -97,17 +103,17 @@ export function buildGuardianToolsUI(
     const resultEl = container.createDiv({ cls: "cairn-utility-result" });
 
     const row1 = container.createDiv({ cls: "cairn-utility-row" });
-    addToolButton(row1, resultEl, gt.fateDie, () => rollFateDie(strings));
-    addToolButton(row1, resultEl, gt.reaction, () => rollReaction(strings));
+    addToolButton(row1, resultEl, gt.fateDie, () => rollFateDie(strings, diceRoller));
+    addToolButton(row1, resultEl, gt.reaction, () => rollReaction(strings, diceRoller));
 
     container.createDiv({ cls: "cairn-utility-label", text: gt.weatherLabel });
     const row2 = container.createDiv({ cls: "cairn-utility-row" });
     for (const season of Object.values(gt.seasons)) {
-        addToolButton(row2, resultEl, season, () => rollWeather(season, strings));
+        addToolButton(row2, resultEl, season, () => rollWeather(season, strings, diceRoller));
     }
 
     container.createDiv({ cls: "cairn-utility-label", text: gt.eventsLabel });
     const row3 = container.createDiv({ cls: "cairn-utility-row" });
-    addToolButton(row3, resultEl, gt.dungeonEventsButton, () => rollFromTable(tables.dungeonEvents));
-    addToolButton(row3, resultEl, gt.wildernessEventsButton, () => rollFromTable(tables.wildernessEvents));
+    addToolButton(row3, resultEl, gt.dungeonEventsButton, () => rollFromTable(tables.dungeonEvents, diceRoller));
+    addToolButton(row3, resultEl, gt.wildernessEventsButton, () => rollFromTable(tables.wildernessEvents, diceRoller));
 }

@@ -3,12 +3,14 @@ import { parseYaml } from "obsidian";
 import { CairnType, TYPES } from "./types";
 import { buildGuardianToolsUI, GuardianEventTables } from "./guardian";
 import type { CairnStrings } from "./i18n";
+import { DiceRoller } from "./dice";
 
 export function cairnMarkdownBlockProcessor(
 	source: string,
 	el: HTMLElement,
 	strings: CairnStrings,
-	tables: GuardianEventTables
+	tables: GuardianEventTables,
+	diceRoller: DiceRoller
 ): ParsedCairnBlock | undefined {
 			const parsed = parseCairnBlock(source, strings);
 			if (parsed.error || !parsed.type) {
@@ -16,7 +18,7 @@ export function cairnMarkdownBlockProcessor(
 				return;
 			}
 			if (parsed.type === "tools") {
-				buildGuardianToolsUI(el, true, strings, tables);
+				buildGuardianToolsUI(el, true, strings, tables, diceRoller);
 				return;
 			}
 

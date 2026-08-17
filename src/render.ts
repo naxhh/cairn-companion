@@ -13,7 +13,6 @@ import {
 import type { CairnType, RollTableEntry } from "./types";
 import { TYPE_ICONS, TYPES } from "./types";
 import type { CairnEntry } from "./indexer";
-import { doRoll, rollSave, extractDiceFormula } from "./dice";
 import { normalize, asString } from "./utils";
 import type { CairnStrings } from "./i18n";
 import { NamePickerModal, EntryPreviewModal } from "./modals";
@@ -209,7 +208,12 @@ function computeSlots(plugin: CairnPlugin, inventory: InventoryItem[]): number {
 /*  Generic entry card rendering                                             */
 /* -------------------------------------------------------------------------- */
 
-function appendAdvantageButtons(el: HTMLElement, plugin: CairnPlugin, rollOutput: HTMLElement, label: string) {
+function appendAdvantageButtons(
+	el: HTMLElement,
+	plugin: CairnPlugin,
+	rollOutput: HTMLElement,
+	label: string
+) {
 	const s = plugin.strings();
 	const advBtn = el.createEl("button", {
 		text: "▲",
@@ -218,7 +222,7 @@ function appendAdvantageButtons(el: HTMLElement, plugin: CairnPlugin, rollOutput
 	});
 	advBtn.onclick = (ev: MouseEvent) => {
 		ev.preventDefault();
-		void doRoll(rollOutput, "1d12", `${label} ${s.dice.advantageSuffix}`, plugin.settings.graphicalDice);
+		void plugin.diceRoller.roll(rollOutput, "1d12", `${label} ${s.dice.advantageSuffix}`, plugin.settings.graphicalDice)
 	};
 	const disBtn = el.createEl("button", {
 		text: "▼",
@@ -227,7 +231,7 @@ function appendAdvantageButtons(el: HTMLElement, plugin: CairnPlugin, rollOutput
 	});
 	disBtn.onclick = (ev: MouseEvent) => {
 		ev.preventDefault();
-		void doRoll(rollOutput, "1d4", `${label} ${s.dice.disadvantageSuffix}`, plugin.settings.graphicalDice);
+		void plugin.diceRoller.roll(rollOutput, "1d4", `${label} ${s.dice.disadvantageSuffix}`, plugin.settings.graphicalDice);
 	};
 }
 
@@ -240,23 +244,24 @@ function appendTextWithDiceButton(
 ) {
 	const s = plugin.strings();
 	el.createSpan({ text });
-	const formula = extractDiceFormula(text);
-	if (formula) {
-		const label = text.length > 28 ? formula : text;
-		const btn = el.createEl("button", {
-			text: "🎲",
-			cls: "cairn-dice-btn",
-			attr: { "aria-label": s.dice.rollAria(formula) },
-		});
-		btn.onclick = (ev: MouseEvent) => {
-			ev.preventDefault();
-			void doRoll(rollOutput, formula, label, plugin.settings.graphicalDice);
-		};
-		// Advantage/Disadvantage replace the weapon's die with 1d12/1d4 (Basic
-		// Rules: Combat → Attack modifiers). Only offered on damage/attack
-		// fields, not things like "3d6 gold coins".
-		if (showAdvantage) appendAdvantageButtons(el, plugin, rollOutput, label);
+
+	var formula = plugin.diceRoller.getCleanedFormula(text)
+	if (formula === "") {
+		return;
 	}
+
+	const label = text;
+	const btn = el.createEl("button", {
+		text: "🎲",
+		cls: "cairn-dice-btn",
+		attr: { "aria-label": s.dice.rollAria(formula) },
+	});
+	btn.onclick = (ev: MouseEvent) => {
+		ev.preventDefault();
+		void plugin.diceRoller.roll(rollOutput, text, label, plugin.settings.graphicalDice);
+	};
+
+	if (showAdvantage) appendAdvantageButtons(el, plugin, rollOutput, label);
 }
 
 function renderFieldCell(td: HTMLElement, plugin: CairnPlugin, rollOutput: HTMLElement, f: FieldDef, v: unknown) {
@@ -507,7 +512,7 @@ function buildInventorySection(
 						cls: "cairn-dice-btn",
 						attr: { "aria-label": s.sheet.rollDamageAria },
 					});
-					rollBtn.onclick = () => doRoll(rollOutput, asString(dmg), item.name, plugin.settings.graphicalDice);
+					rollBtn.onclick = () => plugin.diceRoller.roll(rollOutput, asString(dmg), item.name, plugin.settings.graphicalDice);
 					appendAdvantageButtons(li, plugin, rollOutput, item.name);
 				}
 			}
@@ -647,7 +652,7 @@ async function renderCharacterSheet(
 			void plugin.setCharField(file, maxKey, v);
 		};
 		const rollBtn = box.createEl("button", { text: s.sheet.save, cls: "cairn-dice-btn" });
-		rollBtn.onclick = () => rollSave(rollOutput, Number(fm[key] ?? 0) || 0, s.sheet.saveOf(label), s, plugin.settings.graphicalDice);
+		rollBtn.onclick = () => plugin.diceRoller.rollSave(rollOutput, Number(fm[key] ?? 0) || 0, s.sheet.saveOf(label), s, plugin.settings.graphicalDice);
 	}
 
 	const miscRow = sheet.createDiv({ cls: "cairn-misc-row" });

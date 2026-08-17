@@ -19,7 +19,7 @@ import type { CairnSettings, Language } from "./settings";
 import { DEFAULT_SETTINGS } from "./settings";
 
 import { CairnIndex, CairnEntry, BuiltinRaw } from "./indexer";
-import { hasRollerPlugin } from "./dice";
+import { DiceRoller } from "./dice";
 import { cairnMarkdownBlockProcessor, ParsedCairnBlock } from "./block";
 import { GuardianToolsModal, GuardianEventTables } from "./guardian";
 import { normalize } from "./utils";
@@ -42,6 +42,7 @@ export default class CairnPlugin extends Plugin {
 	scars: RollTableEntry[] = [];
 	dungeonEvents: RollTableEntry[] = [];
 	wildernessEvents: RollTableEntry[] = [];
+	public diceRoller: DiceRoller = new DiceRoller();
 
 	strings(): CairnStrings {
 		return getStrings(this.settings.language);
@@ -61,7 +62,7 @@ export default class CairnPlugin extends Plugin {
 		});
 
 		this.registerMarkdownCodeBlockProcessor("cairn", (source: string, el: HTMLElement, ctx: MarkdownPostProcessorContext) => {
-			const parsed: ParsedCairnBlock | undefined = cairnMarkdownBlockProcessor(source, el, this.strings(), this.eventTables());
+			const parsed: ParsedCairnBlock | undefined = cairnMarkdownBlockProcessor(source, el, this.strings(), this.eventTables(), this.diceRoller);
 			if (!parsed || !(parsed.type && parsed.type !== "tools" && TYPES.includes(parsed.type))) return;
 
 			void renderEntryCard(this, el, parsed.type, parsed.name, parsed.overrides);
@@ -105,7 +106,7 @@ export default class CairnPlugin extends Plugin {
 			id: "cairn-guardian-tools",
 			name: this.strings().commands.guardianTools,
 			callback: () => {
-				new GuardianToolsModal(this.app, this.strings(), this.eventTables()).open();
+				new GuardianToolsModal(this.app, this.strings(), this.eventTables(), this.diceRoller).open();
 			},
 		});
 
@@ -143,7 +144,7 @@ export default class CairnPlugin extends Plugin {
 			});
 		}
 
-		this.addSettingTab(new CairnSettingTab(this.app, this));
+		this.addSettingTab(new CairnSettingTab(this.app, this, this.diceRoller));
 
 		this.registerEvent(this.app.metadataCache.on("changed", () => this.scheduleReindex()));
 		this.registerEvent(this.app.vault.on("delete", () => this.scheduleReindex()));
@@ -340,15 +341,16 @@ const USAGE_EXAMPLE: Record<Language, string> = {
 };
 
 class CairnSettingTab extends PluginSettingTab {
-	constructor(app: App, private plugin: CairnPlugin) {
+	constructor(app: App, private plugin: CairnPlugin, private diceRoller: DiceRoller) {
 		super(app, plugin);
+		this.diceRoller = diceRoller;
 	}
 
 	// Declarative settings API (Obsidian 1.13.0+): lets the in-app settings
 	// search find these controls.
 	getSettingDefinitions(): SettingDefinitionItem[] {
 		const s = this.plugin.strings();
-		const dice = hasRollerPlugin();
+		const dice = this.diceRoller.hasRollerPlugin();
 
 		return [
 			{

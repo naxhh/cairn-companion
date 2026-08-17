@@ -1,30 +1,101 @@
+import { App } from "obsidian";
 import type { CairnStrings } from "./i18n";
 
-interface DiceRollerRoller {
-	// `render` triggers Dice Roller's animated 3D dice overlay for this roll.
-	roll: (render?: boolean) => Promise<number | string>;
-	containerEl?: HTMLElement;
+/**
+ * External dice roller API. Based on the TTRPG-Community dice-roller plugin
+ */
+interface DiceRollerProvider {
+	getRoller(formula: string): DiceRollerApi;
 }
 
 interface DiceRollerApi {
-	getRoller: (formula: string, source?: string) => DiceRollerRoller | null;
+	roll(render?: boolean): Promise<number | string>;
+	rollSync(): number | string;
 }
 
 declare global {
 	interface Window {
-		DiceRoller?: DiceRollerApi;
+		DiceRoller?: DiceRollerProvider;
 	}
 }
 
-export function hasRollerPlugin(): boolean {
-	return typeof window.DiceRoller?.getRoller === "function";
+
+export class DiceRoller {
+	// TODO: listen to plugin enable/disable events
+	private fallbackRoller: FallbackDiceRollerProvider = new FallbackDiceRollerProvider();
+	private roller: DiceRollerProvider = this.hasRollerPlugin() ? window.DiceRoller!! : this.fallbackRoller;
+
+	hasRollerPlugin(): boolean {
+		return (typeof window.DiceRoller?.getRoller === 'function');
+	}
+
+	getCleanedFormula(formula: string): string {
+		return cleanedFormula(formula);
+	}
+
+	rollAndGet(formula: string): number {
+		const result = this.roller.getRoller(formula).rollSync();
+		if (typeof result === 'string') {
+			return parseInt(result);
+		} else {
+			return result;
+		}
+	}
+
+	async roll(outputEl: HTMLElement, text: string, label?: string, graphical = false) {
+		var formula = cleanedFormula(text);
+		if (formula === "") {
+			return;
+		}
+
+		outputEl.empty();
+		outputEl.addClass("cairn-roll-output-active");
+		
+		try {
+			const roller = this.roller.getRoller(formula);
+			const total = await roller.roll(graphical);
+			
+			if (label) outputEl.createSpan({ text: `${label}: `, cls: "cairn-roll-label" });
+			outputEl.createSpan({ text: `${formula} → ${total}` });
+		} catch (e) {
+			console.error("Error rolling dice:", e);
+		}
+	}
+
+	async rollSave(outputEl: HTMLElement, statValue: number, label: string, strings: CairnStrings, graphical = false) {
+		outputEl.empty();
+		outputEl.addClass("cairn-roll-output-active");
+
+		try {
+			const roller = this.roller.getRoller("1d20");
+			const total = Number(await roller.roll(graphical));
+			const success = total === 1 || (total !== 20 && total <= statValue);
+			
+			outputEl.createSpan({ text: `${label}: `, cls: "cairn-roll-label" });
+			outputEl.createSpan({ text: String(total) });
+			outputEl.createSpan({
+				text: ` vs ${statValue} → ${success ? strings.dice.success : strings.dice.fail}`,
+				cls: success ? "cairn-success" : "cairn-fail",
+			});
+		} catch (e) {
+			console.error("Error rolling save:", e);
+		}
+	}
 }
 
 // A simple fallback in case the dice roller plugin is not installed.
-class FallbackDiceRoller {
-	roll(formula: string): number {
-		const clean = formula.replace(/\s+/g, "");
-		const tokens = clean.match(/[+-]?[^+-]+/g) || [clean];
+class FallbackDiceRollerProvider implements DiceRollerProvider {
+	getRoller(formula: string): DiceRollerApi {
+		return new FallbackDiceRoller(formula);
+	}
+}
+
+class FallbackDiceRoller implements DiceRollerApi {
+	// We assume the formula is always correct because the plugins also does so.
+	constructor(private formula: string) {}
+
+	rollSync(): number | string {
+		const tokens = this.formula.match(/[+-]?[^+-]+/g) || [this.formula];
 		let total = 0;
 		for (const tok of tokens) {
 			const sign = tok.startsWith("-") ? -1 : 1;
@@ -38,51 +109,17 @@ class FallbackDiceRoller {
 				total += sign * parseInt(body, 10);
 			}
 		}
+
 		return total;
 	}
-}
-export const fallbackRoller: FallbackDiceRoller = new FallbackDiceRoller();
 
-function getRoller(formula: string): DiceRollerRoller {
-	const roller = window.DiceRoller?.getRoller(formula);
-	if (roller) return roller;
-	return { roll: () => Promise.resolve(fallbackRoller.roll(formula)) };
-}
-
-export function extractDiceFormula(text: string): string | null {
-	const m = text.match(/\d+d\d+(?:\s*\+\s*\d+d\d+)*(?:\s*[+-]\s*\d+)?/i);
-	return m ? m[0].replace(/\s+/g, "") : null;
-}
-
-export async function doRoll(outputEl: HTMLElement, formula: string, label?: string, graphical = false) {
-	outputEl.empty();
-	outputEl.addClass("cairn-roll-output-active");
-	try {
-		const roller = getRoller(formula);
-		const total = await roller.roll(graphical);
-		if (label) outputEl.createSpan({ text: `${label}: `, cls: "cairn-roll-label" });
-		if (roller.containerEl) {
-			outputEl.appendChild(roller.containerEl);
-		} else {
-			outputEl.createSpan({ text: `${formula} → ${total}` });
-		}
-	} catch (e) {
-		console.error("Error rolling dice:", e);
+	roll(render?: boolean): Promise<number | string> {
+		return Promise.resolve(this.rollSync());
 	}
 }
 
-export async function rollSave(outputEl: HTMLElement, statValue: number, label: string, strings: CairnStrings, graphical = false) {
-	outputEl.empty();
-	outputEl.addClass("cairn-roll-output-active");
-	const roller = getRoller("1d20");
-	const total = Number(await roller.roll(graphical));
-	const diceEl = roller.containerEl ?? null;
-	const success = total === 1 || (total !== 20 && total <= statValue);
-	outputEl.createSpan({ text: `${label}: `, cls: "cairn-roll-label" });
-	if (diceEl) outputEl.appendChild(diceEl);
-	else outputEl.createSpan({ text: String(total) });
-	outputEl.createSpan({
-		text: ` vs ${statValue} → ${success ? strings.dice.success : strings.dice.fail}`,
-		cls: success ? "cairn-success" : "cairn-fail",
-	});
+function cleanedFormula(formula: string): string {
+	const m = formula.match(/\d+d\d+(?:\s*\+\s*\d+d\d+)*(?:\s*[+-]\s*\d+)?/i);
+	return m ? m[0].replace(/\s+/g, "") : "";
 }
+
