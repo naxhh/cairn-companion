@@ -21,7 +21,6 @@ declare global {
 
 
 export class DiceRoller {
-	// TODO: listen to plugin enable/disable events
 	private fallbackRoller: FallbackDiceRollerProvider = new FallbackDiceRollerProvider();
 	private roller: DiceRollerProvider = this.hasRollerPlugin() ? window.DiceRoller!! : this.fallbackRoller;
 

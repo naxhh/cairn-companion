@@ -10,7 +10,6 @@ cairnrpg.com): **300 objects** (weapons, armor, market items, background items, 
 Interactive character sheet (with instant updates), automatic mentions with hover previews, dice rolling (with support for the [Dice Roller](https://community.obsidian.md/plugins/obsidian-dice-roller) community plugin if installed), and quick tools for the Guardian.
 
 ## Table of contents
-
 - [Installation](#installation)
 - [Notes Embed](#notes-embed)
 - [Commands](#commands)
@@ -156,7 +155,7 @@ a monster's attacks, a background's "3d6 gold", a character
 sheet's Saving Throws, etc...).
 Objects show an advantage roll button (**▲**) or disadvantage (**▼**)
 
-Uses **Dice Roller** (`obsidian-dice-roller`) if installed or a less sophisticated custom implementation if not.
+Uses [Dice Roller](https://community.obsidian.md/plugins/obsidian-dice-roller) if installed. Defaults to a less sophisticated custom implementation if not.
 
 
 ## Guardian tools
