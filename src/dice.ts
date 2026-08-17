@@ -1,4 +1,3 @@
-import { App } from "obsidian";
 import type { CairnStrings } from "./i18n";
 
 /**
@@ -22,7 +21,7 @@ declare global {
 
 export class DiceRoller {
 	private fallbackRoller: FallbackDiceRollerProvider = new FallbackDiceRollerProvider();
-	private roller: DiceRollerProvider = this.hasRollerPlugin() ? window.DiceRoller!! : this.fallbackRoller;
+	private roller: DiceRollerProvider = this.hasRollerPlugin() ? window.DiceRoller! : this.fallbackRoller;
 
 	hasRollerPlugin(): boolean {
 		return (typeof window.DiceRoller?.getRoller === 'function');
@@ -42,7 +41,7 @@ export class DiceRoller {
 	}
 
 	async roll(outputEl: HTMLElement, text: string, label?: string, graphical = false) {
-		var formula = cleanedFormula(text);
+		const formula = cleanedFormula(text);
 		if (formula === "") {
 			return;
 		}

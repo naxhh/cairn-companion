@@ -245,7 +245,7 @@ function appendTextWithDiceButton(
 	const s = plugin.strings();
 	el.createSpan({ text });
 
-	var formula = plugin.diceRoller.getCleanedFormula(text)
+	const formula = plugin.diceRoller.getCleanedFormula(text)
 	if (formula === "") {
 		return;
 	}

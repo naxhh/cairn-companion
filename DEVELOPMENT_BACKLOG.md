@@ -4,7 +4,6 @@ That said, PR's are welcome for any point in both lists.
 
 ## TODO
 - The "reading" view doesn't find the items in the index
-- Improve dice roller implementation so we don't need to pass the plugin/app everywhere
 - run dev is not really working.
 - Manual review ES data
 - Manual review EN data
@@ -34,3 +33,4 @@ That said, PR's are welcome for any point in both lists.
 - Review deps versions
 - Publish into obsidian marketplace (pass checks)
 - Fix "not found dice roller" plugin
+- Improve dice roller implementation so we don't need to pass the plugin/app everywhere
