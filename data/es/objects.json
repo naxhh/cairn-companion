@@ -205,7 +205,7 @@
       "Voluminoso",
       "Reliquia"
     ],
-    "description": "Vacíalo para invocar a un seguidor hecho de lo que esté enterrado bajo el suelo (PG 6, Armadura 1, FUE 13, DES 11, VOL 4, puños d8+d8).",
+    "description": "Vacíalo para invocar a un seguidor hecho de lo que esté enterrado bajo el suelo (PG 6, Armadura 1, FUE 13, DES 11, VOL 4, puños 1d8+1d8).",
     "recharge": "llénalo de nuevo con la sangre de un guerrero moribundo"
   },
   {
@@ -380,7 +380,7 @@
     "quality": [
       "Reliquia"
     ],
-    "recharge": "Fundir y reforjar. Cada vez, tira un d6. Con un 1-2, se rompe para siempre.",
+    "recharge": "Fundir y reforjar. Cada vez, tira un 1d6. Con un 1-2, se rompe para siempre.",
     "description": "Cuélgala a la altura del pecho para que suene cuando el peligro sea inminente."
   },
   {
@@ -514,7 +514,7 @@
       "Voluminoso",
       "Reliquia"
     ],
-    "description": "Un hermoso yelmo con cabeza de carnero tallado en resistente roble alpino. Los cuernos pueden usarse como armas (d6+d6)."
+    "description": "Un hermoso yelmo con cabeza de carnero tallado en resistente roble alpino. Los cuernos pueden usarse como armas (1d6+1d6)."
   },
   {
     "name": "Cortacadenas",
@@ -700,7 +700,7 @@
     "quality": [
       "Reliquia"
     ],
-    "description": "Una docena de soldados en miniatura hechos de esponjas marinas talladas. Al salpicarlos con agua, crecen hasta alcanzar su tamaño completo [8 PG, 6 FUE, 13 DES, 5 VOL, esponja endurecida (d6), desprendimiento] y siguen las órdenes de la persona que ven hasta que son destruidos o se secan por completo (unos 10 minutos)."
+    "description": "Una docena de soldados en miniatura hechos de esponjas marinas talladas. Al salpicarlos con agua, crecen hasta alcanzar su tamaño completo [8 PG, 6 FUE, 13 DES, 5 VOL, esponja endurecida (1d6), desprendimiento] y siguen las órdenes de la persona que ven hasta que son destruidos o se secan por completo (unos 10 minutos)."
   },
   {
     "name": "Endurecedor",
@@ -1202,7 +1202,7 @@
   },
   {
     "name": "Maza del Matarreyes",
-    "damage": "d8",
+    "damage": "1d8",
     "uses": "2 cargas",
     "quality": [
       "Reliquia"
@@ -1236,7 +1236,7 @@
       "Reliquia"
     ],
     "recharge": "Lleva la moneda durante tres días sin gastar ni ganar dinero.",
-    "description": "Lanza este trozo de metal plano al aire y se transformará en d100 monedas de oro. Las monedas ilusorias desaparecen al cabo de una hora."
+    "description": "Lanza este trozo de metal plano al aire y se transformará en 1d100 monedas de oro. Las monedas ilusorias desaparecen al cabo de una hora."
   },
   {
     "name": "Mula",
@@ -1753,7 +1753,7 @@
     "quality": [
       "Reliquia"
     ],
-    "description": "Rómpelo para liberar una colonia de hormigas de fuego [6 PG, 2 FUE, 10 DES, 1 VOL, mordisco (d10), desprendimiento]. Consume una ración cada dos días."
+    "description": "Rómpelo para liberar una colonia de hormigas de fuego [6 PG, 2 FUE, 10 DES, 1 VOL, mordisco (1d10), desprendimiento]. Consume una ración cada dos días."
   },
   {
     "name": "Teatrillo de bolsillo",
@@ -1834,7 +1834,7 @@
   },
   {
     "name": "Una Hoja Llamada Esperanza",
-    "damage": "d6",
+    "damage": "1d6",
     "quality": [
       "Reliquia"
     ],
@@ -1993,7 +1993,7 @@
   },
   {
     "name": "Último Aliento",
-    "damage": "d6",
+    "damage": "1d6",
     "uses": "1 carga",
     "quality": [
       "Reliquia"

@@ -7,7 +7,7 @@
       "Rations (3 uses)",
       "Lantern",
       "Oil Can (6 uses)",
-      "Needle-knife (d6)",
+      "Needle-knife (1d6)",
       "Protective Gloves (petty)"
     ]
   },
@@ -18,7 +18,7 @@
       "3d6 Gold Pieces",
       "Rations (3 uses)",
       "Torch (3 uses)",
-      "Bonesaw (d6)",
+      "Bonesaw (1d6)",
       "Bandages (3 uses)",
       "Leech (restores 1 STR, 3 uses)",
       "Stained Medical Finery (petty)"
@@ -31,7 +31,7 @@
       "3d6 Gold Pieces",
       "Rations (3 uses)",
       "Torch (3 uses)",
-      "Leather Whip (d6)",
+      "Leather Whip (1d6)",
       "Soporific Darts (STR save or fall asleep, 6 uses)",
       "Lure",
       "Rope (25ft)"
@@ -45,7 +45,7 @@
       "Rations (3 uses)",
       "Lantern",
       "Oil Can (6 uses)",
-      "Stake (d6)",
+      "Stake (1d6)",
       "Chains (10ft)"
     ]
   },
@@ -56,7 +56,7 @@
       "3d6 Gold Pieces",
       "Rations (3 uses)",
       "Torch (3 uses)",
-      "Twin Daggers (d6+d6, bulky)",
+      "Twin Daggers (1d6+1d6, bulky)",
       "Padded Leather (1 Armor)",
       "Lockpicks",
       "Black Outfit (petty)"
@@ -70,8 +70,8 @@
       "Rations (3 uses)",
       "Torch (3 uses)",
       "Brigandine (1 Armor, bulky)",
-      "Sling (d6)",
-      "Hand Axe (d6)",
+      "Sling (1d6)",
+      "Hand Axe (1d6)",
       "Repellent (pick the type, 3 uses)"
     ]
   },
@@ -83,7 +83,7 @@
       "Rations (3 uses)",
       "Torch (3 uses)",
       "Bow (see table)",
-      "Serrated Knife (d6)",
+      "Serrated Knife (1d6)",
       "Boiled Leather (1 Armor)",
       "Heartroot Salve (restores 1d4 STR, 1 use)"
     ]
@@ -97,8 +97,8 @@
       "Torch (3 uses)",
       "Salt Pouch",
       "Heirloom Amulet (petty, glows in the presence of magic)",
-      "Sling (d6)",
-      "Dagger (d6)"
+      "Sling (1d6)",
+      "Dagger (1d6)",
     ]
   },
   {
@@ -107,7 +107,7 @@
     "gear": [
       "3d6 Gold Pieces",
       "Rations (3 uses)",
-      "Sharpened Trowel (d6)",
+      "Sharpened Trowel (1d6)",
       "Candle Helmet (+1 Armor, dim, 6 uses)",
       "Rope (25ft)",
       "Metal Pail"
@@ -121,7 +121,7 @@
       "Rations (3 uses)",
       "Torch (3 uses)",
       "Iron Pot",
-      "Root Knife (d6)",
+      "Root Knife (1d6)",
       "Healing Salve (restore 1d4 STR, 1 use)",
       "Twine Bauble (petty, Ward once per day)"
     ]
@@ -134,7 +134,7 @@
       "Rations (3 uses)",
       "Torch (3 uses)",
       "Spellbook (Thicket: A thicket of trees and dense brush up to 50ft wide suddenly sprouts up. Wrapped in vines that must be destroyed again with each use.)",
-      "Iron Dagger (d6)",
+      "Iron Dagger (1d6)",
       "Herbs Pouch (restore 1 STR, 3 uses)",
       "Ghillie Suit"
     ]
@@ -148,8 +148,8 @@
       "Torch (3 uses)",
       "Vestments of the Order (petty)",
       "Blessed Tinctures",
-      "Silver Knife (d6)",
-      "Crossbow (d8, bulky)"
+      "Silver Knife (1d6)",
+      "Crossbow (1d8, bulky)"
     ]
   },
   {
@@ -162,7 +162,7 @@
       "Costume",
       "Simple Instrument (Pipes, Lute, etc.)",
       "Lucky Jerkin (+1 Armor)",
-      "Sling (d6)"
+      "Sling (1d6)"
     ]
   },
   {
@@ -175,7 +175,7 @@
       "Pincers",
       "Roll of Tin",
       "Gloves (petty)",
-      "Hammer (d6)"
+      "Hammer (1d6)"
     ]
   },
   {
@@ -186,7 +186,7 @@
       "Rations (3 uses)",
       "Lantern",
       "Oil Can (6 uses)",
-      "Long Sword (d10, bulky)",
+      "Long Sword (1d10, bulky)",
       "Boiled Leather (1 Armor)"
     ]
   },
@@ -200,7 +200,7 @@
       "Cart (+4 slots, bulky when pulled)",
       "Trick Playing Cards",
       "Fancy Hat (petty)",
-      "Cane Sword (d6)"
+      "Cane Sword (1d6)"
     ]
   },
   {
@@ -210,9 +210,9 @@
       "3d6 Gold Pieces",
       "Rations (3 uses)",
       "Torch (3 uses)",
-      "Long Sword (d10, bulky)",
+      "Long Sword (1d10, bulky)",
       "Leather Jerkin (1 Armor)",
-      "Crossbow (d8, bulky)",
+      "Crossbow (1d8, bulky)",
       "Spyglass"
     ]
   },
@@ -225,7 +225,7 @@
       "Torch (3 uses)",
       "Tarp",
       "Boiled Leather (1 Armor)",
-      "Short Sword (d6)",
+      "Short Sword (1d6)",
       "Spring-Loaded trap (4 STR damage)"
     ]
   },
@@ -239,7 +239,7 @@
       "Water Shoes",
       "Brigandine (1 Armor, bulky)",
       "Compass",
-      "Dagger (d6)"
+      "Dagger (1d6)"
     ]
   },
   {
@@ -251,7 +251,7 @@
       "Torch (3 uses)",
       "Quill & Ink",
       "Blank Book",
-      "Awl (d6)",
+      "Awl (1d6)",
       "Badge (petty)"
     ]
   }

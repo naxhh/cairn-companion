@@ -7,7 +7,7 @@
     "pg": 4,
     "armor": 1,
     "attacks": [
-      "ceremonial dagger (d6)"
+      "ceremonial dagger (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -21,7 +21,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "bite (d8)"
+      "bite (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -35,13 +35,13 @@
     "pg": 4,
     "armor": 1,
     "attacks": [
-      "short sword (d6) or short bow (d6)"
+      "short sword (1d6) or short bow (1d6)"
     ],
     "moral": "",
     "abilities": [
       "Loyal: When testing Morale, save using the leader's WIL (13). If the leader dies, the others will flee."
     ],
-    "description": "- Outlaws who raid settlements, attack ships, or ambush travelers. Groups of four or more are a detachment.\n- A detachment always travels with one leader wearing chain mail or similar (2 Armor) and a long sword (d10) or crossbow (d8).\n- Loyal: When testing Morale, save using the leader's WIL (13). If the leader dies, the others will flee."
+    "description": "- Outlaws who raid settlements, attack ships, or ambush travelers. Groups of four or more are a detachment.\n- A detachment always travels with one leader wearing chain mail or similar (2 Armor) and a long sword (1d10) or crossbow (1d8).\n- Loyal: When testing Morale, save using the leader's WIL (13). If the leader dies, the others will flee."
   },
   {
     "name": "Banshee",
@@ -51,7 +51,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "ghostly touch (d8)"
+      "ghostly touch (1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -67,7 +67,7 @@
     "pg": 10,
     "armor": 1,
     "attacks": [
-      "bite (d10)"
+      "bite (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -83,7 +83,7 @@
     "pg": 5,
     "armor": "",
     "attacks": [
-      "bite (d6)"
+      "bite (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -97,7 +97,7 @@
     "pg": 4,
     "armor": "",
     "attacks": [
-      "horns (d8)"
+      "horns (1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -127,7 +127,7 @@
     "pg": 8,
     "armor": 3,
     "attacks": [
-      "sharpened arms (d8+d8)"
+      "sharpened arms (1d8+1d8)"
     ],
     "moral": "Detachment",
     "abilities": [],
@@ -141,7 +141,7 @@
     "pg": 8,
     "armor": 1,
     "attacks": [
-      "club (d8)"
+      "club (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -155,7 +155,7 @@
     "pg": 6,
     "armor": 1,
     "attacks": [
-      "bite (d10), acid squirt (d8, blast)"
+      "bite (1d10), acid squirt (1d8, blast)"
     ],
     "moral": "",
     "abilities": [
@@ -171,7 +171,7 @@
     "pg": 2,
     "armor": "",
     "attacks": [
-      "bite (d6)"
+      "bite (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -185,7 +185,7 @@
     "pg": 6,
     "armor": 1,
     "attacks": [
-      "spear (d8) or short bow (d6)"
+      "spear (1d8) or short bow (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -199,7 +199,7 @@
     "pg": 12,
     "armor": 2,
     "attacks": [
-      "bite (d10)"
+      "bite (1d10)"
     ],
     "moral": "",
     "abilities": [],
@@ -213,7 +213,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "vines (d4, blast)"
+      "vines (1d4, blast)"
     ],
     "moral": "",
     "abilities": [
@@ -229,7 +229,7 @@
     "pg": 12,
     "armor": "",
     "attacks": [
-      "ethereal claws (d8+d8)"
+      "ethereal claws (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -243,7 +243,7 @@
     "pg": 4,
     "armor": "",
     "attacks": [
-      "knotted arms (d6)"
+      "knotted arms (1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -259,7 +259,7 @@
     "pg": 10,
     "armor": "",
     "attacks": [
-      "club (d10)"
+      "club (1d10)"
     ],
     "moral": "",
     "abilities": [],
@@ -273,7 +273,7 @@
     "pg": 15,
     "armor": "",
     "attacks": [
-      "bite (d8)"
+      "bite (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -287,7 +287,7 @@
     "pg": 14,
     "armor": 1,
     "attacks": [
-      "icicle dagger (d6)"
+      "icicle dagger (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -301,7 +301,7 @@
     "pg": 8,
     "armor": 3,
     "attacks": [
-      "claws (d8+d8)"
+      "claws (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -315,13 +315,13 @@
     "pg": 8,
     "armor": 1,
     "attacks": [
-      "devouring touch (d8)"
+      "devouring touch (1d8)"
     ],
     "moral": "",
     "abilities": [
-      "Critical Damage: The target is engulfed, losing d6 STR damage per round until they are consumed."
+      "Critical Damage: The target is engulfed, losing 1d6 STR damage per round until they are consumed."
     ],
-    "description": "- Large shapeless masses of transparent jelly. Mindlessly hunt for food in dungeons and underground caverns.\n- Critical Damage: The target is engulfed, losing d6 STR damage per round until they are consumed."
+    "description": "- Large shapeless masses of transparent jelly. Mindlessly hunt for food in dungeons and underground caverns.\n- Critical Damage: The target is engulfed, losing 1d6 STR damage per round until they are consumed."
   },
   {
     "name": "Ghost",
@@ -331,7 +331,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "life drain (d6)"
+      "life drain (1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -347,13 +347,13 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "elongated claws (d6+d6)"
+      "elongated claws (1d6+1d6)"
     ],
     "moral": "",
     "abilities": [
-      "Critical Damage: Target is deprived from their necrotic wound, dying in d4 days unless treated by a priest or skilled healer. If the body is not burned it later rises as a Ghoul as well."
+      "Critical Damage: Target is deprived from their necrotic wound, dying in 1d4 days unless treated by a priest or skilled healer. If the body is not burned it later rises as a Ghoul as well."
     ],
-    "description": "- Grey-skinned man-things wearing shredded clothes that crave only the flesh of the living.\n- Critical Damage: Target is deprived from their necrotic wound, dying in d4 days unless treated by a priest or skilled healer. If the body is not burned it later rises as a Ghoul as well."
+    "description": "- Grey-skinned man-things wearing shredded clothes that crave only the flesh of the living.\n- Critical Damage: Target is deprived from their necrotic wound, dying in 1d4 days unless treated by a priest or skilled healer. If the body is not burned it later rises as a Ghoul as well."
   },
   {
     "name": "Giant Scorpion",
@@ -363,13 +363,13 @@
     "pg": 8,
     "armor": 1,
     "attacks": [
-      "claws (d10+d10)"
+      "claws (1d10+1d10)"
     ],
     "moral": "",
     "abilities": [
-      "Critical Damage: The stinger's poison liquefies the target's insides for an additional d8 STR damage. The STR loss is permanent."
+      "Critical Damage: The stinger's poison liquefies the target's insides for an additional 1d8 STR damage. The STR loss is permanent."
     ],
-    "description": "- Horse-sized arachnids commonly found in dry terrain or caverns.\n- Critical Damage: The stinger's poison liquefies the target's insides for an additional d8 STR damage. The STR loss is permanent."
+    "description": "- Horse-sized arachnids commonly found in dry terrain or caverns.\n- Critical Damage: The stinger's poison liquefies the target's insides for an additional 1d8 STR damage. The STR loss is permanent."
   },
   {
     "name": "Gnoll",
@@ -379,7 +379,7 @@
     "pg": 6,
     "armor": 1,
     "attacks": [
-      "spear (d8)"
+      "spear (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -393,7 +393,7 @@
     "pg": 4,
     "armor": "",
     "attacks": [
-      "dagger (d6) or sling (d6)"
+      "dagger (1d6) or sling (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -407,7 +407,7 @@
     "pg": 12,
     "armor": 2,
     "attacks": [
-      "bite (d12)"
+      "bite (1d12)"
     ],
     "moral": "Detachment",
     "abilities": [
@@ -423,7 +423,7 @@
     "pg": 7,
     "armor": "",
     "attacks": [
-      "claws (d6+d6)"
+      "claws (1d6+1d6)"
     ],
     "moral": "Detachment",
     "abilities": [
@@ -439,13 +439,13 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "claws (d8+d8)"
+      "claws (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [
-      "Critical Damage: Bites the victim for an additional d6 STR damage. They bleed out very quickly."
+      "Critical Damage: Bites the victim for an additional 1d6 STR damage. They bleed out very quickly."
     ],
-    "description": "- Reddish-brown bears commonly found in mountains, woodlands, and prairies.\n- Prefer to eat fish and meat, and will attack the rare unfortunate who crosses their path.\n- Critical Damage: Bites the victim for an additional d6 STR damage. They bleed out very quickly."
+    "description": "- Reddish-brown bears commonly found in mountains, woodlands, and prairies.\n- Prefer to eat fish and meat, and will attack the rare unfortunate who crosses their path.\n- Critical Damage: Bites the victim for an additional 1d6 STR damage. They bleed out very quickly."
   },
   {
     "name": "Harpy",
@@ -455,7 +455,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "claws (d6+d6)"
+      "claws (1d6+1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -471,7 +471,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "bite (d8), fire breath (d6, blast)"
+      "bite (1d8), fire breath (1d6, blast)"
     ],
     "moral": "",
     "abilities": [],
@@ -485,7 +485,7 @@
     "pg": 6,
     "armor": 2,
     "attacks": [
-      "mace (d8)"
+      "mace (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -499,7 +499,7 @@
     "pg": 12,
     "armor": "",
     "attacks": [
-      "leystaff (d8)"
+      "leystaff (1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -515,7 +515,7 @@
     "pg": 12,
     "armor": 2,
     "attacks": [
-      "bite (d12, blast)"
+      "bite (1d12, blast)"
     ],
     "moral": "Detachment",
     "abilities": [],
@@ -529,7 +529,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "fists (d4+d4)"
+      "fists (1d4+1d4)"
     ],
     "moral": "",
     "abilities": [],
@@ -543,11 +543,11 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "sting (d6)"
+      "sting (1d6)"
     ],
     "moral": "Detachment",
     "abilities": [],
-    "description": "- Oversized bees that build underground hives. Hyper-aggressive, attack anything that comes near.\n- Produce special honey that heals 1d6 STR. 3 uses.\n- When the bees cause STR damage, the stingers are lodged into the target, dealing d4 damage each round until removed."
+    "description": "- Oversized bees that build underground hives. Hyper-aggressive, attack anything that comes near.\n- Produce special honey that heals 1d6 STR. 3 uses.\n- When the bees cause STR damage, the stingers are lodged into the target, dealing 1d4 damage each round until removed."
   },
   {
     "name": "Kobold",
@@ -557,7 +557,7 @@
     "pg": 3,
     "armor": "",
     "attacks": [
-      "bite (d6), spear (d8)"
+      "bite (1d6), spear (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -571,13 +571,13 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "toothy bite (d8)"
+      "toothy bite (1d8)"
     ],
     "moral": "",
     "abilities": [
-      "Critical Damage: The target takes d6 WIL damage as their spirit is slowly sapped away. They then become enthralled to the Lamia, obeying its every command while in its presence."
+      "Critical Damage: The target takes 1d6 WIL damage as their spirit is slowly sapped away. They then become enthralled to the Lamia, obeying its every command while in its presence."
     ],
-    "description": "- Centaur-like creatures that prey on the life force of others, seducing their victims through heightened charm and intelligence. Their upper bodies are typically humanoid, the lower half any number of animal hybrids.\n- Inherently magical. Can create illusions, charm creatures, and disguise themselves at will.\n- Critical Damage: The target takes d6 WIL damage as their spirit is slowly sapped away. They then become enthralled to the Lamia, obeying its every command while in its presence."
+    "description": "- Centaur-like creatures that prey on the life force of others, seducing their victims through heightened charm and intelligence. Their upper bodies are typically humanoid, the lower half any number of animal hybrids.\n- Inherently magical. Can create illusions, charm creatures, and disguise themselves at will.\n- Critical Damage: The target takes 1d6 WIL damage as their spirit is slowly sapped away. They then become enthralled to the Lamia, obeying its every command while in its presence."
   },
   {
     "name": "Lich",
@@ -587,11 +587,11 @@
     "pg": 14,
     "armor": 1,
     "attacks": [
-      "soul dagger (d8)"
+      "soul dagger (1d8)"
     ],
     "moral": "",
     "abilities": [],
-    "description": "- Powerful sorcerers that paid the ultimate price for immortality: their own life. Now their thirst for power knows no bounds.\n- Maintain unlife by binding themselves to an earthly artifact, which is typically protected by at least d6 other undead servants.\n- Carry up to six of the following spellbooks: Animate Object, Arcane Eye, Deafen, Disassemble, Elemental Wall, Frenzy, Gate, Hover, Hatred, Identify Owner, Knock, Pacify, Raise Dead, Raise Spirit, Shield, Sleep, Smoke Form, Telekinesis, Telepathy, Teleport, Vision, Wizard Mark."
+    "description": "- Powerful sorcerers that paid the ultimate price for immortality: their own life. Now their thirst for power knows no bounds.\n- Maintain unlife by binding themselves to an earthly artifact, which is typically protected by at least 1d6 other undead servants.\n- Carry up to six of the following spellbooks: Animate Object, Arcane Eye, Deafen, Disassemble, Elemental Wall, Frenzy, Gate, Hover, Hatred, Identify Owner, Knock, Pacify, Raise Dead, Raise Spirit, Shield, Sleep, Smoke Form, Telekinesis, Telepathy, Teleport, Vision, Wizard Mark."
   },
   {
     "name": "Manticore",
@@ -601,7 +601,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "claws (d6+d6), tail spike (d8)"
+      "claws (1d6+1d6), tail spike (1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -617,7 +617,7 @@
     "pg": 9,
     "armor": 2,
     "attacks": [
-      "bite (d8)"
+      "bite (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -631,7 +631,7 @@
     "pg": 12,
     "armor": "",
     "attacks": [
-      "tentacles (d6, blast)"
+      "tentacles (1d6, blast)"
     ],
     "moral": "",
     "abilities": [
@@ -648,7 +648,7 @@
     "pg": 12,
     "armor": 1,
     "attacks": [
-      "two-handed axe (d10), charge (d12)"
+      "two-handed axe (1d10), charge (1d12)"
     ],
     "moral": "",
     "abilities": [],
@@ -662,7 +662,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "necrotic touch (d10)"
+      "necrotic touch (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -678,7 +678,7 @@
     "pg": 6,
     "armor": 1,
     "attacks": [
-      "sword (d6), bite (d10)"
+      "sword (1d6), bite (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -694,11 +694,11 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "claws (d6+d6)"
+      "claws (1d6+1d6)"
     ],
     "moral": "",
     "abilities": [],
-    "description": "- Intelligent, nocturnal marsupials that make their homes in forests and swamps. Hunt in\n- Critical Damage: The Night Cat begins to eat the target (d4 STR damage) while they are"
+    "description": "- Intelligent, nocturnal marsupials that make their homes in forests and swamps. Hunt in\n- Critical Damage: The Night Cat begins to eat the target (1d4 STR damage) while they are"
   },
   {
     "name": "Night Hag",
@@ -708,7 +708,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "talons (d8+d8)"
+      "talons (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -722,7 +722,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "flaming hooves (d8+d8)"
+      "flaming hooves (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -736,7 +736,7 @@
     "pg": 6,
     "armor": 1,
     "attacks": [
-      "club (d10)"
+      "club (1d10)"
     ],
     "moral": "",
     "abilities": [],
@@ -750,7 +750,7 @@
     "pg": 9,
     "armor": "",
     "attacks": [
-      "beak (d10), claws (d8+d8)"
+      "beak (1d10), claws (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -766,7 +766,7 @@
     "pg": 4,
     "armor": "",
     "attacks": [
-      "talons (d10+d10)"
+      "talons (1d10+1d10)"
     ],
     "moral": "",
     "abilities": [],
@@ -792,13 +792,13 @@
     "pg": 18,
     "armor": 1,
     "attacks": [
-      "bite (d12)"
+      "bite (1d12)"
     ],
     "moral": "Detachment",
     "abilities": [
-      "Critical Damage: The target is devoured, taking d8 STR damage from the acid in the worm's stomach."
+      "Critical Damage: The target is devoured, taking 1d8 STR damage from the acid in the worm's stomach."
     ],
-    "description": "- Gargantuan worms that lair in enormous burrows deep underground, only coming to the surface to eat. Found in high deserts and hot tundra.\n- Critical Damage: The target is devoured, taking d8 STR damage from the acid in the worm's stomach."
+    "description": "- Gargantuan worms that lair in enormous burrows deep underground, only coming to the surface to eat. Found in high deserts and hot tundra.\n- Critical Damage: The target is devoured, taking 1d8 STR damage from the acid in the worm's stomach."
   },
   {
     "name": "Red Cap",
@@ -808,7 +808,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "dual sickles (d6+d6)"
+      "dual sickles (1d6+1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -824,7 +824,7 @@
     "pg": 5,
     "armor": 1,
     "attacks": [
-      "bone spear (d8)"
+      "bone spear (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -838,7 +838,7 @@
     "pg": 4,
     "armor": "",
     "attacks": [
-      "spear (d6)"
+      "spear (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -852,7 +852,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "tuber-fingers (d6)"
+      "tuber-fingers (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -866,7 +866,7 @@
     "pg": 5,
     "armor": "",
     "attacks": [
-      "bite (d6)"
+      "bite (1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -882,7 +882,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "long claws (d6+d6)"
+      "long claws (1d6+1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -898,13 +898,13 @@
     "pg": 14,
     "armor": "",
     "attacks": [
-      "draining touch (d6, ignores armor)"
+      "draining touch (1d6, ignores armor)"
     ],
     "moral": "",
     "abilities": [
-      "Critical Damage: Target loses d4 STR. If reduced to 0 STR, they become a shadow as well."
+      "Critical Damage: Target loses 1d4 STR. If reduced to 0 STR, they become a shadow as well."
     ],
-    "description": "- Incorporeal monsters that look like animated shadows. Unharmed by mundane attacks, sleep or mind control.\n- Critical Damage: Target loses d4 STR. If reduced to 0 STR, they become a shadow as well."
+    "description": "- Incorporeal monsters that look like animated shadows. Unharmed by mundane attacks, sleep or mind control.\n- Critical Damage: Target loses 1d4 STR. If reduced to 0 STR, they become a shadow as well."
   },
   {
     "name": "Shambling Mound",
@@ -914,7 +914,7 @@
     "pg": 9,
     "armor": "",
     "attacks": [
-      "tendrils (d8+d8)"
+      "tendrils (1d8+1d8)"
     ],
     "moral": "Detachment",
     "abilities": [
@@ -930,7 +930,7 @@
     "pg": 5,
     "armor": 1,
     "attacks": [
-      "rusty sword (d6) or bow (d6)"
+      "rusty sword (1d6) or bow (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -944,7 +944,7 @@
     "pg": 12,
     "armor": 1,
     "attacks": [
-      "mace (d10)"
+      "mace (1d10)"
     ],
     "moral": "Detachment",
     "abilities": [],
@@ -958,7 +958,7 @@
     "pg": 18,
     "armor": "",
     "attacks": [
-      "claws (d8+d8, blast), beak (d10)"
+      "claws (1d8+1d8, blast), beak (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -974,7 +974,7 @@
     "pg": 18,
     "armor": 2,
     "attacks": [
-      "great sword (d12)"
+      "great sword (1d12)"
     ],
     "moral": "Detachment",
     "abilities": [
@@ -990,7 +990,7 @@
     "pg": 9,
     "armor": "",
     "attacks": [
-      "gore (d6+d6)"
+      "gore (1d6+1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -1006,7 +1006,7 @@
     "pg": 18,
     "armor": 3,
     "attacks": [
-      "lightning sword (d12)"
+      "lightning sword (1d12)"
     ],
     "moral": "Detachment",
     "abilities": [],
@@ -1020,7 +1020,7 @@
     "pg": 10,
     "armor": 3,
     "attacks": [
-      "roots (d8+d8, blast)"
+      "roots (1d8+1d8, blast)"
     ],
     "moral": "",
     "abilities": [],
@@ -1034,7 +1034,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "trident (d8)"
+      "trident (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -1048,7 +1048,7 @@
     "pg": 14,
     "armor": 1,
     "attacks": [
-      "bite (d10), claws (d8+d8)"
+      "bite (1d10), claws (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -1062,7 +1062,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "horn (d10, ignores armor)"
+      "horn (1d10, ignores armor)"
     ],
     "moral": "",
     "abilities": [],
@@ -1076,14 +1076,14 @@
     "pg": 12,
     "armor": 1,
     "attacks": [
-      "bite (d10)"
+      "bite (1d10)"
     ],
     "moral": "",
     "abilities": [
       "Regeneration: A damaged vampire regains 6 HP when it bites a target that has blood. If killed, it becomes a cloud of gas and retreats to its coffin, reforming at the next nightfall. Can only be killed if exposed to sunlight or if the coffin is destroyed.",
-      "Critical Damage: The vampire drains the target's essence, dealing d12 damage to WIL. If the target reaches 0 WIL this way, it dies and is raised as a thrall of the vampire."
+      "Critical Damage: The vampire drains the target's essence, dealing 1d12 damage to WIL. If the target reaches 0 WIL this way, it dies and is raised as a thrall of the vampire."
     ],
-    "description": "- Charming, undead creatures that drink the blood of mortals. Act at night and sleep in a coffin during the day. Can change into a bat at will.\n- Regeneration: A damaged vampire regains 6 HP when it bites a target that has blood. If killed, it becomes a cloud of gas and retreats to its coffin, reforming at the next nightfall. Can only be killed if exposed to sunlight or if the coffin is destroyed.\n- Critical Damage: The vampire drains the target's essence, dealing d12 damage to WIL. If the target reaches 0 WIL this way, it dies and is raised as a thrall of the vampire."
+    "description": "- Charming, undead creatures that drink the blood of mortals. Act at night and sleep in a coffin during the day. Can change into a bat at will.\n- Regeneration: A damaged vampire regains 6 HP when it bites a target that has blood. If killed, it becomes a cloud of gas and retreats to its coffin, reforming at the next nightfall. Can only be killed if exposed to sunlight or if the coffin is destroyed.\n- Critical Damage: The vampire drains the target's essence, dealing 1d12 damage to WIL. If the target reaches 0 WIL this way, it dies and is raised as a thrall of the vampire."
   },
   {
     "name": "Viper",
@@ -1093,7 +1093,7 @@
     "pg": 3,
     "armor": "",
     "attacks": [
-      "bite (d6)"
+      "bite (1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -1109,7 +1109,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "tentacles (d8+d8, blast), bite (d10)"
+      "tentacles (1d8+1d8, blast), bite (1d10)"
     ],
     "moral": "",
     "abilities": [],
@@ -1123,7 +1123,7 @@
     "pg": 4,
     "armor": 2,
     "attacks": [
-      "tentacles (d8+d8)"
+      "tentacles (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -1137,7 +1137,7 @@
     "pg": 14,
     "armor": "",
     "attacks": [
-      "spray (d8)"
+      "spray (1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -1153,7 +1153,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "claws (d6+d6), bite (d8)"
+      "claws (1d6+1d6), bite (1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -1169,7 +1169,7 @@
     "pg": 12,
     "armor": 3,
     "attacks": [
-      "long sword (d10)"
+      "long sword (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -1197,7 +1197,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "bite (d8)"
+      "bite (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -1211,7 +1211,7 @@
     "pg": 10,
     "armor": "",
     "attacks": [
-      "bite (d8), club (d10)"
+      "bite (1d8), club (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -1227,7 +1227,7 @@
     "pg": 11,
     "armor": "",
     "attacks": [
-      "stinger (d10)"
+      "stinger (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -1243,7 +1243,7 @@
     "pg": 2,
     "armor": "",
     "attacks": [
-      "jagged nails (d6)"
+      "jagged nails (1d6)"
     ],
     "moral": "",
     "abilities": [

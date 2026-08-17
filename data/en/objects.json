@@ -1,7 +1,7 @@
 [
   {
     "name": "A Blade Called Hope",
-    "damage": "d6",
+    "damage": "1d6",
     "quality": [
       "Relic"
     ],
@@ -151,7 +151,7 @@
       "Bulky"
     ],
     "recharge": "Fill with the blood of a dying warrior.",
-    "description": "From a local death-cult. Empty it to raise a servant built from whatever is buried below, with 6 HP, 1 Armor, 13 STR, 11 DEX, 4 WIL, and shard fists (d8+d8). Only one servant can be raised at a time. If destroyed, you permanently lose 1d4 STR."
+    "description": "From a local death-cult. Empty it to raise a servant built from whatever is buried below, with 6 HP, 1 Armor, 13 STR, 11 DEX, 4 WIL, and shard fists (1d8+1d8). Only one servant can be raised at a time. If destroyed, you permanently lose 1d4 STR."
   },
   {
     "name": "Bloodmap",
@@ -318,7 +318,7 @@
       "Relic"
     ],
     "recharge": "Carry the coin for three days without spending or earning any money.",
-    "description": "Flip this worthless-looking hunk of flat metal in the air, and it will transform into d100 gold coins. The illusory coins disappear after one hour."
+    "description": "Flip this worthless-looking hunk of flat metal in the air, and it will transform into 1d100 gold coins. The illusory coins disappear after one hour."
   },
   {
     "name": "Common Agents",
@@ -672,7 +672,7 @@
     "quality": [
       "Relic"
     ],
-    "recharge": "Melt and reforge. Each time, roll a d6. On a 1-2, it breaks forever.",
+    "recharge": "Melt and reforge. Each time, roll a 1d6. On a 1-2, it breaks forever.",
     "description": "Hang at chest height to ring when danger is imminent."
   },
   {
@@ -689,7 +689,7 @@
   {
     "name": "Healing Unguent",
     "uses": "1 use",
-    "description": "Taught by a wizened apothecary. Restores d4 STR."
+    "description": "Taught by a wizened apothecary. Restores 1d4 STR."
   },
   {
     "name": "Heartseed",
@@ -701,7 +701,7 @@
     "quality": [
       "+2 slots"
     ],
-    "description": "A beast built for war, an imposing creature. 8 HP, hooves (d10+d10)."
+    "description": "A beast built for war, an imposing creature. 8 HP, hooves (1d10+1d10)."
   },
   {
     "name": "Hellcap",
@@ -777,7 +777,7 @@
     "quality": [
       "Relic"
     ],
-    "description": "Break to release a colony of fire ants [6 HP, 2 STR, 10 DEX, 1 WIL, bite (d10), detachment]. Consumes a ration every two days."
+    "description": "Break to release a colony of fire ants [6 HP, 2 STR, 10 DEX, 1 WIL, bite (1d10), detachment]. Consumes a ration every two days."
   },
   {
     "name": "Jongleur's Rapier",
@@ -810,7 +810,7 @@
   },
   {
     "name": "Last Breath",
-    "damage": "d6",
+    "damage": "1d6",
     "uses": "1 charge",
     "quality": [
       "Relic"
@@ -864,7 +864,7 @@
   },
   {
     "name": "Mace of the Kingslayer",
-    "damage": "d8",
+    "damage": "1d8",
     "uses": "2 charges",
     "quality": [
       "Relic"
@@ -1148,7 +1148,7 @@
   },
   {
     "name": "Raven Familiar",
-    "description": "8 HP, 3 STR, 11 DEX, 13 WIL, beak (d6). Speaks as an intelligent being and is entirely devoted to you."
+    "description": "8 HP, 3 STR, 11 DEX, 13 WIL, beak (1d6). Speaks as an intelligent being and is entirely devoted to you."
   },
   {
     "name": "Rebirth Ash",
@@ -1240,7 +1240,7 @@
   {
     "name": "Rootflower",
     "uses": "1 use",
-    "description": "A white fungus found only on corpses deep underground. Ingest to restore d6 WIL. You will dream of the dead and their stories."
+    "description": "A white fungus found only on corpses deep underground. Ingest to restore 1d6 WIL. You will dream of the dead and their stories."
   },
   {
     "name": "Rope",
@@ -1420,7 +1420,7 @@
     "quality": [
       "Relic"
     ],
-    "description": "A dozen miniature soldiers made of carved sea sponges. When splashed with water, they grow to full size [8 HP, 6 STR, 13 DEX, 5 WIL, hardened sponge (d6), detachment] and follow the orders of the person they see until they are destroyed or dry out completely (about 10 minutes)."
+    "description": "A dozen miniature soldiers made of carved sea sponges. When splashed with water, they grow to full size [8 HP, 6 STR, 13 DEX, 5 WIL, hardened sponge (1d6), detachment] and follow the orders of the person they see until they are destroyed or dry out completely (about 10 minutes)."
   },
   {
     "name": "Sproutcup",
@@ -1640,7 +1640,7 @@
     "quality": [
       "Relic"
     ],
-    "description": "A beautifully rendered ram's head helm wrought from tough alpine oak. The horns can be used as weapons (d6+d6)."
+    "description": "A beautifully rendered ram's head helm wrought from tough alpine oak. The horns can be used as weapons (1d6+1d6)."
   },
   {
     "name": "Uncanny Hand-Puppet",
@@ -1734,7 +1734,7 @@
     "quality": [
       "Bulky"
     ],
-    "description": "Can be wielded as a blunt weapon (d6). Noisy."
+    "description": "Can be wielded as a blunt weapon (1d6). Noisy."
   },
   {
     "name": "Whisper Vial",

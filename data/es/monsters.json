@@ -7,11 +7,11 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "picadura (d6)"
+      "picadura (1d6)"
     ],
     "moral": "Destacamento",
     "abilities": [],
-    "description": "- Abejas gigantes que construyen colmenas subterráneas. Son extremadamente agresivas y atacan a todo lo que se les acerque.\n- Producen una miel especial que cura 1d6 puntos de daño por quemadura. 3 usos.\n- Cuando las abejas infligen daño por quemadura, sus aguijones quedan clavados en el objetivo, infligiendo d4 puntos de daño cada ronda hasta que se extraigan."
+    "description": "- Abejas gigantes que construyen colmenas subterráneas. Son extremadamente agresivas y atacan a todo lo que se les acerque.\n- Producen una miel especial que cura 1d6 puntos de daño por quemadura. 3 usos.\n- Cuando las abejas infligen daño por quemadura, sus aguijones quedan clavados en el objetivo, infligiendo 1d4 puntos de daño cada ronda hasta que se extraigan."
   },
   {
     "name": "Acechador Invisible",
@@ -21,7 +21,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "puños (d4+d4)"
+      "puños (1d4+1d4)"
     ],
     "moral": "",
     "abilities": [],
@@ -35,7 +35,7 @@
     "pg": 4,
     "armor": 1,
     "attacks": [
-      "daga ceremonial (d6)"
+      "daga ceremonial (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -49,7 +49,7 @@
     "pg": 4,
     "armor": "",
     "attacks": [
-      "cornada (d8)"
+      "cornada (1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -65,7 +65,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "mordisco (d8)"
+      "mordisco (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -79,7 +79,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "garras (d6+d6)"
+      "garras (1d6+1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -95,7 +95,7 @@
     "pg": 12,
     "armor": "",
     "attacks": [
-      "tentáculos (d6, estallido)"
+      "tentáculos (1d6, estallido)"
     ],
     "moral": "",
     "abilities": [
@@ -112,13 +112,13 @@
     "pg": 4,
     "armor": 1,
     "attacks": [
-      "espada corta (d6) o arco corto (d6)"
+      "espada corta (1d6) o arco corto (1d6)"
     ],
     "moral": "",
     "abilities": [
       "Leales: al realizar una tirada de Moral, se utiliza la VOL del líder (13). Si el líder muere, los demás huirán."
     ],
-    "description": "- Forajidos que saquean asentamientos, atacan barcos o tienden emboscadas a los viajeros. Los grupos de cuatro o más personas constituyen un destacamento.\n- Un destacamento siempre viaja con un líder que lleva cota de malla o similar (2 de Armadura) y una espada larga (d10) o una ballesta (d8).\n- Leales: al realizar una tirada de Moral, se utiliza la VOL del líder (13). Si el líder muere, los demás huirán."
+    "description": "- Forajidos que saquean asentamientos, atacan barcos o tienden emboscadas a los viajeros. Los grupos de cuatro o más personas constituyen un destacamento.\n- Un destacamento siempre viaja con un líder que lleva cota de malla o similar (2 de Armadura) y una espada larga (1d10) o una ballesta (1d8).\n- Leales: al realizar una tirada de Moral, se utiliza la VOL del líder (13). Si el líder muere, los demás huirán."
   },
   {
     "name": "Banshee",
@@ -128,7 +128,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "toque fantasmal (d8)"
+      "toque fantasmal (1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -144,7 +144,7 @@
     "pg": 10,
     "armor": 1,
     "attacks": [
-      "mordisco (d10)"
+      "mordisco (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -174,7 +174,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "garras largas (d6+d6)"
+      "garras largas (1d6+1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -190,7 +190,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "dedos-tubérculos (d6)"
+      "dedos-tubérculos (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -204,7 +204,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "talones (d8+d8)"
+      "talones (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -218,7 +218,7 @@
     "pg": 8,
     "armor": 1,
     "attacks": [
-      "garrote (d8)"
+      "garrote (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -232,7 +232,7 @@
     "pg": 4,
     "armor": 2,
     "attacks": [
-      "tentáculos (d8+d8)"
+      "tentáculos (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -246,7 +246,7 @@
     "pg": 6,
     "armor": 1,
     "attacks": [
-      "lanza (d8) o arco corto (d6)"
+      "lanza (1d8) o arco corto (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -260,8 +260,8 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "mordisco (d8)",
-      "soplo de fuego (d6, estallido)"
+      "mordisco (1d8)",
+      "soplo de fuego (1d6, estallido)"
     ],
     "moral": "",
     "abilities": [],
@@ -275,7 +275,7 @@
     "pg": 8,
     "armor": 3,
     "attacks": [
-      "brazos afilados (d8+d8)"
+      "brazos afilados (1d8+1d8)"
     ],
     "moral": "Destacamento",
     "abilities": [],
@@ -289,7 +289,7 @@
     "pg": 12,
     "armor": 2,
     "attacks": [
-      "mordisco (d12)"
+      "mordisco (1d12)"
     ],
     "moral": "Destacamento",
     "abilities": [
@@ -305,7 +305,7 @@
     "pg": 4,
     "armor": "",
     "attacks": [
-      "brazos entrelazados (d6)"
+      "brazos entrelazados (1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -321,7 +321,7 @@
     "pg": 14,
     "armor": "",
     "attacks": [
-      "rociar (d8)"
+      "rociar (1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -337,7 +337,7 @@
     "pg": 14,
     "armor": 1,
     "attacks": [
-      "daga carámbano (d6)"
+      "daga carámbano (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -351,7 +351,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "enredaderas (d4, estallido)"
+      "enredaderas (1d4, estallido)"
     ],
     "moral": "",
     "abilities": [
@@ -367,13 +367,13 @@
     "pg": 8,
     "armor": 1,
     "attacks": [
-      "garras (d10+d10)"
+      "garras (1d10+1d10)"
     ],
     "moral": "",
     "abilities": [
-      "Daño Crítico: el veneno del aguijón licúa las entrañas del objetivo, lo que provoca un daño adicional de d8 a la FUE. La pérdida de FUE es permanente."
+      "Daño Crítico: el veneno del aguijón licúa las entrañas del objetivo, lo que provoca un daño adicional de 1d8 a la FUE. La pérdida de FUE es permanente."
     ],
-    "description": "- Arácnidos del tamaño de un caballo que suelen encontrarse en terrenos áridos o cavernas.\n- Daño Crítico: el veneno del aguijón licúa las entrañas del objetivo, lo que provoca un daño adicional de d8 a la FUE. La pérdida de FUE es permanente."
+    "description": "- Arácnidos del tamaño de un caballo que suelen encontrarse en terrenos áridos o cavernas.\n- Daño Crítico: el veneno del aguijón licúa las entrañas del objetivo, lo que provoca un daño adicional de 1d8 a la FUE. La pérdida de FUE es permanente."
   },
   {
     "name": "Esfinge",
@@ -383,8 +383,8 @@
     "pg": 18,
     "armor": "",
     "attacks": [
-      "garras (d8+d8, estallido)",
-      "pico (d10)"
+      "garras (1d8+1d8, estallido)",
+      "pico (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -400,7 +400,7 @@
     "pg": 5,
     "armor": 1,
     "attacks": [
-      "Espada oxidada (d6) o arco (d6)"
+      "Espada oxidada (1d6) o arco (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -414,7 +414,7 @@
     "pg": 10,
     "armor": "",
     "attacks": [
-      "garrote (d10)"
+      "garrote (1d10)"
     ],
     "moral": "",
     "abilities": [],
@@ -428,7 +428,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "drenaje de vida (d6)"
+      "drenaje de vida (1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -456,7 +456,7 @@
     "pg": 4,
     "armor": "",
     "attacks": [
-      "talones (d10+d10)"
+      "talones (1d10+1d10)"
     ],
     "moral": "",
     "abilities": [],
@@ -470,13 +470,13 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "garras (d6+d6)"
+      "garras (1d6+1d6)"
     ],
     "moral": "",
     "abilities": [
-      "Daño Crítico: El gato nocturno comienza a devorar al objetivo (d4 de daño FUE) mientras aún está vivo."
+      "Daño Crítico: El gato nocturno comienza a devorar al objetivo (1d4 de daño FUE) mientras aún está vivo."
     ],
-    "description": "- Marsupiales inteligentes y nocturnos que habitan en bosques y pantanos. Cazan en manadas.\n- Daño Crítico: El gato nocturno comienza a devorar al objetivo (d4 de daño FUE) mientras aún está vivo."
+    "description": "- Marsupiales inteligentes y nocturnos que habitan en bosques y pantanos. Cazan en manadas.\n- Daño Crítico: El gato nocturno comienza a devorar al objetivo (1d4 de daño FUE) mientras aún está vivo."
   },
   {
     "name": "Gigante Celestial",
@@ -486,7 +486,7 @@
     "pg": 12,
     "armor": 1,
     "attacks": [
-      "maza (d10)"
+      "maza (1d10)"
     ],
     "moral": "Destacamento",
     "abilities": [],
@@ -500,7 +500,7 @@
     "pg": 18,
     "armor": 2,
     "attacks": [
-      "espadón (d12)"
+      "espadón (1d12)"
     ],
     "moral": "Destacamento",
     "abilities": [
@@ -516,7 +516,7 @@
     "pg": 6,
     "armor": 1,
     "attacks": [
-      "lanza (d8)"
+      "lanza (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -530,7 +530,7 @@
     "pg": 4,
     "armor": "",
     "attacks": [
-      "daga (d6) o honda (d6)"
+      "daga (1d6) o honda (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -544,7 +544,7 @@
     "pg": 4,
     "armor": "",
     "attacks": [
-      "lanza (d6)"
+      "lanza (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -558,7 +558,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "dos hoces (d6+d6)"
+      "dos hoces (1d6+1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -574,7 +574,7 @@
     "pg": 7,
     "armor": "",
     "attacks": [
-      "garras (d6+d6)"
+      "garras (1d6+1d6)"
     ],
     "moral": "Destacamento",
     "abilities": [
@@ -590,7 +590,7 @@
     "pg": 12,
     "armor": "",
     "attacks": [
-      "garras etéreas (d8+d8)"
+      "garras etéreas (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -604,7 +604,7 @@
     "pg": 11,
     "armor": "",
     "attacks": [
-      "aguijón (d10)"
+      "aguijón (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -620,13 +620,13 @@
     "pg": 18,
     "armor": 1,
     "attacks": [
-      "mordisco (d12)"
+      "mordisco (1d12)"
     ],
     "moral": "Destacamento",
     "abilities": [
-      "Daño Crítico: El objetivo es devorado y sufre d8 puntos de daño FUE por el ácido del estómago del gusano."
+      "Daño Crítico: El objetivo es devorado y sufre 1d8 puntos de daño FUE por el ácido del estómago del gusano."
     ],
-    "description": "- Gusanos gigantescos que habitan en enormes madrigueras a gran profundidad bajo tierra y solo salen a la superficie para alimentarse. Se encuentran en los desiertos de altura y en la tundra cálida.\n- Daño Crítico: El objetivo es devorado y sufre d8 puntos de daño FUE por el ácido del estómago del gusano."
+    "description": "- Gusanos gigantescos que habitan en enormes madrigueras a gran profundidad bajo tierra y solo salen a la superficie para alimentarse. Se encuentran en los desiertos de altura y en la tundra cálida.\n- Daño Crítico: El objetivo es devorado y sufre 1d8 puntos de daño FUE por el ácido del estómago del gusano."
   },
   {
     "name": "Gárgola",
@@ -636,7 +636,7 @@
     "pg": 8,
     "armor": 3,
     "attacks": [
-      "garras (d8+d8)"
+      "garras (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -650,7 +650,7 @@
     "pg": 12,
     "armor": 2,
     "attacks": [
-      "mordisco (d12, estallido)"
+      "mordisco (1d12, estallido)"
     ],
     "moral": "Destacamento",
     "abilities": [],
@@ -664,7 +664,7 @@
     "pg": 6,
     "armor": 2,
     "attacks": [
-      "maza (d8)"
+      "maza (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -678,8 +678,8 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "garras (d6+d6)",
-      "mordisco (d8)"
+      "garras (1d6+1d6)",
+      "mordisco (1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -695,7 +695,7 @@
     "pg": 12,
     "armor": "",
     "attacks": [
-      "bastón de ley (d8)"
+      "bastón de ley (1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -712,8 +712,8 @@
     "pg": 6,
     "armor": 1,
     "attacks": [
-      "mordisco (d10)",
-      "chorro de ácido (d8, estallido)"
+      "mordisco (1d10)",
+      "chorro de ácido (1d8, estallido)"
     ],
     "moral": "",
     "abilities": [
@@ -729,8 +729,8 @@
     "pg": 3,
     "armor": "",
     "attacks": [
-      "mordisco (d6)",
-      "lanza (d8)"
+      "mordisco (1d6)",
+      "lanza (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -744,13 +744,13 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "mordisco con fuerza (d8)"
+      "mordisco con fuerza (1d8)"
     ],
     "moral": "",
     "abilities": [
-      "Daño Crítico: El objetivo sufre d6 puntos de daño a la VOL a medida que su espíritu se va agotando lentamente. A continuación, queda cautivado por la lamia, obedeciendo todas sus órdenes mientras se encuentre en su presencia."
+      "Daño Crítico: El objetivo sufre 1d6 puntos de daño a la VOL a medida que su espíritu se va agotando lentamente. A continuación, queda cautivado por la lamia, obedeciendo todas sus órdenes mientras se encuentre en su presencia."
     ],
-    "description": "- Criaturas parecidas a centauros que se alimentan de la fuerza vital de los demás, seduciendo a sus víctimas gracias a su gran encanto e inteligencia. Su parte superior suele ser humanoide, mientras que la inferior puede adoptar la forma de diversos híbridos animales.\n- Poseen poderes mágicos innatos. Pueden crear ilusiones, hechizar a otras criaturas y disfrazarse a voluntad.\n- Daño Crítico: El objetivo sufre d6 puntos de daño a la VOL a medida que su espíritu se va agotando lentamente. A continuación, queda cautivado por la lamia, obedeciendo todas sus órdenes mientras se encuentre en su presencia."
+    "description": "- Criaturas parecidas a centauros que se alimentan de la fuerza vital de los demás, seduciendo a sus víctimas gracias a su gran encanto e inteligencia. Su parte superior suele ser humanoide, mientras que la inferior puede adoptar la forma de diversos híbridos animales.\n- Poseen poderes mágicos innatos. Pueden crear ilusiones, hechizar a otras criaturas y disfrazarse a voluntad.\n- Daño Crítico: El objetivo sufre 1d6 puntos de daño a la VOL a medida que su espíritu se va agotando lentamente. A continuación, queda cautivado por la lamia, obedeciendo todas sus órdenes mientras se encuentre en su presencia."
   },
   {
     "name": "Langosta Cavernícola",
@@ -760,7 +760,7 @@
     "pg": 2,
     "armor": "",
     "attacks": [
-      "mordisco (d6)"
+      "mordisco (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -774,11 +774,11 @@
     "pg": 14,
     "armor": 1,
     "attacks": [
-      "daga del alma (d8)"
+      "daga del alma (1d8)"
     ],
     "moral": "",
     "abilities": [],
-    "description": "- Poderosos hechiceros que pagaron el precio más alto por la inmortalidad: su propia vida. Ahora, su sed de poder no conoce límites.\n- Mantienen su no-vida vinculándose a un artefacto terrenal, que suele estar protegido por al menos d6 otros sirvientes no-muertos.\n- Llevan hasta seis de los siguientes libros de hechizos: Animar objeto, Ojo arcano, Ensordecer, Desmontar, Muro elemental, Frenesí, Puerta, Levitar, Odio, Identificar propietario, Llamar a la puerta, Pacificar, Resucitar muertos, Resucitar espíritus, Escudo, Dormir, Forma de humo, Telequinesis, Telepatía, Teletransporte, Visión, Marca de mago."
+    "description": "- Poderosos hechiceros que pagaron el precio más alto por la inmortalidad: su propia vida. Ahora, su sed de poder no conoce límites.\n- Mantienen su no-vida vinculándose a un artefacto terrenal, que suele estar protegido por al menos 1d6 otros sirvientes no-muertos.\n- Llevan hasta seis de los siguientes libros de hechizos: Animar objeto, Ojo arcano, Ensordecer, Desmontar, Muro elemental, Frenesí, Puerta, Levitar, Odio, Identificar propietario, Llamar a la puerta, Pacificar, Resucitar muertos, Resucitar espíritus, Escudo, Dormir, Forma de humo, Telequinesis, Telepatía, Teletransporte, Visión, Marca de mago."
   },
   {
     "name": "Lobo",
@@ -788,7 +788,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "mordisco (d8)"
+      "mordisco (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -802,13 +802,13 @@
     "pg": 8,
     "armor": 1,
     "attacks": [
-      "toque devorador (d8)"
+      "toque devorador (1d8)"
     ],
     "moral": "",
     "abilities": [
-      "Daño Crítico: el objetivo queda envuelto y sufre d6 puntos de daño FUE por ronda hasta que es devorado."
+      "Daño Crítico: el objetivo queda envuelto y sufre 1d6 puntos de daño FUE por ronda hasta que es devorado."
     ],
-    "description": "- Grandes masas amorfas de gelatina transparente. Cazan sin sentido en busca de alimento en mazmorras y cavernas subterráneas.\n- Daño Crítico: el objetivo queda envuelto y sufre d6 puntos de daño FUE por ronda hasta que es devorado."
+    "description": "- Grandes masas amorfas de gelatina transparente. Cazan sin sentido en busca de alimento en mazmorras y cavernas subterráneas.\n- Daño Crítico: el objetivo queda envuelto y sufre 1d6 puntos de daño FUE por ronda hasta que es devorado."
   },
   {
     "name": "Mantícora",
@@ -818,8 +818,8 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "garras (d6+d6)",
-      "púa en la cola (d8)"
+      "garras (1d6+1d6)",
+      "púa en la cola (1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -835,8 +835,8 @@
     "pg": 12,
     "armor": 1,
     "attacks": [
-      "hacha a dos manos (d10)",
-      "carga (d12)"
+      "hacha a dos manos (1d10)",
+      "carga (1d12)"
     ],
     "moral": "",
     "abilities": [],
@@ -850,7 +850,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "toque necrótico (d10)"
+      "toque necrótico (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -866,7 +866,7 @@
     "pg": 5,
     "armor": "",
     "attacks": [
-      "mordisco (d6)"
+      "mordisco (1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -882,7 +882,7 @@
     "pg": 9,
     "armor": 2,
     "attacks": [
-      "mordisco (d8)"
+      "mordisco (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -896,8 +896,8 @@
     "pg": 6,
     "armor": 1,
     "attacks": [
-      "espada (d6)",
-      "mordisco (d10)"
+      "espada (1d6)",
+      "mordisco (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -913,13 +913,13 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "garras alargadas (d6+d6)"
+      "garras alargadas (1d6+1d6)"
     ],
     "moral": "",
     "abilities": [
-      "Daño crítico: el objetivo queda exhausto debido a su herida necrótica y muere en d4 días a menos que sea atendido por un sacerdote o un sanador experto. Si no se quema el cadáver, este resucitará más tarde como un necrófago."
+      "Daño crítico: el objetivo queda exhausto debido a su herida necrótica y muere en 1d4 días a menos que sea atendido por un sacerdote o un sanador experto. Si no se quema el cadáver, este resucitará más tarde como un necrófago."
     ],
-    "description": "- Criaturas con aspecto humano y piel grisácea, vestidas con harapos, que solo ansían devorar la carne de los vivos.\n- Daño crítico: el objetivo queda exhausto debido a su herida necrótica y muere en d4 días a menos que sea atendido por un sacerdote o un sanador experto. Si no se quema el cadáver, este resucitará más tarde como un necrófago."
+    "description": "- Criaturas con aspecto humano y piel grisácea, vestidas con harapos, que solo ansían devorar la carne de los vivos.\n- Daño crítico: el objetivo queda exhausto debido a su herida necrótica y muere en 1d4 días a menos que sea atendido por un sacerdote o un sanador experto. Si no se quema el cadáver, este resucitará más tarde como un necrófago."
   },
   {
     "name": "Ogro",
@@ -929,7 +929,7 @@
     "pg": 6,
     "armor": 1,
     "attacks": [
-      "garrote (d10)"
+      "garrote (1d10)"
     ],
     "moral": "",
     "abilities": [],
@@ -943,7 +943,7 @@
     "pg": 15,
     "armor": "",
     "attacks": [
-      "mordisco (d8)"
+      "mordisco (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -957,13 +957,13 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "garras (d8+d8)"
+      "garras (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [
-      "Daño Crítico: muerde al objetivo y le inflige un daño adicional de d6 FUE. El objetivo se desangra muy rápidamente."
+      "Daño Crítico: muerde al objetivo y le inflige un daño adicional de 1d6 FUE. El objetivo se desangra muy rápidamente."
     ],
-    "description": "- Osos de color marrón rojizo que suelen encontrarse en montañas, bosques y praderas.\n- Prefieren alimentarse de pescado y carne, y atacarán a cualquier desafortunado que se cruce en su camino.\n- Daño Crítico: muerde al objetivo y le inflige un daño adicional de d6 FUE. El objetivo se desangra muy rápidamente."
+    "description": "- Osos de color marrón rojizo que suelen encontrarse en montañas, bosques y praderas.\n- Prefieren alimentarse de pescado y carne, y atacarán a cualquier desafortunado que se cruce en su camino.\n- Daño Crítico: muerde al objetivo y le inflige un daño adicional de 1d6 FUE. El objetivo se desangra muy rápidamente."
   },
   {
     "name": "Osobúho",
@@ -973,8 +973,8 @@
     "pg": 9,
     "armor": "",
     "attacks": [
-      "pico (d10)",
-      "garras (d8+d8)"
+      "pico (1d10)",
+      "garras (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [
@@ -990,8 +990,8 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "tentáculos (d8+d8, estallido)",
-      "mordisco (d10)"
+      "tentáculos (1d8+1d8, estallido)",
+      "mordisco (1d10)"
     ],
     "moral": "",
     "abilities": [],
@@ -1005,7 +1005,7 @@
     "pg": 5,
     "armor": "",
     "attacks": [
-      "mordisco (d6)"
+      "mordisco (1d6)"
     ],
     "moral": "",
     "abilities": [],
@@ -1019,7 +1019,7 @@
     "pg": 8,
     "armor": "",
     "attacks": [
-      "pezuñas llameantes (d8+d8)"
+      "pezuñas llameantes (1d8+1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -1045,7 +1045,7 @@
     "pg": 9,
     "armor": "",
     "attacks": [
-      "inmundicia (d6+d6)"
+      "inmundicia (1d6+1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -1061,7 +1061,7 @@
     "pg": 5,
     "armor": 1,
     "attacks": [
-      "lanza de hueso (d8)"
+      "lanza de hueso (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -1075,7 +1075,7 @@
     "pg": 12,
     "armor": 2,
     "attacks": [
-      "mordisco (d10)"
+      "mordisco (1d10)"
     ],
     "moral": "",
     "abilities": [],
@@ -1089,13 +1089,13 @@
     "pg": 14,
     "armor": "",
     "attacks": [
-      "toque drenante (d6, ignora la armadura)"
+      "toque drenante (1d6, ignora la armadura)"
     ],
     "moral": "",
     "abilities": [
-      "Daño Crítico: el objetivo pierde d4 puntos de FUE. Si su FUE se reduce a 0, también se convierte en una sombra."
+      "Daño Crítico: el objetivo pierde 1d4 puntos de FUE. Si su FUE se reduce a 0, también se convierte en una sombra."
     ],
-    "description": "- Monstruos incorpóreos que parecen sombras animadas. No se ven afectados por ataques comunes, el sueño ni el control mental.\n- Daño Crítico: el objetivo pierde d4 puntos de FUE. Si su FUE se reduce a 0, también se convierte en una sombra."
+    "description": "- Monstruos incorpóreos que parecen sombras animadas. No se ven afectados por ataques comunes, el sueño ni el control mental.\n- Daño Crítico: el objetivo pierde 1d4 puntos de FUE. Si su FUE se reduce a 0, también se convierte en una sombra."
   },
   {
     "name": "Titán",
@@ -1105,7 +1105,7 @@
     "pg": 18,
     "armor": 3,
     "attacks": [
-      "espada ligera (d12)"
+      "espada ligera (1d12)"
     ],
     "moral": "Destacamento",
     "abilities": [],
@@ -1119,7 +1119,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "tridente (d8)"
+      "tridente (1d8)"
     ],
     "moral": "",
     "abilities": [],
@@ -1133,8 +1133,8 @@
     "pg": 14,
     "armor": 1,
     "attacks": [
-      "garra (d8)",
-      "garrote (d10)"
+      "garra (1d8)",
+      "garrote (1d10)"
     ],
     "moral": "",
     "abilities": [],
@@ -1148,8 +1148,8 @@
     "pg": 10,
     "armor": "",
     "attacks": [
-      "mordisco (d8)",
-      "garrote (d10)"
+      "mordisco (1d8)",
+      "garrote (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -1165,7 +1165,7 @@
     "pg": 12,
     "armor": 3,
     "attacks": [
-      "espada larga (d10)"
+      "espada larga (1d10)"
     ],
     "moral": "",
     "abilities": [
@@ -1181,7 +1181,7 @@
     "pg": 9,
     "armor": "",
     "attacks": [
-      "enredaderas (d8+d8)"
+      "enredaderas (1d8+1d8)"
     ],
     "moral": "Destacamento",
     "abilities": [
@@ -1197,7 +1197,7 @@
     "pg": 6,
     "armor": "",
     "attacks": [
-      "cuerno (d10, ignora la armadura)"
+      "cuerno (1d10, ignora la armadura)"
     ],
     "moral": "",
     "abilities": [],
@@ -1211,14 +1211,14 @@
     "pg": 12,
     "armor": 1,
     "attacks": [
-      "mordisco (d10)"
+      "mordisco (1d10)"
     ],
     "moral": "",
     "abilities": [
       "Regeneración: un vampiro herido recupera 6 PG cuando muerde a un objetivo que tenga sangre. Si muere, se convierte en una nube de gas y se retira a su ataúd, reformándose al caer la noche siguiente. Solo puede morir si se expone a la luz del sol o si se destruye el ataúd.",
-      "Daño Crítico: El vampiro drena la esencia del objetivo, infligiendo d12 de daño a VOL. Si el objetivo llega a 0 VOL de esta forma, muere y resucita como un esclavo del vampiro."
+      "Daño Crítico: El vampiro drena la esencia del objetivo, infligiendo 1d12 de daño a VOL. Si el objetivo llega a 0 VOL de esta forma, muere y resucita como un esclavo del vampiro."
     ],
-    "description": "- Encantadoras criaturas no muertas que beben la sangre de los mortales. Actúan por la noche y duermen en un ataúd durante el día. Pueden transformarse en murciélagos a voluntad.\n- Regeneración: un vampiro herido recupera 6 PG cuando muerde a un objetivo que tenga sangre. Si muere, se convierte en una nube de gas y se retira a su ataúd, reformándose al caer la noche siguiente. Solo puede morir si se expone a la luz del sol o si se destruye el ataúd.\n- Daño Crítico: El vampiro drena la esencia del objetivo, infligiendo d12 de daño a VOL. Si el objetivo llega a 0 VOL de esta forma, muere y resucita como un esclavo del vampiro."
+    "description": "- Encantadoras criaturas no muertas que beben la sangre de los mortales. Actúan por la noche y duermen en un ataúd durante el día. Pueden transformarse en murciélagos a voluntad.\n- Regeneración: un vampiro herido recupera 6 PG cuando muerde a un objetivo que tenga sangre. Si muere, se convierte en una nube de gas y se retira a su ataúd, reformándose al caer la noche siguiente. Solo puede morir si se expone a la luz del sol o si se destruye el ataúd.\n- Daño Crítico: El vampiro drena la esencia del objetivo, infligiendo 1d12 de daño a VOL. Si el objetivo llega a 0 VOL de esta forma, muere y resucita como un esclavo del vampiro."
   },
   {
     "name": "Víbora",
@@ -1228,7 +1228,7 @@
     "pg": 3,
     "armor": "",
     "attacks": [
-      "mordisco (d6)"
+      "mordisco (1d6)"
     ],
     "moral": "",
     "abilities": [
@@ -1244,17 +1244,17 @@
     "pg": 2,
     "armor": "",
     "attacks": [
-      "uñas afiladas (d6)"
+      "uñas afiladas (1d6)"
     ],
     "moral": "",
     "abilities": [
-      "Daño Crítico: el objetivo resulta infectado y queda exhausto. Sin la ayuda de un especialista o un sanador, se convertirá en zombi en d4 días. Creando Monstruos Resumen Para crear un monstruo único, sigue estos pasos:",
+      "Daño Crítico: el objetivo resulta infectado y queda exhausto. Sin la ayuda de un especialista o un sanador, se convertirá en zombi en 1d4 días. Creando Monstruos Resumen Para crear un monstruo único, sigue estos pasos:",
       "Apariencia: Encogido + Caparazón",
       "Rasgos: Se mueve en línea recta + Punto débil",
       "Ataque: Golpes + Agarrones",
       "Habilidades: Inhabilita + Oído Una criatura parecida a un caracol con un caparazón duro. Solo se mueve en línea recta y tiene el vientre blando. Se lanza contra sus oponentes, arrastrándolos hacia su órbita desenfrenada. El rugido de su movimiento ahoga cualquier otro sonido. Esta criatura es físicamente resistente, con una FUE superior a la media y una armadura sólida. Probablemente sea rápida, pero poco maniobrable, y es probable que no dependa de la habilidad o la destreza para evitar el peligro. Es bruta, pero sigue siendo una bestia salvaje y tan obstinada como cualquier criatura que solo busca su próxima comida. Ataca rodando en línea recta y debería impactar contra múltiples objetivos."
     ],
-    "description": "- Cadáver reanimado mediante un ritual de nigromancia o una influencia maligna. Inmune a todos los efectos que afecten a la mente.\n- Si no se destruye por completo (mediante fuego, desmembramiento total, etc.), el zombi volverá a levantarse en unos minutos.\n- Daño Crítico: el objetivo resulta infectado y queda exhausto. Sin la ayuda de un especialista o un sanador, se convertirá en zombi en d4 días. Creando Monstruos Resumen Para crear un monstruo único, sigue estos pasos:\n- Tira en la tabla de Apariencia Del Monstruo.\n- Tira en la tabla de Rasgos Del Monstruo.\n- Tira en la tabla de Ataques Del Monstruo.\n- Tira en la tabla de Habilidades Del Monstruo.\n- Describe el aspecto, las habilidades y los ataques de la criatura en un lenguaje sencillo.\n- Crea las estadísticas de la criatura siguiendo los principios, las definiciones y el formato del bloque de estadísticas que se indican a continuación. Principios\n- Usa el Daño Crítico para resaltar la amenaza o lo extraño de cualquier PNJ agresivo.\n- Recurre a la originalidad y el estilo para que las criaturas destaquen. Los jugadores recordarán más fácilmente a un humanoide con cara de cerdo que busca a sus ovejas perdidas que a un arquero goblin cualquiera.\n- Ajusta siempre las estadísticas de las criaturas en función de lo que resulte divertido e interesante. PROTECCIÓN CONTRA GOLPES La capacidad de una criatura para esquivar el peligro, ya sea gracias a su resistencia, velocidad o destreza. Asigna 3 PG a las criaturas normales, 6 PG a las más resistentes y 10 PG o más a las amenazas graves. ARMADURA Para algunas criaturas, esto representa su resistencia natural; para otras, puede deberse a algo que llevan puesto o transportan. Si una criatura es capaz de resistir un ataque sin moverse, aumenta este valor. ATRIBUTOS 3 es insuficiente, 6 es bajo, 10 es normal, 14 es notable y 18 es legendario. FUERZA Mide la salud general, la fuerza física y la resistencia a los venenos. ¡Se trata de la capacidad de una criatura para sobrevivir a un impacto directo, no de su capacidad para evitar el peligro! DESTREZA Empieza con un 10 como valor de referencia y, si la criatura es especialmente rápida, ágil o diestra, aumenta la cifra según sea necesario. Si es lenta de reaccionar, corpulenta o torpe, reduce la cifra. VOLUNTAD Determina la capacidad de una criatura para resistir la influencia de otra, así como su poder sobre los demás. También sirve como indicador de su capacidad de defensa en cuestiones mágicas o espirituales. ATAQUES Normalmente, un objeto (por ejemplo, una espada o un arco) o un arma natural (por ejemplo, garras o dientes). HABILIDADES Una acción o poder único que la criatura puede utilizar tanto en combate como fuera de él.\n- Si una habilidad puede evitarse o defenderse de forma efectiva mediante medios tradicionales, se trata de un ataque e interactúa con PG.\n- Si una habilidad no puede evitarse o defenderse de manera significativa mediante medios tradicionales, se trata de una Habilidad.\n- Si una habilidad solo afecta a un único PJ, por lo general debería tener un efecto inmediato sin posibilidad de realizar una tirada de salvación en esa ronda (véase Basilisco, pág. 83).\n- Si una habilidad es capaz de afectar a un grupo de PJ, por lo general debería requerir una tirada de salvación inmediata (véase Dragón Verde, pág. 88). Estadísticas de monstruos X PG, X Armadura, X FUE, X DES, X VOL, Ataque (dX, objetos especiales, cualidades)\n- Una descripción atractiva de su aspecto, comportamiento o hábitos de vida.\n- Una manía, táctica o peculiaridad que distingue a esta criatura.\n- Efecto especial o consecuencia del daño crítico. APARIENCIA DE MONSTRUOS Tira 1d20 por cada columna y combínalos. d20      Físico                                    Característica 1      Albino                                    Antenas 2      Negro                                     Pico 3      Cristalino                                Caparazón 4      Demacrado                                 Garras 5      Sin Ojos                                  Colmillos 6      Emplumado                                 Plumas 7      Gelatinoso                                Pelo 8      Brillante                                 Branquias 9      Endurecido                                Cuernos 10      Descabezado                               Marcas 11      Cornudo                                   Escamas 12      Encorvado                                 Concha 13      Iridiscente                               Hocico 14      Poliocular                                Cola 15      Escamoso                                  Zarpa 16      Segmentado                                Tentáculos 17      Esquelético                               Trompa 18      Viscoso                                   Pezuñas 19      Translúcido                               Voz 20      Retorcido                                 Alas RASGOS DEL MONSTRUO Tira 1d20 por cada columna y combínalos. d20   Rarezas                                          Debilidad 1    Cambia tamaño a voluntad                         Alcohol 2    Cambia de color a voluntad                       Frío 3    Recoge flores raras                              Conversación 4    Colecciona trofeos                               Adulación 5    No muere de viejo                                Juegos 6    Dibuja símbolos                                  Regalos 7    Fascinado por el fuego                           Hierro 8    Acapara libros                                   Ruidos fuertes 9    Adora un color concreto                          Espejos 10    Renace cada día                                  Colores brillantes 11    Adora objetos brillantes                         Luz de luna 12    Imita voces                                      Música 13    Se mueve linealmente                             Comidas preparadas 14    Narra todo                                       Puzles 15    Limpieza obsesiva                                Iconos religiosos 16    Crecen plantas a su paso                         Sal 17    Duerme al revés                                  Plata 18    Habla en rima                                    Luz solar 19    Suda Minerales Raros                             Verdadero nombre 20    Reproducción asexual                             Punto débil ATAQUES DEL MONSTRUO Tira 1d20 por cada columna y combínalos. d20     Tipo                          Daño Crítico 1     Muerde                        Asfixia 2     Corta                         Sangra 3     Quema                         Ceguera 4     Congela                       Rotura 5     Gasea                         Aplastamiento 6     Patada                        Caída 7     Puñetazos                     Diluye 8     Dispara                       Presa 9     Golpea                        Explota 10     Tajos                         Agarre 11     Rebana                        Incapacita 12     Aplasta                       Lacera 13     Pulveriza                     Licua 14     Aprieta                       Paraliza 15     Pincha                        Petrifica 16     Pica                          Envenena 17     Lanza                         Pincha 18     Toca                          Agrava 19     Fusta                         Pisotea 20     Destruye                      Debilita HABILIDADES DEL MONSTRUO Tira 1d20 por cada columna y combínalos. d20      Habilidad                            Objetivo 1      Absorbe                             Cuerpo 2      Amplifica                           Sueños 3      Atrae                               Elemento 4      Ata                                 Emociones 5      Camuflajes                          Energía 6      Conjura                             Salud 7      Controla                            Audición 8      Desactiva                           Ilusiones 9      Duplica                             Luz 10      Crece                               Memoria 11      Manipula                            Metal 12      Refleja                             Plantas 13      Regenera                            Espíritu 14      Resiste                             Piedra 15      Invierte                            Entorno 16      Transformación                      Tiempo 17      Encoge                              Visión 18      Transforma                          Agua 19      Atrapa                              Meteorología 20      Perfora                             Debilita Ejemplo de Monstruo\n- Apariencia: Encogido + Caparazón\n- Rasgos: Se mueve en línea recta + Punto débil\n- Ataque: Golpes + Agarrones\n- Habilidades: Inhabilita + Oído Una criatura parecida a un caracol con un caparazón duro. Solo se mueve en línea recta y tiene el vientre blando. Se lanza contra sus oponentes, arrastrándolos hacia su órbita desenfrenada. El rugido de su movimiento ahoga cualquier otro sonido. Esta criatura es físicamente resistente, con una FUE superior a la media y una armadura sólida. Probablemente sea rápida, pero poco maniobrable, y es probable que no dependa de la habilidad o la destreza para evitar el peligro. Es bruta, pero sigue siendo una bestia salvaje y tan obstinada como cualquier criatura que solo busca su próxima comida. Ataca rodando en línea recta y debería impactar contra múltiples objetivos."
+    "description": "- Cadáver reanimado mediante un ritual de nigromancia o una influencia maligna. Inmune a todos los efectos que afecten a la mente.\n- Si no se destruye por completo (mediante fuego, desmembramiento total, etc.), el zombi volverá a levantarse en unos minutos.\n- Daño Crítico: el objetivo resulta infectado y queda exhausto. Sin la ayuda de un especialista o un sanador, se convertirá en zombi en 1d4 días. Creando Monstruos Resumen Para crear un monstruo único, sigue estos pasos:\n- Tira en la tabla de Apariencia Del Monstruo.\n- Tira en la tabla de Rasgos Del Monstruo.\n- Tira en la tabla de Ataques Del Monstruo.\n- Tira en la tabla de Habilidades Del Monstruo.\n- Describe el aspecto, las habilidades y los ataques de la criatura en un lenguaje sencillo.\n- Crea las estadísticas de la criatura siguiendo los principios, las definiciones y el formato del bloque de estadísticas que se indican a continuación. Principios\n- Usa el Daño Crítico para resaltar la amenaza o lo extraño de cualquier PNJ agresivo.\n- Recurre a la originalidad y el estilo para que las criaturas destaquen. Los jugadores recordarán más fácilmente a un humanoide con cara de cerdo que busca a sus ovejas perdidas que a un arquero goblin cualquiera.\n- Ajusta siempre las estadísticas de las criaturas en función de lo que resulte divertido e interesante. PROTECCIÓN CONTRA GOLPES La capacidad de una criatura para esquivar el peligro, ya sea gracias a su resistencia, velocidad o destreza. Asigna 3 PG a las criaturas normales, 6 PG a las más resistentes y 10 PG o más a las amenazas graves. ARMADURA Para algunas criaturas, esto representa su resistencia natural; para otras, puede deberse a algo que llevan puesto o transportan. Si una criatura es capaz de resistir un ataque sin moverse, aumenta este valor. ATRIBUTOS 3 es insuficiente, 6 es bajo, 10 es normal, 14 es notable y 18 es legendario. FUERZA Mide la salud general, la fuerza física y la resistencia a los venenos. ¡Se trata de la capacidad de una criatura para sobrevivir a un impacto directo, no de su capacidad para evitar el peligro! DESTREZA Empieza con un 10 como valor de referencia y, si la criatura es especialmente rápida, ágil o diestra, aumenta la cifra según sea necesario. Si es lenta de reaccionar, corpulenta o torpe, reduce la cifra. VOLUNTAD Determina la capacidad de una criatura para resistir la influencia de otra, así como su poder sobre los demás. También sirve como indicador de su capacidad de defensa en cuestiones mágicas o espirituales. ATAQUES Normalmente, un objeto (por ejemplo, una espada o un arco) o un arma natural (por ejemplo, garras o dientes). HABILIDADES Una acción o poder único que la criatura puede utilizar tanto en combate como fuera de él.\n- Si una habilidad puede evitarse o defenderse de forma efectiva mediante medios tradicionales, se trata de un ataque e interactúa con PG.\n- Si una habilidad no puede evitarse o defenderse de manera significativa mediante medios tradicionales, se trata de una Habilidad.\n- Si una habilidad solo afecta a un único PJ, por lo general debería tener un efecto inmediato sin posibilidad de realizar una tirada de salvación en esa ronda (véase Basilisco, pág. 83).\n- Si una habilidad es capaz de afectar a un grupo de PJ, por lo general debería requerir una tirada de salvación inmediata (véase Dragón Verde, pág. 88). Estadísticas de monstruos X PG, X Armadura, X FUE, X DES, X VOL, Ataque (dX, objetos especiales, cualidades)\n- Una descripción atractiva de su aspecto, comportamiento o hábitos de vida.\n- Una manía, táctica o peculiaridad que distingue a esta criatura.\n- Efecto especial o consecuencia del daño crítico. APARIENCIA DE MONSTRUOS Tira 1d20 por cada columna y combínalos. 1d20      Físico                                    Característica 1      Albino                                    Antenas 2      Negro                                     Pico 3      Cristalino                                Caparazón 4      Demacrado                                 Garras 5      Sin Ojos                                  Colmillos 6      Emplumado                                 Plumas 7      Gelatinoso                                Pelo 8      Brillante                                 Branquias 9      Endurecido                                Cuernos 10      Descabezado                               Marcas 11      Cornudo                                   Escamas 12      Encorvado                                 Concha 13      Iridiscente                               Hocico 14      Poliocular                                Cola 15      Escamoso                                  Zarpa 16      Segmentado                                Tentáculos 17      Esquelético                               Trompa 18      Viscoso                                   Pezuñas 19      Translúcido                               Voz 20      Retorcido                                 Alas RASGOS DEL MONSTRUO Tira 1d20 por cada columna y combínalos. 1d20   Rarezas                                          Debilidad 1    Cambia tamaño a voluntad                         Alcohol 2    Cambia de color a voluntad                       Frío 3    Recoge flores raras                              Conversación 4    Colecciona trofeos                               Adulación 5    No muere de viejo                                Juegos 6    Dibuja símbolos                                  Regalos 7    Fascinado por el fuego                           Hierro 8    Acapara libros                                   Ruidos fuertes 9    Adora un color concreto                          Espejos 10    Renace cada día                                  Colores brillantes 11    Adora objetos brillantes                         Luz de luna 12    Imita voces                                      Música 13    Se mueve linealmente                             Comidas preparadas 14    Narra todo                                       Puzles 15    Limpieza obsesiva                                Iconos religiosos 16    Crecen plantas a su paso                         Sal 17    Duerme al revés                                  Plata 18    Habla en rima                                    Luz solar 19    Suda Minerales Raros                             Verdadero nombre 20    Reproducción asexual                             Punto débil ATAQUES DEL MONSTRUO Tira 1d20 por cada columna y combínalos. 1d20     Tipo                          Daño Crítico 1     Muerde                        Asfixia 2     Corta                         Sangra 3     Quema                         Ceguera 4     Congela                       Rotura 5     Gasea                         Aplastamiento 6     Patada                        Caída 7     Puñetazos                     Diluye 8     Dispara                       Presa 9     Golpea                        Explota 10     Tajos                         Agarre 11     Rebana                        Incapacita 12     Aplasta                       Lacera 13     Pulveriza                     Licua 14     Aprieta                       Paraliza 15     Pincha                        Petrifica 16     Pica                          Envenena 17     Lanza                         Pincha 18     Toca                          Agrava 19     Fusta                         Pisotea 20     Destruye                      Debilita HABILIDADES DEL MONSTRUO Tira 1d20 por cada columna y combínalos. 1d20      Habilidad                            Objetivo 1      Absorbe                             Cuerpo 2      Amplifica                           Sueños 3      Atrae                               Elemento 4      Ata                                 Emociones 5      Camuflajes                          Energía 6      Conjura                             Salud 7      Controla                            Audición 8      Desactiva                           Ilusiones 9      Duplica                             Luz 10      Crece                               Memoria 11      Manipula                            Metal 12      Refleja                             Plantas 13      Regenera                            Espíritu 14      Resiste                             Piedra 15      Invierte                            Entorno 16      Transformación                      Tiempo 17      Encoge                              Visión 18      Transforma                          Agua 19      Atrapa                              Meteorología 20      Perfora                             Debilita Ejemplo de Monstruo\n- Apariencia: Encogido + Caparazón\n- Rasgos: Se mueve en línea recta + Punto débil\n- Ataque: Golpes + Agarrones\n- Habilidades: Inhabilita + Oído Una criatura parecida a un caracol con un caparazón duro. Solo se mueve en línea recta y tiene el vientre blando. Se lanza contra sus oponentes, arrastrándolos hacia su órbita desenfrenada. El rugido de su movimiento ahoga cualquier otro sonido. Esta criatura es físicamente resistente, con una FUE superior a la media y una armadura sólida. Probablemente sea rápida, pero poco maniobrable, y es probable que no dependa de la habilidad o la destreza para evitar el peligro. Es bruta, pero sigue siendo una bestia salvaje y tan obstinada como cualquier criatura que solo busca su próxima comida. Ataca rodando en línea recta y debería impactar contra múltiples objetivos."
   },
   {
     "name": "Árbol Viviente",
@@ -1264,7 +1264,7 @@
     "pg": 10,
     "armor": 3,
     "attacks": [
-      "raíces (d8+d8, estallido)"
+      "raíces (1d8+1d8, estallido)"
     ],
     "moral": "",
     "abilities": [],
