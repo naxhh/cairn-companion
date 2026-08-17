@@ -2,9 +2,10 @@ import {
 	App,
 	TFile,
 } from "obsidian";
-import { CairnType, DATA_TYPES, TYPES } from "./types";
+import { CairnType, DATA_TYPES, TYPES, RollTableEntry } from "./types";
 import type { CairnSettings } from "./settings";
 import { normalize } from "./utils";
+import { BUILTIN_CATALOGS, BUILTIN_ROLL_TABLES } from "./data";
 
 
 export interface CairnEntry {
@@ -50,7 +51,9 @@ export class CairnIndex {
         omen: [],
     };
 
-    // TODO: move roll tables here
+    scars: RollTableEntry[] = [];
+    dungeonEvents: RollTableEntry[] = [];
+    wildernessEvents: RollTableEntry[] = [];
 
     constructor(private app: App, private settings: CairnSettings) {}
 
@@ -58,10 +61,21 @@ export class CairnIndex {
         for (const t of TYPES) this.entries[t].clear();
     }
 
+    private loadBuiltinData() {
+        const lang = this.settings.language;
+        const catalogs = BUILTIN_CATALOGS[lang] ?? BUILTIN_CATALOGS.en;
+        for (const t of DATA_TYPES) this.builtin[t] = catalogs[t];
+
+        const rollTables = BUILTIN_ROLL_TABLES[lang] ?? BUILTIN_ROLL_TABLES.en;
+        this.scars = rollTables.scars;
+        this.dungeonEvents = rollTables.dungeonEvents;
+        this.wildernessEvents = rollTables.wildernessEvents;
+    }
+
     rebuild() {
+        this.loadBuiltinData();
         this.clear();
 
-        // 1) Datos incorporados primero (JSON del plugin)
         for (const t of DATA_TYPES) {
             for (const raw of this.builtin[t]) {
                 if (!raw || typeof raw.name !== "string" || !raw.name.trim()) continue;
@@ -80,11 +94,6 @@ export class CairnIndex {
             }
         }
 
-        // 2) Notas del vault: añaden o sobrescriben por nombre.
-        // La detección es siempre por la propiedad "cairn_type" del frontmatter,
-        // sin importar en qué carpeta viva la nota (puedes tener un catálogo
-        // reusable en "_db/" y entradas propias de una campaña en
-        // "Campaña/Faccion1/PNJ/Tesorero.md", por ejemplo).
         const files = this.app.vault.getMarkdownFiles();
         for (const file of files) {
             const cache = this.app.metadataCache.getFileCache(file);

@@ -7,41 +7,28 @@ import {
 	PluginSettingTab,
 	SettingDefinitionItem,
 	TFile,
-	normalizePath,
 	stringifyYaml,
 	getLanguage,
 } from "obsidian";
 
-import type { CairnType, RollTableEntry } from "./types";
-import { DATA_TYPES, TYPES } from "./types";
-
-import type { CairnSettings, Language } from "./settings";
-import { DEFAULT_SETTINGS } from "./settings";
-
-import { CairnIndex, CairnEntry, BuiltinRaw } from "./indexer";
+import { DATA_TYPES, TYPES, CairnType } from "./types";
+import { DEFAULT_SETTINGS, CairnSettings, Language  } from "./settings";
+import { CairnIndex, CairnEntry } from "./indexer";
 import { DiceRoller } from "./dice";
 import { cairnMarkdownBlockProcessor, ParsedCairnBlock } from "./block";
 import { GuardianToolsModal, GuardianEventTables } from "./guardian";
 import { normalize } from "./utils";
-import type { CairnStrings } from "./i18n";
-import { getStrings } from "./i18n";
+import { getStrings, CairnStrings } from "./i18n";
 import { renderEntryCard, templatesFor, CairnFieldSuggest, inventoryOf } from "./render";
 import { TypePickerModal, TextInputModal, RandomEntryModal } from "./modals";
 import { createSamples as createExampleNotes } from "./examples";
 import { CairnAutoLinker } from "./autolink";
-
-function pluginDir(plugin: CairnPlugin): string {
-	return plugin.manifest.dir ?? `${plugin.app.vault.configDir}/plugins/${plugin.manifest.id}`;
-}
 
 export default class CairnPlugin extends Plugin {
 	settings: CairnSettings;
 	index: CairnIndex;
 	private reindexTimer: number | null = null;
 	private autoLinker: CairnAutoLinker = new CairnAutoLinker(this);
-	scars: RollTableEntry[] = [];
-	dungeonEvents: RollTableEntry[] = [];
-	wildernessEvents: RollTableEntry[] = [];
 	public diceRoller: DiceRoller = new DiceRoller();
 
 	strings(): CairnStrings {
@@ -49,15 +36,14 @@ export default class CairnPlugin extends Plugin {
 	}
 
 	eventTables(): GuardianEventTables {
-		return { dungeonEvents: this.dungeonEvents, wildernessEvents: this.wildernessEvents };
+		return { dungeonEvents: this.index.dungeonEvents, wildernessEvents: this.index.wildernessEvents };
 	}
 
 	async onload() {
 		await this.loadSettings();
 		this.index = new CairnIndex(this.app, this.settings);
 
-		this.app.workspace.onLayoutReady(async () => {
-			await this.loadBuiltinData();
+		this.app.workspace.onLayoutReady(() => {
 			this.reindex();
 		});
 
@@ -164,64 +150,6 @@ export default class CairnPlugin extends Plugin {
 	reindex() {
 		this.index.rebuild();
 		this.autoLinker.rebuild();
-	}
-
-	async readDataFile(lang: string, type: Exclude<CairnType, "character">): Promise<BuiltinRaw[] | null> {
-		const path = normalizePath(`${pluginDir(this)}/data/${lang}/${type}s.json`);
-		try {
-			const exists = await this.app.vault.adapter.exists(path);
-			if (!exists) return null;
-			const raw = await this.app.vault.adapter.read(path);
-			const parsed: unknown = JSON.parse(raw);
-			return Array.isArray(parsed) ? (parsed as BuiltinRaw[]) : null;
-		} catch {
-			return null;
-		}
-	}
-
-	async readRollTable(lang: string, filename: string): Promise<RollTableEntry[] | null> {
-		const path = normalizePath(`${pluginDir(this)}/data/${lang}/${filename}.json`);
-		try {
-			const exists = await this.app.vault.adapter.exists(path);
-			if (!exists) return null;
-			const raw = await this.app.vault.adapter.read(path);
-			const parsed: unknown = JSON.parse(raw);
-			return Array.isArray(parsed) ? (parsed as RollTableEntry[]) : null;
-		} catch {
-			return null;
-		}
-	}
-
-	async loadBuiltinData() {
-		const lang = this.settings.language;
-		let usedFallback = false;
-		for (const t of DATA_TYPES) {
-			let data = await this.readDataFile(lang, t);
-			if (!data && lang !== "es") {
-				data = await this.readDataFile("es", t);
-				if (data) usedFallback = true;
-			}
-			this.index.builtin[t] = data ?? [];
-		}
-
-		const rollTables: [string, "scars" | "dungeonEvents" | "wildernessEvents"][] = [
-			["scars", "scars"],
-			["dungeon-events", "dungeonEvents"],
-			["wilderness-events", "wildernessEvents"],
-		];
-		for (const [filename, key] of rollTables) {
-			let data = await this.readRollTable(lang, filename);
-			if (!data && lang !== "en") {
-				// Default to EN data if the language is not supported.
-				data = await this.readRollTable("en", filename);
-				if (data) usedFallback = true;
-			}
-			this[key] = data ?? [];
-		}
-
-		if (usedFallback) {
-			new Notice(this.strings().settings.fallbackLanguageNotice(lang));
-		}
 	}
 
 	async ensureFolder(path: string) {
@@ -346,8 +274,6 @@ class CairnSettingTab extends PluginSettingTab {
 		this.diceRoller = diceRoller;
 	}
 
-	// Declarative settings API (Obsidian 1.13.0+): lets the in-app settings
-	// search find these controls.
 	getSettingDefinitions(): SettingDefinitionItem[] {
 		const s = this.plugin.strings();
 		const dice = this.diceRoller.hasRollerPlugin();
@@ -409,8 +335,7 @@ class CairnSettingTab extends PluginSettingTab {
 				desc: s.settings.reloadDataDesc,
 				render: (setting) => {
 					setting.addButton((b) =>
-						b.setButtonText(s.settings.reloadButton).onClick(async () => {
-							await this.plugin.loadBuiltinData();
+						b.setButtonText(s.settings.reloadButton).onClick(() => {
 							this.plugin.reindex();
 							new Notice(s.settings.reloadNotice(this.plugin.countEntries()));
 						})
@@ -454,7 +379,6 @@ class CairnSettingTab extends PluginSettingTab {
 			await super.setControlValue(key, value);
 			await this.plugin.saveSettings();
 			if (key === "language") {
-				await this.plugin.loadBuiltinData();
 				this.plugin.reindex();
 				this.update();
 			}

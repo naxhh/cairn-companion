@@ -182,7 +182,6 @@ export interface CairnStrings {
 		usageIntro: string;
 		usageExtraFields: string;
 		usageCommands: string;
-		fallbackLanguageNotice: (lang: string) => string;
 	};
 
 	commands: {
@@ -418,7 +417,6 @@ export const es: CairnStrings = {
 			"partida» sin modificar la ficha original.",
 		usageCommands:
 			"Utiliza los comandos (ctrl+p) buscando «Cairn» para crear nuevas entradas, insertar referencias, abrir herramientas del Guardián o generar una entrada aleatoria.",
-		fallbackLanguageNotice: (lang) => `No hay datos en "${lang}" todavía; se usó Español como reserva.`,
 	},
 
 	commands: {
@@ -654,7 +652,6 @@ export const en: CairnStrings = {
 			"modifying the original entry.",
 		usageCommands:
 			"Use the commands (ctrl+p) searching for \"Cairn\" to create new entries, insert references, open Warden tools, or generate a random entry.",
-		fallbackLanguageNotice: (lang) => `No data for "${lang}" yet; Spanish was used as a fallback.`,
 	},
 
 	commands: {

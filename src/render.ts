@@ -615,7 +615,7 @@ async function renderCharacterSheet(
 		fm.pg = next;
 		pgCur.value = String(next);
 		dmgInput.value = "";
-		if (next === 0) renderScar(rollOutput, dmg, s, plugin.scars);
+		if (next === 0) renderScar(rollOutput, dmg, s, plugin.index.scars);
 		await plugin.setCharField(file, "pg", next);
 	};
 	const restBtn = pgBox.createEl("button", { text: s.sheet.rest, cls: "cairn-rest-btn" });

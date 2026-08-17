@@ -34,3 +34,4 @@ That said, PR's are welcome for any point in both lists.
 - Publish into obsidian marketplace (pass checks)
 - Fix "not found dice roller" plugin
 - Improve dice roller implementation so we don't need to pass the plugin/app everywhere
+- Fix data folder not being downloaded when installing the plugin from obsidian marketplace
